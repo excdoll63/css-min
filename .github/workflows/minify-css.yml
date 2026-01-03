@@ -4,8 +4,8 @@ on:
   push:
     paths:
       - "src/mgi.css"
-      - "public/mgi.css"
       - ".github/workflows/minify-css.yml"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -25,15 +25,8 @@ jobs:
       - name: Install clean-css-cli
         run: npm i -g clean-css-cli
 
-      - name: Build mgi.min.css from mgi.css
-        run: |
-          if [ -f "src/mgi.css" ]; then
-            INPUT="src/mgi.css"
-          else
-            INPUT="public/mgi.css"
-          fi
-          echo "Using input: $INPUT"
-          cleancss -O2 "$INPUT" -o public/mgi.min.css
+      - name: Build public/mgi.min.css from src/mgi.css
+        run: cleancss -O2 src/mgi.css -o public/mgi.min.css
 
       - name: Commit & push if changed
         run: |
