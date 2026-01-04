@@ -3827,17 +3827,51 @@ input, textarea, select {
   font-size: 16px !important;
 }
 
+:root {
+  --mgi-white: #ffffff;
+  --mgi-lilac: #cb3fff;
+  --mgi-magenta: #ef00ff;
+  --mgi-violet: #5105a3;
+  --mgi-deep: #3d0251;
+  --mgi-ink: #200236;
+  --mgi-graphite: #191919;
+}
+
+div:where(.swal2-icon).swal2-success .swal2-success-ring {
+  position: absolute;
+  z-index: 2;
+  top: -0.25em;
+  left: -0.25em;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  border: 0.25em solid rgba(239, 0, 255, 0.28);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    0 0 18px rgba(239, 0, 255, 0.22),
+    0 0 26px rgba(81, 5, 163, 0.22);
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.45));
+  animation: mgiSuccessRing 2.4s ease-in-out infinite;
+}
+
+#changeBank {
+  --mgi-card: rgba(32, 2, 54, 0.82);
+  --mgi-line: rgba(203, 63, 255, 0.28);
+  --mgi-glow: rgba(239, 0, 255, 0.22);
+  --mgi-shadow: rgba(0, 0, 0, 0.55);
+}
+
 #changeBank .t1 {
   margin: 12px auto 14px;
   padding: 12px 16px;
-
   width: min(360px, calc(100% - 24px));
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 
-  color: #ffffff;
+  color: var(--mgi-white);
   font-size: 18px;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -3850,23 +3884,26 @@ input, textarea, select {
   border: 2px solid transparent;
 
   background:
-    radial-gradient(120% 120% at 50% 0%, rgba(255,255,255,.22) 0%, rgba(255,255,255,0) 55%) padding-box,
-    linear-gradient(180deg, #200236 0%, #3D0251 55%, #200236 100%) padding-box,
-    linear-gradient(135deg, #FFFFFF 0%, #CB3FFF 28%, #EF00FF 58%, #5105A3 100%) border-box;
+    radial-gradient(120% 120% at 50% 0%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 58%) padding-box,
+    linear-gradient(180deg, var(--mgi-ink) 0%, var(--mgi-deep) 55%, var(--mgi-ink) 100%) padding-box,
+    linear-gradient(135deg, var(--mgi-white) 0%, var(--mgi-lilac) 28%, var(--mgi-magenta) 58%, var(--mgi-violet) 100%) border-box;
 
   box-shadow:
-    0 16px 34px rgba(0,0,0,.55),
-    0 0 0 1px rgba(255,255,255,.06) inset,
-    0 0 26px rgba(239,0,255,.18),
-    0 0 40px rgba(81,5,163,.22);
+    0 16px 34px var(--mgi-shadow),
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    0 0 26px rgba(239, 0, 255, 0.18),
+    0 0 44px rgba(81, 5, 163, 0.22);
 
   text-shadow:
-    0 1px 0 rgba(0,0,0,.55),
-    0 0 18px rgba(239,0,255,.22);
+    0 1px 0 rgba(0, 0, 0, 0.55),
+    0 0 18px rgba(239, 0, 255, 0.22);
 
   -webkit-tap-highlight-color: transparent;
   user-select: none;
 
+  transform: translateZ(0);
+  will-change: transform, filter;
+  transition: transform 180ms ease, filter 180ms ease;
   animation: mgiTitleGlow 3.2s ease-in-out infinite;
 }
 
@@ -3881,24 +3918,27 @@ input, textarea, select {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(60% 50% at 50% 0%, rgba(239,0,255,.22) 0%, rgba(239,0,255,0) 70%);
-  opacity: .9;
   pointer-events: none;
+  opacity: 0.88;
+  background:
+    radial-gradient(60% 55% at 50% 0%, rgba(239, 0, 255, 0.22) 0%, rgba(239, 0, 255, 0) 72%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.07) 0 1px, rgba(255, 255, 255, 0) 1px 12px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0 1px, rgba(255, 255, 255, 0) 1px 12px);
 }
 
 #changeBank .t1::after {
   content: "";
   position: absolute;
   top: -60%;
-  left: -60%;
-  width: 40%;
-  height: 220%;
+  left: -80%;
+  width: 48%;
+  height: 240%;
   transform: rotate(25deg);
   background: linear-gradient(
     90deg,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,.78) 50%,
-    rgba(255,255,255,0) 100%
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.78) 50%,
+    rgba(255, 255, 255, 0) 100%
   );
   opacity: 0;
   pointer-events: none;
@@ -3909,44 +3949,284 @@ input, textarea, select {
     transform: translateY(-1px);
     filter: brightness(1.08) saturate(1.05);
   }
+
   #changeBank .t1:hover::after {
     opacity: 1;
-    animation: mgiShine 900ms cubic-bezier(.2,.7,.2,1);
+    animation: mgiShine 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 }
 
 #changeBank .t1:active {
   transform: translateY(0);
-  filter: brightness(.98);
+  filter: brightness(0.98);
 }
+
 #changeBank .t1:active::after {
   opacity: 1;
-  animation: mgiShine 650ms cubic-bezier(.2,.7,.2,1);
+  animation: mgiShine 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+#changeBank .t2 {
+  margin: 10px 12px 0;
+  color: var(--mgi-magenta);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: none;
+  text-shadow: 0 0 12px rgba(239, 0, 255, 0.18);
+}
+
+#changeBank table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-top: 10px;
+}
+
+#changeBank table td {
+  padding: 12px 10px 10px 0;
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+#changeBank table td + td {
+  width: auto;
+  white-space: normal;
+  padding-right: 0;
+  font-weight: 700;
+}
+
+#changeBank input,
+#changeBank select,
+#changeBank textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid var(--mgi-line);
+  background: var(--mgi-card);
+  color: var(--mgi-white);
+  padding: 12px 12px;
+  font-size: 16px;
+  line-height: 1.2;
+  outline: none;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 12px 26px rgba(0, 0, 0, 0.35);
+  transition: border-color 180ms ease, box-shadow 180ms ease, filter 180ms ease, transform 180ms ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#changeBank input::placeholder,
+#changeBank textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+#changeBank input:focus,
+#changeBank select:focus,
+#changeBank textarea:focus {
+  border-color: rgba(239, 0, 255, 0.6);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.07) inset,
+    0 0 0 3px rgba(239, 0, 255, 0.18),
+    0 18px 34px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.03) saturate(1.05);
+}
+
+#changeBank .note {
+  margin: 12px 12px 0;
+  color: var(--mgi-magenta);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  text-shadow:
+    0 0 14px rgba(239, 0, 255, 0.24),
+    0 1px 0 rgba(0, 0, 0, 0.55);
+  animation: mgiNoteBlink 1.35s ease-in-out infinite;
+}
+
+#changeBank .btn,
+#changeBank a.btn,
+#changeBank button.btn {
+  margin: 16px auto 0;
+  width: min(320px, calc(100% - 24px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 14px 18px;
+  min-height: 46px;
+
+  border-radius: 14px;
+  border: 2px solid transparent;
+
+  color: var(--mgi-white);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  background:
+    radial-gradient(120% 120% at 50% 0%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 58%) padding-box,
+    linear-gradient(180deg, #440053 0%, var(--mgi-deep) 55%, var(--mgi-ink) 100%) padding-box,
+    linear-gradient(135deg, var(--mgi-white) 0%, var(--mgi-lilac) 28%, var(--mgi-magenta) 58%, var(--mgi-violet) 100%) border-box;
+
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    0 0 24px rgba(239, 0, 255, 0.16);
+
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+
+  transform: translateZ(0);
+  will-change: transform, filter;
+  transition: transform 180ms ease, filter 180ms ease, box-shadow 180ms ease;
+}
+
+#changeBank .btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.85;
+  background:
+    radial-gradient(70% 60% at 50% 0%, rgba(239, 0, 255, 0.18) 0%, rgba(239, 0, 255, 0) 72%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px, rgba(255, 255, 255, 0) 1px 14px);
+}
+
+#changeBank .btn::after {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: -90%;
+  width: 45%;
+  height: 260%;
+  transform: rotate(25deg);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.75) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  #changeBank .btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.08) saturate(1.06);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.58),
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+      0 0 34px rgba(239, 0, 255, 0.22);
+  }
+
+  #changeBank .btn:hover::after {
+    opacity: 1;
+    animation: mgiShine 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+}
+
+#changeBank .btn:active {
+  transform: translateY(0);
+  filter: brightness(0.98);
+}
+
+#changeBank .btn:active::after {
+  opacity: 1;
+  animation: mgiShine 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 @keyframes mgiShine {
-  from { left: -60%; }
-  to   { left: 130%; }
+  from { left: -90%; }
+  to { left: 130%; }
 }
 
 @keyframes mgiTitleGlow {
   0%, 100% {
     box-shadow:
-      0 16px 34px rgba(0,0,0,.55),
-      0 0 0 1px rgba(255,255,255,.06) inset,
-      0 0 22px rgba(239,0,255,.15),
-      0 0 34px rgba(81,5,163,.18);
+      0 16px 34px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+      0 0 22px rgba(239, 0, 255, 0.15),
+      0 0 34px rgba(81, 5, 163, 0.18);
   }
   50% {
     box-shadow:
-      0 18px 38px rgba(0,0,0,.58),
-      0 0 0 1px rgba(255,255,255,.08) inset,
-      0 0 30px rgba(239,0,255,.24),
-      0 0 48px rgba(81,5,163,.28);
+      0 18px 38px rgba(0, 0, 0, 0.58),
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+      0 0 30px rgba(239, 0, 255, 0.24),
+      0 0 48px rgba(81, 5, 163, 0.28);
+  }
+}
+
+@keyframes mgiNoteBlink {
+  0%, 100% {
+    opacity: 0.78;
+    text-shadow:
+      0 0 10px rgba(239, 0, 255, 0.16),
+      0 1px 0 rgba(0, 0, 0, 0.55);
+  }
+  50% {
+    opacity: 1;
+    text-shadow:
+      0 0 18px rgba(239, 0, 255, 0.28),
+      0 0 34px rgba(81, 5, 163, 0.22),
+      0 1px 0 rgba(0, 0, 0, 0.55);
+  }
+}
+
+@keyframes mgiSuccessRing {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.92;
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+      0 0 14px rgba(239, 0, 255, 0.18),
+      0 0 22px rgba(81, 5, 163, 0.18);
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+      0 0 20px rgba(239, 0, 255, 0.26),
+      0 0 30px rgba(81, 5, 163, 0.26);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #changeBank .t1 { animation: none; }
-  #changeBank .t1::after { animation: none; }
+  div:where(.swal2-icon).swal2-success .swal2-success-ring {
+    animation: none;
+  }
+
+  #changeBank .t1 {
+    animation: none;
+    transition: none;
+  }
+
+  #changeBank .t1::after {
+    animation: none;
+  }
+
+  #changeBank .note {
+    animation: none;
+  }
+
+  #changeBank .btn::after {
+    animation: none;
+  }
 }
+
