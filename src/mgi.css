@@ -4228,4 +4228,479 @@ div:where(.swal2-icon).swal2-success .swal2-success-ring {
     animation: none;
   }
 }
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+div:where(.swal2-icon).swal2-success .swal2-success-ring {
+  position: absolute;
+  z-index: 2;
+  top: -0.25em;
+  left: -0.25em;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  border: 0.25em solid rgba(239, 0, 255, 0.28);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 0 22px rgba(239, 0, 255, 0.18);
+}
+
+#changeBank {
+  padding: 0 12px 14px;
+}
+
+#changeBank .t1 {
+  margin: 12px auto 14px;
+  padding: 12px 16px;
+  width: min(360px, calc(100% - 24px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  background: radial-gradient(120% 120% at 50% 0%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 55%) padding-box,
+    linear-gradient(180deg, #200236 0%, #3d0251 55%, #200236 100%) padding-box,
+    linear-gradient(135deg, #ffffff 0%, #cb3fff 28%, #ef00ff 58%, #5105a3 100%) border-box;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 0 26px rgba(239, 0, 255, 0.18),
+    0 0 40px rgba(81, 5, 163, 0.22);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55), 0 0 18px rgba(239, 0, 255, 0.22);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  transform: translateZ(0);
+  animation: mgiTitleGlow 3.2s ease-in-out infinite;
+}
+
+@supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+  #changeBank .t1 {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+#changeBank .t1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 50% at 50% 0%, rgba(239, 0, 255, 0.22) 0%, rgba(239, 0, 255, 0) 70%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+#changeBank .t1::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 40%;
+  height: 220%;
+  transform: rotate(25deg);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.78) 50%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  #changeBank .t1:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.08) saturate(1.05);
+  }
+
+  #changeBank .t1:hover::after {
+    opacity: 1;
+    animation: mgiShine 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+}
+
+#changeBank .t1:active {
+  transform: translateY(0);
+  filter: brightness(0.98);
+}
+
+#changeBank .t1:active::after {
+  opacity: 1;
+  animation: mgiShine 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+#changeBank .t2 {
+  margin-top: 10px;
+  color: #f700fd;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  text-shadow: 0 0 16px rgba(239, 0, 255, 0.18);
+}
+
+#changeBank table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+#changeBank table td {
+  padding: 0;
+  vertical-align: middle;
+}
+
+#changeBank table td:first-child {
+  padding: 0 10px 0 0;
+  width: 1%;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+#changeBank table td:last-child {
+  width: 100%;
+}
+
+#changeBank .note {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #f700fd;
+  font-weight: 900;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  animation: mgiBlink 1.2s linear infinite;
+  text-shadow: 0 0 18px rgba(239, 0, 255, 0.22);
+}
+
+#changeBank .btn,
+#changeBank a.btn {
+  margin-top: 15px;
+  display: block;
+  width: min(360px, calc(100% - 24px));
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(203, 63, 255, 0.55);
+  background: radial-gradient(120% 120% at 50% 0%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 60%) padding-box,
+    linear-gradient(180deg, #3d0251 0%, #200236 100%) padding-box;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0 22px rgba(239, 0, 255, 0.16);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  transform: translateZ(0);
+}
+
+@media (hover: hover) {
+  #changeBank .btn:hover,
+  #changeBank a.btn:hover {
+    filter: brightness(1.06) saturate(1.05);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.55), 0 0 28px rgba(239, 0, 255, 0.22);
+  }
+}
+
+#changeBank .btn:active,
+#changeBank a.btn:active {
+  filter: brightness(0.98);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.55), 0 0 18px rgba(239, 0, 255, 0.16);
+}
+
+#amopayramp .fabtns,
+#direpay .fabtns,
+#fpay .fabtns,
+#gggpay .fabtns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0 12px;
+}
+
+#amopayramp var,
+#direpay var,
+#fpay var,
+#gggpay var {
+  font-style: normal;
+}
+
+#amopayramp .fabtn,
+#direpay .fabtn,
+#fpay .fabtn,
+#gggpay .fabtn {
+  float: none;
+  width: 72px;
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid rgba(203, 63, 255, 0.65);
+  background: radial-gradient(120% 140% at 50% 0%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 58%) padding-box,
+    linear-gradient(180deg, #cb3fff 0%, #ef00ff 55%, #5105a3 100%) padding-box;
+  color: #200236;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  user-select: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.12) inset;
+  transition: transform 160ms ease, filter 160ms ease, box-shadow 160ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#amopayramp .fabtn::after,
+#direpay .fabtn::after,
+#fpay .fabtn::after,
+#gggpay .fabtn::after {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: -70%;
+  width: 45%;
+  height: 240%;
+  transform: rotate(25deg);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  #amopayramp .fabtn:hover,
+  #direpay .fabtn:hover,
+  #fpay .fabtn:hover,
+  #gggpay .fabtn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05) saturate(1.06);
+    box-shadow: 0 14px 22px rgba(0, 0, 0, 0.42), 0 0 22px rgba(239, 0, 255, 0.18);
+  }
+
+  #amopayramp .fabtn:hover::after,
+  #direpay .fabtn:hover::after,
+  #fpay .fabtn:hover::after,
+  #gggpay .fabtn:hover::after {
+    opacity: 1;
+    animation: mgiShine 850ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+}
+
+#amopayramp .fabtn:active,
+#direpay .fabtn:active,
+#fpay .fabtn:active,
+#gggpay .fabtn:active {
+  transform: translateY(0);
+  filter: brightness(0.98);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.45), 0 0 18px rgba(239, 0, 255, 0.15);
+}
+
+#amopayramp .fabtn:active::after,
+#direpay .fabtn:active::after,
+#fpay .fabtn:active::after,
+#gggpay .fabtn:active::after {
+  opacity: 1;
+  animation: mgiShine 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+#amopayramp .fabtn.selected,
+#direpay .fabtn.selected,
+#fpay .fabtn.selected,
+#gggpay .fabtn.selected {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.22);
+  background: radial-gradient(120% 140% at 50% 0%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 58%) padding-box,
+    linear-gradient(180deg, #200236 0%, #3d0251 55%, #200236 100%) padding-box;
+  box-shadow: 0 16px 26px rgba(0, 0, 0, 0.55), 0 0 30px rgba(239, 0, 255, 0.22);
+}
+
+#gggpay input,
+#gggpay select {
+  margin-top: 14px;
+}
+
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  font-size: 16px;
+  margin: 0;
+  padding: 12px 12px;
+  position: relative;
+  display: block;
+  outline: 0;
+  border-radius: 12px;
+  border: 1px solid rgba(203, 63, 255, 0.55);
+  background: rgba(255, 255, 255, 0.96);
+  color: #200236;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-user-select: text;
+  user-select: text;
+  box-sizing: border-box;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.55) inset;
+  transition: box-shadow 180ms ease, border-color 180ms ease, filter 180ms ease, transform 180ms ease;
+}
+
+textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(32, 2, 54, 0.55);
+  font-weight: 700;
+}
+
+select {
+  background-image: linear-gradient(45deg, transparent 50%, rgba(32, 2, 54, 0.75) 50%),
+    linear-gradient(135deg, rgba(32, 2, 54, 0.75) 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 34px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: rgba(239, 0, 255, 0.85);
+  box-shadow: 0 0 0 3px rgba(239, 0, 255, 0.22), 0 14px 28px rgba(0, 0, 0, 0.42), 0 0 22px rgba(239, 0, 255, 0.14);
+  filter: brightness(1.02);
+}
+
+#gggpay .btn.submit,
+#gggpay .btn.danger.cancel,
+#amopayramp .btn.submit,
+#amopayramp .btn.danger.cancel,
+#direpay .btn.submit,
+#direpay .btn.danger.cancel,
+#fpay .btn.submit,
+#fpay .btn.danger.cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(203, 63, 255, 0.55);
+  background: radial-gradient(120% 140% at 50% 0%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 62%) padding-box,
+    linear-gradient(180deg, #3d0251 0%, #200236 100%) padding-box;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.5), 0 0 18px rgba(239, 0, 255, 0.14);
+  transition: transform 160ms ease, filter 160ms ease, box-shadow 160ms ease;
+}
+
+@media (hover: hover) {
+  #gggpay .btn.submit:hover,
+  #gggpay .btn.danger.cancel:hover,
+  #amopayramp .btn.submit:hover,
+  #amopayramp .btn.danger.cancel:hover,
+  #direpay .btn.submit:hover,
+  #direpay .btn.danger.cancel:hover,
+  #fpay .btn.submit:hover,
+  #fpay .btn.danger.cancel:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.06) saturate(1.05);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.55), 0 0 26px rgba(239, 0, 255, 0.2);
+  }
+}
+
+#gggpay .btn.submit:active,
+#gggpay .btn.danger.cancel:active,
+#amopayramp .btn.submit:active,
+#amopayramp .btn.danger.cancel:active,
+#direpay .btn.submit:active,
+#direpay .btn.danger.cancel:active,
+#fpay .btn.submit:active,
+#fpay .btn.danger.cancel:active {
+  transform: translateY(0);
+  filter: brightness(0.98);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.55), 0 0 18px rgba(239, 0, 255, 0.14);
+}
+
+#gggpay .btn.danger.cancel,
+#amopayramp .btn.danger.cancel,
+#direpay .btn.danger.cancel,
+#fpay .btn.danger.cancel {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: radial-gradient(120% 140% at 50% 0%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 62%) padding-box,
+    linear-gradient(180deg, #191919 0%, #200236 100%) padding-box;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.55), 0 0 16px rgba(203, 63, 255, 0.1);
+}
+
+@keyframes mgiShine {
+  from {
+    left: -60%;
+  }
+  to {
+    left: 130%;
+  }
+}
+
+@keyframes mgiTitleGlow {
+  0%,
+  100% {
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 0 22px rgba(239, 0, 255, 0.15),
+      0 0 34px rgba(81, 5, 163, 0.18);
+  }
+  50% {
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.58), 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 0 30px rgba(239, 0, 255, 0.24),
+      0 0 48px rgba(81, 5, 163, 0.28);
+  }
+}
+
+@keyframes mgiBlink {
+  0%,
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.55;
+    filter: brightness(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #changeBank .t1 {
+    animation: none;
+  }
+
+  #changeBank .t1::after {
+    animation: none;
+  }
+
+  #changeBank .note {
+    animation: none;
+  }
+}
 
