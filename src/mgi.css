@@ -5192,3 +5192,22 @@ textarea[readonly] {
     animation: none;
   }
 }
+
+#deposit .fabtns{
+  display:grid!important;
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  gap:6px!important;
+  margin-top:6px!important;
+  padding:0 10px 0 0!important;
+  box-sizing:border-box!important
+}
+#deposit .fabtn{
+  float:none!important;
+  margin:0!important;
+  width:100%!important;
+  min-width:0!important;
+  box-sizing:border-box!important
+}
+@media (max-width:360px){
+  #deposit .fabtns{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+}
