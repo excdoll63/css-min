@@ -4553,11 +4553,20 @@ textarea[readonly] {
   opacity: 0.85;
 }
 #deposit .bank-info table td:last-child input,
-#deposit .bank-info table td.copy input{
-  font-weight:600!important;
-  transform:none!important;
-  filter:none!important;
-  transition:none!important;
+#deposit .bank-info table td.copy input {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  outline: 0 !important;
+  transform: none !important;
+  filter: none !important;
+  transition: none !important;
+  animation: none !important;
+  font-weight: 600 !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  opacity: 1 !important;
 }
 
 #deposit .bank-info table td:last-child input:hover,
@@ -4565,9 +4574,16 @@ textarea[readonly] {
 #deposit .bank-info table td:last-child input:focus,
 #deposit .bank-info table td.copy input:hover,
 #deposit .bank-info table td.copy input:active,
-#deposit .bank-info table td.copy input:focus{
-  transform:none!important;
-  filter:none!important;
+#deposit .bank-info table td.copy input:focus {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  outline: 0 !important;
+  transform: none !important;
+  filter: none !important;
+  transition: none !important;
+  animation: none !important;
 }
 
 input[type=date],
