@@ -5195,3 +5195,119 @@ textarea[readonly] {
     animation: none;
   }
 }
+
+#deposit .fabtn.selected {
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    text-shadow: 0 1px 0 rgba(0,0,0,.55), 0 0 14px rgba(239,0,255,.22);
+    background:
+        radial-gradient(110% 140% at 50% 0, rgba(255,255,255,.34) 0, rgba(255,255,255,0) 62%) padding-box,
+        linear-gradient(180deg, rgba(239,0,255,.22) 0, rgba(81,5,163,.62) 46%, rgba(32,2,54,.98) 100%) padding-box,
+        conic-gradient(from 210deg at 50% 50%, #ffffff 0deg, #cb3fff 75deg, #ef00ff 150deg, #5105a3 235deg, #3d0251 310deg, #ffffff 360deg) border-box;
+    box-shadow:
+        0 18px 36px rgba(0,0,0,.72),
+        0 0 0 1px rgba(255,255,255,.14) inset,
+        0 0 30px rgba(239,0,255,.30),
+        0 0 60px rgba(81,5,163,.22);
+    filter: saturate(1.12) brightness(1.04);
+    animation: mgiFabtnSelectedPulse 2.9s ease-in-out infinite;
+}
+
+#deposit .fabtn.selected::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: .14;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            rgba(255,255,255,.18) 0,
+            rgba(255,255,255,.18) 1px,
+            rgba(255,255,255,0) 7px,
+            rgba(255,255,255,0) 10px
+        ),
+        radial-gradient(70% 90% at 50% 0, rgba(239,0,255,.22) 0, rgba(239,0,255,0) 70%);
+    transform: translateX(-18%);
+    animation: mgiFabtnSelectedScan 2.4s linear infinite;
+}
+
+#deposit .fabtn.selected::after {
+    content: "";
+    position: absolute;
+    top: -70%;
+    left: -90%;
+    width: 60%;
+    height: 240%;
+    transform: rotate(25deg);
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,.92) 50%,
+        rgba(255,255,255,0) 100%
+    );
+    animation: mgiFabtnSelectedShine 3.25s cubic-bezier(.2,.7,.2,1) infinite;
+}
+
+#deposit .fabtn.selected:active {
+    filter: saturate(1.18) brightness(1.08);
+    box-shadow:
+        0 18px 36px rgba(0,0,0,.78),
+        0 0 0 1px rgba(255,255,255,.16) inset,
+        0 0 38px rgba(239,0,255,.38),
+        0 0 78px rgba(81,5,163,.28);
+}
+
+@keyframes mgiFabtnSelectedPulse {
+    0%, 100% {
+        filter: saturate(1.10) brightness(1.03);
+        box-shadow:
+            0 18px 36px rgba(0,0,0,.72),
+            0 0 0 1px rgba(255,255,255,.14) inset,
+            0 0 26px rgba(239,0,255,.26),
+            0 0 54px rgba(81,5,163,.20);
+    }
+    50% {
+        filter: saturate(1.18) brightness(1.06);
+        box-shadow:
+            0 20px 40px rgba(0,0,0,.76),
+            0 0 0 1px rgba(255,255,255,.16) inset,
+            0 0 34px rgba(239,0,255,.34),
+            0 0 66px rgba(81,5,163,.26);
+    }
+}
+
+@keyframes mgiFabtnSelectedScan {
+    0% { transform: translateX(-18%); }
+    100% { transform: translateX(18%); }
+}
+
+@keyframes mgiFabtnSelectedShine {
+    0%, 64% {
+        opacity: 0;
+        left: -90%;
+    }
+    74% {
+        opacity: .95;
+        left: -30%;
+    }
+    100% {
+        opacity: 0;
+        left: 140%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #deposit .fabtn.selected {
+        animation: none;
+    }
+    #deposit .fabtn.selected::before,
+    #deposit .fabtn.selected::after {
+        animation: none;
+        opacity: .12;
+    }
+}
