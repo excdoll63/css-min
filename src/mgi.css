@@ -3826,3 +3826,127 @@ body {
 input, textarea, select {
   font-size: 16px !important;
 }
+
+#changeBank .t1 {
+  margin: 12px auto 14px;
+  padding: 12px 16px;
+
+  width: min(360px, calc(100% - 24px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.1;
+
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 2px solid transparent;
+
+  background:
+    radial-gradient(120% 120% at 50% 0%, rgba(255,255,255,.22) 0%, rgba(255,255,255,0) 55%) padding-box,
+    linear-gradient(180deg, #200236 0%, #3D0251 55%, #200236 100%) padding-box,
+    linear-gradient(135deg, #FFFFFF 0%, #CB3FFF 28%, #EF00FF 58%, #5105A3 100%) border-box;
+
+  box-shadow:
+    0 16px 34px rgba(0,0,0,.55),
+    0 0 0 1px rgba(255,255,255,.06) inset,
+    0 0 26px rgba(239,0,255,.18),
+    0 0 40px rgba(81,5,163,.22);
+
+  text-shadow:
+    0 1px 0 rgba(0,0,0,.55),
+    0 0 18px rgba(239,0,255,.22);
+
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+
+  animation: mgiTitleGlow 3.2s ease-in-out infinite;
+}
+
+@supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+  #changeBank .t1 {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+#changeBank .t1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 50% at 50% 0%, rgba(239,0,255,.22) 0%, rgba(239,0,255,0) 70%);
+  opacity: .9;
+  pointer-events: none;
+}
+
+#changeBank .t1::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 40%;
+  height: 220%;
+  transform: rotate(25deg);
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,.78) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  #changeBank .t1:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.08) saturate(1.05);
+  }
+  #changeBank .t1:hover::after {
+    opacity: 1;
+    animation: mgiShine 900ms cubic-bezier(.2,.7,.2,1);
+  }
+}
+
+#changeBank .t1:active {
+  transform: translateY(0);
+  filter: brightness(.98);
+}
+#changeBank .t1:active::after {
+  opacity: 1;
+  animation: mgiShine 650ms cubic-bezier(.2,.7,.2,1);
+}
+
+@keyframes mgiShine {
+  from { left: -60%; }
+  to   { left: 130%; }
+}
+
+@keyframes mgiTitleGlow {
+  0%, 100% {
+    box-shadow:
+      0 16px 34px rgba(0,0,0,.55),
+      0 0 0 1px rgba(255,255,255,.06) inset,
+      0 0 22px rgba(239,0,255,.15),
+      0 0 34px rgba(81,5,163,.18);
+  }
+  50% {
+    box-shadow:
+      0 18px 38px rgba(0,0,0,.58),
+      0 0 0 1px rgba(255,255,255,.08) inset,
+      0 0 30px rgba(239,0,255,.24),
+      0 0 48px rgba(81,5,163,.28);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #changeBank .t1 { animation: none; }
+  #changeBank .t1::after { animation: none; }
+}
