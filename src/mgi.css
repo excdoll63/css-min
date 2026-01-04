@@ -1312,6 +1312,7 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
 }
 
 #deposit .fabtn {
+  box-sizing: border-box;
   float: left;
   margin: 5px 5px 0 0;
   padding: 9px 5px;
@@ -3772,6 +3773,7 @@ body .light-theme .current {
 }
 
 #deposit .fabtn {
+  box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   float: left;
   margin: 6px 6px 0 0;
@@ -3795,6 +3797,7 @@ body .light-theme .current {
 }
 
 #deposit .fabtn {
+  box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   border: 2px solid transparent;
   border-radius: 999px;
@@ -5116,6 +5119,7 @@ textarea[readonly] {
 }
 
 #deposit .fabtn {
+  box-sizing: border-box;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -5123,7 +5127,7 @@ textarea[readonly] {
 
 #deposit .fabtn.selected {
   color: #ffffff;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   border-radius: 20px;
   text-shadow: 0 1px 0 rgba(0,0,0,.55), 0 0 12px rgba(203,63,255,.18);
   background:
@@ -5145,7 +5149,6 @@ textarea[readonly] {
     0 0 26px rgba(203,63,255,.24),
     0 0 46px rgba(81,5,163,.22);
   filter: saturate(1.10) brightness(1.05);
-  transform: translateY(-1px);
   animation: mgiFabtnBreath 3.1s ease-in-out infinite;
 }
 
@@ -5191,23 +5194,4 @@ textarea[readonly] {
   #deposit .fabtn.selected {
     animation: none;
   }
-}
-
-#deposit .fabtns{
-  display:grid!important;
-  grid-template-columns:repeat(6,minmax(0,1fr))!important;
-  gap:6px!important;
-  margin-top:6px!important;
-  padding:0 10px 0 0!important;
-  box-sizing:border-box!important
-}
-#deposit .fabtn{
-  float:none!important;
-  margin:0!important;
-  width:100%!important;
-  min-width:0!important;
-  box-sizing:border-box!important
-}
-@media (max-width:360px){
-  #deposit .fabtns{grid-template-columns:repeat(5,minmax(0,1fr))!important}
 }
