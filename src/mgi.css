@@ -4552,3 +4552,45 @@ input[readonly],
 textarea[readonly] {
   opacity: 0.85;
 }
+#deposit .bank-info table td:last-child input,
+#deposit .bank-info table td.copy input{
+  font-weight:600!important;
+  transform:none!important;
+  filter:none!important;
+  transition:none!important;
+}
+
+#deposit .bank-info table td:last-child input:hover,
+#deposit .bank-info table td:last-child input:active,
+#deposit .bank-info table td:last-child input:focus,
+#deposit .bank-info table td.copy input:hover,
+#deposit .bank-info table td.copy input:active,
+#deposit .bank-info table td.copy input:focus{
+  transform:none!important;
+  filter:none!important;
+}
+
+input[type=date],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+textarea{
+  font-weight:600!important;
+}
+
+#amopayramp .fabtn,
+#direpay .fabtn,
+#fpay .fabtn,
+#gggpay .fabtn,
+#deposit .fabtn{
+  font-weight:600!important;
+}
