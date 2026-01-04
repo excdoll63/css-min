@@ -3997,7 +3997,6 @@ div:where(.swal2-icon).swal2-success .swal2-success-ring {
 #changeBank table td + td {
   width: auto;
   white-space: normal;
-  padding-right: 0;
   font-weight: 700;
 }
 
