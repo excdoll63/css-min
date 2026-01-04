@@ -4605,3 +4605,17 @@ textarea[readonly] {
   border: 1px solid rgba(239, 0, 255, .35);
   padding: 12px 10px;
 }
+
+#withdraw .inputs td{
+  font-size:13px;
+}
+
+#withdraw .inputs input[disabled],
+#withdraw .inputs select[disabled],
+#withdraw .inputs textarea[disabled],
+#withdraw .inputs input[readonly],
+#withdraw .inputs select[readonly],
+#withdraw .inputs textarea[readonly]{
+  font-size:13px !important;
+  font-weight:600;
+}
