@@ -4852,15 +4852,6 @@ textarea[readonly] {
   box-shadow: 0 12px 26px rgba(25,25,25,.48), 0 0 0 1px rgba(255,255,255,.10) inset, 0 0 22px rgba(239,0,255,.18) !important;
 }
 
-#home-refer .refer,
-#home-refer a.refer,
-#home-refer .btn.refer,
-#home-refer a.btn.refer {
-  background: linear-gradient(180deg,#ef00ff 0,#cb3fff 100%) padding-box, linear-gradient(135deg,#ffffff 0,#cb3fff 30%,#ef00ff 60%,#5105a3 100%) border-box !important;
-  border: 2px solid transparent !important;
-  z-index: 2;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   #home-refer .refer,
   #home-refer a.refer,
