@@ -5114,3 +5114,81 @@ textarea[readonly] {
     opacity: 0;
   }
 }
+
+#deposit .fabtn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+#deposit .fabtn.selected {
+  color: #ffffff;
+  border: 3px solid transparent;
+  border-radius: 20px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.55), 0 0 12px rgba(203,63,255,.18);
+  background:
+    radial-gradient(120% 140% at 50% 0%,
+      rgba(255,255,255,.26) 0%,
+      rgba(255,255,255,0) 62%) padding-box,
+    linear-gradient(180deg,
+      rgba(81,5,163,.55) 0%,
+      rgba(61,2,81,.75) 52%,
+      rgba(32,2,54,.98) 100%) padding-box,
+    linear-gradient(135deg,
+      #ffffff 0%,
+      #cb3fff 26%,
+      #5105a3 62%,
+      #200236 100%) border-box;
+  box-shadow:
+    0 18px 36px rgba(0,0,0,.70),
+    0 0 0 1px rgba(255,255,255,.12) inset,
+    0 0 26px rgba(203,63,255,.24),
+    0 0 46px rgba(81,5,163,.22);
+  filter: saturate(1.10) brightness(1.05);
+  transform: translateY(-1px);
+  animation: mgiFabtnBreath 3.1s ease-in-out infinite;
+}
+
+#deposit .fabtn.selected::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background:
+    radial-gradient(60% 40% at 50% 0%,
+      rgba(239,0,255,.20) 0%,
+      rgba(239,0,255,0) 70%);
+  opacity: .9;
+  pointer-events: none;
+}
+
+#deposit .fabtn.selected:active {
+  transform: translateY(0);
+  box-shadow:
+    0 14px 28px rgba(0,0,0,.72),
+    0 0 0 1px rgba(255,255,255,.12) inset,
+    0 0 30px rgba(203,63,255,.28),
+    0 0 54px rgba(81,5,163,.24);
+}
+
+@keyframes mgiFabtnBreath {
+  0%, 100% {
+    box-shadow:
+      0 18px 36px rgba(0,0,0,.70),
+      0 0 0 1px rgba(255,255,255,.12) inset,
+      0 0 22px rgba(203,63,255,.18),
+      0 0 40px rgba(81,5,163,.18);
+  }
+  50% {
+    box-shadow:
+      0 20px 40px rgba(0,0,0,.74),
+      0 0 0 1px rgba(255,255,255,.14) inset,
+      0 0 32px rgba(203,63,255,.26),
+      0 0 56px rgba(81,5,163,.26);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #deposit .fabtn.selected {
+    animation: none;
+  }
+}
