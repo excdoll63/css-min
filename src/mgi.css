@@ -4552,8 +4552,9 @@ input[readonly],
 textarea[readonly] {
   opacity: 0.85;
 }
-#deposit .bank-info table td:last-child input,
-#deposit .bank-info table td.copy input {
+
+#deposit .bank-info table td.copy input,
+#deposit .bank-info table td:last-child input {
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
@@ -4563,50 +4564,44 @@ textarea[readonly] {
   filter: none !important;
   transition: none !important;
   animation: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
   font-weight: 600 !important;
   color: #000 !important;
   -webkit-text-fill-color: #000 !important;
   opacity: 1 !important;
 }
 
-#deposit .bank-info table td:last-child input:hover,
-#deposit .bank-info table td:last-child input:active,
-#deposit .bank-info table td:last-child input:focus,
 #deposit .bank-info table td.copy input:hover,
+#deposit .bank-info table td:last-child input:hover,
 #deposit .bank-info table td.copy input:active,
-#deposit .bank-info table td.copy input:focus {
-  background: transparent !important;
-  border: 0 !important;
+#deposit .bank-info table td:last-child input:active,
+#deposit .bank-info table td.copy input:focus,
+#deposit .bank-info table td:last-child input:focus {
   box-shadow: none !important;
   text-shadow: none !important;
   outline: 0 !important;
   transform: none !important;
   filter: none !important;
-  transition: none !important;
-  animation: none !important;
 }
 
-input[type=date],
-input[type=datetime-local],
-input[type=email],
-input[type=month],
-input[type=number],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=text],
-input[type=time],
-input[type=url],
-input[type=week],
-select,
-textarea{
-  font-weight:600!important;
+#deposit .form-box input,
+#deposit .form-box select,
+#deposit .form-box textarea {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
 }
 
-#amopayramp .fabtn,
-#direpay .fabtn,
-#fpay .fabtn,
-#gggpay .fabtn,
-#deposit .fabtn{
-  font-weight:600!important;
+#deposit .form-box input,
+#deposit .form-box select {
+  border-radius: 12px;
+  border: 1px solid rgba(239, 0, 255, .35);
+  padding: 12px 10px;
 }
