@@ -4619,3 +4619,99 @@ textarea[readonly] {
   font-size:13px !important;
   font-weight:600;
 }
+
+#home-lucky .btn {
+  isolation: isolate;
+  animation: mgiLuckyBtnGlow 3.2s ease-in-out infinite;
+}
+
+#home-lucky .btn.more {
+  animation-delay: .6s;
+}
+
+#home-lucky .btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .9;
+  background:
+    radial-gradient(70% 140% at 0% 0%, rgba(255,255,255,.26) 0%, rgba(255,255,255,0) 58%),
+    radial-gradient(80% 160% at 100% 0%, rgba(239,0,255,.20) 0%, rgba(239,0,255,0) 55%),
+    radial-gradient(120% 220% at 50% 120%, rgba(81,5,163,.18) 0%, rgba(81,5,163,0) 60%);
+}
+
+#home-lucky .btn::after {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: -35%;
+  width: 55%;
+  height: 240%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-160%) rotate(25deg);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.78) 50%, rgba(255,255,255,0) 100%);
+  animation: mgiLuckySweep 3.1s cubic-bezier(.2,.7,.2,1) infinite;
+}
+
+@media (hover: hover) {
+  #home-lucky .btn:hover {
+    filter: brightness(1.08) saturate(1.06);
+    box-shadow: 0 12px 26px rgba(25,25,25,.52), 0 0 0 1px rgba(255,255,255,.12) inset, 0 0 28px rgba(239,0,255,.26);
+    transform: translateY(-1px);
+  }
+  #home-lucky .btn:hover::after {
+    animation-duration: 900ms;
+    opacity: 1;
+  }
+}
+
+#home-lucky .btn:active {
+  filter: brightness(1.05);
+  transform: translateY(0);
+}
+
+#home-lucky .btn:active::after {
+  animation-duration: 750ms;
+  opacity: 1;
+}
+
+@keyframes mgiLuckyBtnGlow {
+  0%, 100% {
+    box-shadow: 0 10px 22px rgba(25,25,25,.45), 0 0 0 1px rgba(255,255,255,.10) inset, 0 0 18px rgba(239,0,255,.18);
+    filter: saturate(1);
+  }
+  50% {
+    box-shadow: 0 12px 26px rgba(25,25,25,.52), 0 0 0 1px rgba(255,255,255,.12) inset, 0 0 30px rgba(239,0,255,.28);
+    filter: saturate(1.06);
+  }
+}
+
+@keyframes mgiLuckySweep {
+  0% {
+    transform: translateX(-160%) rotate(25deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: .55;
+  }
+  42% {
+    opacity: .55;
+  }
+  58% {
+    transform: translateX(220%) rotate(25deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(220%) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #home-lucky .btn,
+  #home-lucky .btn::after {
+    animation: none;
+  }
+}
