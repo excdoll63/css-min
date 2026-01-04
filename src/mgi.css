@@ -4715,3 +4715,235 @@ textarea[readonly] {
     animation: none;
   }
 }
+
+@keyframes mgiSaberSweep {
+  from { left: -85%; }
+  to { left: 145%; }
+}
+
+@keyframes mgiReferBreath {
+  0%, 100% {
+    transform: translateZ(0) scale(1);
+    filter: brightness(1) saturate(1);
+    box-shadow: 0 12px 26px rgba(25,25,25,.48), 0 0 0 1px rgba(255,255,255,.12) inset, 0 0 26px rgba(239,0,255,.20);
+  }
+  50% {
+    transform: translateZ(0) scale(1.035);
+    filter: brightness(1.06) saturate(1.06);
+    box-shadow: 0 14px 30px rgba(25,25,25,.52), 0 0 0 1px rgba(255,255,255,.14) inset, 0 0 40px rgba(239,0,255,.30);
+  }
+}
+
+#home-lucky .btn,
+#home-lucky a.btn,
+#home-lucky button.btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#home-lucky .btn::after,
+#home-lucky a.btn::after,
+#home-lucky button.btn::after {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: -85%;
+  width: 46%;
+  height: 240%;
+  transform: rotate(25deg);
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,.85) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  #home-lucky .btn:hover,
+  #home-lucky a.btn:hover,
+  #home-lucky button.btn:hover {
+    filter: brightness(1.06) saturate(1.04);
+  }
+
+  #home-lucky .btn:hover::after,
+  #home-lucky a.btn:hover::after,
+  #home-lucky button.btn:hover::after {
+    opacity: 1;
+    animation: mgiSaberSweep 900ms cubic-bezier(.2,.7,.2,1);
+  }
+
+  #home-lucky .btn:active::after,
+  #home-lucky a.btn:active::after,
+  #home-lucky button.btn:active::after {
+    opacity: 1;
+    animation: mgiSaberSweep 700ms cubic-bezier(.2,.7,.2,1);
+  }
+}
+
+@media (hover: none) {
+  #home-lucky .btn::after,
+  #home-lucky a.btn::after,
+  #home-lucky button.btn::after {
+    opacity: .55;
+    animation: mgiSaberSweep 2.9s cubic-bezier(.2,.7,.2,1) infinite;
+  }
+
+  #home-lucky .btn.more::after,
+  #home-lucky a.btn.more::after,
+  #home-lucky button.btn.more::after {
+    animation-delay: 1.1s;
+  }
+}
+
+#home-refer .btn,
+#home-refer .copy,
+#home-refer a.btn,
+#home-refer a.copy,
+#home-refer button.btn,
+#home-refer button.copy {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#home-refer .btn::after,
+#home-refer .copy::after,
+#home-refer a.btn::after,
+#home-refer a.copy::after,
+#home-refer button.btn::after,
+#home-refer button.copy::after {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: -85%;
+  width: 46%;
+  height: 240%;
+  transform: rotate(25deg);
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,.85) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+}
+
+#home-refer .btn.downline,
+#home-refer .copy,
+#home-refer .btn.more,
+#home-refer a.btn.downline,
+#home-refer a.copy,
+#home-refer a.btn.more {
+  background: linear-gradient(180deg,#5105a3 0,#200236 100%) padding-box, linear-gradient(135deg,#ef00ff 0,#cb3fff 50%,#5105a3 100%) border-box !important;
+  border: 2px solid transparent !important;
+  box-shadow: 0 12px 26px rgba(25,25,25,.48), 0 0 0 1px rgba(255,255,255,.10) inset, 0 0 22px rgba(239,0,255,.18) !important;
+}
+
+#home-refer .refer,
+#home-refer a.refer,
+#home-refer .btn.refer,
+#home-refer a.btn.refer {
+  background: linear-gradient(180deg,#ef00ff 0,#cb3fff 100%) padding-box, linear-gradient(135deg,#ffffff 0,#cb3fff 30%,#ef00ff 60%,#5105a3 100%) border-box !important;
+  border: 2px solid transparent !important;
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #home-refer .refer,
+  #home-refer a.refer,
+  #home-refer .btn.refer,
+  #home-refer a.btn.refer {
+    animation: mgiReferBreath 2.8s ease-in-out infinite;
+  }
+}
+
+@media (hover: hover) {
+  #home-refer .btn.downline:hover,
+  #home-refer .copy:hover,
+  #home-refer .btn.more:hover,
+  #home-refer a.btn.downline:hover,
+  #home-refer a.copy:hover,
+  #home-refer a.btn.more:hover {
+    transform: translateY(-1px) translateZ(0);
+    filter: brightness(1.06) saturate(1.04);
+  }
+
+  #home-refer .btn.downline:hover::after,
+  #home-refer .copy:hover::after,
+  #home-refer .btn.more:hover::after,
+  #home-refer a.btn.downline:hover::after,
+  #home-refer a.copy:hover::after,
+  #home-refer a.btn.more:hover::after {
+    opacity: 1;
+    animation: mgiSaberSweep 900ms cubic-bezier(.2,.7,.2,1);
+  }
+
+  #home-refer .btn.downline:active::after,
+  #home-refer .copy:active::after,
+  #home-refer .btn.more:active::after,
+  #home-refer a.btn.downline:active::after,
+  #home-refer a.copy:active::after,
+  #home-refer a.btn.more:active::after {
+    opacity: 1;
+    animation: mgiSaberSweep 700ms cubic-bezier(.2,.7,.2,1);
+  }
+}
+
+@media (hover: none) {
+  #home-refer .btn.downline::after,
+  #home-refer .copy::after,
+  #home-refer .btn.more::after,
+  #home-refer a.btn.downline::after,
+  #home-refer a.copy::after,
+  #home-refer a.btn.more::after {
+    opacity: .55;
+    animation: mgiSaberSweep 3.0s cubic-bezier(.2,.7,.2,1) infinite;
+  }
+
+  #home-refer .btn.downline::after,
+  #home-refer a.btn.downline::after {
+    animation-delay: 0s;
+  }
+
+  #home-refer .copy::after,
+  #home-refer a.copy::after {
+    animation-delay: .9s;
+  }
+
+  #home-refer .btn.more::after,
+  #home-refer a.btn.more::after {
+    animation-delay: 1.8s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #home-lucky .btn::after,
+  #home-lucky a.btn::after,
+  #home-lucky button.btn::after,
+  #home-refer .btn::after,
+  #home-refer .copy::after,
+  #home-refer a.btn::after,
+  #home-refer a.copy::after,
+  #home-refer button.btn::after,
+  #home-refer button.copy::after,
+  #home-refer .refer,
+  #home-refer a.refer,
+  #home-refer .btn.refer,
+  #home-refer a.btn.refer {
+    animation: none !important;
+    transition: none !important;
+  }
+}
