@@ -5311,3 +5311,35 @@ textarea[readonly] {
         opacity: .12;
     }
 }
+
+@keyframes mgiSwalRing{
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
+@keyframes mgiSwalPop{
+  0%{transform:scale(.86);filter:brightness(.95)}
+  60%{transform:scale(1.06);filter:brightness(1.10)}
+  100%{transform:scale(1);filter:brightness(1)}
+}
+div:where(.swal2-icon).swal2-info{
+  border-color:rgba(203,63,255,.92)!important;
+  color:#cb3fff!important;
+  background:radial-gradient(120% 90% at 50% 18%,rgba(255,255,255,.16) 0,rgba(255,255,255,0) 55%),linear-gradient(180deg,rgba(81,5,163,.38) 0,rgba(61,2,81,.78) 55%,rgba(32,2,54,.96) 100%)!important;
+  box-shadow:0 0 0 1px rgba(255,255,255,.08) inset,0 0 18px rgba(239,0,255,.32),0 0 44px rgba(81,5,163,.26)!important;
+  text-shadow:0 1px 0 rgba(0,0,0,.55),0 0 18px rgba(239,0,255,.18);
+}
+div:where(.swal2-icon).swal2-info::before{
+  content:"";
+  position:absolute;
+  inset:-.42em;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:-1;
+  opacity:.55;
+  filter:blur(7px);
+  background:conic-gradient(from 90deg,rgba(239,0,255,0) 0deg,rgba(239,0,255,.70) 55deg,rgba(203,63,255,0) 120deg,rgba(81,5,163,.55) 180deg,rgba(239,0,255,0) 360deg);
+  animation:mgiSwalRing 2.8s linear infinite;
+}
+div:where(.swal2-icon).swal2-info.swal2-icon-show{
+  animation:mgiSwalPop .55s cubic-bezier(.2,.9,.2,1) both;
+}
