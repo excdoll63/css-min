@@ -3843,8 +3843,8 @@ input, textarea, select {
 div:where(.swal2-icon).swal2-info,
 div:where(.swal2-icon).swal2-success,
 div:where(.swal2-icon).swal2-error {
-  --mgi-swal-rgb: 239, 0, 255;
-  --mgi-swal-rgb2: 81, 5, 163;
+  --mgi-swal-rgb: 203, 63, 255;
+  --mgi-swal-rgb2: 239, 0, 255;
   position: relative;
   overflow: visible;
   box-sizing: content-box;
@@ -3876,12 +3876,12 @@ div:where(.swal2-icon).swal2-error::before {
   position: absolute;
   inset: -0.25em;
   box-sizing: content-box;
-  border: 0.25em solid rgba(var(--mgi-swal-rgb),0.28);
+  border: 0.25em solid rgba(var(--mgi-swal-rgb),0.30);
   border-radius: 50%;
   box-shadow:
     0 0 0 1px rgba(255,255,255,0.06) inset,
     0 0 18px rgba(var(--mgi-swal-rgb),0.22),
-    0 0 26px rgba(var(--mgi-swal-rgb2),0.22);
+    0 0 26px rgba(var(--mgi-swal-rgb2),0.20);
   filter: drop-shadow(0 10px 18px rgba(0,0,0,0.45));
   animation: mgiSuccessRing 2.4s ease-in-out infinite;
   pointer-events: none;
@@ -3909,69 +3909,108 @@ div:where(.swal2-icon).swal2-error > * {
 }
 
 div:where(.swal2-icon).swal2-info {
-  --mgi-swal-rgb: 203, 63, 255;
-  --mgi-swal-rgb2: 239, 0, 255;
-}
-
-div:where(.swal2-icon).swal2-success {
-  --mgi-swal-rgb: 239, 0, 255;
+  --mgi-swal-rgb: 63, 195, 238;
   --mgi-swal-rgb2: 81, 5, 163;
 }
 
+div:where(.swal2-icon).swal2-success {
+  --mgi-swal-rgb: 46, 242, 200;
+  --mgi-swal-rgb2: 63, 195, 238;
+}
+
 div:where(.swal2-icon).swal2-error {
-  --mgi-swal-rgb: 239, 0, 255;
-  --mgi-swal-rgb2: 61, 2, 81;
+  --mgi-swal-rgb: 255, 72, 72;
+  --mgi-swal-rgb2: 239, 0, 255;
 }
 
 div:where(.swal2-icon).swal2-info .swal2-icon-content {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Bai Jamjuree", "Segoe UI Symbol", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 900;
   font-size: 2.85em;
   line-height: 1;
   transform: translateY(-0.04em);
-  color: var(--mgi-white);
+  color: rgb(var(--mgi-swal-rgb));
   text-shadow:
-    0 0 14px rgba(var(--mgi-swal-rgb),0.32),
+    0 0 14px rgba(var(--mgi-swal-rgb),0.34),
     0 0 22px rgba(var(--mgi-swal-rgb2),0.22),
     0 1px 0 rgba(0,0,0,0.55);
   filter: drop-shadow(0 10px 16px rgba(0,0,0,0.35));
 }
 
-div:where(.swal2-icon).swal2-success .swal2-success-ring {
-  display: none !important;
-}
-
+div:where(.swal2-icon).swal2-success .swal2-success-line-tip,
+div:where(.swal2-icon).swal2-success .swal2-success-line-long,
 div:where(.swal2-icon).swal2-success .swal2-success-fix,
 div:where(.swal2-icon).swal2-success .swal2-success-circular-line-left,
 div:where(.swal2-icon).swal2-success .swal2-success-circular-line-right {
-  background: transparent !important;
+  display: none !important;
 }
 
-div:where(.swal2-icon).swal2-success .swal2-success-line-tip,
-div:where(.swal2-icon).swal2-success .swal2-success-line-long {
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(203,63,255,1) 60%, rgba(239,0,255,1) 100%) !important;
-  box-shadow:
-    0 0 14px rgba(var(--mgi-swal-rgb),0.28),
+div:where(.swal2-icon).swal2-success .swal2-success-ring {
+  display: flex !important;
+  position: absolute;
+  inset: 0;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none !important;
+  z-index: 3;
+  pointer-events: none;
+  animation: none !important;
+}
+
+div:where(.swal2-icon).swal2-success .swal2-success-ring::before {
+  content: "✓";
+  font-family: "Montserrat", "Bai Jamjuree", "Segoe UI Symbol", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2.85em;
+  line-height: 1;
+  transform: translateY(-0.04em);
+  color: rgb(var(--mgi-swal-rgb));
+  text-shadow:
+    0 0 14px rgba(var(--mgi-swal-rgb),0.34),
     0 0 22px rgba(var(--mgi-swal-rgb2),0.22),
     0 1px 0 rgba(0,0,0,0.55);
-  border-radius: 999px;
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,0.35));
 }
 
 div:where(.swal2-icon).swal2-error .swal2-x-mark-line-left,
 div:where(.swal2-icon).swal2-error .swal2-x-mark-line-right {
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(203,63,255,1) 60%, rgba(239,0,255,1) 100%) !important;
-  box-shadow:
-    0 0 14px rgba(var(--mgi-swal-rgb),0.28),
-    0 0 22px rgba(var(--mgi-swal-rgb2),0.22),
-    0 1px 0 rgba(0,0,0,0.55);
-  border-radius: 999px;
+  display: none !important;
 }
 
 div:where(.swal2-icon).swal2-error .swal2-x-mark {
-  align-self: stretch;
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 12px 18px rgba(0,0,0,0.38));
+  display: flex !important;
+  position: absolute;
+  inset: 0;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transform: none !important;
+  filter: none !important;
+  pointer-events: none;
+}
+
+div:where(.swal2-icon).swal2-error .swal2-x-mark::before {
+  content: "✕";
+  font-family: "Montserrat", "Bai Jamjuree", "Segoe UI Symbol", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2.75em;
+  line-height: 1;
+  transform: translateY(-0.04em);
+  color: rgb(var(--mgi-swal-rgb));
+  text-shadow:
+    0 0 14px rgba(var(--mgi-swal-rgb),0.34),
+    0 0 22px rgba(var(--mgi-swal-rgb2),0.22),
+    0 1px 0 rgba(0,0,0,0.55);
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,0.35));
 }
 
 
@@ -4313,16 +4352,16 @@ div:where(.swal2-icon).swal2-error .swal2-x-mark {
     opacity: 0.92;
     box-shadow:
       0 0 0 1px rgba(255, 255, 255, 0.06) inset,
-      0 0 14px rgba(239, 0, 255, 0.18),
-      0 0 22px rgba(81, 5, 163, 0.18);
+      0 0 14px rgba(var(--mgi-swal-rgb), 0.18),
+      0 0 22px rgba(var(--mgi-swal-rgb2), 0.18);
   }
   50% {
     transform: scale(1.03);
     opacity: 1;
     box-shadow:
       0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-      0 0 20px rgba(239, 0, 255, 0.26),
-      0 0 30px rgba(81, 5, 163, 0.26);
+      0 0 20px rgba(var(--mgi-swal-rgb), 0.26),
+      0 0 30px rgba(var(--mgi-swal-rgb2), 0.26);
   }
 }
 
