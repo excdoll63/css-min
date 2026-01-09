@@ -3185,7 +3185,7 @@ body.C #home > .A .pinfo .links a {
 }
 
 #promotion-popup .title {
-  color: #FCF380;
+  color: #6B0103;
   font-weight: 700;
   border-bottom: 2px solid;
   padding-bottom: 10px;
@@ -3249,7 +3249,7 @@ body.C #home > .A .pinfo .links a {
 #promotion-popup {
   overflow: hidden;
   padding: 15px;
-  background: #2F0000;
+  background: #d6dbdf;
   width: 90%;
   max-width: 800px;
   border-radius: 8px;
