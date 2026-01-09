@@ -6,6 +6,7 @@ on:
       - "src/mgi.css"
       - "src/26m.css"
       - ".github/workflows/minify-css.yml"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -16,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -26,10 +29,14 @@ jobs:
         run: npm i -g clean-css-cli
 
       - name: Build public/mgi.min.css from src/mgi.css
-        run: cleancss -O2 src/mgi.css -o public/mgi.min.css
+        run: |
+          mkdir -p public
+          cleancss -O2 --inline none src/mgi.css -o public/mgi.min.css
 
       - name: Build public/26m.min.css from src/26m.css
-        run: cleancss -O2 src/26m.css -o public/26m.min.css
+        run: |
+          mkdir -p public
+          cleancss -O2 --inline none src/26m.css -o public/26m.min.css
 
       - name: Commit & push if changed
         run: |
