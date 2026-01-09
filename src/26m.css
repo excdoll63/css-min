@@ -5212,3 +5212,30 @@ textarea[readonly] {
   opacity: 1;
   outline: none;
 }
+
+#chatroom .chat-tools textarea,
+#chatroom .chat-tools textarea:hover,
+#chatroom .chat-tools textarea:focus,
+#chatroom .chat-tools textarea:focus-visible,
+#chatroom .chat-tools textarea:active{
+    box-shadow:none!important;
+    text-shadow:none!important;
+    outline:0!important;
+    transform:none!important;
+    filter:none!important;
+    transition:none!important;
+    animation:none!important;
+}
+
+#chatroom .chat-tools .tool,
+#chatroom .chat-tools .tool:hover,
+#chatroom .chat-tools .tool:focus,
+#chatroom .chat-tools .tool:active{
+    box-shadow:none!important;
+    text-shadow:none!important;
+    outline:0!important;
+    transform:none!important;
+    filter:none!important;
+    transition:none!important;
+    animation:none!important;
+}
