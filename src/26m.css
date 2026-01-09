@@ -5276,3 +5276,47 @@ textarea[readonly] {
     animation: mgiFabtnShine 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 }
+#history .tabs .tab,#downline .tabs .tab,#gameList .tabs .tab{
+  float:none;
+  flex:1;
+  min-width:0;
+  box-sizing:border-box;
+  margin:0;
+  border-radius:12px;
+  border:2px solid transparent;
+  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,0) 70%) padding-box,linear-gradient(180deg,#2F0000 0%,#6B0103 100%) padding-box,linear-gradient(180deg,#DEAF1B 0%,#6B0103 100%) border-box;
+  color:#fff;
+  text-align:center;
+  text-transform:uppercase;
+  font:800 12px/1 Montserrat,sans-serif;
+  letter-spacing:.5px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  cursor:pointer;
+  box-shadow:0 10px 20px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.06) inset;
+  transition:transform .18s ease,filter .18s ease,box-shadow .18s ease;
+}
+
+@media (hover:hover) and (pointer:fine){
+  #history .tabs .tab:hover:not(.selected):not(.active),#downline .tabs .tab:hover:not(.selected):not(.active),#gameList .tabs .tab:hover:not(.selected):not(.active){
+    transform:translateY(-1px);
+    filter:brightness(1.08) saturate(1.1);
+    background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,0) 70%) padding-box,linear-gradient(180deg,#2F0000 0%,#6B0103 100%) padding-box,linear-gradient(180deg,#FCF380 0%,#DEAF1B 60%,#832E00 100%) border-box;
+    box-shadow:0 14px 28px rgba(0,0,0,.62),0 0 0 1px rgba(255,255,255,.08) inset,0 0 26px rgba(222,175,27,.30),0 0 44px rgba(252,243,128,.18);
+  }
+}
+
+#history .tabs .tab:active,#downline .tabs .tab:active,#gameList .tabs .tab:active{
+  transform:translateY(0);
+  filter:brightness(.98);
+}
+
+#history .tabs .tab.selected,#downline .tabs .tab.selected,#gameList .tabs .tab.selected,#history .tabs .tab.active,#downline .tabs .tab.active,#gameList .tabs .tab.active{
+  border:2px solid transparent;
+  background:radial-gradient(140% 90% at 50% 0%,rgba(255,255,255,.30),rgba(255,255,255,0) 58%) padding-box,linear-gradient(180deg,#FCF380 0%,#DEAF1B 65%,#DEAF1B 100%) padding-box,linear-gradient(180deg,#6B0103 0%,#2D0000 100%) border-box;
+  color:#2F0000;
+  text-shadow:none;
+  box-shadow:0 16px 34px rgba(0,0,0,.68),0 0 0 1px rgba(255,255,255,.18) inset,0 0 30px rgba(222,175,27,.26),0 0 52px rgba(252,243,128,.20);
+  filter:saturate(1.05);
+}
