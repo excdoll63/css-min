@@ -3277,12 +3277,6 @@ body.C #home > .A .pinfo .links a {
   overflow: hidden;
 }
 
-#promotion .packet-group {
-  box-shadow: 0px 0px 3px #FCF380;
-  margin: 4% 10px;
-  border-radius: 20px;
-}
-
 #promotion .packet p:last-child {
   font-size: 18px;
   font-weight: 700;
