@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "src/mgi.css"
+      - "src/26m.css"
       - ".github/workflows/minify-css.yml"
 
 permissions:
@@ -27,13 +28,16 @@ jobs:
       - name: Build public/mgi.min.css from src/mgi.css
         run: cleancss -O2 src/mgi.css -o public/mgi.min.css
 
+      - name: Build public/26m.min.css from src/26m.css
+        run: cleancss -O2 src/26m.css -o public/26m.min.css
+
       - name: Commit & push if changed
         run: |
-          if [[ -n "$(git status --porcelain public/mgi.min.css)" ]]; then
+          if [[ -n "$(git status --porcelain public/mgi.min.css public/26m.min.css)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add public/mgi.min.css
-            git commit -m "chore: auto-generate mgi.min.css"
+            git add public/mgi.min.css public/26m.min.css
+            git commit -m "chore: auto-generate min css"
             git push
           else
             echo "No changes to commit."
