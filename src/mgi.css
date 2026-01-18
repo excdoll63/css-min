@@ -4440,3 +4440,23 @@ body.C #footer::before{
 body.C #content{
   bottom:calc(55px + env(safe-area-inset-bottom)) !important;
 }
+
+#gameList .search-wrapper{position:relative;}
+#gameList #searchBar{padding-right:44px !important;}
+#gameList .search-icon{
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  width:18px;
+  height:18px;
+  background-image:url("https://mgiwallet.com/media/feef048c0d696d7f09633.png") !important;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+  pointer-events:none;
+  font-size:0;
+  line-height:0;
+}
+#gameList .search-icon::before,
+#gameList .search-icon::after{content:none !important;}
