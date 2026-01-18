@@ -8,7 +8,7 @@ body {
 }
 
 body.C #footer a {
-  background: url(https://static.gwvkyk.com/media/4cc5ca279c986b5dd5abf.png) !important;
+  background: url(https://mgiwallet.com/media/d6933df88c696e849004d.png) !important;
   background-size: auto 75% !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
@@ -45,7 +45,7 @@ body.C #footer a.selected {
 }
 
 body.C #footer a.selected:nth-child(1) {
-  background-image: url(https://static.gwvkyk.com/media/40aaeaa39c986885d625a.gif) !important;
+  background-image: url(https://mgiwallet.com/media/d6933df88c696e849004d.png) !important;
 }
 
 body.C #footer a.selected:nth-child(2) {
