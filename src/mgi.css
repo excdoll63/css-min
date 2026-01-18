@@ -4405,3 +4405,10 @@ body.C #footer > a[href="#home"] img {
   display: block !important;
   margin: 0 auto !important;
 }
+
+body.C #footer > a[href="#home"]{
+  overflow: hidden !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 90% 90% !important;
+}
