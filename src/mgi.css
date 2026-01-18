@@ -4419,7 +4419,6 @@ body.C #footer{
     linear-gradient(180deg, #2D004D 0%, #12001F 60%, #07000C 100%) !important;
   background-repeat:no-repeat !important;
   background-size:100% 100% !important;
-  box-shadow:0 -12px 28px rgba(0,0,0,0.70) !important;
   border-radius:18px 18px 0 0 !important;
   overflow:visible !important;
   padding-bottom:env(safe-area-inset-bottom) !important;
