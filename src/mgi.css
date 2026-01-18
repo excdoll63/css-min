@@ -4371,3 +4371,37 @@ body.C #footer > a[href="#history"]   { order: 2; }
 body.C #footer > a[href="#home"]      { order: 3; }
 body.C #footer > a[href="#chatroom"]  { order: 4; }
 body.C #footer > a[href="#settings"]  { order: 5; }
+
+body.C #footer {
+  overflow: visible !important;
+}
+
+body.C #footer > a[href="#home"] {
+  flex: 0 0 76px !important;
+  width: 76px !important;
+  min-width: 76px !important;
+  height: 76px !important;
+  align-self: center !important;
+  margin-top: -18px !important;
+  margin-left: 6px !important;
+  margin-right: 6px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  box-sizing: border-box !important;
+  background-color: #2D004D !important;
+  border: 2px solid #EF00FF !important;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.12) inset !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: auto 60% !important;
+  position: relative !important;
+  z-index: 20 !important;
+}
+
+body.C #footer > a[href="#home"] img {
+  width: 60% !important;
+  height: 60% !important;
+  border-radius: 50% !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
