@@ -4440,3 +4440,22 @@ body.C #footer::before{
 body.C #content{
   bottom:calc(55px + env(safe-area-inset-bottom)) !important;
 }
+
+#gameList .search-wrapper {
+  position: relative;
+}
+
+#gameList .search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  display: block;
+  background-image: url(https://mgiwallet.com/media/feef048c0d696d7f09633.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+}
