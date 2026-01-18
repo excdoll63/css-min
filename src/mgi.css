@@ -69,7 +69,6 @@ body.C #footer a.selected:nth-child(5) {
 }
 
 .swal2-popup .swal2-title {
-  color: #ccc;
   font-size: 20px;
 }
 
@@ -88,16 +87,9 @@ body.C #home>.A .pinfo .links a {
 }
 
 #home>.A .pinfo {
-  border: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  text-align: left left;
   padding: 0px 0;
-}
-
-.swal2-popup.swal2-modal.swal2-show {
-  background: transparent;
-  border: 1px solid #fff;
 }
 
 .swal2-popup .swal2-title {
@@ -105,8 +97,6 @@ body.C #home>.A .pinfo .links a {
 }
 
 .swal2-popup.swal2-modal.swal2-show {
-  background: #000;
-  border: 0;
   background-size: cover;
   background-position: center;
 }
@@ -274,13 +264,6 @@ a.btn.register.primary {
   text-align: center;
 }
 
-#history-report .t1 {
-  color: #F700FD;
-  font-weight: 700;
-  border-bottom: 2px solid;
-  padding-bottom: 10px;
-}
-
 #settings .t1 {
   color: #F700FD;
   border-bottom: 2px solid;
@@ -316,11 +299,6 @@ a.btn.register.primary {
   padding-bottom: 5px;
   font-weight: 700;
   font-size: 18px;
-}
-
-#luckynumber table td.label {
-  background: #F700FD;
-  font-weight: 700;
 }
 
 #changePassword .t1 {
@@ -489,26 +467,16 @@ a.btn.register.primary {
 }
 
 #changeBank .t1 {
-  color: #F700FD;
-  font-size: 18px;
-  font-weight: 700;
   border-bottom: 2px solid;
   padding-bottom: 10px;
 }
 
 #changeBank .t2 {
   margin-top: 10px;
-  color: #F700FD;
-  text-transform: none;
 }
 
 #changeBank .note {
-  font-size: 13px;
   margin-top: 10px;
-  color: #F700FD;
-  font-weight: 700;
-  animation: blink 1.3s linear infinite;
-  text-transform: none;
 }
 
 #changeBank .btn {
@@ -536,7 +504,6 @@ a.btn.register.primary {
 }
 
 #home-download .btns .play {
-  background: #F700FD !important;
   border: 0;
   color: white !important;
 }
@@ -638,9 +605,6 @@ a.btn.register.primary {
 }
 
 body .light-theme .current {
-  background: #FFFFFF;
-  box-shadow: none;
-  color: #EF00FF;
   font-weight: 700;
 }
 
@@ -651,10 +615,8 @@ body .light-theme .current {
 }
 
 #history-bet .note {
-  background: #EF00FF;
   padding: 5px;
   line-height: 1;
-  color: #3D0251;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -874,10 +836,7 @@ body .light-theme .current {
 }
 
 #history-transaction table>tbody>tr:first-child>td {
-  padding: 5px 8px 3px;
-  background: linear-gradient(90deg,rgba(203, 63, 255, 1) 0%, rgba(239, 0, 255, 1) 50%, rgba(81, 5, 163, 1) 100%);
   font-weight: 700;
-  color: #3D0251;
 }
 
 #history-transaction table b {
@@ -893,9 +852,7 @@ body .light-theme .current {
 }
 
 #history-bet table tr:first-child td {
-  background: #5105A3;
   font-weight: 700;
-  color: #FFFFFF;
 }
 
 #home-featured .wrapper {
@@ -954,7 +911,6 @@ body .light-theme .current {
 
 #downline table tr:first-child td {
   border-top: 1px solid #EF00FF;
-  background: #2D004D;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
@@ -962,17 +918,9 @@ body .light-theme .current {
 #downline table td {
   border-bottom: 1px solid #EF00FF;
   border-right: 1px solid #EF00FF;
-  padding: 3px 5px;
-  text-transform: uppercase;
 }
 
 #user-report {
-  padding: 15px;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 8px;
-  background: radial-gradient(circle,rgba(203, 63, 255, 1) 33%, rgba(81, 5, 163, 1) 100%);
-  color: #000;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
 }
 
@@ -1018,18 +966,6 @@ body .light-theme .current {
   font-family: "Montserrat";
   font-size: 13.5px;
   line-height: 1.4;
-}
-
-#chatroom .message .name {
-  font-family: "Montserrat";
-  font-weight: 700;
-  color: black;
-}
-
-#chatroom .message.myself .name {
-  font-family: "Montserrat";
-  font-weight: 700;
-  color: black;
 }
 
 #chatroom .time {
@@ -1297,24 +1233,13 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
 }
 
 #deposit .fabtn {
-  box-sizing: border-box;
-  float: left;
-  margin: 5px 5px 0 0;
-  padding: 9px 5px;
-  min-width: 60px;
-  border-radius: 20px;
   font-size: 13px;
   line-height: 1;
-  color: #3D0251;
-  border: 2px solid #EF00FF;
   background-color: #FFFFFF;
-  text-align: center;
-  cursor: pointer;
 }
 
 #deposit .step-box {
   background: #2D004D;
-  padding: 10px;
   margin-top: 10px;
   border-radius: 4px;
   color: #FFFFFF;
@@ -1323,24 +1248,14 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
 }
 
 #deposit .bank-info {
-  overflow: auto;
   margin-top: 10px;
   border: 2px solid #EF00FF;
   border-radius: 4px;
-  padding: 4px 10px;
-  background: linear-gradient(120deg,rgba(255, 255, 255, 1) 0%, rgba(203, 63, 255, 1) 100%);
-}
-
-#deposit .fabtn.selected {
-  background: #2D004D;
-  color: #FFFFFF;
 }
 
 .btn.primary {
-  border: 2px solid #EF00FF;
   background-color: #2D004D;
   background-image: linear-gradient(to bottom,#200236,#200236);
-  color: #FFFFFF;
 }
 
 #deposit .form-box {
@@ -1362,12 +1277,6 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
 }
 
 #withdraw form {
-  background: #2D004D;
-  color: #FFFFFF;
-  padding: 10px;
-  border: 2px solid #EF00FF;
-  border-radius: 5px;
-  margin-top: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
@@ -1791,39 +1700,15 @@ var {
   }
 }
 
-#home-refer .refer {
-  background-image: none !important;
-  background-repeat: no-repeat !important;
-  background-size: auto !important;
-  background-position: center !important;
-  background: linear-gradient(135deg, #200236 0%, #3d0251 55%, #200236 100%) padding-box, linear-gradient(135deg, #ef00ff 0%, #cb3fff 40%, #5105a3 100%) border-box !important;
-  border: 3px solid transparent !important;
-  border-radius: 18px !important;
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-  box-shadow: 0 18px 40px rgba(25, 25, 25, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.10) inset, 0 0 34px rgba(239, 0, 255, 0.18);
-}
-
 #home-refer .refer::before {
-  content: "";
-  position: absolute;
-  inset: -28%;
-  background: radial-gradient(70% 55% at 50% 8%, rgba(239, 0, 255, 0.55), rgba(239, 0, 255, 0) 60%), radial-gradient(55% 55% at 18% 85%, rgba(203, 63, 255, 0.35), rgba(203, 63, 255, 0) 70%), radial-gradient(55% 55% at 82% 85%, rgba(81, 5, 163, 0.35), rgba(81, 5, 163, 0) 70%);
   filter: blur(18px);
-  opacity: 0.40;
   transform: scale(1);
-  pointer-events: none;
   z-index: -1;
   animation: mgiReferBreathe 2.8s ease-in-out infinite;
 }
 
 #home-refer .refer::after {
-  content: "";
-  position: absolute;
   inset: 0;
-  background: radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 58%);
-  pointer-events: none;
   z-index: -1;
 }
 
@@ -1952,8 +1837,6 @@ var {
 }
 
 #home-lucky .btn:active {
-  transform: translateY(0);
-  filter: brightness(0.98);
   box-shadow: 0 8px 18px rgba(25, 25, 25, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 0 18px rgba(239, 0, 255, 0.18);
 }
 
@@ -2104,16 +1987,12 @@ var {
 .swal2-popup .swal2-cancel.swal2-styled, .swal2-popup .swal2-styled.swal2-cancel {
   -webkit-tap-highlight-color: transparent;
   appearance: none !important;
-  min-width: 150px !important;
-  height: 44px !important;
-  padding: 0 18px !important;
   border-radius: 14px !important;
   border: 2px solid transparent !important;
   background: linear-gradient(180deg, #4b4b4b 0%, #2b2b2b 55%, #191919 100%) padding-box, linear-gradient(135deg, #bdbdbd 0%, #777777 42%, #3a3a3a 100%) border-box !important;
   color: #ffffff !important;
   font-family: "Montserrat", sans-serif !important;
   font-weight: 900 !important;
-  font-size: 14px !important;
   letter-spacing: 0.6px !important;
   text-transform: uppercase !important;
   line-height: 1 !important;
@@ -2430,23 +2309,11 @@ var {
 }
 
 #deposit .btns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   margin-top: 14px;
 }
 
 #deposit .btns .btn, #deposit .btns a.btn, #deposit .btns button.btn {
-  flex: 0 0 120px;
-  width: 120px !important;
-  min-width: 120px !important;
-  margin: 0 !important;
   float: none !important;
-}
-
-#deposit .btns .btn.cancel, #deposit .btns a.btn.cancel, #deposit .btns button.btn.cancel, #deposit .btns .btn.danger.cancel, #deposit .btns a.btn.danger.cancel, #deposit .btns button.btn.danger.cancel {
-  font-size: 15px !important;
 }
 
 #resetPassword .btn {
@@ -2486,8 +2353,6 @@ var {
 #gameList .tabs .tab {
   float: none;
   box-sizing: border-box;
-  flex: 1 1 calc(33.333% - 6px);
-  min-width: calc(33.333% - 6px);
   margin: 0;
   padding: 10px 8px;
   border-radius: 12px;
@@ -2509,35 +2374,14 @@ var {
 #gameList .tabs .tab.selected {
   border: 2px solid transparent;
   background: radial-gradient(140% 90% at 50% 0%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 58%) padding-box, linear-gradient(180deg, #2D004D 0%, #200236 100%) padding-box, linear-gradient(135deg, #FFFFFF 0%, #CB3FFF 28%, #EF00FF 58%, #5105A3 100%) border-box;
-  font-weight: 800;
   color: #FFFFFF;
 }
 
 #gameList .games .game .btn {
-  -webkit-tap-highlight-color: transparent;
-  appearance: none;
-  box-sizing: border-box;
-  display: block;
-  width: 92%;
-  min-height: 22px;
-  margin: 10px auto 0;
-  padding: 0 12px;
-  border: 2px solid transparent;
-  border-radius: 999px;
-  background: radial-gradient(140% 120% at 50% 0%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 62%) padding-box, linear-gradient(180deg, #3D0251 0%, #200236 100%) padding-box, linear-gradient(135deg, #CB3FFF 0%, #EF00FF 52%, #5105A3 100%) border-box;
-  color: #FFFFFF;
-  text-align: center;
   line-height: 22px;
-  text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 12px;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.50), 0 0 0 1px rgba(255, 255, 255, 0.10) inset, 0 0 16px rgba(239, 0, 255, 0.18);
-  cursor: pointer;
-  user-select: none;
 }
 
 #gameList .games.have-demo .game .btn {
@@ -2687,9 +2531,6 @@ var {
 }
 
 #deposit .btns {
-  display: flex !important;
-  justify-content: flex-start !important;
-  align-items: center !important;
   flex-wrap: wrap !important;
   gap: 10px !important;
 }
@@ -2816,24 +2657,6 @@ var {
   padding-right: 78px;
 }
 
-#home-download .login td:last-child input, #home-download .login td.copy input {
-  width: 100%;
-  background: transparent;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  height: 22px;
-  line-height: 22px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.4px;
-  color: #CB3FFF;
-  -webkit-text-fill-color: #CB3FFF;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
-  outline: none;
-}
-
 #home-download .login td:last-child span, #home-download .login td.copy span {
   -webkit-tap-highlight-color: transparent;
   appearance: none;
@@ -2868,12 +2691,6 @@ var {
   filter: brightness(1.06);
 }
 
-#home-download .btns {
-  margin-top: 14px;
-  display: flex;
-  gap: 10px;
-}
-
 #home-download .btns .btn {
   float: none !important;
   width: auto !important;
@@ -2902,16 +2719,6 @@ var {
 #home-download .btns .btn:active {
   transform: scale(0.985);
   filter: brightness(1.06);
-}
-
-#home-download .btns .play {
-  background: radial-gradient(140% 90% at 50% 0%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 58%) padding-box, linear-gradient(180deg, #CB3FFF 0%, #5105A3 45%, #200236 100%) padding-box, linear-gradient(135deg, #FFFFFF 0%, #CB3FFF 28%, #EF00FF 58%, #5105A3 100%) border-box;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.12) inset, 0 0 24px rgba(239, 0, 255, 0.22);
-}
-
-#home-download .btns .primary.download {
-  background: linear-gradient(180deg, #4B4B4B 0%, #2B2B2B 55%, #191919 100%) padding-box, linear-gradient(135deg, #BDBDBD 0%, #777777 42%, #3A3A3A 100%) border-box;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.50), 0 0 0 1px rgba(255, 255, 255, 0.10) inset, 0 0 22px rgba(255, 255, 255, 0.06);
 }
 
 #home-download .btns {
@@ -3011,7 +2818,6 @@ var {
   display: flex !important;
   justify-content: flex-start !important;
   align-items: center !important;
-  flex-wrap: wrap;
 }
 
 #deposit .btns .btn,#deposit .btns a.btn,#deposit .btns button.btn {
@@ -3332,13 +3138,10 @@ body .light-theme .current {
 }
 
 #deposit .bank-info table {
-  width: 100%;
-  border-collapse: separate;
   border-spacing: 0;
 }
 
 #deposit .bank-info td {
-  padding: 8px 0;
   border-top: 1px solid rgba(45,0,77,.12);
   vertical-align: middle;
 }
@@ -3370,14 +3173,12 @@ body .light-theme .current {
 }
 
 #deposit .form-box td {
-  padding: 6px 0;
   color: rgba(255,255,255,.9);
 }
 
 #deposit .form-box input,#deposit .form-box select {
   border-radius: 12px;
   border: 1px solid rgba(239,0,255,.35);
-  padding: 10px;
   font: 700 13px/1 Montserrat,sans-serif;
 }
 
@@ -3391,10 +3192,6 @@ body .light-theme .current {
 
 #deposit .step-box,#deposit .form-box {
   line-height: 1.5;
-}
-
-#deposit .form-box td {
-  padding: 8px 0;
 }
 
 #deposit .form-box input,#deposit .form-box select {
@@ -3432,20 +3229,6 @@ body .light-theme .current {
 }
 
 #deposit .bank-info td.copy i {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  width: 28px;
-  height: 28px;
-  display: grid;
-  place-items: center;
-  border-radius: 10px;
-  border: 2px solid transparent;
-  background: linear-gradient(180deg,#2D004D,#200236) padding-box,linear-gradient(135deg,#fff 0%,#CB3FFF 28%,#EF00FF 58%,#5105A3 100%) border-box;
-  color: #EF00FF;
-  box-shadow: 0 8px 16px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.12) inset;
-  cursor: pointer;
   z-index: 1;
 }
 
@@ -3500,31 +3283,16 @@ body .light-theme .current {
 }
 
 #deposit .fabtn {
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
   float: left;
   margin: 6px 6px 0 0;
   padding: 8px 12px;
   min-width: 56px;
-  border: 2px solid transparent;
-  border-radius: 999px;
-  background: radial-gradient(140% 120% at 50% 0%,rgba(255,255,255,.35),rgba(255,255,255,0) 65%) padding-box,linear-gradient(135deg,#fff 0%,rgba(203,63,255,.85) 100%) padding-box,linear-gradient(135deg,#fff 0%,#CB3FFF 28%,#EF00FF 58%,#5105A3 100%) border-box;
-  color: #2D004D;
   text-align: center;
   font: 800 12px/1 Montserrat,sans-serif;
-  box-shadow: 0 10px 20px rgba(0,0,0,.25),0 0 16px rgba(239,0,255,.12);
   cursor: pointer;
-  user-select: none;
-}
-
-#deposit .fabtn.selected {
-  background: radial-gradient(140% 90% at 50% 0%,rgba(255,255,255,.22),rgba(255,255,255,0) 58%) padding-box,linear-gradient(180deg,#2D004D,#200236) padding-box,linear-gradient(135deg,#fff 0%,#CB3FFF 28%,#EF00FF 58%,#5105A3 100%) border-box;
-  color: #fff;
-  box-shadow: 0 14px 28px rgba(0,0,0,.55),0 0 22px rgba(239,0,255,.18);
 }
 
 #deposit .fabtn {
-  box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   border: 2px solid transparent;
   border-radius: 999px;
@@ -3536,11 +3304,6 @@ body .light-theme .current {
   text-shadow: 0 1px 0 rgba(0,0,0,.35);
   box-shadow: 0 10px 22px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08) inset,0 0 18px rgba(239,0,255,.18);
   user-select: none;
-}
-
-#deposit .fabtn.selected {
-  background: radial-gradient(140% 120% at 50% 0%,rgba(255,255,255,.22),rgba(255,255,255,0) 58%) padding-box,linear-gradient(180deg,#2D004D,#200236) padding-box,linear-gradient(135deg,#fff 0%,#CB3FFF 28%,#EF00FF 58%,#5105A3 100%) border-box;
-  box-shadow: 0 16px 32px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.12) inset,0 0 30px rgba(239,0,255,.26);
 }
 
 html, body {
@@ -3909,30 +3672,6 @@ div:where(.swal2-icon).swal2-success .swal2-success-ring {
   transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, filter 160ms ease;
 }
 
-#amopayramp .fabtn::before, #direpay .fabtn::before, #fpay .fabtn::before, #gggpay .fabtn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 14px;
-  background: radial-gradient(60% 55% at 50% 0%, rgba(239, 0, 255, 0.22) 0%, rgba(239, 0, 255, 0) 70%);
-  opacity: 0.75;
-  pointer-events: none;
-}
-
-#amopayramp .fabtn::after, #direpay .fabtn::after, #fpay .fabtn::after, #gggpay .fabtn::after {
-  content: "";
-  position: absolute;
-  top: -65%;
-  left: -70%;
-  width: 46%;
-  height: 240%;
-  transform: rotate(24deg);
-  border-radius: 999px;
-  background: linear-gradient( 90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0) 100% );
-  opacity: 0;
-  pointer-events: none;
-}
-
 @media (hover: hover) {
   #amopayramp .fabtn:hover, #direpay .fabtn:hover, #fpay .fabtn:hover, #gggpay .fabtn:hover {
     transform: translateY(-1px);
@@ -3945,13 +3684,6 @@ div:where(.swal2-icon).swal2-success .swal2-success-ring {
     opacity: 1;
     animation: mgiFabtnShine 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
   }
-}
-
-#amopayramp .fabtn:active, #direpay .fabtn:active, #fpay .fabtn:active, #gggpay .fabtn:active {
-  transform: translateY(0);
-  filter: brightness(0.98);
-  border-color: rgba(203, 63, 255, 0.70);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 0 18px rgba(239, 0, 255, 0.14);
 }
 
 #amopayramp .fabtn:focus-visible, #direpay .fabtn:focus-visible, #fpay .fabtn:focus-visible, #gggpay .fabtn:focus-visible {
@@ -4623,19 +4355,3 @@ input[readonly], textarea[readonly] {
 #gameList .games .game[data-code="211"], #gameList .games .game[data-code="221"], #gameList .games .game[data-code="220"], #gameList .games .game[data-code="219"], #gameList .games .game[data-code="199"], #gameList .games .game[data-code="163"], #gameList .games .game[data-code="161"], #gameList .games .game[data-code="160"], #gameList .games .game[data-code="159"], #gameList .games .game[data-code="132"], #gameList .games .game[data-code="128"], #gameList .games .game[data-code="94"], #gameList .games .game[data-code="290064"], #gameList .games .game[data-code="421"], #gameList .games .game[data-code="3045"], #gameList .games .game[data-code="FairyForestTale"], #gameList .games .game[data-code="WildVick2"], #gameList .games .game[data-code="WildVick"], #gameList .games .game[data-code="5501"], #gameList .games .game[data-code="45005"], #gameList .games .game[data-code="sw_jlr_940"], #gameList .games .game[data-code="153"], #gameList .games .game[data-code="0:14088"], #gameList .games .game[data-code="SGBombRunner"], #gameList .games .game[data-code="SMG_championsOfOlympusVF"], #gameList .games .game[data-code="FourSeasons"], #gameList .games .game[data-code="250130"], #gameList .games .game[data-code="250133"], #gameList .games .game[data-code="SMG_miningPotsOfGold"], #gameList .games .game[data-code="SMG_3BlazingVolcanoesPowerCombo"], #gameList .games .game[data-code="79"], #gameList .games .game[data-code="75"], #gameList .games .game[data-code="72"], #gameList .games .game[data-code="hxb3p8r71kj3y"], #gameList .games .game[data-code="SMG_championsOfOlympus"], #gameList .games .game[data-code="SMG_chroniclesOfOlympusIIZeus"], #gameList .games .game[data-code="LionOnRidge"], #gameList .games .game[data-code="gpas_tttotems_pop"], #gameList .games .game[data-code="gpas_tttotemspp_pop"], #gameList .games .game[data-code="gpas_sorome_pop"], #gameList .games .game[data-code="gpas_wlavaiw_pop"], #gameList .games .game[data-code="gpas_wlava_pop"], #gameList .games .game[data-code="gpas_sjungle_pop"], #gameList .games .game[data-code="pop_c8bbebef_qsp"], #gameList .games .game[data-code="23"], #gameList .games .game[data-code="127"], #gameList .games .game[data-code="253"], #gameList .games .game[data-code="S-HE01"] {
   display: none !important;
 }
-
-body.C #footer{
-  display: flex !important;
-}
-
-body.C #footer > a{
-  flex: 1 1 0;
-  width: auto !important;
-  float: none !important;
-}
-
-body.C #footer > a[href="#promotion"] { order: 1; }
-body.C #footer > a[href="#history"]   { order: 2; }
-body.C #footer > a[href="#home"]      { order: 3; }
-body.C #footer > a[href="#chatroom"]  { order: 4; }
-body.C #footer > a[href="#settings"]  { order: 5; }
