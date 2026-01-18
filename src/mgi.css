@@ -4412,3 +4412,32 @@ body.C #footer > a[href="#home"]{
   background-size: 90% 90% !important;
   top: -8px;
 }
+
+body.C #footer{
+  background-image:
+    radial-gradient(120px 38px at 50% 0, rgba(239,0,255,0.18), rgba(0,0,0,0) 70%),
+    linear-gradient(180deg, #2D004D 0%, #12001F 60%, #07000C 100%) !important;
+  background-repeat:no-repeat !important;
+  background-size:100% 100% !important;
+  border-top:1px solid rgba(255,255,255,0.12) !important;
+  box-shadow:0 -12px 28px rgba(0,0,0,0.70) !important;
+  border-radius:18px 18px 0 0 !important;
+  overflow:visible !important;
+  padding-bottom:env(safe-area-inset-bottom) !important;
+}
+
+body.C #footer::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:2px;
+  background:linear-gradient(90deg, rgba(239,0,255,0), rgba(239,0,255,0.85), rgba(239,0,255,0));
+  opacity:0.85;
+  pointer-events:none;
+}
+
+body.C #content{
+  bottom:calc(55px + env(safe-area-inset-bottom)) !important;
+}
