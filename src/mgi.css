@@ -4410,4 +4410,5 @@ body.C #footer > a[href="#home"]{
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: 90% 90% !important;
+  top: -8px;
 }
