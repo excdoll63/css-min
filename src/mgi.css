@@ -8,7 +8,7 @@ body {
 }
 
 body.C #footer a {
-  background: url(https://mgiwallet.com/media/d6933df88c696e849004d.png) !important;
+  background: url(https://mgiwallet.com/media/8b903c91bc69693e27fff.png) !important;
   background-size: auto 75% !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
@@ -45,7 +45,7 @@ body.C #footer a.selected {
 }
 
 body.C #footer a.selected:nth-child(1) {
-  background-image: url(https://mgiwallet.com/media/d6933df88c696e849004d.png) !important;
+  background-image: url(https://mgiwallet.com/media/8b903c91bc69693e27fff.png) !important;
 }
 
 body.C #footer a.selected:nth-child(2) {
