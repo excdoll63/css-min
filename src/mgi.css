@@ -4422,6 +4422,7 @@ body.C #footer{
   border-radius:18px 18px 0 0 !important;
   overflow:visible !important;
   padding-bottom:env(safe-area-inset-bottom) !important;
+  box-shadow: none;
 }
 
 body.C #footer::before{
