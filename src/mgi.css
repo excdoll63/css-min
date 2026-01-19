@@ -968,13 +968,6 @@ body .light-theme .current {
   line-height: 1.4;
 }
 
-#chatroom .time {
-  font-size: 13px;
-  margin: 5px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-}
-
 #login input {
   font-weight: 600;
   color: #000000;
@@ -4460,3 +4453,20 @@ body.C #content{
 }
 #gameList .search-icon::before,
 #gameList .search-icon::after{content:none !important;}
+
+#chatroom .time {
+    width: 89px;
+    height: 22px;
+    color: white;
+    background-color: #5b5b5b;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 21px;
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+    font-weight: 700;
+    float: none;
+    margin: 5px auto;
+}
