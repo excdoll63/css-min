@@ -24,8 +24,8 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install terser
-        run: npm i -g terser
+      - name: Install terser + javascript-obfuscator
+        run: npm i -g terser javascript-obfuscator
 
       - name: Build public JS from src/js
         run: |
@@ -34,17 +34,28 @@ jobs:
             out="public/${f#src/}"
             out="${out%.js}.min.js"
             mkdir -p "$(dirname "$out")"
-            terser "$f" --compress --mangle --comments false --output "$out"
+
+            tmp="$(mktemp)"
+            terser "$f" --compress --mangle --comments false --output "$tmp"
+
+            javascript-obfuscator "$tmp" \
+              --output "$out" \
+              --compact true \
+              --string-array true \
+              --string-array-encoding base64 \
+              --string-array-threshold 1
+
+            rm -f "$tmp"
           done
 
-      - name: Commit changes
+      - name: Commit changes if needed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/js
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Build public JS"
+          if [ -n "$(git status --porcelain public/js)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add public/js
+            git commit -m "Update minified JS"
             git push
+          else
+            echo "No changes to commit"
           fi
