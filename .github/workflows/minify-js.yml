@@ -1,0 +1,50 @@
+name: Minify JS
+
+on:
+  push:
+    paths:
+      - "src/js/**/*.js"
+      - ".github/workflows/minify-js.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  minify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install terser
+        run: npm i -g terser
+
+      - name: Build public JS from src/js
+        run: |
+          mkdir -p public/js
+          find src/js -type f -name "*.js" ! -name "*.min.js" | while read -r f; do
+            out="public/${f#src/}"
+            out="${out%.js}.min.js"
+            mkdir -p "$(dirname "$out")"
+            terser "$f" --compress --mangle --comments false --output "$out"
+          done
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/js
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Build public JS"
+            git push
+          fi
