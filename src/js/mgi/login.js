@@ -1,3 +1,5 @@
+window.__MGI_LOGIN_VER__="20260120";
+
 (function () {
   'use strict';
 
