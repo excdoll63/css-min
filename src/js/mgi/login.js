@@ -1,4 +1,4 @@
-window.__MGI_LOGIN_VER__="20260120";
+window.__MGI_LOGIN_VER__ = "20260120";
 
 (function () {
   'use strict';
@@ -24,7 +24,7 @@ window.__MGI_LOGIN_VER__="20260120";
     return '';
   }
 
-  function getLang() {
+  function getLangFromPage() {
     var htmlLang = document.documentElement ? document.documentElement.getAttribute('lang') : '';
     var byHtml = normLang(htmlLang);
     if (byHtml) return byHtml;
@@ -50,7 +50,7 @@ window.__MGI_LOGIN_VER__="20260120";
 
   function applyI18n(root) {
     if (!root) return;
-    var lang = getLang();
+    var lang = getLangFromPage();
     var t = dict[lang] || dict.EN;
     var nodes = root.querySelectorAll('[data-i18n]');
     for (var i = 0; i < nodes.length; i++) {
@@ -59,96 +59,154 @@ window.__MGI_LOGIN_VER__="20260120";
     }
   }
 
+  function observeLangChanges(root) {
+    if (!window.MutationObserver || !document.body) return;
+    if (document.body.getAttribute('data-mgi-login-i18n') === '1') return;
+    document.body.setAttribute('data-mgi-login-i18n', '1');
+
+    var obs = new MutationObserver(function (mutations) {
+      for (var i = 0; i < mutations.length; i++) {
+        if (mutations[i].type === 'attributes' && mutations[i].attributeName === 'class') {
+          applyI18n(root);
+          break;
+        }
+      }
+    });
+
+    obs.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  }
+
   function safeGet(k) {
     try { return localStorage.getItem(k); } catch (e) { return null; }
   }
+
   function safeSet(k, v) {
     try { localStorage.setItem(k, v); } catch (e) {}
   }
+
   function safeRemove(k) {
     try { localStorage.removeItem(k); } catch (e) {}
   }
 
-  function filled(el) {
-    return !!el && (el.value || '').trim().length > 0;
+  function restoreRememberMe(root) {
+    var remember = root.querySelector('#rememberMe');
+    var mobileInput = root.querySelector('input[name="mobile"]');
+    if (!remember || !mobileInput) return;
+
+    var KEY_FLAG = 'mgi_remember_me';
+    var KEY_MOBILE = 'mgi_remember_mobile';
+
+    if (safeGet(KEY_FLAG) === '1') {
+      remember.checked = true;
+      var savedMobile = safeGet(KEY_MOBILE);
+      if (savedMobile) mobileInput.value = savedMobile;
+    }
   }
 
-  function bindLogin(root) {
+  function persistRememberMe(root) {
+    var remember = root.querySelector('#rememberMe');
+    var mobileInput = root.querySelector('input[name="mobile"]');
+    if (!remember || !mobileInput) return;
+
+    var KEY_FLAG = 'mgi_remember_me';
+    var KEY_MOBILE = 'mgi_remember_mobile';
+
+    if (remember.checked) {
+      safeSet(KEY_FLAG, '1');
+      var v = (mobileInput.value || '').trim();
+      if (v) safeSet(KEY_MOBILE, v);
+    } else {
+      safeRemove(KEY_FLAG);
+      safeRemove(KEY_MOBILE);
+    }
+  }
+
+  function bindRememberMe(root) {
+    var remember = root.querySelector('#rememberMe');
+    var mobileInput = root.querySelector('input[name="mobile"]');
+    if (!remember || !mobileInput) return;
+
+    if (remember.getAttribute('data-mgi-bound') === '1') return;
+    remember.setAttribute('data-mgi-bound', '1');
+
+    remember.addEventListener('change', function () { persistRememberMe(root); });
+    mobileInput.addEventListener('blur', function () { persistRememberMe(root); });
+  }
+
+  function updateActiveButton(root) {
+    var mobileInput = root.querySelector('input[name="mobile"]');
+    var passInput = root.querySelector('input[name="password"]');
+    var loginBtn = root.querySelector('.btn.login');
+    if (!mobileInput || !passInput || !loginBtn) return;
+
+    function filled(el) {
+      return (el.value || '').trim().length > 0;
+    }
+
+    var ok = filled(mobileInput) && filled(passInput);
+    if (ok) {
+      loginBtn.classList.add('active');
+      loginBtn.setAttribute('aria-disabled', 'false');
+    } else {
+      loginBtn.classList.remove('active');
+      loginBtn.setAttribute('aria-disabled', 'true');
+    }
+  }
+
+  function bindPasswordToggle(root) {
+    var eye = root.querySelector('.show-pass-icon');
+    var passInput = root.querySelector('#loginPass');
+    if (!eye || !passInput) return;
+
+    if (eye.getAttribute('data-mgi-bound') === '1') return;
+    eye.setAttribute('data-mgi-bound', '1');
+
+    eye.addEventListener('click', function (e) {
+      e.preventDefault();
+      var isPassword = passInput.type === 'password';
+      passInput.type = isPassword ? 'text' : 'password';
+
+      if (eye.classList) {
+        if (isPassword) {
+          eye.classList.remove('fa-eye');
+          eye.classList.add('fa-eye-slash');
+        } else {
+          eye.classList.remove('fa-eye-slash');
+          eye.classList.add('fa-eye');
+        }
+      }
+    });
+  }
+
+  function bindAll(root) {
     if (!root) return;
     if (root.getAttribute('data-mgi-login-bound') === '1') return;
     root.setAttribute('data-mgi-login-bound', '1');
 
     applyI18n(root);
+    observeLangChanges(root);
 
-    var eye = root.querySelector('.show-pass-icon');
-    var passInput = root.querySelector('#loginPass');
-    if (eye && passInput) {
-      eye.addEventListener('click', function (e) {
-        e.preventDefault();
-        var isPassword = passInput.type === 'password';
-        passInput.type = isPassword ? 'text' : 'password';
-        if (eye.classList) {
-          eye.classList.toggle('fa-eye', !isPassword);
-          eye.classList.toggle('fa-eye-slash', isPassword);
-        }
-      });
-    }
+    restoreRememberMe(root);
+    bindRememberMe(root);
 
-    var remember = root.querySelector('#rememberMe');
+    bindPasswordToggle(root);
+
+    updateActiveButton(root);
+
     var mobileInput = root.querySelector('input[name="mobile"]');
-    var passField = root.querySelector('input[name="password"]');
+    var passInput = root.querySelector('input[name="password"]');
     var loginBtn = root.querySelector('.btn.login');
 
-    var KEY_FLAG = 'mgi_remember_me';
-    var KEY_MOBILE = 'mgi_remember_mobile';
-
-    function updateBtn() {
-      if (!mobileInput || !passField || !loginBtn) return;
-      var ok = filled(mobileInput) && filled(passField);
-      if (ok) {
-        loginBtn.classList.add('active');
-        loginBtn.setAttribute('aria-disabled', 'false');
-      } else {
-        loginBtn.classList.remove('active');
-        loginBtn.setAttribute('aria-disabled', 'true');
-      }
-    }
-
-    function persistRemember() {
-      if (!remember || !mobileInput) return;
-      if (remember.checked) {
-        safeSet(KEY_FLAG, '1');
-        var v = (mobileInput.value || '').trim();
-        if (v) safeSet(KEY_MOBILE, v);
-      } else {
-        safeRemove(KEY_FLAG);
-        safeRemove(KEY_MOBILE);
-      }
-    }
-
-    if (remember && mobileInput) {
-      if (safeGet(KEY_FLAG) === '1') {
-        remember.checked = true;
-        var savedMobile = safeGet(KEY_MOBILE);
-        if (savedMobile) mobileInput.value = savedMobile;
-      }
-      remember.addEventListener('change', function () {
-        persistRemember();
-        updateBtn();
-      });
-      mobileInput.addEventListener('blur', function () {
-        persistRemember();
-        updateBtn();
-      });
-    }
+    function onChange() { updateActiveButton(root); }
 
     if (mobileInput) {
-      mobileInput.addEventListener('input', updateBtn);
-      mobileInput.addEventListener('blur', updateBtn);
+      mobileInput.addEventListener('input', onChange);
+      mobileInput.addEventListener('blur', onChange);
     }
-    if (passField) {
-      passField.addEventListener('input', updateBtn);
-      passField.addEventListener('blur', updateBtn);
+
+    if (passInput) {
+      passInput.addEventListener('input', onChange);
+      passInput.addEventListener('blur', onChange);
     }
 
     if (loginBtn) {
@@ -159,54 +217,22 @@ window.__MGI_LOGIN_VER__="20260120";
         }
       });
     }
-
-    updateBtn();
-  }
-
-  function tryBind() {
-    var root = document.getElementById('login');
-    if (root) bindLogin(root);
   }
 
   function watchLoginRoot() {
-    tryBind();
+    var root = document.getElementById('login');
+    if (root) bindAll(root);
 
-    var raf = window.requestAnimationFrame || function (cb) { return setTimeout(cb, 16); };
-    var scheduled = false;
+    if (!window.MutationObserver || !document.body) return;
+    if (document.body.getAttribute('data-mgi-login-watch') === '1') return;
+    document.body.setAttribute('data-mgi-login-watch', '1');
 
-    function schedule() {
-      if (scheduled) return;
-      scheduled = true;
-      raf(function () {
-        scheduled = false;
-        tryBind();
-      });
-    }
+    var obs = new MutationObserver(function () {
+      var r = document.getElementById('login');
+      if (r) bindAll(r);
+    });
 
-    if (window.MutationObserver && document.documentElement) {
-      var obs = new MutationObserver(schedule);
-      obs.observe(document.documentElement, { childList: true, subtree: true });
-    } else {
-      var tries = 0;
-      var t = setInterval(function () {
-        tries++;
-        tryBind();
-        if (document.getElementById('login') || tries > 40) clearInterval(t);
-      }, 250);
-    }
-
-    if (window.MutationObserver && document.body) {
-      var obsClass = new MutationObserver(function (mutations) {
-        for (var i = 0; i < mutations.length; i++) {
-          if (mutations[i].type === 'attributes' && mutations[i].attributeName === 'class') {
-            var root = document.getElementById('login');
-            if (root) applyI18n(root);
-            break;
-          }
-        }
-      });
-      obsClass.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-    }
+    obs.observe(document.body, { childList: true, subtree: true });
   }
 
   onReady(watchLoginRoot);
