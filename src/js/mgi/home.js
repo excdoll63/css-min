@@ -1,184 +1,3 @@
-window.__MGI_HOME_VER__ = "20260124_fix1";
-
-
-/* =====================
- * [MGI] Home Page (Externalized)
- * Source: HTML HomePage MGI 24-01-2026.html + JS HomePage MGI 24-01-2026.js
- * NOTE: Layout logic restored to original (desktop/tablet slots + mobile stack)
- * ===================== */
-
-
-/* --- [1] Mobile stack layout (JS box) --- */
-
-(function () {
-  const HOME_SELECTOR = '#home';
-  const MOBILE_CLASS = 'is-mobile';
-  const MQ = '(max-width: 767px)';
-  const STACK_ID = 'home-mobile-stack';
-
-  const ORDER = [
-    '.banner-wrapper',
-    'img.static-banner, .static-banner',
-    '.jackpot-wrapper, #home-jackpot',
-    '.user-checkin-wrapper',
-    '#home-dailyCheckIn',
-    '.livetx-wrapper, .livetx-wrapper-1, #home-livetx',
-    '.livetx-append-wrapper',
-    '.balance-wrapper, #home-balance',
-
-    '#home-featured',
-
-    '.user-rank-wrapper',
-    'img.leaderboard-banner, .leaderboard-banner',
-    '.bonus-wrapper'
-  ];
-
-  const TAIL = [
-    '.popular-game',
-    '.game-banners',
-    '.game-wrapper',
-    '.lucky-wrapper',
-    '.refer-wrapper',
-    '.movie-wrapper',
-    'img.soccer-banner, .soccer-banner',
-    '.footer-wrapper'
-  ];
-
-  let applied = false;
-  let stack = null;
-
-  const placeholders = new Map();
-
-  let hiddenTables = [];
-
-  const getHome = () => document.querySelector(HOME_SELECTOR);
-
-  const isMobile = () =>
-    document.documentElement.classList.contains(MOBILE_CLASS) ||
-    window.matchMedia(MQ).matches;
-
-  const ensureStack = (home) => {
-    stack = document.getElementById(STACK_ID);
-    if (!stack) {
-      stack = document.createElement('div');
-      stack.id = STACK_ID;
-      stack.className = 'box-1-1 mobile-home-layout';
-      home.prepend(stack);
-    } else if (stack.parentNode !== home) {
-      home.prepend(stack);
-    }
-  };
-
-  const remember = (el) => {
-    if (placeholders.has(el) || !el.parentNode) return;
-    const ph = document.createComment(STACK_ID);
-    el.parentNode.insertBefore(ph, el);
-    placeholders.set(el, { ph });
-  };
-
-  const moveFirst = (home, selector) => {
-    const el = home.querySelector(selector);
-    if (!el) return;
-    if (stack && stack.contains(el)) return;
-
-    remember(el);
-    stack.appendChild(el);
-  };
-
-  const hideDesktopTables = (home) => {
-    const tables = Array.from(home.querySelectorAll('table.box-3, table.box-2'));
-    hiddenTables = [];
-    for (const t of tables) {
-      if (!t) continue;
-      if (t.style.display !== 'none') {
-        hiddenTables.push(t);
-        t.style.display = 'none';
-      }
-    }
-  };
-
-  const showDesktopTables = () => {
-    for (const t of hiddenTables) {
-      if (t) t.style.display = '';
-    }
-    hiddenTables = [];
-  };
-
-  const apply = () => {
-    const home = getHome();
-    if (!home) return;
-
-    ensureStack(home);
-
-    ORDER.forEach((s) => moveFirst(home, s));
-    TAIL.forEach((s) => moveFirst(home, s));
-
-    hideDesktopTables(home);
-
-    applied = true;
-  };
-
-  const restore = () => {
-    if (!applied) return;
-
-    const home = getHome();
-    showDesktopTables();
-
-    for (const [el, meta] of placeholders) {
-      const ph = meta && meta.ph;
-      const stillInStack = stack && stack.contains(el);
-      const detached = !el.isConnected;
-
-      if ((stillInStack || detached) && home) {
-        if (ph && ph.parentNode) {
-          ph.parentNode.insertBefore(el, ph);
-        } else {
-          home.appendChild(el);
-        }
-      }
-
-      if (ph) ph.remove();
-    }
-    placeholders.clear();
-
-    if (stack && home) {
-      while (stack.firstChild) home.appendChild(stack.firstChild);
-    }
-
-    if (stack && stack.parentNode) stack.remove();
-    stack = null;
-    applied = false;
-  };
-
-  let raf = 0;
-  const update = () => {
-    if (raf) cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(() => {
-      raf = 0;
-      if (isMobile()) apply();
-      else restore();
-    });
-  };
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', update, { once: true });
-  } else {
-    update();
-  }
-
-  const mql = window.matchMedia(MQ);
-  if (mql.addEventListener) mql.addEventListener('change', update);
-  else mql.addListener(update);
-
-  new MutationObserver(update).observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ['class'],
-  });
-})();
-
-
-/* --- [2] LiveTX --- */
-
 (function () {
       var API_URL = "https://api-66.com/LiveTX=com01";
 
@@ -269,9 +88,6 @@ window.__MGI_HOME_VER__ = "20260124_fix1";
       loadTX();
       setInterval(loadTX, 15000);
     })();
-
-
-/* --- [3] Desktop/Tablet slot layout --- */
 
 (function() {
   function createElement(tag, className) {
@@ -434,9 +250,6 @@ window.__MGI_HOME_VER__ = "20260124_fix1";
 
   window.addEventListener("resize", initHomeLayout);
 })();
-
-
-/* --- [4] Daily Check-In popup --- */
 
 (function() {
   var VIP_COM = "com01";
@@ -749,9 +562,6 @@ window.__MGI_HOME_VER__ = "20260124_fix1";
     boot();
   }
 })();
-
-
-/* --- [5] User Rank --- */
 
 (function() {
   var VIP_COM = "com01";
