@@ -1,4 +1,14 @@
-window.__MGI_HOME_VER__ = "20260124";
+window.__MGI_HOME_VER__ = "20260124_fix1";
+
+
+/* =====================
+ * [MGI] Home Page (Externalized)
+ * Source: HTML HomePage MGI 24-01-2026.html + JS HomePage MGI 24-01-2026.js
+ * NOTE: Layout logic restored to original (desktop/tablet slots + mobile stack)
+ * ===================== */
+
+
+/* --- [1] Mobile stack layout (JS box) --- */
 
 (function () {
   const HOME_SELECTOR = '#home';
@@ -166,112 +176,102 @@ window.__MGI_HOME_VER__ = "20260124";
   });
 })();
 
+
+/* --- [2] LiveTX --- */
+
 (function () {
-  "use strict";
+      var API_URL = "https://api-66.com/LiveTX=com01";
 
-  function ready(fn) {
-    if (document.readyState !== "loading") {
-      fn();
-      return;
-    }
-    document.addEventListener("DOMContentLoaded", fn, { once: true });
-  }
+      var table = document.getElementById("home-livetx");
+      var tbody = document.querySelector("#home-livetx tbody");
+      if (!tbody || !table) return;
 
-  ready(function () {
-    var API_URL = "https://api-66.com/LiveTX=com01";
-
-    var table = document.getElementById("home-livetx");
-    if (!table) return;
-    if (table.getAttribute("data-mgi-tx-inited") === "1") return;
-    table.setAttribute("data-mgi-tx-inited", "1");
-
-    var tbody = table.querySelector("tbody");
-    if (!tbody) return;
-
-    function ensureRM(value) {
-      if (value == null || value === "-") return "-";
-      var s = String(value).trim();
-      if (!s) return "-";
-      return s.toUpperCase().indexOf("RM") === 0 ? s : ("RM" + s);
-    }
-
-    function normalizeRows(data) {
-      var rows = [];
-      if (Array.isArray(data)) {
-        rows = data;
-      } else if (data && typeof data === "object" && Array.isArray(data.rows)) {
-        rows = data.rows;
+      function ensureRM(value) {
+        if (value == null || value === "-") return "-";
+        var s = String(value).trim();
+        if (!s) return "-";
+        return s.toUpperCase().indexOf("RM") === 0 ? s : ("RM" + s);
       }
 
-      return rows.map(function (r) {
-        var txtype = (r.txtype || "").toString().toLowerCase();
-        var type = (r.type || (txtype === "w" ? "WITHDRAW" : "DEPOSIT")).toUpperCase();
-        var isWithdraw = type === "WITHDRAW";
+      function normalizeRows(data) {
+        var rows = [];
+        if (Array.isArray(data)) {
+          rows = data;
+        } else if (data && typeof data === "object" && Array.isArray(data.rows)) {
+          rows = data.rows;
+        }
 
-        return {
-          type: type,
-          mobile: r.mobile || "-",
-          amount: r.amount,
-          game: isWithdraw ? (r.game || r.gameName || "-") : "-"
-        };
-      });
-    }
+        return rows.map(function (r) {
+          var txtype = (r.txtype || "").toString().toLowerCase();
+          var type = (r.type || (txtype === "w" ? "WITHDRAW" : "DEPOSIT")).toUpperCase();
+          var isWithdraw = type === "WITHDRAW";
 
-    function renderRows(rows) {
-      if (!Array.isArray(rows)) rows = [];
-
-      var deposits = [];
-      var withdraws = [];
-
-      for (var i = 0; i < rows.length; i++) {
-        var r = rows[i];
-        if (!r || !r.type) continue;
-        if (r.type === "DEPOSIT") deposits.push(r);
-        else if (r.type === "WITHDRAW") withdraws.push(r);
+          return {
+            type: type,
+            mobile: r.mobile || "-",
+            amount: r.amount,
+            game: isWithdraw ? (r.game || r.gameName || "-") : "-"
+          };
+        });
       }
 
-      var maxRows = 5;
-      var html = "";
+      function renderRows(rows) {
+        if (!Array.isArray(rows)) rows = [];
 
-      for (var j = 0; j < maxRows; j++) {
-        var d = deposits[j];
-        var w = withdraws[j];
+        var deposits = [];
+        var withdraws = [];
 
-        var dMobile = d && d.mobile ? d.mobile : "-";
-        var dAmount = d ? ensureRM(d.amount) : "-";
+        for (var i = 0; i < rows.length; i++) {
+          var r = rows[i];
+          if (!r || !r.type) continue;
+          if (r.type === "DEPOSIT") deposits.push(r);
+          else if (r.type === "WITHDRAW") withdraws.push(r);
+        }
 
-        var wMobile = w && w.mobile ? w.mobile : "-";
-        var wAmount = w ? ensureRM(w.amount) : "-";
-        var wGame   = w && w.game ? w.game : "-";
+        var maxRows = 5;
+        var html = "";
 
-        html += "<tr>"
-             +    "<td>" + dMobile + "</td>"
-             +    "<td class='amount'>" + dAmount + "</td>"
-             +    "<td>" + wMobile + "</td>"
-             +    "<td class='amount'>" + wAmount + "</td>"
-             +    "<td>" + wGame + "</td>"
-             +  "</tr>";
+        for (var j = 0; j < maxRows; j++) {
+          var d = deposits[j];
+          var w = withdraws[j];
+
+          var dMobile = d && d.mobile ? d.mobile : "-";
+          var dAmount = d ? ensureRM(d.amount) : "-";
+
+          var wMobile = w && w.mobile ? w.mobile : "-";
+          var wAmount = w ? ensureRM(w.amount) : "-";
+          var wGame   = w && w.game ? w.game : "-";
+
+          html += "<tr>"
+               +    "<td>" + dMobile + "</td>"
+               +    "<td class='amount'>" + dAmount + "</td>"
+               +    "<td>" + wMobile + "</td>"
+               +    "<td class='amount'>" + wAmount + "</td>"
+               +    "<td>" + wGame + "</td>"
+               +  "</tr>";
+        }
+
+        tbody.innerHTML = html;
+        if (!table.classList.contains("mgi-live-ready")) table.classList.add("mgi-live-ready");
       }
 
-      tbody.innerHTML = html;
-      if (!table.classList.contains("mgi-live-ready")) table.classList.add("mgi-live-ready");
-    }
+      function loadTX() {
+        fetch(API_URL, { cache: "no-store" })
+          .then(function (r) { return r.json(); })
+          .then(function (j) {
+            if (!j || (j.code !== 0 && j.code !== "0")) return;
+            var rows = normalizeRows(j.data);
+            renderRows(rows);
+          })
+          .catch(function () {});
+      }
 
-    function loadTX() {
-      fetch(API_URL, { cache: "no-store" })
-        .then(function (r) { return r.json(); })
-        .then(function (j) {
-          if (!j || (j.code !== 0 && j.code !== "0")) return;
-          var rows = normalizeRows(j.data);
-          renderRows(rows);
-        })
-        .catch(function () {});
-    }
+      loadTX();
+      setInterval(loadTX, 15000);
+    })();
 
-    loadTX();
-    setInterval(loadTX, 15000);
-  });
-})();
+
+/* --- [3] Desktop/Tablet slot layout --- */
 
 (function() {
   function createElement(tag, className) {
@@ -434,6 +434,9 @@ window.__MGI_HOME_VER__ = "20260124";
 
   window.addEventListener("resize", initHomeLayout);
 })();
+
+
+/* --- [4] Daily Check-In popup --- */
 
 (function() {
   var VIP_COM = "com01";
@@ -746,6 +749,9 @@ window.__MGI_HOME_VER__ = "20260124";
     boot();
   }
 })();
+
+
+/* --- [5] User Rank --- */
 
 (function() {
   var VIP_COM = "com01";
