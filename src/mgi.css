@@ -4471,41 +4471,63 @@ body.C #content{
     margin: 5px auto;
 }
 
-#main-notice {
-  position: relative;
-  margin: 15px auto;
+#popupwindow {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 500px;
+  height: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+}
+
+#main-notice {
+  width: 80%;
+  max-width: 360px;
   display: flex;
-  flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
   scroll-behavior: smooth;
-  gap: 20px;
-  padding: 0 15px;
-  box-sizing: border-box;
+  scrollbar-width: none;
+  border-radius: 28px;
+  position: relative;
 }
 
 #main-notice::-webkit-scrollbar {
-  display: none;
+  width: 0;
+  height: 0;
 }
 
-#main-notice .notice {
+.notice {
   flex: 0 0 100%;
-  max-width: 400px;
   width: 100%;
   scroll-snap-align: start;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-radius: 28px;
+  cursor: pointer;
 }
 
-#main-notice .ic-close {
+#main-notice .ic-close,
+#main-notice .ic-close-circle {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  z-index: 5;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.8;
+  padding: 10px;
+  text-align: right;
+  cursor: pointer;
+  z-index: 10;
 }
