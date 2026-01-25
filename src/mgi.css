@@ -4472,7 +4472,7 @@ body.C #content{
 }
 
 #popupwindow {
-  z-index: 3;
+  z-index: 9999;
   position: fixed;
   top: 0;
   left: 0;
@@ -4492,6 +4492,9 @@ body.C #content{
   max-width: 360px;
   display: flex;
   flex-wrap: nowrap;
+  gap: 0;
+  padding: 0;
+  box-sizing: border-box;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -4499,10 +4502,10 @@ body.C #content{
   scroll-snap-stop: always;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  border-radius: 32px;
   position: relative;
-  box-sizing: border-box;
-  --pop-gap: 18px;
-  --pop-peek: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #main-notice::-webkit-scrollbar {
@@ -4511,28 +4514,24 @@ body.C #content{
 }
 
 #main-notice .notice {
-  flex: 0 0 calc(100% - var(--pop-peek)) !important;
-  width: calc(100% - var(--pop-peek)) !important;
-  max-width: calc(100% - var(--pop-peek)) !important;
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
   scroll-snap-align: start;
   background-size: contain !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  border-radius: 34px !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 32px;
   overflow: hidden;
   cursor: pointer;
-  margin-right: var(--pop-gap);
-}
-
-#main-notice .notice:last-child {
-  margin-right: 0;
 }
 
 #main-notice .ic-close,
 #main-notice .ic-close-circle {
   position: absolute;
   top: 10px;
-  right: calc(var(--pop-peek) + 10px);
+  right: 10px;
   width: 40px;
   height: 40px;
   opacity: 0.8;
@@ -4541,16 +4540,3 @@ body.C #content{
   cursor: pointer;
   z-index: 10;
 }
-
-@media (min-width: 768px) {
-  #main-notice {
-    max-width: 420px;
-    --pop-peek: 80px;
-    --pop-gap: 20px;
-  }
-
-  #main-notice .notice {
-    border-radius: 38px !important;
-  }
-}
-
