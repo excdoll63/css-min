@@ -4472,7 +4472,7 @@ body.C #content{
 }
 
 #popupwindow {
-  z-index: 3;
+  z-index: 9999;
   position: fixed;
   top: 0;
   left: 0;
@@ -4488,24 +4488,24 @@ body.C #content{
 }
 
 #main-notice {
-  --pop-gap: 18px;
-  --pop-peek: 34px;
-  width: 86%;
-  max-width: 380px;
+  width: 80%;
+  max-width: 360px;
   display: flex;
   flex-wrap: nowrap;
+  gap: 0;
+  padding: 0;
+  box-sizing: border-box;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   scroll-snap-stop: always;
   scroll-behavior: smooth;
-  padding-left: var(--pop-peek);
-  padding-right: var(--pop-peek);
-  box-sizing: border-box;
   scrollbar-width: none;
+  border-radius: 32px;
   position: relative;
-  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #main-notice::-webkit-scrollbar {
@@ -4514,51 +4514,29 @@ body.C #content{
 }
 
 #main-notice .notice {
-  flex: 0 0 100%;
-  width: 100%;
-  scroll-snap-align: center !important;
-  border-radius: 32px !important;
-  overflow: hidden;
-  background-size: contain;
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  scroll-snap-align: start;
+  background-size: contain !important;
   background-position: center;
   background-repeat: no-repeat;
-  background-clip: padding-box;
+  border-radius: 32px;
+  overflow: hidden;
   cursor: pointer;
-  margin-right: var(--pop-gap);
-}
-
-#main-notice .notice:last-child {
-  margin-right: 0;
 }
 
 #main-notice .ic-close,
 #main-notice .ic-close-circle {
   position: absolute;
   top: 10px;
-  right: calc(var(--pop-peek) + 10px);
+  right: 10px;
   width: 40px;
   height: 40px;
-  opacity: 0.85;
+  opacity: 0.8;
   padding: 10px;
   text-align: right;
   cursor: pointer;
   z-index: 10;
-}
-
-@media (min-width: 768px) {
-  #main-notice {
-    --pop-gap: 22px;
-    --pop-peek: 70px;
-    width: 70%;
-    max-width: 620px;
-  }
-
-  #main-notice .notice {
-    border-radius: 38px !important;
-  }
-
-  #main-notice .ic-close,
-  #main-notice .ic-close-circle {
-    right: calc(var(--pop-peek) + 14px);
-  }
 }
