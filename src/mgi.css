@@ -4594,8 +4594,6 @@ body.C #content{
   #main-notice .ic-close-circle {
     position: fixed !important;
     top: 24px !important;
-    left: 24px !important;
-    right: auto !important;
     z-index: 9999 !important;
     text-align: left !important;
   }
