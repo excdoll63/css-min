@@ -4472,7 +4472,7 @@ body.C #content{
 }
 
 #popupwindow {
-  z-index: 9999;
+  z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
@@ -4488,24 +4488,35 @@ body.C #content{
 }
 
 #main-notice {
-  width: 80%;
-  max-width: 360px;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: auto;
-  overflow-y: hidden;
+  --pop-gap: 24px;
+  --pop-peek: 0px;
+  --pop-radius: 38px;
+
+  width: 80% !important;
+  max-width: 360px !important;
+
+  margin: 15px auto !important;
+
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+
+  gap: var(--pop-gap) !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
   -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
+
+  scroll-snap-type: x mandatory !important;
   scroll-snap-stop: always;
   scroll-behavior: smooth;
+
   scrollbar-width: none;
-  border-radius: 32px;
+
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  touch-action: pan-x;
 }
 
 #main-notice::-webkit-scrollbar {
@@ -4516,15 +4527,26 @@ body.C #content{
 #main-notice .notice {
   flex: 0 0 100% !important;
   width: 100% !important;
-  min-width: 100% !important;
   max-width: 100% !important;
+
+  margin: 0 !important;
+
+  height: 0;
+  padding-top: 150%;
+
   scroll-snap-align: start;
-  background-size: contain !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 32px;
+
+  border-radius: var(--pop-radius) !important;
   overflow: hidden;
+
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-clip: padding-box;
+
   cursor: pointer;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
 }
 
 #main-notice .ic-close,
@@ -4534,9 +4556,17 @@ body.C #content{
   right: 10px;
   width: 40px;
   height: 40px;
-  opacity: 0.8;
+  opacity: 0.85;
   padding: 10px;
   text-align: right;
   cursor: pointer;
-  z-index: 10;
+  z-index: 30;
+}
+
+@media (min-width: 768px) {
+  #main-notice {
+    max-width: 420px !important;
+    --pop-gap: 28px;
+    --pop-radius: 42px;
+  }
 }
