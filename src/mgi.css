@@ -4560,7 +4560,23 @@ body.C #content{
 
 #main-notice .ic-close,
 #main-notice .ic-close-circle {
-  display: none !important;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  opacity: 0.85;
+  padding: 10px;
+  text-align: right;
+  cursor: pointer;
+  z-index: 30;
+}
+
+@media (max-width: 767px) {
+  #main-notice .ic-close,
+  #main-notice .ic-close-circle {
+    display: none !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -4576,17 +4592,11 @@ body.C #content{
 
   #main-notice .ic-close,
   #main-notice .ic-close-circle {
-    display: block !important;
     position: fixed !important;
-    top: 16px !important;
-    left: 16px !important;
+    top: 24px !important;
+    left: 24px !important;
     right: auto !important;
-    width: 40px !important;
-    height: 40px !important;
-    opacity: 0.85 !important;
-    padding: 10px !important;
-    text-align: center !important;
-    cursor: pointer;
     z-index: 9999 !important;
+    text-align: left !important;
   }
 }
