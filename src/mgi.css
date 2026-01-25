@@ -4499,7 +4499,7 @@ body.C #content{
 #main-notice {
   --pop-gap: 24px;
   --pop-peek: 0px;
-  --pop-radius: 38px;
+  --pop-radius: 20px;
 
   width: 80% !important;
   max-width: 360px !important;
