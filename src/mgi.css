@@ -4485,6 +4485,15 @@ body.C #content{
   opacity: 0;
   transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+#popupwindow[style*="display: block"],
+#popupwindow[style*="display:block"] {
+  display: flex !important;
 }
 
 #main-notice {
@@ -4495,7 +4504,7 @@ body.C #content{
   width: 80% !important;
   max-width: 360px !important;
 
-  margin: 15px auto !important;
+  margin: 0 auto !important;
 
   display: flex !important;
   flex-wrap: nowrap !important;
@@ -4564,6 +4573,10 @@ body.C #content{
 }
 
 @media (min-width: 768px) {
+  #popupwindow {
+    padding: 24px;
+  }
+
   #main-notice {
     max-width: 420px !important;
     --pop-gap: 28px;
