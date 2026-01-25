@@ -4580,6 +4580,6 @@ body.C #content{
   #main-notice {
     max-width: 420px !important;
     --pop-gap: 28px;
-    --pop-radius: 20px;
+    --pop-radius: 42px;
   }
 }
