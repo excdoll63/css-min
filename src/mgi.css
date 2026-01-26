@@ -4592,86 +4592,129 @@ body.C #content{
   }
 }
 
-#home-featured {
-  --mgi-bg-a: rgba(61, 2, 81, 0.72);
-  --mgi-bg-b: rgba(32, 2, 54, 0.72);
-  --mgi-accent: #cb3fff;
-  --mgi-accent-2: #ef00ff;
-  --mgi-accent-3: #5105a3;
-  --mgi-glow: rgba(239, 0, 255, 0.35);
-  --mgi-radius: 12px;
+#home-featured{
+  --hf-ac1:#cb3fff;
+  --hf-ac2:#ef00ff;
+  --hf-ac3:#5105a3;
+  --hf-bg1:#3d0251;
+  --hf-bg2:#200236;
 
-  position: relative;
-  overflow: hidden;
-  margin-top: 15px;
+  --hf-radius:14px;
+  --hf-border:1px;
+  --hf-pad-x:10px;
+  --hf-pad-top:34px;
+  --hf-pad-bottom:14px;
 
-  background: linear-gradient(145deg, var(--mgi-bg-a), var(--mgi-bg-b));
-  border: 1px solid rgba(203, 63, 255, 0.55);
-  border-radius: var(--mgi-radius);
+  position:relative;
+  overflow:hidden;
+  margin-top:15px;
+
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  color:#fff;
+
+  border-radius:var(--hf-radius);
+  border:var(--hf-border) solid rgba(203,63,255,.75);
+
+  background:linear-gradient(145deg, rgba(61,2,81,.82), rgba(32,2,54,.92));
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
 
   box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.03),
-    0 8px 24px rgba(25, 25, 25, 0.8),
-    0 0 18px var(--mgi-glow);
-
-  backdrop-filter: blur(10px) saturate(120%);
-  -webkit-backdrop-filter: blur(10px) saturate(120%);
+    inset 0 1px 2px rgba(255,255,255,.03),
+    0 8px 24px rgba(25,25,25,.80),
+    0 0 18px rgba(239,0,255,.35);
 }
 
-#home-featured::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+#home-featured .wrapper{
+  position:relative;
+  overflow:hidden;
 
-  background:
-    radial-gradient(80% 60% at 12% 0%,
-      rgba(203, 63, 255, 0.22) 0%,
-      rgba(203, 63, 255, 0) 60%),
-    radial-gradient(70% 55% at 88% 100%,
-      rgba(239, 0, 255, 0.18) 0%,
-      rgba(239, 0, 255, 0) 65%);
-}
+  padding:var(--hf-pad-top) var(--hf-pad-x) var(--hf-pad-bottom);
 
-#home-featured .wrapper {
-  position: relative;
-  z-index: 1;
-
-  overflow: hidden;
-  padding: 32px 8px 15px;
-
-  background: linear-gradient(
+  background:linear-gradient(
     90deg,
-    rgba(203, 63, 255, 0.55) 0%,
-    rgba(239, 0, 255, 0.45) 50%,
-    rgba(81, 5, 163, 0.55) 100%
+    rgba(203,63,255,.18) 0%,
+    rgba(239,0,255,.12) 50%,
+    rgba(81,5,163,.18) 100%
   );
-
-  border-radius: calc(var(--mgi-radius) - 2px);
 }
 
-#home-featured .label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
+#home-featured .label{
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:2;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  height:26px;
+  line-height:26px;
+  padding:0 12px;
 
-  height: 22px;
-  padding: 0 10px;
+  font-size:11px;
+  letter-spacing:.2px;
 
-  background: linear-gradient(90deg, var(--mgi-accent) 0%, var(--mgi-accent-2) 100%);
-  color: #fff;
+  font-family:'Montserrat',sans-serif;
+  font-weight:700;
+  color:#fff;
 
-  font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 22px;
-  letter-spacing: 0.3px;
+  background:linear-gradient(90deg, var(--hf-ac1) 0%, var(--hf-ac2) 65%, var(--hf-ac3) 100%);
+  border-right:1px solid rgba(255,255,255,.12);
+  border-bottom:1px solid rgba(255,255,255,.12);
+  border-radius:0 0 12px 0;
 
-  border-radius: 0 0 10px 0;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  text-shadow:1px 1px 2px rgba(25,25,25,.85);
+  box-shadow:
+    0 8px 18px rgba(0,0,0,.45),
+    0 0 14px rgba(239,0,255,.25);
+}
+
+#home-featured iframe{
+  display:block;
+  width:100%;
+
+  border:1px solid rgba(203,63,255,.65);
+  border-radius:12px;
+
+  background:rgba(0,0,0,.18);
+
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.04),
+    0 10px 22px rgba(0,0,0,.50),
+    0 0 16px rgba(239,0,255,.25);
+}
+
+#home-featured iframe:focus{
+  outline:none;
+}
+
+#home-featured img{
+  max-width:100%;
+  height:auto;
+  border-radius:10px;
+}
+
+#home-featured a{
+  color:inherit;
+  text-decoration:none;
+}
+
+@media (max-width: 767px){
+  #home-featured{
+    --hf-radius:12px;
+    --hf-pad-x:8px;
+    --hf-pad-top:32px;
+    --hf-pad-bottom:12px;
+  }
+
+  #home-featured .label{
+    height:24px;
+    line-height:24px;
+    font-size:10px;
+    padding:0 10px;
+    border-radius:0 0 10px 0;
+  }
+
+  #home-featured iframe{
+    border-radius:10px;
+  }
 }
