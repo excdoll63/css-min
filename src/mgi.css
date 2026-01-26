@@ -4592,71 +4592,9 @@ body.C #content{
   }
 }
 
-#home-featured {
-  --hf-radius: 10px;
-  --hf-bg-1: rgba(95, 10, 170, 0.85);
-  --hf-bg-2: rgba(18, 2, 38, 0.92);
-  --hf-neon: rgba(255, 0, 214, 0.22);
-  --hf-neon-2: rgba(122, 42, 255, 0.20);
-
-  position: relative;
-  overflow: hidden;
-  margin-top: 15px;
-
-  border-radius: var(--hf-radius);
-  background: linear-gradient(135deg, var(--hf-bg-1), var(--hf-bg-2));
-  border: 1px solid var(--hf-neon);
-
-  box-shadow:
-    0 10px 28px rgba(0, 0, 0, 0.55),
-    0 0 18px rgba(255, 0, 214, 0.14);
-}
-
-#home-featured::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-
-  background:
-    radial-gradient(520px circle at 0% 0%, rgba(255, 0, 214, 0.18), transparent 56%),
-    radial-gradient(520px circle at 100% 100%, rgba(122, 42, 255, 0.16), transparent 60%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.06), transparent 35%, transparent 65%, rgba(255, 255, 255, 0.04));
-}
-
-#home-featured > * {
-  position: relative;
-  z-index: 1;
-}
-
 #home-featured .label {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 24px;
-  line-height: 24px;
-  padding: 0 12px;
-
-  font-size: 11px;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-
-  color: #fff;
-  font-family: Montserrat, "Bai Jamjuree", sans-serif;
+  background: #5105A3;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
-
-  background: linear-gradient(90deg, #ff00d6 0%, #7a2aff 100%);
-  border-radius: 0 0 var(--hf-radius) 0;
-
-  box-shadow:
-    0 8px 18px rgba(0, 0, 0, 0.45),
-    0 0 14px rgba(255, 0, 214, 0.22);
-
-  border-right: 1px solid rgba(255, 255, 255, 0.14);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
