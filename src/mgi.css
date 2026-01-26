@@ -859,13 +859,6 @@ body .light-theme .current {
   background: linear-gradient(90deg,rgba(203, 63, 255, 1) 0%, rgba(239, 0, 255, 1) 50%, rgba(81, 5, 163, 1) 100%);
 }
 
-#home-featured .label {
-  background: #5105A3;
-  color: #FFFFFF;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-}
-
 #history-report textarea {
   margin-top: 10px;
   background: #FFFFFF;
