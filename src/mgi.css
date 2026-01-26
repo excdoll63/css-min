@@ -4484,9 +4484,14 @@ body.C #content{
   box-sizing: border-box;
 }
 
-#popupwindow[style*="display: block"],
-#popupwindow[style*="display:block"] {
+body[page="home"] #popupwindow[style*="display: block"],
+body[page="home"] #popupwindow[style*="display:block"] {
   display: flex !important;
+}
+
+body[page="promotion"] #popupwindow[style*="display: block"],
+body[page="promotion"] #popupwindow[style*="display:block"] {
+  display: block !important;
 }
 
 #main-notice {
