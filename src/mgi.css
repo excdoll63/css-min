@@ -4718,3 +4718,157 @@ body.C #content{
     border-radius:10px;
   }
 }
+
+body.C #footer > a[href="#home"]{
+  --mgi-accent1:#cb3fff;
+  --mgi-accent2:#ef00ff;
+  --mgi-accent3:#5105a3;
+  --mgi-bg1:#3d0251;
+  --mgi-bg2:#200236;
+
+  --fab-size:76px;
+  --fab-raise:-18px;
+
+  --fab-icon:url("https://mgiwallet.com/media/fd3b93a150f864771d14e.png");
+
+  order:3;
+  flex:0 0 var(--fab-size) !important;
+  width:var(--fab-size) !important;
+  min-width:var(--fab-size) !important;
+  height:var(--fab-size) !important;
+
+  align-self:center !important;
+  margin-top:var(--fab-raise) !important;
+  margin-left:6px !important;
+  margin-right:6px !important;
+
+  padding:0 !important;
+  border-radius:50% !important;
+
+  position:relative !important;
+  display:grid !important;
+  place-items:center !important;
+
+  background-image:none !important;
+
+  background:linear-gradient(145deg, rgba(61,2,81,.88), rgba(32,2,54,.88)) !important;
+  border:1px solid rgba(203,63,255,.65) !important;
+
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.04),
+    0 8px 24px rgba(25,25,25,.85),
+    0 0 18px rgba(239,0,255,.25) !important;
+
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+
+  overflow:visible !important;
+  isolation:isolate;
+
+  font-size:0 !important;
+  color:transparent !important;
+
+  transform:translateZ(0);
+}
+
+body.C #footer > a[href="#home"] > *{
+  display:none !important;
+}
+
+body.C #footer > a[href="#home"]::before{
+  content:"";
+  position:absolute;
+  inset:-5px;
+  border-radius:inherit;
+
+  background:conic-gradient(from 0deg,
+    var(--mgi-accent1),
+    var(--mgi-accent2),
+    var(--mgi-accent3),
+    var(--mgi-accent1)
+  );
+
+  z-index:-1;
+  pointer-events:none;
+
+  -webkit-mask:radial-gradient(farthest-side,
+    transparent calc(50% - 7px),
+    #000        calc(50% - 6px)
+  );
+  mask:radial-gradient(farthest-side,
+    transparent calc(50% - 7px),
+    #000        calc(50% - 6px)
+  );
+
+  filter:drop-shadow(0 0 10px rgba(239,0,255,.35));
+  opacity:.75;
+}
+
+body.C #footer > a[href="#home"]::after{
+  content:"";
+  width:calc(var(--fab-size) * .64);
+  height:calc(var(--fab-size) * .64);
+
+  background:var(--fab-icon) center / contain no-repeat;
+
+  border-radius:16px;
+  box-shadow:0 10px 22px rgba(0,0,0,.35);
+  pointer-events:none;
+}
+
+body.C #footer > a[href="#home"].selected::before{
+  opacity:1;
+  animation:mgiRingSpin 4s linear infinite, mgiRingPulse 2.1s ease-in-out infinite;
+}
+
+@media (hover:hover){
+  body.C #footer > a[href="#home"]:hover{
+    transform:translateY(-1px) scale(1.02);
+  }
+  body.C #footer > a[href="#home"]:hover::before{
+    opacity:1;
+    animation:mgiRingSpin 2.8s linear infinite, mgiRingPulse 2.1s ease-in-out infinite;
+  }
+}
+
+body.C #footer > a[href="#home"]:active{
+  transform:scale(.97);
+}
+
+body.C #footer > a[href="#home"]:focus-visible{
+  outline:2px solid rgba(239,0,255,.85);
+  outline-offset:4px;
+}
+
+@media (max-width:767px){
+  body.C #footer > a[href="#home"]{
+    --fab-size:64px;
+    --fab-raise:-14px;
+  }
+  body.C #footer > a[href="#home"]::after{
+    border-radius:14px;
+  }
+}
+
+@keyframes mgiRingSpin{
+  to{ transform:rotate(1turn); }
+}
+
+@keyframes mgiRingPulse{
+  0%,100%{
+    filter:drop-shadow(0 0 8px rgba(239,0,255,.25));
+    opacity:.85;
+  }
+  50%{
+    filter:drop-shadow(0 0 16px rgba(239,0,255,.5));
+    opacity:1;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  body.C #footer > a[href="#home"],
+  body.C #footer > a[href="#home"]::before{
+    animation:none !important;
+    transition:none !important;
+  }
+}
