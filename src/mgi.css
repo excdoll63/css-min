@@ -4820,3 +4820,6 @@ body.C #footer>a[href="#home"]:active::after{
   body.C #footer>a[href="#home"]::before{animation:none !important;}
   body.C #footer>a[href="#home"]{transition:none;}
 }
+
+body.C #footer { display: flex !important; }
+body.C #marquee { display: block !important; }
