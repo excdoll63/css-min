@@ -1,30 +1,31 @@
 (function () {
   'use strict';
 
-  window.toggleReadMore = function () {
-    var content = document.getElementById("moreContent");
-    var btn = document.getElementById("readMoreBtn");
-    if (!content || !btn) return;
+  function init() {
+    var root = document.getElementById('promoFooter');
+    if (!root) return;
 
-    var isHidden = window.getComputedStyle(content).display === "none";
-    if (isHidden) {
-      content.style.display = "block";
-      btn.textContent = "Read Less";
-      btn.setAttribute("aria-expanded", "true");
-    } else {
-      content.style.display = "none";
-      btn.textContent = "Read More";
-      btn.setAttribute("aria-expanded", "false");
-    }
-  };
+    var btn = root.querySelector('#promoReadMoreBtn');
+    var content = root.querySelector('#promoMoreContent');
+    if (!btn || !content) return;
 
-  document.addEventListener("DOMContentLoaded", function () {
-    var content = document.getElementById("moreContent");
-    var btn = document.getElementById("readMoreBtn");
-    if (content) content.style.display = "none";
-    if (btn) {
-      btn.textContent = "Read More";
-      btn.setAttribute("aria-expanded", "false");
+    function setState(expanded) {
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      content.style.display = expanded ? 'block' : 'none';
+      btn.textContent = expanded ? 'Read Less' : 'Read More';
     }
-  }, { once: true });
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      setState(btn.getAttribute('aria-expanded') !== 'true');
+    });
+
+    setState(false);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
+  } else {
+    init();
+  }
 })();
