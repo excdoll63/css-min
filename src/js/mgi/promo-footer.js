@@ -1,25 +1,35 @@
 (function () {
   'use strict';
-  function init() {
-    var root = document.getElementById('promoFooter');
-    if (!root) return;
-    var btn = root.querySelector('#promoReadMoreBtn');
-    var content = root.querySelector('#promoMoreContent');
-    if (!btn || !content) return;
-    function setState(expanded) {
-      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-      content.style.display = expanded ? 'block' : 'none';
-      btn.textContent = expanded ? 'Read Less' : 'Read More';
+
+  window.togglePromoReadMore = function () {
+    var content = document.getElementById('promoMoreContent');
+    var btn = document.getElementById('promoReadMoreBtn');
+    if (!content || !btn) return;
+
+    var isHidden = window.getComputedStyle(content).display === 'none';
+
+    if (isHidden) {
+      content.style.setProperty('display', 'block', 'important');
+      btn.textContent = 'Read Less';
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      content.style.setProperty('display', 'none', 'important');
+      btn.textContent = 'Read More';
+      btn.setAttribute('aria-expanded', 'false');
     }
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      setState(btn.getAttribute('aria-expanded') !== 'true');
-    });
-    setState(false);
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init, { once: true });
-  } else {
-    init();
-  }
+  };
+
+  document.addEventListener(
+    'DOMContentLoaded',
+    function () {
+      var content = document.getElementById('promoMoreContent');
+      var btn = document.getElementById('promoReadMoreBtn');
+      if (content) content.style.setProperty('display', 'none', 'important');
+      if (btn) {
+        btn.textContent = 'Read More';
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    },
+    { once: true }
+  );
 })();
