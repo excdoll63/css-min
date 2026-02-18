@@ -4823,3 +4823,350 @@ body.C #footer>a[href="#home"]:active::after{
 
 body.C #footer { display: flex !important; }
 body.C #marquee { display: block !important; }
+
+body.C{
+  --cs-bg:#B22222;
+  --cs-deep:#2D0000;
+  --cs-ink:#1A0A00;
+  --cs-brown:#832E00;
+  --cs-gold:#DEAF1B;
+  --cs-gold2:#FCF380;
+  --cs-gold3:#FFF6CF;
+  --cs-gold4:#C7920A;
+  --cs-gold5:#9E7400;
+  --cs-panel:rgba(45,0,0,.78);
+  background-color:var(--cs-bg)!important;
+  color:#fff!important;
+  font-family:"Montserrat","PingFang SC","Microsoft YaHei",sans-serif!important;
+}
+
+body.C,
+body.C #content{
+  background-color:var(--cs-bg)!important;
+}
+
+body.C h1,
+body.C h2,
+body.C h3,
+body.C .title,
+body.C .t1,
+body.C .t2,
+body.C #login .title,
+body.C #promotion-popup .title{
+  font-family:"STKaiti","Kaiti SC","KaiTi","Songti SC","STSong","Noto Serif SC","Times New Roman",serif!important;
+  letter-spacing:.04em!important;
+}
+
+body.C #login .title,
+body.C #withdraw h2,
+body.C #withdraw .title,
+body.C #settings .t1,
+body.C #resetPassword .t1,
+body.C #changePassword .t1,
+body.C #changeBank .t1{
+  color:var(--cs-gold2)!important;
+  text-shadow:0 10px 26px rgba(0,0,0,.45)!important;
+}
+
+body.C #withdraw .blink{
+  color:var(--cs-gold2)!important;
+  text-shadow:0 0 18px rgba(252,243,128,.22)!important;
+}
+
+body.C a{
+  color:var(--cs-gold2)!important;
+  text-decoration:none;
+  text-underline-offset:3px;
+}
+
+body.C a:hover{
+  color:var(--cs-gold3)!important;
+  text-decoration:underline;
+}
+
+body.C #header{
+  background:linear-gradient(180deg,rgba(45,0,0,.92),rgba(26,10,0,.96))!important;
+  border-bottom:1px solid rgba(222,175,27,.28)!important;
+  box-shadow:0 12px 30px rgba(0,0,0,.55)!important;
+}
+
+body.C #marquee{
+  background:linear-gradient(180deg,rgba(45,0,0,.90),rgba(26,10,0,.94))!important;
+  border:1px solid rgba(222,175,27,.30)!important;
+  border-radius:12px!important;
+  color:var(--cs-gold2)!important;
+  font-weight:900!important;
+  letter-spacing:.6px!important;
+  text-shadow:0 1px 0 rgba(0,0,0,.35)!important;
+  box-shadow:0 12px 26px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.06) inset!important;
+}
+
+body.C #promotion-popup,
+body.C #withdraw form,
+body.C #user-report,
+body.C #deposit .step-box,
+body.C #deposit .form-box{
+  border:2px solid rgba(222,175,27,.55)!important;
+  border-radius:18px!important;
+  background:linear-gradient(180deg,rgba(45,0,0,.74),rgba(26,10,0,.90))!important;
+  box-shadow:0 22px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.06) inset!important;
+}
+
+body.C input[type=text],
+body.C input[type=email],
+body.C input[type=tel],
+body.C input[type=number],
+body.C input[type=password],
+body.C textarea,
+body.C select{
+  box-sizing:border-box;
+  width:100%;
+  font-size:16px!important;
+  padding:12px 12px!important;
+  border-radius:14px!important;
+  border:1px solid rgba(222,175,27,.45)!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,246,207,.92))!important;
+  color:var(--cs-brown)!important;
+  -webkit-text-fill-color:var(--cs-brown)!important;
+  font-weight:800!important;
+  outline:0!important;
+  box-shadow:0 14px 24px rgba(0,0,0,.32),0 0 0 1px rgba(255,255,255,.24) inset!important;
+}
+
+body.C input::placeholder,
+body.C textarea::placeholder{
+  color:rgba(131,46,0,.55)!important;
+  font-weight:800!important;
+}
+
+body.C input:focus,
+body.C textarea:focus,
+body.C select:focus{
+  border-color:rgba(252,243,128,.82)!important;
+  box-shadow:0 16px 30px rgba(0,0,0,.36),0 0 0 1px rgba(255,255,255,.30) inset,0 0 0 3px rgba(252,243,128,.22),0 0 28px rgba(222,175,27,.18)!important;
+}
+
+@keyframes cs-coinshine{
+  0%{transform:translateX(-140%) rotate(25deg);opacity:0;}
+  25%{opacity:.85;}
+  100%{transform:translateX(260%) rotate(25deg);opacity:0;}
+}
+
+body.C .btn.next,
+body.C .btn.submit,
+body.C .btn.primary,
+body.C #gameList .games .game .btn,
+body.C #home-download .btns .play,
+body.C #user-report .submit-btn,
+body.C #deposit .menu-container .btn,
+body.C #downline-winloss .filter .btn,
+body.C #login .btn.login,
+body.C #login a.btn.login,
+body.C #login button.btn.login,
+body.C #login .btn.register,
+body.C #login a.btn.register,
+body.C #login button.btn.register,
+body.C .swal2-popup .swal2-styled.swal2-confirm{
+  -webkit-tap-highlight-color:transparent!important;
+  appearance:none!important;
+  box-sizing:border-box!important;
+  position:relative!important;
+  overflow:hidden!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:42px!important;
+  padding:0 18px!important;
+  border-radius:18px!important;
+  border:2px solid transparent!important;
+  color:var(--cs-brown)!important;
+  text-decoration:none!important;
+  font-family:"Montserrat","PingFang SC","Microsoft YaHei",sans-serif!important;
+  font-weight:1000!important;
+  letter-spacing:.10em!important;
+  text-transform:uppercase!important;
+  line-height:1!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.35)!important;
+  background:
+    radial-gradient(circle at 16px 50%, rgba(131,46,0,.20) 0 15px, rgba(0,0,0,0) 16px) padding-box,
+    radial-gradient(circle at calc(100% - 16px) 50%, rgba(131,46,0,.20) 0 15px, rgba(0,0,0,0) 16px) padding-box,
+    radial-gradient(circle at 16px 50%, rgba(255,255,255,.30) 0 5px, rgba(0,0,0,0) 6px) padding-box,
+    radial-gradient(circle at calc(100% - 16px) 50%, rgba(255,255,255,.30) 0 5px, rgba(0,0,0,0) 6px) padding-box,
+    repeating-linear-gradient(115deg, rgba(255,255,255,.18) 0 2px, rgba(255,255,255,0) 2px 7px) padding-box,
+    linear-gradient(180deg, var(--cs-gold3) 0%, #FCE58E 18%, var(--cs-gold2) 46%, var(--cs-gold) 74%, var(--cs-gold4) 100%) padding-box,
+    linear-gradient(135deg, rgba(255,255,255,.92) 0%, rgba(252,243,128,.92) 30%, rgba(222,175,27,.96) 62%, rgba(131,46,0,.68) 100%) border-box!important;
+  box-shadow:0 18px 38px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.75), inset 0 -3px 0 rgba(131,46,0,.38), 0 0 30px rgba(222,175,27,.14)!important;
+  cursor:pointer!important;
+  user-select:none!important;
+  transition:transform .18s ease,filter .18s ease,box-shadow .18s ease!important;
+}
+
+body.C .btn.next::before,
+body.C .btn.submit::before,
+body.C .btn.primary::before,
+body.C #gameList .games .game .btn::before,
+body.C #home-download .btns .play::before,
+body.C #user-report .submit-btn::before,
+body.C #deposit .menu-container .btn::before,
+body.C #downline-winloss .filter .btn::before,
+body.C #login .btn.login::before,
+body.C #login a.btn.login::before,
+body.C #login button.btn.login::before,
+body.C #login .btn.register::before,
+body.C #login a.btn.register::before,
+body.C #login button.btn.register::before,
+body.C .swal2-popup .swal2-styled.swal2-confirm::before{
+  content:"";
+  position:absolute;
+  inset:1px;
+  border-radius:inherit;
+  background:linear-gradient(135deg,rgba(255,255,255,.55),rgba(255,255,255,0) 55%);
+  opacity:.55;
+  pointer-events:none;
+}
+
+body.C .btn.next::after,
+body.C .btn.submit::after,
+body.C .btn.primary::after,
+body.C #gameList .games .game .btn::after,
+body.C #home-download .btns .play::after,
+body.C #user-report .submit-btn::after,
+body.C #deposit .menu-container .btn::after,
+body.C #downline-winloss .filter .btn::after,
+body.C #login .btn.login::after,
+body.C #login a.btn.login::after,
+body.C #login button.btn.login::after,
+body.C #login .btn.register::after,
+body.C #login a.btn.register::after,
+body.C #login button.btn.register::after,
+body.C .swal2-popup .swal2-styled.swal2-confirm::after{
+  content:"";
+  position:absolute;
+  top:-70%;
+  left:-40%;
+  width:40%;
+  height:240%;
+  transform:rotate(25deg);
+  background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.68) 50%,rgba(255,255,255,0) 100%);
+  opacity:0;
+  pointer-events:none;
+}
+
+@media (hover:hover){
+  body.C .btn.next:hover,
+  body.C .btn.submit:hover,
+  body.C .btn.primary:hover,
+  body.C #gameList .games .game .btn:hover,
+  body.C #home-download .btns .play:hover,
+  body.C #user-report .submit-btn:hover,
+  body.C #deposit .menu-container .btn:hover,
+  body.C #downline-winloss .filter .btn:hover,
+  body.C #login .btn.login:hover,
+  body.C #login a.btn.login:hover,
+  body.C #login button.btn.login:hover,
+  body.C #login .btn.register:hover,
+  body.C #login a.btn.register:hover,
+  body.C #login button.btn.register:hover,
+  body.C .swal2-popup .swal2-styled.swal2-confirm:hover{
+    transform:translateY(-1px);
+    filter:brightness(1.10) saturate(1.07);
+    box-shadow:0 22px 44px rgba(0,0,0,.58), inset 0 1px 0 rgba(255,255,255,.78), inset 0 -3px 0 rgba(131,46,0,.38), 0 0 38px rgba(252,243,128,.16)!important;
+  }
+
+  body.C .btn.next:hover::after,
+  body.C .btn.submit:hover::after,
+  body.C .btn.primary:hover::after,
+  body.C #gameList .games .game .btn:hover::after,
+  body.C #home-download .btns .play:hover::after,
+  body.C #user-report .submit-btn:hover::after,
+  body.C #deposit .menu-container .btn:hover::after,
+  body.C #downline-winloss .filter .btn:hover::after,
+  body.C #login .btn.login:hover::after,
+  body.C #login a.btn.login:hover::after,
+  body.C #login button.btn.login:hover::after,
+  body.C #login .btn.register:hover::after,
+  body.C #login a.btn.register:hover::after,
+  body.C #login button.btn.register:hover::after,
+  body.C .swal2-popup .swal2-styled.swal2-confirm:hover::after{
+    opacity:.85;
+    animation:cs-coinshine .95s ease;
+  }
+}
+
+body.C .btn.next:active,
+body.C .btn.submit:active,
+body.C .btn.primary:active,
+body.C #gameList .games .game .btn:active,
+body.C #home-download .btns .play:active,
+body.C #user-report .submit-btn:active,
+body.C #deposit .menu-container .btn:active,
+body.C #downline-winloss .filter .btn:active,
+body.C #login .btn.login:active,
+body.C #login a.btn.login:active,
+body.C #login button.btn.login:active,
+body.C #login .btn.register:active,
+body.C #login a.btn.register:active,
+body.C #login button.btn.register:active,
+body.C .swal2-popup .swal2-styled.swal2-confirm:active{
+  transform:translateY(0);
+  filter:brightness(1.03);
+  box-shadow:0 14px 30px rgba(0,0,0,.52), inset 0 1px 0 rgba(255,255,255,.70), inset 0 -3px 0 rgba(131,46,0,.38), 0 0 24px rgba(222,175,27,.12)!important;
+}
+
+body.C .btn.cancel,
+body.C .btn.danger.cancel,
+body.C .swal2-popup .swal2-styled.swal2-cancel{
+  border:2px solid rgba(255,255,255,.16)!important;
+  border-radius:18px!important;
+  background:linear-gradient(180deg,#545454 0%,#2B2B2B 55%,#191919 100%)!important;
+  color:#fff!important;
+  font-weight:900!important;
+  letter-spacing:.08em!important;
+  box-shadow:0 16px 34px rgba(0,0,0,.50), inset 0 1px 0 rgba(255,255,255,.10)!important;
+}
+
+body.C #gameList .tabs .tab.selected,
+body.C #history .tabs .tab.selected,
+body.C #downline .tabs .tab.selected,
+body.C #luckynumber .tabs .tab.selected,
+body.C #leaderboard .dates .date.selected,
+body.C #leaderboard .keys .key.selected{
+  border:2px solid transparent!important;
+  background:
+    repeating-linear-gradient(115deg, rgba(255,255,255,.16) 0 2px, rgba(255,255,255,0) 2px 7px) padding-box,
+    linear-gradient(180deg,var(--cs-gold3) 0%,var(--cs-gold2) 48%,var(--cs-gold) 100%) padding-box,
+    linear-gradient(135deg, rgba(255,255,255,.92) 0%, rgba(252,243,128,.92) 30%, rgba(222,175,27,.96) 62%, rgba(131,46,0,.68) 100%) border-box!important;
+  color:var(--cs-brown)!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.35)!important;
+}
+
+@media (prefers-reduced-motion: reduce){
+  body.C .btn.next,
+  body.C .btn.submit,
+  body.C .btn.primary,
+  body.C #gameList .games .game .btn,
+  body.C #home-download .btns .play,
+  body.C #user-report .submit-btn,
+  body.C #deposit .menu-container .btn,
+  body.C #downline-winloss .filter .btn,
+  body.C #login .btn.login,
+  body.C #login .btn.register,
+  body.C .swal2-popup .swal2-styled.swal2-confirm{
+    transition:none!important;
+  }
+  body.C .btn.next::after,
+  body.C .btn.submit::after,
+  body.C .btn.primary::after,
+  body.C #gameList .games .game .btn::after,
+  body.C #home-download .btns .play::after,
+  body.C #user-report .submit-btn::after,
+  body.C #deposit .menu-container .btn::after,
+  body.C #downline-winloss .filter .btn::after,
+  body.C #login .btn.login::after,
+  body.C #login .btn.register::after,
+  body.C .swal2-popup .swal2-styled.swal2-confirm::after{
+    animation:none!important;
+    opacity:0!important;
+  }
+}
+
