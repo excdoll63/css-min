@@ -4997,137 +4997,180 @@ body.C #home-balance > .A .pinfo .links a.register:active {
         0 0 20px rgba(222,175,27,.18) !important;
 }
 
-body.C #home-balance > .A .btns .btn.vc-deposit,
-body.C #home-balance > .A .btns .btn.vc-withdraw,
-body.C #home-balance > .A .btns .btn.vc-refresh,
-body.C #home-balance > .A .btns .btn.danger.vc-withdraw,
-body.C #home-balance > .A .btns .btn.warning.vc-refresh {
+@keyframes mk_btn_shine {
+    0% { transform: rotate(var(--shine-angle)) translateX(-220%); opacity: 0; }
+    14% { opacity: 0; }
+    22% { opacity: .55; }
+    48% { opacity: .45; }
+    70% { opacity: 0; }
+    100% { transform: rotate(var(--shine-angle)) translateX(260%); opacity: 0; }
+}
+
+@keyframes mk_btn_pulse {
+    0%, 100% { opacity: .62; }
+    50% { opacity: .88; }
+}
+
+body.C #home-balance>.A .btns .btn.vc-deposit,
+body.C #home-balance>.A .btns .btn.vc-withdraw,
+body.C #home-balance>.A .btns .btn.danger.vc-withdraw,
+body.C #home-balance>.A .btns .btn.vc-refresh,
+body.C #home-balance>.A .btns .btn.warning.vc-refresh {
+    --shine-angle: 22deg;
+    --shine-dur: 3.2s;
+    --shine-delay: 0s;
+    --pulse-dur: 3.0s;
+    --rim: rgba(255,243,128,.22);
+    --depth: rgba(131,46,0,.26);
+
     background-color: #DEAF1B !important;
     background-image:
-        radial-gradient(140% 90% at 50% 0%, rgba(255,255,255,.30) 0%, rgba(255,255,255,0) 58%),
-        linear-gradient(180deg, #fff6cf 0%, #fce58e 18%, #fcf380 45%, #deaf1b 72%, #c7920a 100%),
-        linear-gradient(135deg, #ffffff 0%, #fcf380 28%, #deaf1b 58%, #832e00 100%) !important;
-    background-origin: padding-box, padding-box, border-box !important;
-    background-clip: padding-box, padding-box, border-box !important;
+        radial-gradient(160% 120% at 50% 0%, rgba(255,255,255,.55) 0%, rgba(255,255,255,0) 52%),
+        linear-gradient(90deg, rgba(131,46,0,.14) 0%, rgba(0,0,0,0) 18%, rgba(0,0,0,0) 82%, rgba(131,46,0,.14) 100%),
+        linear-gradient(180deg, #fff9d6 0%, #fcf380 32%, #deaf1b 70%, #c7920a 100%),
+        linear-gradient(135deg, #ffffff 0%, #fcf380 26%, #deaf1b 58%, #832e00 100%) !important;
+    background-origin: padding-box, padding-box, padding-box, border-box !important;
+    background-clip: padding-box, padding-box, padding-box, border-box !important;
     background-repeat: no-repeat !important;
 
     border: 2px solid transparent !important;
     border-radius: 12px !important;
 
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
     color: #832E00 !important;
-    text-shadow: 0 1px 0 rgba(255,246,207,.85), 0 -1px 0 rgba(0,0,0,.06) !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    letter-spacing: .6px !important;
+    line-height: 1 !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+    font-kerning: none;
 
     position: relative;
     z-index: 0;
     overflow: hidden;
 
-    box-shadow: 0 14px 28px rgba(0,0,0,.55),
-                inset 0 2px 0 rgba(255,255,255,.65),
-                inset 0 -10px 18px rgba(131,46,0,.26),
-                inset 0 0 0 1px rgba(255,243,128,.18),
-                0 0 24px rgba(222,175,27,.20) !important;
+    box-shadow:
+        0 14px 28px rgba(0,0,0,.55),
+        inset 0 1px 0 rgba(255,255,255,.55),
+        inset 0 -18px 26px var(--depth),
+        inset 0 0 0 1px rgba(255,243,128,.14),
+        0 0 26px rgba(222,175,27,.16) !important;
 
     transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
 }
 
-body.C #home-balance > .A .btns .btn.vc-deposit::before,
-body.C #home-balance > .A .btns .btn.vc-withdraw::before,
-body.C #home-balance > .A .btns .btn.vc-refresh::before,
-body.C #home-balance > .A .btns .btn.danger.vc-withdraw::before,
-body.C #home-balance > .A .btns .btn.warning.vc-refresh::before {
+body.C #home-balance>.A .btns .btn.vc-deposit::before,
+body.C #home-balance>.A .btns .btn.vc-withdraw::before,
+body.C #home-balance>.A .btns .btn.danger.vc-withdraw::before,
+body.C #home-balance>.A .btns .btn.vc-refresh::before,
+body.C #home-balance>.A .btns .btn.warning.vc-refresh::before {
     content: "";
     position: absolute;
-    inset: 1px;
-    border-radius: 11px;
+    inset: 3px;
+    border-radius: 9px;
     pointer-events: none;
     z-index: -1;
-    box-shadow: inset 0 2px 0 rgba(255,255,255,.55),
-                inset 0 -6px 10px rgba(131,46,0,.28),
-                inset 0 0 0 1px rgba(255,243,128,.22);
+    background: linear-gradient(180deg, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 42%, rgba(0,0,0,.18) 100%);
+    box-shadow:
+        inset 0 0 0 1px var(--rim),
+        inset 0 -10px 18px rgba(0,0,0,.12);
+    opacity: .72;
+    animation: mk_btn_pulse var(--pulse-dur) ease-in-out infinite;
 }
 
-body.C #home-balance > .A .btns .btn.vc-deposit::after,
-body.C #home-balance > .A .btns .btn.vc-withdraw::after,
-body.C #home-balance > .A .btns .btn.vc-refresh::after,
-body.C #home-balance > .A .btns .btn.danger.vc-withdraw::after,
-body.C #home-balance > .A .btns .btn.warning.vc-refresh::after {
+body.C #home-balance>.A .btns .btn.vc-deposit::after,
+body.C #home-balance>.A .btns .btn.vc-withdraw::after,
+body.C #home-balance>.A .btns .btn.danger.vc-withdraw::after,
+body.C #home-balance>.A .btns .btn.vc-refresh::after,
+body.C #home-balance>.A .btns .btn.warning.vc-refresh::after {
     content: "";
     position: absolute;
-    inset: 7px;
-    border-radius: 7px;
+    top: -60%;
+    left: -70%;
+    width: 55%;
+    height: 220%;
     pointer-events: none;
     z-index: -1;
-    box-shadow: inset 0 0 0 1px rgba(131,46,0,.22),
-                inset 0 0 0 2px rgba(255,255,255,.10);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.75) 50%, rgba(255,255,255,0) 100%);
+    transform: rotate(var(--shine-angle)) translateX(-220%);
+    opacity: 0;
+    animation: mk_btn_shine var(--shine-dur) ease-in-out infinite;
+    animation-delay: var(--shine-delay);
+    mix-blend-mode: overlay;
 }
 
-body.C #home-balance > .A .btns .btn.vc-deposit:active,
-body.C #home-balance > .A .btns .btn.vc-withdraw:active,
-body.C #home-balance > .A .btns .btn.vc-refresh:active,
-body.C #home-balance > .A .btns .btn.danger.vc-withdraw:active,
-body.C #home-balance > .A .btns .btn.warning.vc-refresh:active {
+body.C #home-balance>.A .btns .btn.vc-deposit:active,
+body.C #home-balance>.A .btns .btn.vc-withdraw:active,
+body.C #home-balance>.A .btns .btn.danger.vc-withdraw:active,
+body.C #home-balance>.A .btns .btn.vc-refresh:active,
+body.C #home-balance>.A .btns .btn.warning.vc-refresh:active {
     transform: translateY(1px);
-    filter: brightness(.98) saturate(1.06);
-    box-shadow: 0 10px 18px rgba(0,0,0,.50),
-                inset 0 1px 0 rgba(255,255,255,.55),
-                inset 0 -12px 22px rgba(131,46,0,.28),
-                inset 0 0 0 1px rgba(255,243,128,.16),
-                0 0 18px rgba(222,175,27,.18) !important;
+    filter: brightness(.985) saturate(1.06);
 }
 
-body.C #home-balance > .A .btns .btn.vc-deposit {
+body.C #home-balance>.A .btns .btn.vc-deposit {
+    --shine-angle: 26deg;
+    --shine-dur: 3.05s;
+    --shine-delay: .05s;
+    --pulse-dur: 2.85s;
+    --depth: rgba(131,46,0,.20);
     background-image:
-        radial-gradient(140% 90% at 50% 0%, rgba(255,255,255,.38) 0%, rgba(255,255,255,0) 58%),
-        linear-gradient(180deg, #fff6cf 0%, #fce58e 18%, #fcf380 45%, #deaf1b 72%, #c7920a 100%),
-        linear-gradient(135deg, #ffffff 0%, #fcf380 28%, #deaf1b 58%, #832e00 100%) !important;
-    box-shadow: 0 14px 28px rgba(0,0,0,.55),
-                inset 0 2px 0 rgba(255,255,255,.72),
-                inset 0 -10px 18px rgba(131,46,0,.22),
-                inset 0 0 0 1px rgba(255,243,128,.20),
-                0 0 28px rgba(252,243,128,.14) !important;
+        radial-gradient(160% 120% at 50% 0%, rgba(255,255,255,.62) 0%, rgba(255,255,255,0) 52%),
+        linear-gradient(90deg, rgba(131,46,0,.10) 0%, rgba(0,0,0,0) 18%, rgba(0,0,0,0) 82%, rgba(131,46,0,.10) 100%),
+        linear-gradient(180deg, #fff9d6 0%, #fcf380 34%, #deaf1b 72%, #c7920a 100%),
+        linear-gradient(135deg, #ffffff 0%, #fcf380 26%, #deaf1b 58%, #832e00 100%) !important;
 }
 
-body.C #home-balance > .A .btns .btn.vc-deposit::before {
-    box-shadow: inset 0 2px 0 rgba(255,255,255,.60),
-                inset 0 -6px 10px rgba(131,46,0,.24),
-                inset 0 0 0 1px rgba(255,243,128,.26);
-}
-
-body.C #home-balance > .A .btns .btn.danger.vc-withdraw,
-body.C #home-balance > .A .btns .btn.vc-withdraw {
+body.C #home-balance>.A .btns .btn.vc-withdraw,
+body.C #home-balance>.A .btns .btn.danger.vc-withdraw {
+    --shine-angle: 18deg;
+    --shine-dur: 3.75s;
+    --shine-delay: .16s;
+    --pulse-dur: 3.35s;
+    --depth: rgba(131,46,0,.36);
     background-image:
-        radial-gradient(150% 95% at 50% -10%, rgba(255,255,255,.26) 0%, rgba(255,255,255,0) 62%),
-        linear-gradient(180deg, #fce58e 0%, #fcf380 26%, #deaf1b 62%, #c7920a 100%),
+        radial-gradient(170% 120% at 50% -10%, rgba(255,255,255,.48) 0%, rgba(255,255,255,0) 60%),
+        linear-gradient(90deg, rgba(131,46,0,.18) 0%, rgba(0,0,0,0) 16%, rgba(0,0,0,0) 84%, rgba(131,46,0,.18) 100%),
+        linear-gradient(180deg, #fce58e 0%, #fcf380 28%, #deaf1b 72%, #b57d00 100%),
         linear-gradient(135deg, #ffffff 0%, #deaf1b 42%, #832e00 100%) !important;
-    box-shadow: 0 14px 28px rgba(0,0,0,.58),
-                inset 0 2px 0 rgba(255,255,255,.55),
-                inset 0 -16px 26px rgba(131,46,0,.34),
-                inset 0 0 0 1px rgba(131,46,0,.20),
-                0 0 24px rgba(131,46,0,.16) !important;
+    font-size: 12px !important;
+    letter-spacing: .6px !important;
+    font-weight: 800 !important;
 }
 
-body.C #home-balance > .A .btns .btn.danger.vc-withdraw::after,
-body.C #home-balance > .A .btns .btn.vc-withdraw::after {
-    box-shadow: inset 0 0 0 1px rgba(131,46,0,.30),
-                inset 0 0 0 2px rgba(255,255,255,.08);
-}
-
-body.C #home-balance > .A .btns .btn.vc-refresh,
-body.C #home-balance > .A .btns .btn.warning.vc-refresh {
+body.C #home-balance>.A .btns .btn.vc-refresh,
+body.C #home-balance>.A .btns .btn.warning.vc-refresh {
+    --shine-angle: 30deg;
+    --shine-dur: 3.25s;
+    --shine-delay: .36s;
+    --pulse-dur: 3.05s;
+    --depth: rgba(0,0,0,.24);
     background-image:
-        radial-gradient(140% 90% at 70% 0%, rgba(255,255,255,.30) 0%, rgba(255,255,255,0) 58%),
-        linear-gradient(180deg, #fff6cf 0%, #fcf380 22%, #deaf1b 64%, #c7920a 100%),
-        linear-gradient(135deg, #ffffff 0%, #fcf380 24%, #deaf1b 50%, #2d0000 100%) !important;
-    box-shadow: 0 14px 28px rgba(0,0,0,.55),
-                inset 0 2px 0 rgba(255,255,255,.62),
-                inset 0 -14px 24px rgba(0,0,0,.22),
-                inset 0 0 0 1px rgba(255,243,128,.16),
-                0 0 22px rgba(222,175,27,.18) !important;
+        radial-gradient(160% 120% at 65% 0%, rgba(255,255,255,.56) 0%, rgba(255,255,255,0) 58%),
+        linear-gradient(90deg, rgba(0,0,0,.14) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,.14) 100%),
+        linear-gradient(180deg, #fff6cf 0%, #fcf380 30%, #deaf1b 70%, #c7920a 100%),
+        linear-gradient(135deg, #ffffff 0%, #fcf380 24%, #deaf1b 52%, #2d0000 100%) !important;
 }
 
-body.C #home-balance > .A .btns .btn.vc-refresh::before,
-body.C #home-balance > .A .btns .btn.warning.vc-refresh::before {
-    box-shadow: inset 0 2px 0 rgba(255,255,255,.55),
-                inset 0 -8px 12px rgba(0,0,0,.20),
-                inset 0 0 0 1px rgba(255,243,128,.20);
+@media (prefers-reduced-motion: reduce) {
+    body.C #home-balance>.A .btns .btn.vc-deposit::before,
+    body.C #home-balance>.A .btns .btn.vc-withdraw::before,
+    body.C #home-balance>.A .btns .btn.danger.vc-withdraw::before,
+    body.C #home-balance>.A .btns .btn.vc-refresh::before,
+    body.C #home-balance>.A .btns .btn.warning.vc-refresh::before,
+    body.C #home-balance>.A .btns .btn.vc-deposit::after,
+    body.C #home-balance>.A .btns .btn.vc-withdraw::after,
+    body.C #home-balance>.A .btns .btn.danger.vc-withdraw::after,
+    body.C #home-balance>.A .btns .btn.vc-refresh::after,
+    body.C #home-balance>.A .btns .btn.warning.vc-refresh::after {
+        animation: none !important;
+        opacity: .72;
+    }
 }
