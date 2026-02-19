@@ -1502,13 +1502,13 @@ var {
   max-width: 140px !important;
   margin: 6px 0 0 auto !important;
   padding: 0 12px !important;
-  color: #1A0A00 !important;
+  color: #832E00 !important;
   font-size: 12px !important;
   font-weight: 800;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   text-align: center !important;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+  text-shadow: 0 1px 0 rgba(255, 246, 207, 0.80), 0 -1px 0 rgba(0, 0, 0, 0.06);
   text-decoration: none !important;
   cursor: pointer;
   user-select: none;
@@ -1522,9 +1522,20 @@ var {
 #home-balance > .A .btns .btn::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: radial-gradient(140% 90% at 50% 0%, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 58%) padding-box, linear-gradient(180deg, #FFF6CF 0%, #FCE58E 18%, #FCF380 45%, #DEAF1B 72%, #C7920A 100%) padding-box, linear-gradient(135deg, #FFFFFF 0%, #FCF380 28%, #DEAF1B 58%, #832E00 100%) border-box;
+  inset: 1px;
+  border-radius: 11px;
   pointer-events: none;
+  background: none;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.55), inset 0 -6px 10px rgba(131, 46, 0, 0.28), inset 0 0 0 1px rgba(255, 243, 128, 0.22);
+}
+
+#home-balance > .A .btns .btn::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 7px;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(131, 46, 0, 0.22), inset 0 0 0 2px rgba(255, 255, 255, 0.10);
 }
 
 #home-balance > .A .btns .btn.vc-deposit {
@@ -1547,7 +1558,7 @@ var {
 }
 
 #home-balance > .A .btns .btn:active::after {
-  left: 125%;
+  inset: 7px;
 }
 
 #home-balance > .A .btns .btn:focus-visible {
