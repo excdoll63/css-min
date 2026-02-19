@@ -5222,3 +5222,227 @@ body.C #home-balance>.A .btns .btn.warning.vc-refresh {
         opacity: .72;
     }
 }
+body.C #home-refer .btn,
+body.C #home-refer a.btn,
+body.C #home-refer button.btn,
+body.C #home-refer .copy,
+body.C #home-refer a.copy,
+body.C #home-refer button.copy {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  appearance: none;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+  will-change: transform, filter, box-shadow;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px !important;
+  padding: 0 14px !important;
+  border-radius: 14px !important;
+  border: 2px solid transparent !important;
+
+  background-color: #DEAF1B !important;
+  background-image:
+    radial-gradient(140% 95% at 50% 0%, rgba(255,255,255,.62) 0%, rgba(255,255,255,0) 62%),
+    linear-gradient(180deg, #FFF6CF 0%, #FCE58E 18%, #FCF380 48%, #DEAF1B 78%, #C7920A 100%),
+    linear-gradient(135deg, #FFFFFF 0%, #FCF380 30%, #DEAF1B 58%, #832E00 100%) !important;
+  background-origin: padding-box, padding-box, border-box !important;
+  background-clip: padding-box, padding-box, border-box !important;
+  background-repeat: no-repeat !important;
+
+  color: #832E00 !important;
+  font-family: Montserrat, sans-serif;
+  font-weight: 900;
+  font-size: 12px !important;
+  letter-spacing: .65px;
+  text-transform: uppercase;
+  line-height: 1 !important;
+  white-space: nowrap;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-shadow: 0 1px 0 rgba(255,246,207,.85), 0 -1px 0 rgba(0,0,0,.08) !important;
+
+  box-shadow:
+    0 14px 28px rgba(0,0,0,.55),
+    inset 0 2px 0 rgba(255,255,255,.75),
+    inset 0 -14px 22px rgba(131,46,0,.25),
+    inset 0 0 0 1px rgba(255,243,128,.22),
+    0 0 24px rgba(222,175,27,.22) !important;
+
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+
+body.C #home-refer .btn::before,
+body.C #home-refer a.btn::before,
+body.C #home-refer button.btn::before,
+body.C #home-refer .copy::before,
+body.C #home-refer a.copy::before,
+body.C #home-refer button.copy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,.55) 0%, rgba(255,255,255,0) 62%),
+    radial-gradient(120% 95% at 50% 110%, rgba(131,46,0,.22) 0%, rgba(131,46,0,0) 60%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.38),
+    inset 0 0 0 3px rgba(255,243,128,.10);
+  opacity: .95;
+}
+
+body.C #home-refer .btn::after,
+body.C #home-refer a.btn::after,
+body.C #home-refer button.btn::after,
+body.C #home-refer .copy::after,
+body.C #home-refer a.copy::after,
+body.C #home-refer button.copy::after {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: -85%;
+  width: 46%;
+  height: 240%;
+  transform: rotate(25deg);
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.75) 50%, rgba(255,255,255,0) 100%);
+}
+
+body.C #home-refer .btn.refer,
+body.C #home-refer a.btn.refer,
+body.C #home-refer .refer,
+body.C #home-refer a.refer {
+  background-color: #2D0000 !important;
+  background-image:
+    radial-gradient(140% 95% at 50% 0%, rgba(255,255,255,.25) 0%, rgba(255,255,255,0) 65%),
+    linear-gradient(180deg, #AE0000 0%, #6B0103 55%, #2D0000 100%),
+    linear-gradient(135deg, #FCF380 0%, #DEAF1B 52%, #832E00 100%) !important;
+  background-origin: padding-box, padding-box, border-box !important;
+  background-clip: padding-box, padding-box, border-box !important;
+  color: #FCF380 !important;
+  text-shadow: 0 1px 0 rgba(45,0,0,.75), 0 0 12px rgba(222,175,27,.18) !important;
+  box-shadow:
+    0 16px 34px rgba(0,0,0,.58),
+    inset 0 1px 0 rgba(255,255,255,.22),
+    inset 0 -16px 26px rgba(0,0,0,.32),
+    0 0 22px rgba(174,0,0,.18),
+    0 0 28px rgba(222,175,27,.24) !important;
+  filter: saturate(1.06);
+}
+
+body.C #home-refer .btn.refer::after,
+body.C #home-refer a.btn.refer::after,
+body.C #home-refer .refer::after,
+body.C #home-refer a.refer::after {
+  background: linear-gradient(90deg, rgba(252,243,128,0) 0%, rgba(252,243,128,.85) 50%, rgba(252,243,128,0) 100%);
+}
+
+@media (hover: hover) {
+  body.C #home-refer .btn:hover,
+  body.C #home-refer a.btn:hover,
+  body.C #home-refer button.btn:hover,
+  body.C #home-refer .copy:hover,
+  body.C #home-refer a.copy:hover,
+  body.C #home-refer button.copy:hover {
+    transform: translateY(-1px) translateZ(0);
+    filter: brightness(1.06) saturate(1.05);
+    box-shadow:
+      0 16px 32px rgba(0,0,0,.58),
+      inset 0 2px 0 rgba(255,255,255,.80),
+      inset 0 -16px 26px rgba(131,46,0,.26),
+      inset 0 0 0 1px rgba(255,243,128,.24),
+      0 0 30px rgba(222,175,27,.26) !important;
+  }
+
+  body.C #home-refer .btn:hover::after,
+  body.C #home-refer a.btn:hover::after,
+  body.C #home-refer button.btn:hover::after,
+  body.C #home-refer .copy:hover::after,
+  body.C #home-refer a.copy:hover::after,
+  body.C #home-refer button.copy:hover::after {
+    opacity: 1;
+    animation: mgiSaberSweep 900ms cubic-bezier(.2,.7,.2,1);
+  }
+
+  body.C #home-refer .btn:active,
+  body.C #home-refer a.btn:active,
+  body.C #home-refer button.btn:active,
+  body.C #home-refer .copy:active,
+  body.C #home-refer a.copy:active,
+  body.C #home-refer button.copy:active {
+    transform: translateY(0) scale(.99);
+    filter: brightness(1.02) saturate(1.05);
+  }
+
+  body.C #home-refer .btn:active::after,
+  body.C #home-refer a.btn:active::after,
+  body.C #home-refer button.btn:active::after,
+  body.C #home-refer .copy:active::after,
+  body.C #home-refer a.copy:active::after,
+  body.C #home-refer button.copy:active::after {
+    opacity: 1;
+    animation: mgiSaberSweep 700ms cubic-bezier(.2,.7,.2,1);
+  }
+}
+
+@media (hover: none) {
+  body.C #home-refer .btn::after,
+  body.C #home-refer a.btn::after,
+  body.C #home-refer button.btn::after,
+  body.C #home-refer .copy::after,
+  body.C #home-refer a.copy::after,
+  body.C #home-refer button.copy::after {
+    opacity: .55;
+    animation: mgiSaberSweep 3.1s cubic-bezier(.2,.7,.2,1) infinite;
+  }
+
+  body.C #home-refer .btn.refer::after,
+  body.C #home-refer a.btn.refer::after,
+  body.C #home-refer .refer::after,
+  body.C #home-refer a.refer::after {
+    animation-delay: .35s;
+  }
+
+  body.C #home-refer .btn.downline::after,
+  body.C #home-refer a.btn.downline::after {
+    animation-delay: 0s;
+  }
+
+  body.C #home-refer .copy::after,
+  body.C #home-refer a.copy::after {
+    animation-delay: 1.05s;
+  }
+
+  body.C #home-refer .btn.more::after,
+  body.C #home-refer a.btn.more::after {
+    animation-delay: 2.1s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.C #home-refer .btn,
+  body.C #home-refer a.btn,
+  body.C #home-refer button.btn,
+  body.C #home-refer .copy,
+  body.C #home-refer a.copy,
+  body.C #home-refer button.copy {
+    transition: none !important;
+  }
+
+  body.C #home-refer .btn::after,
+  body.C #home-refer a.btn::after,
+  body.C #home-refer button.btn::after,
+  body.C #home-refer .copy::after,
+  body.C #home-refer a.copy::after,
+  body.C #home-refer button.copy::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}
