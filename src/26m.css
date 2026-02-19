@@ -4399,16 +4399,15 @@ body.C #footer > a[href="#home"]{
   top: -8px;
 }
 
-body.C #footer{
-  background-image:
-    radial-gradient(120px 38px at 50% 0, rgba(222, 175, 27,0.18), rgba(0,0,0,0) 70%),
-    linear-gradient(180deg, #2F0000 0%, #2D0000 60%, #2D0000 100%) !important;
-  background-repeat:no-repeat !important;
-  background-size:100% 100% !important;
-  border-radius:18px 18px 0 0 !important;
-  overflow:visible !important;
-  padding-bottom:env(safe-area-inset-bottom) !important;
-  box-shadow: none;
+body.C #footer {
+    background-image: radial-gradient(120px 38px at 50% 0, rgba(252,243,128,.25), rgba(0,0,0,0) 70%), linear-gradient(180deg, #DEAF1B 0, #DEAF1B 60%, #DEAF1B 100%) !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    border-radius: 18px 18px 0 0 !important;
+    overflow: visible !important;
+    padding-bottom: env(safe-area-inset-bottom) !important;
+    box-shadow: none;
+    display: flex !important;
 }
 
 body.C #footer::before{
