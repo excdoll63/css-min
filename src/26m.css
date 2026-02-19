@@ -5446,3 +5446,26 @@ body.C #home-refer a.refer::after {
     opacity: 0 !important;
   }
 }
+
+body[page="login"] #login .btn.login:not(.active),
+body[page="login"] #login a.btn.login:not(.active),
+body[page="login"] #login button.btn.login:not(.active) {
+  background: #c7c7c7 !important;
+  background-image: none !important;
+  border: 2px solid #bdbdbd !important;
+  box-shadow: none !important;
+  color: rgba(25, 25, 25, 0.45) !important;
+  text-shadow: none !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+
+body[page="login"] #login .btn.login:not(.active)::before,
+body[page="login"] #login a.btn.login:not(.active)::before,
+body[page="login"] #login button.btn.login:not(.active)::before,
+body[page="login"] #login .btn.login:not(.active)::after,
+body[page="login"] #login a.btn.login:not(.active)::after,
+body[page="login"] #login button.btn.login:not(.active)::after {
+  content: none !important;
+  display: none !important;
+}
