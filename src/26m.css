@@ -5469,3 +5469,183 @@ body[page="login"] #login button.btn.login:not(.active)::after {
   content: none !important;
   display: none !important;
 }
+
+@keyframes m26_tab_sweep {
+  0% { transform: rotate(20deg) translateX(-220%); opacity: 0; }
+  14% { opacity: 0; }
+  22% { opacity: .55; }
+  52% { opacity: .42; }
+  72% { opacity: 0; }
+  100% { transform: rotate(20deg) translateX(260%); opacity: 0; }
+}
+
+@keyframes m26_tab_pulse {
+  0%, 100% { opacity: .62; }
+  50% { opacity: .90; }
+}
+
+body.C #downline .tabs,
+body.C #gameList .tabs,
+body.C #history .tabs {
+  display: flex;
+  gap: 10px;
+  padding: 8px 10px;
+  background: none;
+  box-shadow: none;
+}
+
+body.C #downline .tabs .tab,
+body.C #gameList .tabs .tab,
+body.C #history .tabs .tab {
+  flex: 1 1 0;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 2px solid transparent !important;
+  box-sizing: border-box;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+
+  color: #832E00;
+  text-shadow: 0 1px 0 rgba(255,246,207,.85), 0 -1px 0 rgba(0,0,0,.06);
+
+  background-color: #DEAF1B !important;
+  background-image:
+    radial-gradient(140% 90% at 50% 0%, rgba(255,255,255,.55) 0%, rgba(255,255,255,0) 62%),
+    linear-gradient(180deg, #fff6cf 0%, #fce58e 20%, #fcf380 52%, #deaf1b 80%, #c7920a 100%),
+    linear-gradient(135deg, #ffffff 0%, #fcf380 28%, #deaf1b 58%, #832e00 100%) !important;
+  background-origin: padding-box, padding-box, border-box !important;
+  background-clip: padding-box, padding-box, border-box !important;
+  background-repeat: no-repeat !important;
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+
+  box-shadow:
+    0 12px 26px rgba(0,0,0,.45),
+    inset 0 2px 0 rgba(255,255,255,.72),
+    inset 0 -14px 22px rgba(131,46,0,.22),
+    inset 0 0 0 1px rgba(255,243,128,.18),
+    0 0 18px rgba(222,175,27,.18);
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+
+body.C #downline .tabs .tab::before,
+body.C #gameList .tabs .tab::before,
+body.C #history .tabs .tab::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 52%, rgba(0,0,0,.12) 100%);
+  opacity: .78;
+  z-index: -1;
+}
+
+body.C #downline .tabs .tab::after,
+body.C #gameList .tabs .tab::after,
+body.C #history .tabs .tab::after {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: -85%;
+  width: 52%;
+  height: 240%;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.78) 50%, rgba(255,255,255,0) 100%);
+  transform: rotate(20deg) translateX(-220%);
+  opacity: 0;
+  mix-blend-mode: overlay;
+  z-index: -1;
+}
+
+body.C #downline .tabs .tab.selected,
+body.C #gameList .tabs .tab.selected,
+body.C #history .tabs .tab.selected {
+  color: #FCF380;
+  text-shadow: 0 1px 0 rgba(45,0,0,.75), 0 0 10px rgba(222,175,27,.18);
+
+  background-color: #6B0103 !important;
+  background-image:
+    radial-gradient(140% 90% at 50% 0%, rgba(255,255,255,.22) 0%, rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, #AE0000 0%, #6B0103 55%, #2D0000 100%),
+    linear-gradient(135deg, #FCF380 0%, #DEAF1B 52%, #832E00 100%) !important;
+  background-origin: padding-box, padding-box, border-box !important;
+  background-clip: padding-box, padding-box, border-box !important;
+
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.22),
+    inset 0 -18px 30px rgba(0,0,0,.32),
+    0 0 22px rgba(174,0,0,.18),
+    0 0 22px rgba(222,175,27,.20);
+}
+
+body.C #downline .tabs .tab.selected::after,
+body.C #gameList .tabs .tab.selected::after,
+body.C #history .tabs .tab.selected::after {
+  background: linear-gradient(90deg, rgba(252,243,128,0) 0%, rgba(252,243,128,.85) 50%, rgba(252,243,128,0) 100%);
+  mix-blend-mode: screen;
+}
+
+@media (hover: hover) {
+  body.C #downline .tabs .tab:hover,
+  body.C #gameList .tabs .tab:hover,
+  body.C #history .tabs .tab:hover {
+    transform: translateY(-1px) translateZ(0);
+    filter: brightness(1.04) saturate(1.05);
+  }
+
+  body.C #downline .tabs .tab:hover::after,
+  body.C #gameList .tabs .tab:hover::after,
+  body.C #history .tabs .tab:hover::after {
+    opacity: .55;
+    animation: m26_tab_sweep 900ms cubic-bezier(.2,.7,.2,1);
+  }
+}
+
+@media (hover: none) {
+  body.C #downline .tabs .tab::before,
+  body.C #gameList .tabs .tab::before,
+  body.C #history .tabs .tab::before {
+    animation: m26_tab_pulse 3.2s ease-in-out infinite;
+  }
+
+  body.C #downline .tabs .tab::after,
+  body.C #gameList .tabs .tab::after,
+  body.C #history .tabs .tab::after {
+    opacity: .55;
+    animation: m26_tab_sweep 3.4s ease-in-out infinite;
+  }
+
+  body.C #downline .tabs .tab.selected::after,
+  body.C #gameList .tabs .tab.selected::after,
+  body.C #history .tabs .tab.selected::after {
+    animation-delay: .35s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.C #downline .tabs .tab::before,
+  body.C #gameList .tabs .tab::before,
+  body.C #history .tabs .tab::before,
+  body.C #downline .tabs .tab::after,
+  body.C #gameList .tabs .tab::after,
+  body.C #history .tabs .tab::after {
+    animation: none !important;
+    opacity: .78 !important;
+  }
+}
