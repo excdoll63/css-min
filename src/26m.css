@@ -5918,3 +5918,61 @@ body.C #deposit .fabtn:focus-visible {
     opacity: 0 !important;
   }
 }
+
+@keyframes m26FabtnSelectedPulse2 {
+  0%, 100% {
+    transform: translateZ(0) scale(1.02);
+    filter: saturate(1.18) brightness(1.07);
+    box-shadow:
+      0 18px 36px rgba(0,0,0,.62),
+      inset 0 2px 0 rgba(255,255,255,.78),
+      inset 0 -16px 24px rgba(131,46,0,.22),
+      inset 0 0 0 2px rgba(252,243,128,.22),
+      0 0 22px rgba(222,175,27,.32),
+      0 0 14px rgba(174,0,0,.14);
+  }
+  50% {
+    transform: translateZ(0) scale(1.06);
+    filter: saturate(1.28) brightness(1.12);
+    box-shadow:
+      0 22px 44px rgba(0,0,0,.70),
+      inset 0 2px 0 rgba(255,255,255,.86),
+      inset 0 -18px 28px rgba(131,46,0,.26),
+      inset 0 0 0 2px rgba(252,243,128,.30),
+      0 0 32px rgba(222,175,27,.48),
+      0 0 18px rgba(174,0,0,.18);
+  }
+}
+
+body.C #deposit .fabtn.selected,
+#deposit .fabtn.selected {
+  color: #2D0000 !important;
+  -webkit-text-fill-color: #2D0000 !important;
+  text-shadow: 0 1px 0 rgba(255,246,207,.92), 0 0 10px rgba(252,243,128,.30) !important;
+
+  border: 2px solid transparent !important;
+  border-radius: 999px !important;
+
+  background-color: #DEAF1B !important;
+  background:
+    radial-gradient(140% 90% at 50% 0, rgba(255,255,255,.38) 0, rgba(255,255,255,0) 58%) padding-box,
+    linear-gradient(180deg, #fffdf4 0, #fcf380 18%, #deaf1b 62%, #9a6600 100%) padding-box,
+    linear-gradient(135deg, #fcf380 0, #deaf1b 35%, #6b0103 68%, #2d0000 100%) border-box !important;
+
+  animation: m26FabtnSelectedPulse2 2.6s ease-in-out infinite !important;
+}
+
+body.C #deposit .fabtn.selected::after,
+#deposit .fabtn.selected::after {
+  opacity: .62 !important;
+  background: linear-gradient(90deg, rgba(252,243,128,0) 0%, rgba(252,243,128,.90) 50%, rgba(252,243,128,0) 100%) !important;
+  mix-blend-mode: screen !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.C #deposit .fabtn.selected,
+  #deposit .fabtn.selected {
+    animation: none !important;
+    transform: translateZ(0) scale(1.04) !important;
+  }
+}
