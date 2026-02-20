@@ -6723,3 +6723,71 @@ body.C div:where(.swal2-icon).swal2-success .swal2-success-circular-line-right,
 body.C div:where(.swal2-icon).swal2-success .swal2-success-fix {
   background: transparent !important;
 }
+
+body.C div:where(.swal2-icon).swal2-info {
+    --i1: #FCF380;
+    --i2: #DEAF1B;
+    --i3: #832E00;
+
+    border: 3px solid transparent !important;
+    border-radius: 50% !important;
+
+    background:
+        radial-gradient(120% 120% at 32% 22%, rgba(255,255,255,.20) 0%, rgba(255,255,255,0) 60%) padding-box,
+        linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.34) 46%, rgba(255,255,255,0) 54%) padding-box,
+        linear-gradient(180deg, rgba(45,0,0,.92) 0%, rgba(107,1,3,.96) 55%, rgba(45,0,0,.94) 100%) padding-box,
+        linear-gradient(135deg, #ffffff 0%, var(--i1) 28%, var(--i2) 58%, var(--i3) 100%) border-box !important;
+
+    background-repeat: no-repeat !important;
+    background-size: 100% 100%, 240% 240%, 100% 100%, 100% 100%;
+    background-position: 0 0, -150% -150%, 0 0, 0 0;
+
+    color: var(--i1) !important;
+
+    box-shadow:
+        0 22px 55px rgba(0,0,0,.78),
+        inset 0 2px 0 rgba(255,255,255,.14),
+        inset 0 0 0 3px rgba(252,243,128,.12),
+        inset 0 -14px 22px rgba(0,0,0,.25),
+        0 0 26px rgba(222,175,27,.30),
+        0 0 60px rgba(252,243,128,.16) !important;
+
+    filter: saturate(1.08);
+    transform: translateZ(0);
+    will-change: background-position, filter;
+
+    animation: m26mInfoSweep 3.2s ease-in-out infinite, m26mInfoPulse 2.6s ease-in-out infinite;
+}
+
+body.C div:where(.swal2-icon).swal2-info .swal2-icon-content {
+    color: var(--i1) !important;
+    text-shadow:
+        0 1px 0 rgba(255,246,207,.55),
+        0 4px 10px rgba(0,0,0,.55),
+        0 0 16px rgba(222,175,27,.34);
+}
+
+body.C div:where(.swal2-icon).swal2-info::before,
+body.C div:where(.swal2-icon).swal2-info::after {
+    background-color: var(--i1) !important;
+    box-shadow:
+        0 1px 0 rgba(255,246,207,.45),
+        0 3px 8px rgba(0,0,0,.55),
+        0 0 16px rgba(222,175,27,.34);
+}
+
+@keyframes m26mInfoSweep {
+    0%, 100% { background-position: 0 0, -150% -150%, 0 0, 0 0; }
+    50%      { background-position: 0 0, 125% 125%, 0 0, 0 0; }
+}
+
+@keyframes m26mInfoPulse {
+    0%, 100% { filter: saturate(1.08) brightness(1); }
+    50%      { filter: saturate(1.18) brightness(1.07); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.C div:where(.swal2-icon).swal2-info {
+        animation: none !important;
+    }
+}
