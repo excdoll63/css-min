@@ -466,11 +466,6 @@ a.btn.register.primary {
   border: solid 1px #DEAF1B;
 }
 
-#changeBank .t1 {
-  border-bottom: 2px solid;
-  padding-bottom: 10px;
-}
-
 #changeBank .t2 {
   margin-top: 10px;
 }
@@ -3301,6 +3296,8 @@ div:where(.swal2-icon).swal2-success .swal2-success-ring {
   border-radius: 14px;
   border: 2px solid transparent;
   background: radial-gradient(120% 120% at 50% 0%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 58%) padding-box, linear-gradient(180deg, var(--mgi-ink) 0%, var(--mgi-deep) 55%, var(--mgi-ink) 100%) padding-box, linear-gradient(135deg, var(--mgi-white) 0%, var(--mgi-lilac) 28%, var(--mgi-magenta) 58%, var(--mgi-violet) 100%) border-box;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 16px 34px var(--mgi-shadow), 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 0 26px rgba(222, 175, 27, 0.18), 0 0 44px rgba(45, 0, 0, 0.22);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55), 0 0 18px rgba(222, 175, 27, 0.22);
   -webkit-tap-highlight-color: transparent;
@@ -3309,13 +3306,6 @@ div:where(.swal2-icon).swal2-success .swal2-success-ring {
   will-change: transform, filter;
   transition: transform 180ms ease, filter 180ms ease;
   animation: mgiTitleGlow 3.2s ease-in-out infinite;
-}
-
-@supports ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
-  #changeBank .t1 {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
 }
 
 #changeBank .t1::before {
