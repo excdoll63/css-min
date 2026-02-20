@@ -6243,3 +6243,357 @@ body.C div:where(.swal2-icon).swal2-info {
 body.C .swal2-icon.swal2-info .swal2-icon-content {
     text-shadow: 0 1px 0 rgba(45,0,0,.65);
 }
+
+@keyframes m26ReportSweep {
+  0% { transform: rotate(20deg) translateX(-220%); opacity: 0; }
+  16% { opacity: 0; }
+  26% { opacity: .58; }
+  60% { opacity: .42; }
+  78% { opacity: 0; }
+  100% { transform: rotate(20deg) translateX(260%); opacity: 0; }
+}
+
+@keyframes m26ReportPulse {
+  0%, 100% { opacity: .62; }
+  50% { opacity: .92; }
+}
+
+body.C #user-report {
+  width: 90%;
+  max-width: 500px;
+  padding: 16px;
+  border-radius: 18px;
+
+  border: 2px solid transparent !important;
+
+  background-color: #6B0103 !important;
+  background-image:
+    radial-gradient(140% 95% at 50% 0, rgba(255,255,255,.12) 0, rgba(255,255,255,0) 62%),
+    linear-gradient(180deg, #AE0000 0, #6B0103 55%, #2D0000 100%),
+    linear-gradient(135deg, #FCF380 0, #DEAF1B 52%, #832E00 100%) !important;
+  background-origin: padding-box, padding-box, border-box !important;
+  background-clip: padding-box, padding-box, border-box !important;
+  background-repeat: no-repeat !important;
+
+  color: #fffdf4 !important;
+  font: 700 14px/1.35 "Montserrat", sans-serif !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.06),
+    0 24px 60px rgba(0,0,0,.75),
+    0 0 22px rgba(222,175,27,.12) !important;
+}
+
+body.C #user-report .report-container h2 {
+  margin: 0 0 12px;
+  text-transform: none !important;
+  text-align: center;
+
+  font: 900 18px/1.1 "Montserrat", sans-serif;
+  letter-spacing: .3px;
+
+  color: #FCF380;
+  text-shadow: 0 1px 0 rgba(45,0,0,.75), 0 0 14px rgba(222,175,27,.14);
+}
+
+body.C #user-report select,
+body.C #user-report textarea,
+body.C #user-report input[type="text"],
+body.C #user-report input[type="tel"],
+body.C #user-report input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 14px !important;
+
+  color: #2D0000 !important;
+  background: rgba(255,255,255,.92) !important;
+
+  border: 1.5px solid rgba(222,175,27,.28) !important;
+  border-radius: 12px !important;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.70),
+    0 10px 24px rgba(0,0,0,.18) !important;
+
+  outline: none !important;
+}
+
+body.C #user-report textarea {
+  min-height: 110px;
+  resize: none;
+}
+
+body.C #user-report select:focus,
+body.C #user-report textarea:focus,
+body.C #user-report input:focus {
+  border-color: rgba(252,243,128,.75) !important;
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,.70),
+    0 0 0 3px rgba(222,175,27,.18),
+    0 12px 26px rgba(0,0,0,.22) !important;
+}
+
+body.C #user-report textarea::placeholder,
+body.C #user-report input::placeholder {
+  color: rgba(45,0,0,.45);
+  font-weight: 800;
+}
+
+body.C #user-report .report-tools .tool {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(222,175,27,.28) !important;
+  background:
+    radial-gradient(140% 90% at 50% 0, rgba(255,255,255,.10) 0, rgba(255,255,255,0) 60%),
+    linear-gradient(180deg, rgba(0,0,0,.25) 0, rgba(0,0,0,.35) 100%) !important;
+
+  color: #FCF380 !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.55);
+  box-shadow:
+    0 10px 22px rgba(0,0,0,.40),
+    inset 0 1px 0 rgba(255,255,255,.08) !important;
+
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body.C #user-report .btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+body.C #user-report .btns .btn {
+  flex: 1 1 0 !important;
+  float: none !important;
+  width: auto !important;
+  margin: 0 !important;
+}
+
+body.C #user-report .close-btn,
+body.C #user-report .btn.close,
+body.C #user-report .btn.cancel,
+body.C #user-report .btns .btn.close,
+body.C #user-report .btns .btn.cancel,
+body.C #user-report .btns > .btn:first-child {
+  -webkit-tap-highlight-color: transparent;
+  appearance: none !important;
+
+  min-height: 40px !important;
+  padding: 0 16px !important;
+
+  border-radius: 14px !important;
+  border: 2px solid transparent !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 13px !important;
+  letter-spacing: .6px !important;
+  text-transform: uppercase !important;
+  line-height: 1 !important;
+
+  color: #ffffff !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.60) !important;
+
+  background-color: #2b2b2b !important;
+  background-image:
+    radial-gradient(140% 95% at 50% 0, rgba(255,255,255,.14) 0, rgba(255,255,255,0) 62%),
+    linear-gradient(180deg, #4b4b4b 0, #2b2b2b 55%, #151515 100%),
+    linear-gradient(135deg, #e0e0e0 0, #9a9a9a 42%, #3a3a3a 100%) !important;
+  background-origin: padding-box, padding-box, border-box !important;
+  background-clip: padding-box, padding-box, border-box !important;
+
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.12),
+    0 0 18px rgba(255,255,255,.06) !important;
+
+  cursor: pointer !important;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+
+body.C #user-report .submit-btn,
+body.C #user-report a.submit-btn,
+body.C #user-report button.submit-btn {
+  -webkit-tap-highlight-color: transparent;
+  appearance: none !important;
+
+  min-height: 40px !important;
+  padding: 0 16px !important;
+
+  border-radius: 14px !important;
+  border: 2px solid transparent !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 13px !important;
+  letter-spacing: .6px !important;
+  text-transform: uppercase !important;
+  line-height: 1 !important;
+
+  background-color: #DEAF1B !important;
+  background-image:
+    radial-gradient(140% 95% at 50% 0, rgba(255,255,255,.55) 0, rgba(255,255,255,0) 62%),
+    linear-gradient(180deg, #fff6cf 0, #fce58e 18%, #fcf380 48%, #deaf1b 78%, #c7920a 100%),
+    linear-gradient(135deg, #ffffff 0, #fcf380 30%, #deaf1b 58%, #832e00 100%) !important;
+  background-origin: padding-box, padding-box, border-box !important;
+  background-clip: padding-box, padding-box, border-box !important;
+
+  color: #832E00 !important;
+  -webkit-text-fill-color: #832E00 !important;
+  text-shadow: 0 1px 0 rgba(255,246,207,.90), 0 -1px 0 rgba(0,0,0,.06) !important;
+
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.50),
+    inset 0 2px 0 rgba(255,255,255,.72),
+    inset 0 -14px 22px rgba(131,46,0,.18),
+    0 0 26px rgba(222,175,27,.20) !important;
+
+  cursor: pointer !important;
+  user-select: none;
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+
+body.C #user-report .submit-btn::before,
+body.C #user-report a.submit-btn::before,
+body.C #user-report button.submit-btn::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 12px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 55%, rgba(0,0,0,.12) 100%);
+  opacity: .82;
+  z-index: -1;
+}
+
+body.C #user-report .submit-btn::after,
+body.C #user-report a.submit-btn::after,
+body.C #user-report button.submit-btn::after {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: -85%;
+  width: 52%;
+  height: 240%;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(252,243,128,0) 0%, rgba(252,243,128,.90) 50%, rgba(252,243,128,0) 100%);
+  transform: rotate(20deg) translateX(-220%);
+  opacity: 0;
+  z-index: -1;
+  mix-blend-mode: screen;
+}
+
+body.C #user-report .submit-btn[disabled],
+body.C #user-report button.submit-btn:disabled,
+body.C #user-report .submit-btn.disabled,
+body.C #user-report .submit-btn[aria-disabled="true"],
+body.C #user-report a.submit-btn[aria-disabled="true"] {
+  background: rgba(0,0,0,.28) !important;
+  background-image: none !important;
+  border: 2px solid rgba(255,255,255,.10) !important;
+  color: rgba(255,255,255,.35) !important;
+  -webkit-text-fill-color: rgba(255,255,255,.35) !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+
+body.C #user-report .submit-btn[disabled]::before,
+body.C #user-report button.submit-btn:disabled::before,
+body.C #user-report .submit-btn.disabled::before,
+body.C #user-report .submit-btn[aria-disabled="true"]::before,
+body.C #user-report a.submit-btn[aria-disabled="true"]::before,
+body.C #user-report .submit-btn[disabled]::after,
+body.C #user-report button.submit-btn:disabled::after,
+body.C #user-report .submit-btn.disabled::after,
+body.C #user-report .submit-btn[aria-disabled="true"]::after,
+body.C #user-report a.submit-btn[aria-disabled="true"]::after {
+  display: none !important;
+  content: none !important;
+}
+
+@media (hover: hover) {
+  body.C #user-report .close-btn:hover,
+  body.C #user-report .btn.close:hover,
+  body.C #user-report .btn.cancel:hover,
+  body.C #user-report .submit-btn:hover,
+  body.C #user-report a.submit-btn:hover,
+  body.C #user-report button.submit-btn:hover {
+    transform: translateY(-2px) translateZ(0);
+    filter: brightness(1.04) saturate(1.06);
+  }
+
+  body.C #user-report .submit-btn:hover::after,
+  body.C #user-report a.submit-btn:hover::after,
+  body.C #user-report button.submit-btn:hover::after {
+    opacity: .55;
+    animation: m26ReportSweep 900ms cubic-bezier(.2,.7,.2,1);
+  }
+
+  body.C #user-report .close-btn:active,
+  body.C #user-report .btn.close:active,
+  body.C #user-report .btn.cancel:active,
+  body.C #user-report .submit-btn:active,
+  body.C #user-report a.submit-btn:active,
+  body.C #user-report button.submit-btn:active {
+    transform: translateY(0) translateZ(0);
+    filter: brightness(.99) saturate(1.03);
+  }
+}
+
+@media (hover: none) {
+  body.C #user-report .submit-btn::before,
+  body.C #user-report a.submit-btn::before,
+  body.C #user-report button.submit-btn::before {
+    animation: m26ReportPulse 3.2s ease-in-out infinite;
+  }
+
+  body.C #user-report .submit-btn::after,
+  body.C #user-report a.submit-btn::after,
+  body.C #user-report button.submit-btn::after {
+    opacity: .55;
+    animation: m26ReportSweep 3.6s ease-in-out infinite;
+    animation-delay: .25s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.C #user-report .submit-btn::before,
+  body.C #user-report .submit-btn::after,
+  body.C #user-report a.submit-btn::before,
+  body.C #user-report a.submit-btn::after,
+  body.C #user-report button.submit-btn::before,
+  body.C #user-report button.submit-btn::after {
+    animation: none !important;
+    opacity: .82 !important;
+  }
+}
