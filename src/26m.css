@@ -6666,3 +6666,27 @@ body.C .swal2-icon.swal2-error .swal2-x-mark-line-right {
         filter: none !important;
     }
 }
+
+body.C [class^=swal2] {
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Montserrat", sans-serif !important;
+  color: #fffdf4;
+  font-weight: 700;
+}
+
+body.C div:where(.swal2-icon).swal2-info {
+  border-color: #fcf380 !important;
+  color: #fcf380 !important;
+  box-shadow: 0 0 0 1px rgba(255, 246, 207, 0.10) inset, 0 0 22px rgba(222, 175, 27, 0.24), 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+body.C div:where(.swal2-icon).swal2-info .swal2-icon-content {
+  color: #fcf380 !important;
+  font-weight: 900;
+  text-shadow: 0 1px 0 rgba(45, 0, 0, 0.65), 0 0 14px rgba(222, 175, 27, 0.18);
+}
+
+body.C div:where(.swal2-icon).swal2-info:before,
+body.C div:where(.swal2-icon).swal2-info:after {
+  background-color: #fcf380 !important;
+}
