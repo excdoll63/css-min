@@ -5991,7 +5991,10 @@ body.C #deposit .fabtn.selected::after,
   50% { opacity: .92; }
 }
 
-body.C .swal2-popup .swal2-styled {
+body.C .swal2-popup .swal2-confirm.swal2-styled,
+body.C .swal2-popup .swal2-styled.swal2-confirm,
+body.C .swal2-popup .swal2-cancel.swal2-styled,
+body.C .swal2-popup .swal2-styled.swal2-cancel {
   -webkit-tap-highlight-color: transparent;
   appearance: none !important;
 
@@ -6024,20 +6027,28 @@ body.C .swal2-popup .swal2-styled {
 
   transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
   outline: none !important;
+
+  z-index: 0;
 }
 
-body.C .swal2-popup .swal2-styled::before {
+body.C .swal2-popup .swal2-confirm.swal2-styled::before,
+body.C .swal2-popup .swal2-styled.swal2-confirm::before,
+body.C .swal2-popup .swal2-cancel.swal2-styled::before,
+body.C .swal2-popup .swal2-styled.swal2-cancel::before {
   content: "";
   position: absolute;
   inset: 2px;
   border-radius: 12px;
   pointer-events: none;
-  z-index: -1;
   background: linear-gradient(180deg, rgba(255,255,255,.45) 0%, rgba(255,255,255,0) 55%, rgba(0,0,0,.14) 100%);
   opacity: .82;
+  z-index: -1;
 }
 
-body.C .swal2-popup .swal2-styled::after {
+body.C .swal2-popup .swal2-confirm.swal2-styled::after,
+body.C .swal2-popup .swal2-styled.swal2-confirm::after,
+body.C .swal2-popup .swal2-cancel.swal2-styled::after,
+body.C .swal2-popup .swal2-styled.swal2-cancel::after {
   content: "";
   position: absolute;
   top: -70%;
@@ -6045,10 +6056,9 @@ body.C .swal2-popup .swal2-styled::after {
   width: 52%;
   height: 240%;
   pointer-events: none;
-  z-index: -1;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.78) 50%, rgba(255,255,255,0) 100%);
   transform: rotate(20deg) translateX(-220%);
   opacity: 0;
+  z-index: -1;
   mix-blend-mode: overlay;
 }
 
@@ -6075,49 +6085,70 @@ body.C .swal2-popup .swal2-styled.swal2-confirm {
   filter: saturate(1.08);
 }
 
+body.C .swal2-popup .swal2-confirm.swal2-styled::after,
+body.C .swal2-popup .swal2-styled.swal2-confirm::after {
+  background: linear-gradient(90deg, rgba(252,243,128,0) 0%, rgba(252,243,128,.90) 50%, rgba(252,243,128,0) 100%);
+  mix-blend-mode: screen;
+}
+
 body.C .swal2-popup .swal2-cancel.swal2-styled,
 body.C .swal2-popup .swal2-styled.swal2-cancel {
-  min-width: 150px !important;
-
-  background-color: #1A0A00 !important;
+  background-color: #2b2b2b !important;
   background-image:
-    radial-gradient(140% 95% at 50% 0, rgba(255,255,255,.12) 0, rgba(255,255,255,0) 62%),
-    linear-gradient(180deg, #3a3a3a 0, #222222 55%, #2d0000 100%),
-    linear-gradient(135deg, #bdbdbd 0, #777777 42%, #3a3a3a 100%) !important;
+    radial-gradient(140% 95% at 50% 0, rgba(255,255,255,.14) 0, rgba(255,255,255,0) 62%),
+    linear-gradient(180deg, #4b4b4b 0, #2b2b2b 55%, #151515 100%),
+    linear-gradient(135deg, #e0e0e0 0, #9a9a9a 42%, #3a3a3a 100%) !important;
   background-origin: padding-box, padding-box, border-box !important;
   background-clip: padding-box, padding-box, border-box !important;
 
-  color: #FCF380 !important;
-  -webkit-text-fill-color: #FCF380 !important;
-  text-shadow: 0 1px 0 rgba(0,0,0,.55), 0 0 12px rgba(222,175,27,.12) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.60) !important;
 
   box-shadow:
     0 14px 30px rgba(0,0,0,.55),
-    inset 0 1px 0 rgba(255,255,255,.10),
+    inset 0 1px 0 rgba(255,255,255,.12),
     0 0 18px rgba(255,255,255,.06) !important;
 
   filter: saturate(1.02);
 }
 
+body.C .swal2-popup .swal2-cancel.swal2-styled::after,
+body.C .swal2-popup .swal2-styled.swal2-cancel::after {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.80) 50%, rgba(255,255,255,0) 100%);
+}
+
 @media (hover: hover) {
-  body.C .swal2-popup .swal2-styled:hover {
+  body.C .swal2-popup .swal2-confirm.swal2-styled:hover,
+  body.C .swal2-popup .swal2-styled.swal2-confirm:hover,
+  body.C .swal2-popup .swal2-cancel.swal2-styled:hover,
+  body.C .swal2-popup .swal2-styled.swal2-cancel:hover {
     transform: translateY(-2px) translateZ(0);
     filter: brightness(1.04) saturate(1.06);
   }
 
-  body.C .swal2-popup .swal2-styled:hover::after {
+  body.C .swal2-popup .swal2-confirm.swal2-styled:hover::after,
+  body.C .swal2-popup .swal2-styled.swal2-confirm:hover::after,
+  body.C .swal2-popup .swal2-cancel.swal2-styled:hover::after,
+  body.C .swal2-popup .swal2-styled.swal2-cancel:hover::after {
     opacity: .55;
     animation: m26SwalSweep 900ms cubic-bezier(.2,.7,.2,1);
   }
 
-  body.C .swal2-popup .swal2-styled:active {
+  body.C .swal2-popup .swal2-confirm.swal2-styled:active,
+  body.C .swal2-popup .swal2-styled.swal2-confirm:active,
+  body.C .swal2-popup .swal2-cancel.swal2-styled:active,
+  body.C .swal2-popup .swal2-styled.swal2-cancel:active {
     transform: translateY(0) translateZ(0);
     filter: brightness(.99) saturate(1.03);
   }
 }
 
 @media (hover: none) {
-  body.C .swal2-popup .swal2-styled::before {
+  body.C .swal2-popup .swal2-confirm.swal2-styled::before,
+  body.C .swal2-popup .swal2-styled.swal2-confirm::before,
+  body.C .swal2-popup .swal2-cancel.swal2-styled::before,
+  body.C .swal2-popup .swal2-styled.swal2-cancel::before {
     animation: m26SwalPulse 3.2s ease-in-out infinite;
   }
 
@@ -6132,16 +6163,26 @@ body.C .swal2-popup .swal2-styled.swal2-cancel {
   body.C .swal2-popup .swal2-styled.swal2-cancel::after {
     opacity: .50;
     animation: m26SwalSweep 4.0s ease-in-out infinite;
-    animation-delay: 1.15s;
+    animation-delay: 1.05s;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body.C .swal2-popup .swal2-styled {
+  body.C .swal2-popup .swal2-confirm.swal2-styled,
+  body.C .swal2-popup .swal2-styled.swal2-confirm,
+  body.C .swal2-popup .swal2-cancel.swal2-styled,
+  body.C .swal2-popup .swal2-styled.swal2-cancel {
     transition: none !important;
   }
-  body.C .swal2-popup .swal2-styled::before,
-  body.C .swal2-popup .swal2-styled::after {
+
+  body.C .swal2-popup .swal2-confirm.swal2-styled::before,
+  body.C .swal2-popup .swal2-styled.swal2-confirm::before,
+  body.C .swal2-popup .swal2-cancel.swal2-styled::before,
+  body.C .swal2-popup .swal2-styled.swal2-cancel::before,
+  body.C .swal2-popup .swal2-confirm.swal2-styled::after,
+  body.C .swal2-popup .swal2-styled.swal2-confirm::after,
+  body.C .swal2-popup .swal2-cancel.swal2-styled::after,
+  body.C .swal2-popup .swal2-styled.swal2-cancel::after {
     animation: none !important;
     opacity: .82 !important;
   }
