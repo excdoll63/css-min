@@ -5756,3 +5756,165 @@ body.C #chatroom .message.myself .message-wrapper{
 body.C #chatroom .message.myself .message-wrapper a{
     color:#6B0103 !important;
 }
+
+@keyframes m26FabtnSweep {
+  0% { transform: rotate(20deg) translateX(-220%); opacity: 0; }
+  18% { opacity: 0; }
+  28% { opacity: .55; }
+  60% { opacity: .35; }
+  80% { opacity: 0; }
+  100% { transform: rotate(20deg) translateX(260%); opacity: 0; }
+}
+
+@keyframes m26FabtnBreath {
+  0%, 100% {
+    filter: saturate(1.06) brightness(1.02);
+    box-shadow:
+      0 12px 24px rgba(0,0,0,.46),
+      inset 0 0 0 1px rgba(255,255,255,.14),
+      inset 0 -12px 18px rgba(131,46,0,.16),
+      0 0 18px rgba(222,175,27,.16);
+  }
+  50% {
+    filter: saturate(1.14) brightness(1.07);
+    box-shadow:
+      0 16px 34px rgba(0,0,0,.56),
+      inset 0 0 0 1px rgba(255,255,255,.18),
+      inset 0 -14px 22px rgba(131,46,0,.20),
+      0 0 28px rgba(222,175,27,.26);
+  }
+}
+
+body.C #deposit .fabtn {
+  float: left;
+  margin: 6px 6px 0 0;
+  padding: 8px 12px;
+  min-width: 56px;
+  text-align: center;
+
+  font: 900 12px/1 "Montserrat", sans-serif;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+
+  border: 2px solid transparent !important;
+  border-radius: 999px !important;
+  box-sizing: border-box;
+
+  color: #2D0000 !important;
+  text-shadow: 0 1px 0 rgba(255,246,207,.80), 0 -1px 0 rgba(0,0,0,.06);
+
+  background-color: #DEAF1B !important;
+  background-image:
+    radial-gradient(140% 90% at 50% 0, rgba(255,255,255,.30) 0, rgba(255,255,255,0) 58%) ,
+    linear-gradient(180deg, #fff6cf 0, #fce58e 18%, #fcf380 48%, #deaf1b 78%, #c7920a 100%),
+    linear-gradient(135deg, #fff 0, #fcf380 28%, #deaf1b 58%, #832e00 100%) !important;
+  background-origin: padding-box, padding-box, border-box !important;
+  background-clip: padding-box, padding-box, border-box !important;
+  background-repeat: no-repeat !important;
+
+  box-shadow:
+    0 12px 24px rgba(0,0,0,.42),
+    inset 0 2px 0 rgba(255,255,255,.66),
+    inset 0 -12px 18px rgba(131,46,0,.14),
+    0 0 16px rgba(222,175,27,.14) !important;
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+
+body.C #deposit .fabtn::after {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: -85%;
+  width: 52%;
+  height: 240%;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.78) 50%, rgba(255,255,255,0) 100%);
+  transform: rotate(20deg) translateX(-220%);
+  opacity: 0;
+  mix-blend-mode: overlay;
+}
+
+body.C #deposit .fabtn.selected {
+  color: #1A0A00 !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.35);
+
+  border-radius: 999px !important;
+
+  background-color: #DEAF1B !important;
+  background-image:
+    radial-gradient(140% 90% at 50% 0, rgba(255,255,255,.34) 0, rgba(255,255,255,0) 58%),
+    linear-gradient(180deg, #fffdf0 0, #fcf380 28%, #deaf1b 70%, #b57d00 100%),
+    linear-gradient(135deg, #ffffff 0, #fcf380 22%, #deaf1b 52%, #6b0103 82%, #2d0000 100%) !important;
+  background-origin: padding-box, padding-box, border-box !important;
+  background-clip: padding-box, padding-box, border-box !important;
+
+  box-shadow:
+    0 16px 34px rgba(0,0,0,.56),
+    inset 0 0 0 1px rgba(255,243,128,.22),
+    inset 0 -14px 22px rgba(131,46,0,.22),
+    0 0 28px rgba(222,175,27,.28) !important;
+
+  filter: saturate(1.14) brightness(1.06);
+}
+
+@media (hover: hover) {
+  body.C #deposit .fabtn:hover {
+    transform: translateY(-1px) translateZ(0);
+    filter: brightness(1.04) saturate(1.06);
+    box-shadow:
+      0 14px 30px rgba(0,0,0,.48),
+      inset 0 2px 0 rgba(255,255,255,.70),
+      inset 0 -14px 22px rgba(131,46,0,.18),
+      0 0 20px rgba(222,175,27,.18) !important;
+  }
+
+  body.C #deposit .fabtn:hover::after {
+    opacity: .55;
+    animation: m26FabtnSweep 900ms cubic-bezier(.2,.7,.2,1);
+  }
+}
+
+@media (hover: none) {
+  body.C #deposit .fabtn.selected {
+    animation: m26FabtnBreath 3.1s ease-in-out infinite;
+  }
+
+  body.C #deposit .fabtn.selected::after {
+    opacity: .55;
+    animation: m26FabtnSweep 3.5s ease-in-out infinite;
+    animation-delay: .25s;
+  }
+}
+
+body.C #deposit .fabtn:active {
+  transform: translateY(0) scale(.99);
+  filter: brightness(.99) saturate(1.04);
+}
+
+body.C #deposit .fabtn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(222,175,27,.22),
+    0 14px 28px rgba(0,0,0,.50),
+    inset 0 2px 0 rgba(255,255,255,.70) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.C #deposit .fabtn.selected {
+    animation: none !important;
+  }
+  body.C #deposit .fabtn::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}
