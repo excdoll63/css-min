@@ -5714,11 +5714,6 @@ body.C #chatroom .message .message-wrapper{
     text-shadow:0 1px 0 rgba(0,0,0,.35);
     word-wrap:break-word;
 
-    box-shadow:
-        0 10px 22px rgba(0,0,0,.42),
-        0 0 0 1px rgba(252,243,128,.10) inset,
-        0 0 18px rgba(222,175,27,.14) !important;
-
     overflow:hidden;
     isolation:isolate;
     z-index:0;
