@@ -369,8 +369,8 @@ window.__26M_SETTINGS_VER__ = "20260220";
 
     if (!window.MutationObserver) return;
 
-    if (document.body && document.body.getAttribute('data-mgi-settings-i18n') !== '1') {
-      document.body.setAttribute('data-mgi-settings-i18n', '1');
+    if (document.body && document.body.getAttribute('data-26m-settings-i18n') !== '1') {
+      document.body.setAttribute('data-26m-settings-i18n', '1');
 
       var obs = new MutationObserver(function (mutations) {
         for (var i = 0; i < mutations.length; i++) {
@@ -385,8 +385,8 @@ window.__26M_SETTINGS_VER__ = "20260220";
       if (document.documentElement) obs.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
     }
 
-    if (document.body && document.body.getAttribute('data-mgi-settings-watch') !== '1') {
-      document.body.setAttribute('data-mgi-settings-watch', '1');
+    if (document.body && document.body.getAttribute('data-26m-settings-watch') !== '1') {
+      document.body.setAttribute('data-26m-settings-watch', '1');
 
       var obs2 = new MutationObserver(function () {
         scheduleApply();
