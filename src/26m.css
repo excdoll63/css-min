@@ -6940,6 +6940,11 @@ body.C #changeBank button.btn{
   width: 100% !important;
   margin: 14px 0 0 !important;
 
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  z-index: 0 !important;
+
   color: #832e00 !important;
   -webkit-text-fill-color: #832e00 !important;
   font-family: "Montserrat", sans-serif !important;
@@ -6950,6 +6955,23 @@ body.C #changeBank button.btn{
 
   text-shadow: 0 1px 0 rgba(255,246,207,.88), 0 -1px 0 rgba(0,0,0,.06) !important;
   opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+body.C #changeBank .btn *,
+body.C #changeBank a.btn *,
+body.C #changeBank button.btn *{
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+body.C #changeBank .btn::before,
+body.C #changeBank a.btn::before,
+body.C #changeBank button.btn::before,
+body.C #changeBank .btn::after,
+body.C #changeBank a.btn::after,
+body.C #changeBank button.btn::after{
+  z-index: -1 !important;
 }
 
 body.C #changeBank .btn[disabled],
@@ -6957,8 +6979,9 @@ body.C #changeBank button.btn:disabled,
 body.C #changeBank .btn.disabled,
 body.C #changeBank .btn[aria-disabled="true"],
 body.C #changeBank a.btn[aria-disabled="true"]{
-  opacity: .92 !important;
-  color: rgba(131,46,0,.55) !important;
-  -webkit-text-fill-color: rgba(131,46,0,.55) !important;
-  text-shadow: 0 1px 0 rgba(255,246,207,.65) !important;
+  opacity: 1 !important;
+  color: rgba(131,46,0,.78) !important;
+  -webkit-text-fill-color: rgba(131,46,0,.78) !important;
+  text-shadow: 0 1px 0 rgba(255,246,207,.72) !important;
+  filter: none !important;
 }
