@@ -6884,9 +6884,9 @@ body.C #changeBank td:nth-child(2){
 
 body.C #changeBank td:first-child{
   margin: 12px 0 6px !important;
-  color: #2d0000 !important;
-  font-weight: 900 !important;
-  font-size: 13px !important;
+  color: rgba(45, 0, 0, 0.78) !important;
+  font-weight: 800 !important;
+  font-size: 11.5px !important;
   text-shadow: none !important;
   letter-spacing: .02em !important;
   white-space: normal !important;
