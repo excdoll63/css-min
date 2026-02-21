@@ -6818,13 +6818,38 @@ body.C #changeBank{
 body.C #changeBank .t1{
   width: 100% !important;
   margin: 0 auto 12px !important;
+  padding: 0 !important;
+
+  display: block !important;
+  text-align: center !important;
+
+  background: none !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+
+  color: #2d0000 !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+
+  text-shadow: 0 1px 0 rgba(255,246,207,.90), 0 10px 22px rgba(0,0,0,.12) !important;
+  animation: none !important;
+}
+
+body.C #changeBank .t1::before,
+body.C #changeBank .t1::after{
+  content: none !important;
+  display: none !important;
 }
 
 body.C #changeBank .t2{
   width: 100% !important;
   margin: 0 0 12px !important;
   color: #832e00 !important;
-  font-weight: 800 !important;
+  font-weight: 650 !important;
   text-shadow: 0 1px 0 rgba(255,246,207,.85) !important;
 }
 
@@ -6832,7 +6857,7 @@ body.C #changeBank .note{
   width: 100% !important;
   margin: 12px 0 0 !important;
   color: #832e00 !important;
-  font-weight: 800 !important;
+  font-weight: 650 !important;
   text-shadow: 0 1px 0 rgba(255,246,207,.85) !important;
   animation: none !important;
 }
@@ -6914,4 +6939,26 @@ body.C #changeBank a.btn,
 body.C #changeBank button.btn{
   width: 100% !important;
   margin: 14px 0 0 !important;
+
+  color: #832e00 !important;
+  -webkit-text-fill-color: #832e00 !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 15px !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+
+  text-shadow: 0 1px 0 rgba(255,246,207,.88), 0 -1px 0 rgba(0,0,0,.06) !important;
+  opacity: 1 !important;
+}
+
+body.C #changeBank .btn[disabled],
+body.C #changeBank button.btn:disabled,
+body.C #changeBank .btn.disabled,
+body.C #changeBank .btn[aria-disabled="true"],
+body.C #changeBank a.btn[aria-disabled="true"]{
+  opacity: .92 !important;
+  color: rgba(131,46,0,.55) !important;
+  -webkit-text-fill-color: rgba(131,46,0,.55) !important;
+  text-shadow: 0 1px 0 rgba(255,246,207,.65) !important;
 }
