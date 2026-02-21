@@ -7812,12 +7812,12 @@ body.C #resetPassword .login {
   text-decoration: none !important;
 }
 
-body.C #resetPassword .login i {
-  font-size: 20px !important;
-  position: relative !important;
-  top: 1px !important;
-}
 
+
+body.C #resetPassword .login i,
+body.C #resetPassword .login .fa{
+  display: none !important;
+}
 @media (hover: hover) {
   body.C #resetPassword .login:hover {
     text-decoration: underline !important;
@@ -7857,26 +7857,4 @@ body.C #resetPassword .login{
   line-height: 1.1 !important;
 
   text-decoration: none !important;
-}
-
-body.C #resetPassword .login i,
-body.C #resetPassword .login .fa{
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  margin: 0 !important;
-  padding: 0 !important;
-
-  line-height: 1 !important;
-  vertical-align: middle !important;
-
-  position: static !important;
-  top: auto !important;
-  transform: translateY(0) !important;
-}
-
-body.C #resetPassword .login i.fa,
-body.C #resetPassword .login .fa{
-  font-size: 18px !important;
 }
