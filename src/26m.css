@@ -7912,3 +7912,27 @@ body.C #resetPassword .login .fa{
 body.C #resetPassword .login i.fa-angle-right:before{
   content: "\f105" !important;
 }
+
+body.C #resetPassword .login{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  line-height: 1 !important;
+}
+
+body.C #resetPassword .login i,
+body.C #resetPassword .login .fa{
+  margin: 0 !important;
+  position: static !important;
+  top: auto !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  transform: translateY(-0.02em) !important;
+}
+
+body.C #resetPassword .login .fa-lg{
+  font-size: 18px !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+}
