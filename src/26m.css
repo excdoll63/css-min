@@ -7842,3 +7842,48 @@ body.C #resetPassword .login i {
     opacity: .75 !important;
   }
 }
+
+body.C #resetPassword .login{
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  overflow: visible !important;
+  line-height: 1.1 !important;
+}
+
+body.C #resetPassword .login .fa,
+body.C #resetPassword .login i.fa,
+body.C #resetPassword .login i[class^="fa"],
+body.C #resetPassword .login i[class*=" fa-"]{
+  font-family: "FontAwesome","Font Awesome 5 Free","Font Awesome 6 Free" !important;
+  font-style: normal !important;
+  font-weight: 900 !important;
+  speak: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  width: 1em;
+  height: 1em;
+  line-height: 1 !important;
+  margin: 0 !important;
+
+  color: inherit !important;
+  opacity: 1 !important;
+
+  position: relative;
+  top: 1px;
+  z-index: 1;
+}
+
+body.C #resetPassword .login .fa::before,
+body.C #resetPassword .login i.fa::before,
+body.C #resetPassword .login i[class^="fa"]::before,
+body.C #resetPassword .login i[class*=" fa-"]::before{
+  display: block;
+}
