@@ -6829,7 +6829,7 @@ body.C #changeBank .t1{
   box-shadow: none !important;
   border-radius: 0 !important;
 
-  color: #2d0000 !important;
+  color: var(--m26-red) !important;
   font-size: 18px !important;
   font-weight: 900 !important;
   letter-spacing: .12em !important;
