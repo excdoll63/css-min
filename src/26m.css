@@ -7844,46 +7844,39 @@ body.C #resetPassword .login i {
 }
 
 body.C #resetPassword .login{
+  width: 100% !important;
+  margin: 14px auto 0 !important;
+  padding: 6px 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+
+  text-align: center !important;
+  line-height: 1.1 !important;
+
+  text-decoration: none !important;
+}
+
+body.C #resetPassword .login i,
+body.C #resetPassword .login .fa{
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 6px !important;
-  overflow: visible !important;
-  line-height: 1.1 !important;
-}
 
-body.C #resetPassword .login .fa,
-body.C #resetPassword .login i.fa,
-body.C #resetPassword .login i[class^="fa"],
-body.C #resetPassword .login i[class*=" fa-"]{
-  font-family: "FontAwesome","Font Awesome 5 Free","Font Awesome 6 Free" !important;
-  font-style: normal !important;
-  font-weight: 900 !important;
-  speak: none;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-
-  width: 1em;
-  height: 1em;
-  line-height: 1 !important;
   margin: 0 !important;
+  padding: 0 !important;
 
-  color: inherit !important;
-  opacity: 1 !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
 
-  position: relative;
-  top: 1px;
-  z-index: 1;
+  position: static !important;
+  top: auto !important;
+  transform: translateY(0) !important;
 }
 
-body.C #resetPassword .login .fa::before,
-body.C #resetPassword .login i.fa::before,
-body.C #resetPassword .login i[class^="fa"]::before,
-body.C #resetPassword .login i[class*=" fa-"]::before{
-  display: block;
+body.C #resetPassword .login i.fa,
+body.C #resetPassword .login .fa{
+  font-size: 18px !important;
 }
