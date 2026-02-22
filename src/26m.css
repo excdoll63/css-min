@@ -8404,3 +8404,77 @@ body.C #content #withdraw button.btn+button.btn,
     width:100% !important;
   }
 }
+
+body.C #content #gggpay,
+body.C #content #fpay,
+body.C #content #direpay,
+body.C #content #amopayramp,
+body.C #content #redtelco{
+  padding:15px;
+  overflow:hidden;
+}
+
+body.C #content #gggpay .fabtns,
+body.C #content #fpay .fabtns,
+body.C #content #direpay .fabtns,
+body.C #content #amopayramp .fabtns{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0 0 14px 0;
+}
+
+body.C #content #gggpay .fabtns .fabtn,
+body.C #content #fpay .fabtns .fabtn,
+body.C #content #direpay .fabtns .fabtn,
+body.C #content #amopayramp .fabtns .fabtn{
+  float:none!important;
+  margin:0!important;
+}
+
+body.C #content #gggpay input:not([type=hidden]),
+body.C #content #gggpay select,
+body.C #content #gggpay textarea,
+body.C #content #fpay input:not([type=hidden]),
+body.C #content #fpay select,
+body.C #content #fpay textarea,
+body.C #content #direpay input:not([type=hidden]),
+body.C #content #direpay select,
+body.C #content #direpay textarea,
+body.C #content #amopayramp input:not([type=hidden]),
+body.C #content #amopayramp select,
+body.C #content #amopayramp textarea,
+body.C #content #redtelco input:not([type=hidden]),
+body.C #content #redtelco select,
+body.C #content #redtelco textarea{
+  margin:0 0 14px 0!important;
+}
+
+body.C #content #gggpay .btns,
+body.C #content #fpay .btns,
+body.C #content #direpay .btns,
+body.C #content #amopayramp .btns,
+body.C #content #redtelco .btns{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+body.C #content #gggpay .btns .btn,
+body.C #content #gggpay .btns a.btn,
+body.C #content #gggpay .btns button.btn,
+body.C #content #fpay .btns .btn,
+body.C #content #fpay .btns a.btn,
+body.C #content #fpay .btns button.btn,
+body.C #content #direpay .btns .btn,
+body.C #content #direpay .btns a.btn,
+body.C #content #direpay .btns button.btn,
+body.C #content #amopayramp .btns .btn,
+body.C #content #amopayramp .btns a.btn,
+body.C #content #amopayramp .btns button.btn,
+body.C #content #redtelco .btns .btn,
+body.C #content #redtelco .btns a.btn,
+body.C #content #redtelco .btns button.btn{
+  float:none!important;
+  margin:0!important;
+}
