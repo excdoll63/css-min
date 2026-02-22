@@ -8404,3 +8404,577 @@ body.C #content #withdraw button.btn+button.btn,
     width:100% !important;
   }
 }
+
+#deposit,
+#deposit *{
+  box-sizing:border-box;
+  text-shadow:none !important;
+}
+
+#deposit .fa,
+#deposit .fa::before,
+#deposit .fa::after{
+  font-family:FontAwesome !important;
+}
+
+@keyframes m26_dep_sweep{
+  0%{transform:rotate(20deg) translateX(-220%);opacity:0;}
+  14%{opacity:0;}
+  22%{opacity:.55;}
+  52%{opacity:.42;}
+  72%{opacity:0;}
+  100%{transform:rotate(20deg) translateX(260%);opacity:0;}
+}
+
+@keyframes m26_dep_pulse{
+  0%,100%{opacity:.62;}
+  50%{opacity:.90;}
+}
+
+#deposit{
+  --m26-white:#ffffff;
+  --m26-offwhite:#fff6cf;
+  --m26-gold-hi:#fcf380;
+  --m26-gold:#deaf1b;
+  --m26-gold-deep:#c7920a;
+  --m26-red-hi:#ae0000;
+  --m26-red:#6b0103;
+  --m26-deep:#2d0000;
+  --m26-brown:#832e00;
+  --m26-ink:#1a0a00;
+  --m26-cream:#fffdf4;
+  --m26-shadow:rgba(0,0,0,.22);
+  --m26-glow:rgba(222,175,27,.18);
+  font-family:Montserrat,sans-serif;
+  text-transform:none !important;
+  color:var(--m26-ink);
+}
+
+body.C #content #deposit{
+  width:min(1120px,calc(100% - 28px));
+  margin:14px auto 88px;
+  padding:12px;
+  border-radius:22px;
+  border:2px solid transparent;
+  background:
+    linear-gradient(#fffdf4,#fff8df) padding-box,
+    linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 28%,var(--m26-gold) 58%,var(--m26-brown) 100%) border-box;
+  box-shadow:0 18px 44px var(--m26-shadow),0 0 26px var(--m26-glow);
+  overflow:hidden;
+}
+
+#deposit .ih{
+  display:none;
+}
+
+#deposit h2{
+  margin:0 0 10px;
+  color:var(--m26-red);
+  font-size:18px;
+  font-weight:900;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+#deposit .title{
+  margin:10px 0 8px;
+  font-weight:900;
+  letter-spacing:.06em;
+  color:var(--m26-red);
+  text-transform:uppercase;
+}
+
+#deposit .question{
+  margin-top:12px;
+  overflow:visible;
+}
+
+#deposit .question:first-child{
+  margin-top:0;
+}
+
+#deposit ul,
+#deposit ol{
+  margin:6px 0 0;
+  padding:0;
+}
+
+#deposit li{
+  margin:4px 0 0 18px;
+  font-weight:650;
+  color:rgba(45,0,0,.86);
+  text-transform:none;
+}
+
+body.C #content #deposit input[type=date],
+body.C #content #deposit input[type=email],
+body.C #content #deposit input[type=number],
+body.C #content #deposit input[type=password],
+body.C #content #deposit input[type=tel],
+body.C #content #deposit input[type=text],
+body.C #content #deposit input[type=time],
+body.C #content #deposit select,
+body.C #content #deposit textarea{
+  box-sizing:border-box;
+  width:100% !important;
+  margin:0;
+  outline:0 !important;
+  border-radius:12px !important;
+  border:1.2px solid rgba(222,175,27,.32) !important;
+  background:linear-gradient(180deg,rgba(255,255,255,.98) 0,rgba(255,255,255,.92) 100%) !important;
+  color:var(--m26-ink) !important;
+  font-family:Montserrat,sans-serif !important;
+  font-weight:650 !important;
+  font-size:13px !important;
+  line-height:1.2 !important;
+  padding:9px 12px !important;
+  box-shadow:none !important;
+  transform:none !important;
+  filter:none !important;
+  text-transform:none !important;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-user-select:text;
+}
+
+body.C #content #deposit textarea{
+  min-height:92px;
+  resize:vertical;
+}
+
+body.C #content #deposit input::placeholder,
+body.C #content #deposit textarea::placeholder{
+  color:rgba(45,0,0,.42);
+  font-weight:650;
+}
+
+body.C #content #deposit select{
+  padding-right:48px !important;
+  -webkit-appearance:none;
+  appearance:none;
+  background-image:
+    linear-gradient(45deg,transparent 50%,rgba(45,0,0,.60) 50%),
+    linear-gradient(135deg,rgba(45,0,0,.60) 50%,transparent 50%),
+    linear-gradient(to right,rgba(222,175,27,.22),rgba(222,175,27,.22)),
+    linear-gradient(180deg,rgba(255,255,255,.98) 0,rgba(255,255,255,.92) 100%);
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 12px) 50%,
+    calc(100% - 38px) 50%,
+    0 0;
+  background-size:
+    6px 6px,
+    6px 6px,
+    1px 18px,
+    100% 100%;
+  background-repeat:no-repeat;
+}
+
+body.C #content #deposit input:focus,
+body.C #content #deposit select:focus,
+body.C #content #deposit textarea:focus{
+  border-color:rgba(222,175,27,.85) !important;
+  box-shadow:0 0 0 3px rgba(222,175,27,.16) !important;
+}
+
+@media (hover:hover){
+  body.C #content #deposit input:hover,
+  body.C #content #deposit select:hover,
+  body.C #content #deposit textarea:hover{
+    border-color:rgba(131,46,0,.55) !important;
+  }
+}
+
+#deposit .step-box{
+  padding:12px 14px;
+  border-radius:18px;
+  border:2px solid transparent;
+  background:
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.18) 0,rgba(255,255,255,0) 62%) padding-box,
+    linear-gradient(180deg,var(--m26-red-hi) 0,var(--m26-red) 55%,var(--m26-deep) 100%) padding-box,
+    linear-gradient(135deg,var(--m26-gold-hi) 0,var(--m26-gold) 52%,var(--m26-brown) 100%) border-box;
+  color:rgba(255,255,255,.92);
+  font:650 12.5px/1.45 Montserrat,sans-serif;
+  box-shadow:0 16px 36px rgba(0,0,0,.26),0 0 22px rgba(174,0,0,.16),0 0 20px rgba(222,175,27,.14);
+}
+
+#deposit .step-box b,
+#deposit .step-box strong{
+  color:var(--m26-gold-hi);
+  font-weight:900;
+  letter-spacing:.04em;
+}
+
+#deposit .bank-info{
+  margin-top:12px;
+  border-radius:18px;
+  border:2px solid rgba(222,175,27,.55);
+  background:linear-gradient(180deg,rgba(255,255,255,.92) 0,rgba(255,246,207,.68) 100%);
+  box-shadow:0 16px 34px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.85);
+  overflow:hidden;
+}
+
+#deposit .bank-info table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+  border-spacing:0;
+}
+
+#deposit .bank-info table tr:first-child td{
+  border-top:0;
+}
+
+#deposit .bank-info td{
+  padding:10px 12px;
+  border-top:1px solid rgba(222,175,27,.22);
+  vertical-align:middle;
+  font:650 12.5px/1.2 Montserrat,sans-serif;
+  color:var(--m26-ink);
+}
+
+#deposit .bank-info td:first-child{
+  width:40%;
+  color:rgba(45,0,0,.62);
+  font-weight:900;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+#deposit .bank-info td.copy{
+  width:46px;
+  padding:8px 10px 8px 0;
+  text-align:right;
+  white-space:nowrap;
+}
+
+#deposit .bank-info td.copy a,
+#deposit .bank-info td.copy button{
+  -webkit-tap-highlight-color:transparent;
+  appearance:none;
+  width:32px;
+  height:32px;
+  border-radius:10px;
+  border:2px solid transparent;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  user-select:none;
+  background:
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.18) 0,rgba(255,255,255,0) 62%) padding-box,
+    linear-gradient(180deg,var(--m26-red-hi) 0,var(--m26-red) 55%,var(--m26-deep) 100%) padding-box,
+    linear-gradient(135deg,var(--m26-gold-hi) 0,var(--m26-gold) 52%,var(--m26-brown) 100%) border-box;
+  color:var(--m26-gold-hi);
+  box-shadow:0 12px 26px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.18),0 0 14px rgba(222,175,27,.14);
+}
+
+#deposit .bank-info td.copy a:active,
+#deposit .bank-info td.copy button:active{
+  transform:translateY(1px);
+  filter:brightness(.98);
+}
+
+#deposit .bank-info table td.copy input,
+#deposit .bank-info table td:last-child input{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  text-shadow:none !important;
+  outline:0 !important;
+  transform:none !important;
+  filter:none !important;
+  transition:none !important;
+  animation:none !important;
+  padding:0 !important;
+  margin:0 !important;
+  height:auto !important;
+  border-radius:0 !important;
+  font-size:13px !important;
+  line-height:1.2 !important;
+  font-weight:650 !important;
+  color:var(--m26-ink) !important;
+  -webkit-text-fill-color:var(--m26-ink) !important;
+  opacity:1 !important;
+}
+
+#deposit .form-box{
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius:18px;
+  border:2px solid rgba(222,175,27,.55);
+  background:linear-gradient(180deg,rgba(255,255,255,.92) 0,rgba(255,246,207,.62) 100%);
+  box-shadow:0 16px 34px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.85);
+  color:var(--m26-ink);
+  font:650 12.5px/1.35 Montserrat,sans-serif;
+}
+
+#deposit .inputs{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0 10px;
+  table-layout:fixed;
+}
+
+#deposit .inputs td{
+  padding:0 10px 0 0;
+  vertical-align:middle;
+  color:var(--m26-ink);
+}
+
+#deposit .inputs tr td:first-child{
+  width:200px;
+  white-space:nowrap;
+  font-weight:800;
+  font-size:12px;
+  color:rgba(45,0,0,.78);
+}
+
+#deposit .inputs tr td:last-child{
+  padding-right:0;
+}
+
+#deposit .file-upload{
+  width:100%;
+  overflow:visible;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+#deposit .btn.primary,
+#deposit a.btn.primary,
+#deposit button.btn.primary{
+  -webkit-tap-highlight-color:transparent;
+  appearance:none;
+  box-sizing:border-box;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:30px;
+  padding:0 12px;
+  border:2px solid transparent;
+  border-radius:999px;
+  background:
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.55) 0,rgba(255,255,255,0) 62%) padding-box,
+    linear-gradient(180deg,var(--m26-offwhite) 0,#fce58e 18%,var(--m26-gold-hi) 48%,var(--m26-gold) 78%,var(--m26-gold-deep) 100%) padding-box,
+    linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 30%,var(--m26-gold) 58%,var(--m26-brown) 100%) border-box;
+  background-origin:padding-box,padding-box,border-box;
+  background-clip:padding-box,padding-box,border-box;
+  color:var(--m26-brown);
+  text-decoration:none;
+  font:900 11px/1 Montserrat,sans-serif;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  text-shadow:0 1px 0 rgba(255,246,207,.85),0 -1px 0 rgba(0,0,0,.06);
+  box-shadow:0 10px 22px rgba(0,0,0,.18),inset 0 2px 0 rgba(255,255,255,.70),inset 0 -12px 18px rgba(131,46,0,.16),0 0 16px rgba(222,175,27,.14);
+  cursor:pointer;
+  user-select:none;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  transform:translateZ(0);
+  transition:transform .16s,filter .16s,box-shadow .16s;
+}
+
+#deposit .question .btn.primary,
+#deposit .question a.btn.primary,
+#deposit .question button.btn.primary{
+  margin:0 8px 8px 0;
+}
+
+#deposit .file-upload .btn.primary,
+#deposit .file-upload a.btn.primary,
+#deposit .file-upload button.btn.primary{
+  margin:0;
+}
+
+@media (hover:hover){
+  #deposit .btn.primary:hover,
+  #deposit a.btn.primary:hover,
+  #deposit button.btn.primary:hover{
+    transform:translateY(-1px) translateZ(0);
+    filter:brightness(1.03) saturate(1.04);
+    box-shadow:0 12px 26px rgba(0,0,0,.20),inset 0 2px 0 rgba(255,255,255,.74),inset 0 -14px 20px rgba(131,46,0,.18),0 0 18px rgba(222,175,27,.16);
+  }
+}
+
+#deposit .btn.primary:active,
+#deposit a.btn.primary:active,
+#deposit button.btn.primary:active{
+  transform:translateY(0) translateZ(0);
+  filter:brightness(.99);
+}
+
+#deposit .btns{
+  margin-top:14px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+#deposit .btns .btn,
+#deposit .btns a.btn,
+#deposit .btns button.btn{
+  -webkit-tap-highlight-color:transparent;
+  appearance:none;
+  box-sizing:border-box;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:46px;
+  min-height:46px;
+  width:148px;
+  padding:0 18px;
+  border-radius:14px;
+  border:2px solid transparent;
+  font-family:Montserrat,sans-serif;
+  font-weight:900;
+  font-size:13px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  line-height:1;
+  text-decoration:none;
+  user-select:none;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  transform:translateZ(0);
+  transition:transform .18s,filter .18s,box-shadow .18s;
+}
+
+#deposit .btns .btn.submit,
+#deposit .btns a.btn.submit,
+#deposit .btns button.btn.submit,
+#deposit .btns .btn.primary.submit,
+#deposit .btns a.btn.primary.submit,
+#deposit .btns button.btn.primary.submit{
+  color:var(--m26-brown);
+  text-shadow:0 1px 0 rgba(255,246,207,.85),0 -1px 0 rgba(0,0,0,.06);
+  background:
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.55) 0,rgba(255,255,255,0) 62%) padding-box,
+    linear-gradient(180deg,var(--m26-offwhite) 0,#fce58e 18%,var(--m26-gold-hi) 48%,var(--m26-gold) 78%,var(--m26-gold-deep) 100%) padding-box,
+    linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 30%,var(--m26-gold) 58%,var(--m26-brown) 100%) border-box;
+  background-origin:padding-box,padding-box,border-box;
+  background-clip:padding-box,padding-box,border-box;
+  box-shadow:0 14px 30px rgba(0,0,0,.20),inset 0 2px 0 rgba(255,255,255,.70),inset 0 -16px 26px rgba(131,46,0,.18),0 0 22px rgba(222,175,27,.16);
+}
+
+#deposit .btns .btn.danger.cancel,
+#deposit .btns a.btn.danger.cancel,
+#deposit .btns button.btn.danger.cancel,
+#deposit .btns .btn.cancel,
+#deposit .btns a.btn.cancel,
+#deposit .btns button.btn.cancel{
+  color:var(--m26-gold-hi);
+  text-shadow:0 1px 0 rgba(0,0,0,.55);
+  background:
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.12) 0,rgba(255,255,255,0) 62%) padding-box,
+    linear-gradient(180deg,#3a3a3a 0,#1f1f1f 55%,#0b0600 100%) padding-box,
+    linear-gradient(135deg,#ffffff 0,var(--m26-gold-hi) 30%,var(--m26-gold) 58%,var(--m26-brown) 100%) border-box;
+  background-origin:padding-box,padding-box,border-box;
+  background-clip:padding-box,padding-box,border-box;
+  box-shadow:0 14px 30px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.10),0 0 20px rgba(222,175,27,.12);
+}
+
+#deposit .btns .btn::after,
+#deposit .btns a.btn::after,
+#deposit .btns button.btn::after{
+  content:"";
+  position:absolute;
+  top:-70%;
+  left:-90%;
+  width:55%;
+  height:240%;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(255,255,255,0) 0,rgba(255,255,255,.78) 50%,rgba(255,255,255,0) 100%);
+  transform:rotate(20deg) translateX(-220%);
+  opacity:0;
+  mix-blend-mode:overlay;
+}
+
+@media (hover:hover){
+  #deposit .btns .btn:hover,
+  #deposit .btns a.btn:hover,
+  #deposit .btns button.btn:hover{
+    transform:translateY(-1px) translateZ(0);
+    filter:brightness(1.03) saturate(1.04);
+  }
+  #deposit .btns .btn:hover::after,
+  #deposit .btns a.btn:hover::after,
+  #deposit .btns button.btn:hover::after{
+    opacity:.55;
+    animation:m26_dep_sweep 900ms cubic-bezier(.2,.7,.2,1);
+  }
+}
+
+#deposit .btns .btn:active,
+#deposit .btns a.btn:active,
+#deposit .btns button.btn:active{
+  transform:translateY(0) translateZ(0);
+  filter:brightness(.99);
+}
+
+@media (hover:none){
+  #deposit .btns .btn::after,
+  #deposit .btns a.btn::after,
+  #deposit .btns button.btn::after{
+    opacity:.55;
+    animation:m26_dep_sweep 3.6s ease-in-out infinite;
+  }
+}
+
+@media (max-width:520px){
+  body.C #content #deposit{
+    width:calc(100% - 18px);
+    padding:10px;
+    margin:12px auto 86px;
+    border-radius:20px;
+  }
+  #deposit h2{
+    font-size:16px;
+  }
+  #deposit .step-box,
+  #deposit .form-box,
+  #deposit .bank-info{
+    border-radius:16px;
+  }
+  #deposit .bank-info td:first-child{
+    width:44%;
+    font-size:10.5px;
+  }
+  #deposit .inputs tr td:first-child{
+    width:140px;
+    white-space:normal;
+  }
+  #deposit .btns{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  #deposit .btns .btn,
+  #deposit .btns a.btn,
+  #deposit .btns button.btn{
+    width:100%;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  #deposit .btn.primary,
+  #deposit a.btn.primary,
+  #deposit button.btn.primary,
+  #deposit .btns .btn,
+  #deposit .btns a.btn,
+  #deposit .btns button.btn{
+    transition:none !important;
+  }
+  #deposit .btns .btn::after,
+  #deposit .btns a.btn::after,
+  #deposit .btns button.btn::after{
+    animation:none !important;
+    opacity:.78 !important;
+  }
+}
