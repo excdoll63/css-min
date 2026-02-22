@@ -8508,8 +8508,3 @@ body.C #content textarea[readonly]{
   opacity:.72;
   cursor:not-allowed;
 }
-body.C #deposit .manual-container.hasmenu{display:flex;flex-direction:column;gap:12px}
-body.C #deposit .manual-container.hasmenu .fabtns{display:flex;flex-wrap:wrap;gap:10px}
-body.C #deposit .manual-container.hasmenu .fabtns .fabtn{float:none;margin:0}
-body.C #deposit .manual-container.hasmenu input.question,body.C #deposit .manual-container.hasmenu select.question,body.C #deposit .manual-container.hasmenu textarea.question{margin-top:0}
-body.C #deposit .manual-container.hasmenu .btns{margin-top:0}
