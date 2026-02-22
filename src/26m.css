@@ -8404,3 +8404,63 @@ body.C #content #withdraw button.btn+button.btn,
     width:100% !important;
   }
 }
+
+body.C #deposit .manual-container input.question[type="text"],
+body.C #deposit .manual-container input.question[type="tel"],
+body.C #deposit .manual-container input.question[type="number"],
+body.C #deposit .manual-container select.question{
+  width: 100% !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 100%) !important;
+  border: 1.2px solid rgba(222,175,27,.32) !important;
+  border-radius: 12px !important;
+
+  padding: 9px 12px !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  color: #1a0a00 !important;
+  -webkit-text-fill-color: #1a0a00 !important;
+
+  margin: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  transform: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+
+  transition: border-color .18s ease, box-shadow .18s ease !important;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+body.C #deposit .manual-container select.question{
+  padding-right: 40px !important;
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 100%),
+    linear-gradient(45deg, transparent 50%, rgba(107,1,3,.85) 50%),
+    linear-gradient(135deg, rgba(107,1,3,.85) 50%, transparent 50%) !important;
+  background-repeat: no-repeat !important;
+  background-size: auto, 8px 8px, 8px 8px !important;
+  background-position: 0 0, calc(100% - 18px) 50%, calc(100% - 12px) 50% !important;
+}
+
+body.C #deposit .manual-container input.question::placeholder{
+  color: rgba(45,0,0,.42) !important;
+  font-weight: 650 !important;
+  -webkit-text-fill-color: rgba(45,0,0,.42) !important;
+}
+
+body.C #deposit .manual-container input.question:focus,
+body.C #deposit .manual-container select.question:focus{
+  border-color: rgba(222,175,27,.85) !important;
+  box-shadow: 0 0 0 3px rgba(222,175,27,.16) !important;
+}
+
+@media (hover:hover){
+  body.C #deposit .manual-container input.question:hover,
+  body.C #deposit .manual-container select.question:hover{
+    border-color: rgba(131,46,0,.55) !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
