@@ -8405,62 +8405,106 @@ body.C #content #withdraw button.btn+button.btn,
   }
 }
 
-body.C #deposit .manual-container input.question[type="text"],
-body.C #deposit .manual-container input.question[type="tel"],
-body.C #deposit .manual-container input.question[type="number"],
-body.C #deposit .manual-container select.question{
-  width: 100% !important;
-  background: linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 100%) !important;
-  border: 1.2px solid rgba(222,175,27,.32) !important;
-  border-radius: 12px !important;
-
-  padding: 9px 12px !important;
-  font-size: 13px !important;
-  font-weight: 650 !important;
-  color: #1a0a00 !important;
-  -webkit-text-fill-color: #1a0a00 !important;
-
-  margin: 0 !important;
-  outline: none !important;
-  box-shadow: none !important;
-
-  transform: none !important;
-  filter: none !important;
-  text-shadow: none !important;
-
-  transition: border-color .18s ease, box-shadow .18s ease !important;
-  -webkit-appearance: none;
-  appearance: none;
+body.C #content{
+  --m26-ink:#1a0a00;
+  --m26-border:rgba(222,175,27,.32);
+  --m26-border-hover:rgba(131,46,0,.55);
+  --m26-border-focus:rgba(222,175,27,.85);
+  --m26-ring:rgba(222,175,27,.16);
+  --m26-placeholder:rgba(45,0,0,.42);
 }
 
-body.C #deposit .manual-container select.question{
-  padding-right: 40px !important;
-  background-image:
-    linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 100%),
-    linear-gradient(45deg, transparent 50%, rgba(107,1,3,.85) 50%),
-    linear-gradient(135deg, rgba(107,1,3,.85) 50%, transparent 50%) !important;
-  background-repeat: no-repeat !important;
-  background-size: auto, 8px 8px, 8px 8px !important;
-  background-position: 0 0, calc(100% - 18px) 50%, calc(100% - 12px) 50% !important;
+body.C #content input:not([type]),
+body.C #content input[type=text],
+body.C #content input[type=email],
+body.C #content input[type=tel],
+body.C #content input[type=number],
+body.C #content input[type=password],
+body.C #content input[type=date],
+body.C #content input[type=time],
+body.C #content input[type=search],
+body.C #content input[type=url],
+body.C #content textarea,
+body.C #content select{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:100%!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.98) 0,rgba(255,255,255,.92) 100%)!important;
+  border:1.2px solid var(--m26-border)!important;
+  border-radius:12px!important;
+  padding:9px 12px!important;
+  font-family:Montserrat,sans-serif!important;
+  font-size:13px!important;
+  font-weight:650!important;
+  line-height:1.2!important;
+  color:var(--m26-ink)!important;
+  -webkit-text-fill-color:var(--m26-ink)!important;
+  outline:0!important;
+  box-shadow:none!important;
+  text-shadow:none!important;
+  transform:none!important;
+  filter:none!important;
+  margin:0!important;
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  -webkit-tap-highlight-color:transparent;
+  transition:border-color .18s ease,box-shadow .18s ease!important;
 }
 
-body.C #deposit .manual-container input.question::placeholder{
-  color: rgba(45,0,0,.42) !important;
-  font-weight: 650 !important;
-  -webkit-text-fill-color: rgba(45,0,0,.42) !important;
+body.C #content input::placeholder,
+body.C #content textarea::placeholder{
+  color:var(--m26-placeholder)!important;
+  font-weight:650!important;
 }
 
-body.C #deposit .manual-container input.question:focus,
-body.C #deposit .manual-container select.question:focus{
-  border-color: rgba(222,175,27,.85) !important;
-  box-shadow: 0 0 0 3px rgba(222,175,27,.16) !important;
+body.C #content input:focus,
+body.C #content textarea:focus,
+body.C #content select:focus{
+  border-color:var(--m26-border-focus)!important;
+  box-shadow:0 0 0 3px var(--m26-ring)!important;
 }
 
 @media (hover:hover){
-  body.C #deposit .manual-container input.question:hover,
-  body.C #deposit .manual-container select.question:hover{
-    border-color: rgba(131,46,0,.55) !important;
-    transform: none !important;
-    box-shadow: none !important;
+  body.C #content input:hover,
+  body.C #content textarea:hover,
+  body.C #content select:hover{
+    border-color:var(--m26-border-hover)!important;
   }
+}
+
+body.C #content select{
+  padding-right:40px!important;
+  background-image:
+    linear-gradient(45deg,transparent 50%,rgba(45,0,0,.95) 50%),
+    linear-gradient(135deg,rgba(45,0,0,.95) 50%,transparent 50%),
+    linear-gradient(180deg,rgba(255,255,255,.98) 0,rgba(255,255,255,.92) 100%)!important;
+  background-position:calc(100% - 18px) 50%,calc(100% - 12px) 50%,0 0!important;
+  background-size:6px 6px,6px 6px,100% 100%!important;
+  background-repeat:no-repeat!important;
+}
+
+body.C #content select::-ms-expand{display:none;}
+
+body.C #content textarea{
+  resize:vertical;
+}
+
+body.C #content input[type=number]::-webkit-outer-spin-button,
+body.C #content input[type=number]::-webkit-inner-spin-button{
+  -webkit-appearance:none;
+  margin:0;
+}
+
+body.C #content input[type=number]{
+  -moz-appearance:textfield;
+}
+
+body.C #content input[disabled],
+body.C #content select[disabled],
+body.C #content textarea[disabled],
+body.C #content input[readonly],
+body.C #content select[readonly],
+body.C #content textarea[readonly]{
+  opacity:.72;
+  cursor:not-allowed;
 }
