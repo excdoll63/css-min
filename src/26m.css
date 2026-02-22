@@ -7860,461 +7860,456 @@ body.C #resetPassword .login{
 }
 
 #withdraw,
-#withdraw * {
-  box-sizing: border-box;
-  text-shadow: none !important;
+#withdraw *{
+  box-sizing:border-box;
+  text-shadow:none !important;
+  font-family:Montserrat,sans-serif;
 }
 
-@keyframes m26_withdraw_sweep {
-  0% { transform: rotate(20deg) translateX(-220%); opacity: 0; }
-  14% { opacity: 0; }
-  22% { opacity: .55; }
-  52% { opacity: .42; }
-  72% { opacity: 0; }
-  100% { transform: rotate(20deg) translateX(260%); opacity: 0; }
+@keyframes m26_withdraw_sweep{
+  0%{transform:rotate(20deg) translateX(-220%);opacity:0;}
+  14%{opacity:0;}
+  22%{opacity:.55;}
+  52%{opacity:.42;}
+  72%{opacity:0;}
+  100%{transform:rotate(20deg) translateX(260%);opacity:0;}
 }
 
-@keyframes m26_withdraw_pulse {
-  0%, 100% { opacity: .62; }
-  50% { opacity: .90; }
+@keyframes m26_withdraw_pulse{
+  0%,100%{opacity:.62;}
+  50%{opacity:.88;}
 }
 
-#withdraw {
-  --m26-white: #ffffff;
-  --m26-offwhite: #fff6cf;
-  --m26-gold-hi: #fcf380;
-  --m26-gold: #deaf1b;
-  --m26-gold-deep: #c7920a;
-  --m26-red-hi: #ae0000;
-  --m26-red: #6b0103;
-  --m26-deep: #2d0000;
-  --m26-brown: #832e00;
-  --m26-ink: #1a0a00;
-  --m26-shadow: rgba(0, 0, 0, 0.22);
-  --m26-glow: rgba(222, 175, 27, 0.18);
-  font-family: Montserrat, sans-serif;
-  text-transform: none !important;
-  color: var(--m26-ink);
+@keyframes m26_withdraw_blink{
+  0%,100%{opacity:1;}
+  50%{opacity:.35;}
 }
 
-body.C #content #withdraw {
-  width: min(980px, calc(100% - 28px));
-  margin: 14px auto 88px;
-  padding: 16px 16px calc(18px + env(safe-area-inset-bottom));
-  border-radius: 22px;
-  border: 2px solid transparent;
-  background:
-    linear-gradient(#fffdf4, #fff8df) padding-box,
-    linear-gradient(135deg, var(--m26-white) 0%, var(--m26-gold-hi) 28%, var(--m26-gold) 58%, var(--m26-brown) 100%) border-box;
-  box-shadow: 0 18px 44px var(--m26-shadow), 0 0 26px var(--m26-glow);
+#withdraw{
+  --m26-white:#ffffff;
+  --m26-offwhite:#fff6cf;
+  --m26-gold-hi:#fcf380;
+  --m26-gold:#deaf1b;
+  --m26-gold-deep:#c7920a;
+  --m26-red-hi:#ae0000;
+  --m26-red:#6b0103;
+  --m26-deep:#2d0000;
+  --m26-brown:#832e00;
+  --m26-ink:#1a0a00;
+  --m26-shadow:rgba(0,0,0,.22);
+  --m26-glow:rgba(222,175,27,.18);
+  text-transform:none !important;
+  color:var(--m26-ink);
 }
 
-#withdraw h2 {
-  margin: 0 0 10px;
-  font-size: 18px;
-  font-weight: 900;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: var(--m26-red);
-  text-shadow: 0 1px 0 rgba(255, 246, 207, .85);
+body.C #content #withdraw{
+  width:min(1120px,calc(100% - 28px));
+  margin:14px auto 88px;
+  padding:18px 18px 20px;
+  border-radius:22px;
+  border:2px solid transparent;
+  background:linear-gradient(#fffdf4,#fff8df) padding-box,linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 28%,var(--m26-gold) 58%,var(--m26-brown) 100%) border-box;
+  box-shadow:0 18px 44px var(--m26-shadow),0 0 26px var(--m26-glow);
 }
 
-#withdraw .title {
-  margin: 10px 0 6px;
-  font-weight: 900;
-  letter-spacing: .02em;
-  color: rgba(45, 0, 0, .72);
+body.C #content #withdraw h2{
+  margin:0 0 12px;
+  text-align:left;
+  font-size:18px;
+  font-weight:900;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--m26-red) !important;
 }
 
-#withdraw ul {
-  margin: 0 0 12px 18px;
-  padding: 0;
+body.C #content #withdraw .title{
+  margin:0 0 6px;
+  font-size:13px;
+  font-weight:800;
+  color:rgba(45,0,0,.78);
+  letter-spacing:.02em;
 }
 
-#withdraw li {
-  margin: 6px 0 0;
-  font-weight: 650;
-  font-size: 12px;
-  line-height: 1.35;
-  color: rgba(45, 0, 0, .70);
+body.C #content #withdraw ul{
+  margin:0 0 12px;
+  padding-left:18px;
 }
 
-#withdraw .blink {
-  color: var(--m26-red);
-  font-weight: 900;
-  letter-spacing: .02em;
-  animation: m26_withdraw_pulse 1.2s ease-in-out infinite;
+body.C #content #withdraw li{
+  margin:6px 0 0;
+  font-size:11.5px;
+  font-weight:650;
+  color:rgba(45,0,0,.62);
+  line-height:1.35;
 }
 
-#withdraw form {
-  margin-top: 12px;
-  padding: 14px;
-  border-radius: 18px;
-  border: 1px solid rgba(222, 175, 27, .22);
-  background: linear-gradient(180deg, rgba(255, 246, 207, .60) 0%, rgba(255, 246, 207, .28) 100%);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, .12), inset 0 1px 0 rgba(255, 255, 255, .65);
+body.C #content #withdraw .blink{
+  animation:m26_withdraw_blink 1.2s linear infinite;
+  color:var(--m26-red);
+  font-weight:800;
+  letter-spacing:.02em;
 }
 
-#withdraw .inputs {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 10px;
+body.C #content #withdraw form{
+  margin-top:12px;
+  padding:14px;
+  border-radius:18px;
+  border:1px solid rgba(222,175,27,.22);
+  background:linear-gradient(180deg,rgba(255,246,207,.60) 0,rgba(255,246,207,.28) 100%);
+  box-shadow:0 10px 22px rgba(0,0,0,.12);
+  color:rgba(45,0,0,.78);
 }
 
-#withdraw .inputs tbody,
-#withdraw .inputs tr,
-#withdraw .inputs td {
-  border: 0;
+body.C #content #withdraw .inputs{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0 10px;
 }
 
-#withdraw .inputs tr {
-  display: grid;
-  grid-template-columns: minmax(150px, 220px) 14px 1fr;
-  align-items: center;
+body.C #content #withdraw .inputs td{
+  padding:0;
+  vertical-align:top;
+  font-size:13px;
+  font-weight:650;
+  color:rgba(45,0,0,.78);
 }
 
-#withdraw .inputs td {
-  padding: 0;
+body.C #content #withdraw .inputs td:first-child{
+  width:210px;
+  padding:0 10px 0 0;
+  white-space:nowrap;
+  font-size:11.5px;
+  font-weight:800;
+  color:rgba(45,0,0,.78);
 }
 
-#withdraw .inputs td:nth-child(1) {
-  padding-right: 10px;
-  font-size: 12px;
-  font-weight: 800;
-  color: rgba(45, 0, 0, .78);
-  line-height: 1.2;
-  white-space: nowrap;
+body.C #content #withdraw .inputs td:nth-child(2){
+  width:18px;
+  text-align:center;
+  font-size:12px;
+  font-weight:800;
+  color:rgba(45,0,0,.45);
+  padding:0 8px 0 0;
 }
 
-#withdraw .inputs td:nth-child(2) {
-  text-align: center;
-  font-weight: 900;
-  color: rgba(45, 0, 0, .45);
+body.C #content #withdraw .inputs td:last-child{
+  width:auto;
 }
 
-#withdraw .inputs td:nth-child(3) {
-  min-width: 0;
+body.C #content #withdraw input[type=date],
+body.C #content #withdraw input[type=email],
+body.C #content #withdraw input[type=number],
+body.C #content #withdraw input[type=password],
+body.C #content #withdraw input[type=tel],
+body.C #content #withdraw input[type=text],
+body.C #content #withdraw input[type=time],
+body.C #content #withdraw select,
+body.C #content #withdraw textarea{
+  width:100% !important;
+  background:linear-gradient(180deg,rgba(255,255,255,.98) 0,rgba(255,255,255,.92) 100%) !important;
+  border:1.2px solid rgba(222,175,27,.32) !important;
+  border-radius:12px !important;
+  padding:9px 36px 9px 12px !important;
+  font-size:13px !important;
+  font-weight:650 !important;
+  color:var(--m26-ink) !important;
+  margin:0 !important;
+  outline:none !important;
+  box-shadow:none !important;
+  transform:none !important;
+  filter:none !important;
+  transition:border-color .18s ease,box-shadow .18s ease !important;
+  -webkit-appearance:none;
+  appearance:none;
+  text-transform:none !important;
 }
 
-#withdraw .inputs td[colspan] {
-  grid-column: 1 / -1;
+body.C #content #withdraw textarea{min-height:92px;resize:vertical;}
+
+body.C #content #withdraw input::placeholder,
+body.C #content #withdraw textarea::placeholder{
+  color:rgba(45,0,0,.42);
+  font-weight:650;
 }
 
-#withdraw input[type="date"],
-#withdraw input[type="email"],
-#withdraw input[type="number"],
-#withdraw input[type="password"],
-#withdraw input[type="tel"],
-#withdraw input[type="text"],
-#withdraw input[type="time"],
-#withdraw select,
-#withdraw textarea {
-  box-sizing: border-box;
-  width: 100% !important;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .98) 0%, rgba(255, 255, 255, .92) 100%) !important;
-  border: 1.2px solid rgba(222, 175, 27, .32) !important;
-  border-radius: 12px !important;
-  padding: 10px 12px !important;
-  font-size: 13px !important;
-  font-weight: 650 !important;
-  color: var(--m26-ink) !important;
-  margin: 0 !important;
-  outline: none !important;
-  box-shadow: none !important;
-  transform: none !important;
-  filter: none !important;
-  transition: border-color .18s ease, box-shadow .18s ease !important;
-  -webkit-appearance: none;
-  appearance: none;
-  caret-color: var(--m26-red);
-  -webkit-tap-highlight-color: transparent;
-  -webkit-user-select: text;
+body.C #content #withdraw input:focus,
+body.C #content #withdraw textarea:focus,
+body.C #content #withdraw select:focus{
+  border-color:rgba(222,175,27,.85) !important;
+  box-shadow:0 0 0 3px rgba(222,175,27,.16) !important;
 }
 
-#withdraw input[type="date"]::placeholder,
-#withdraw input[type="email"]::placeholder,
-#withdraw input[type="number"]::placeholder,
-#withdraw input[type="password"]::placeholder,
-#withdraw input[type="tel"]::placeholder,
-#withdraw input[type="text"]::placeholder,
-#withdraw input[type="time"]::placeholder,
-#withdraw textarea::placeholder {
-  color: rgba(45, 0, 0, .42);
-  font-weight: 650;
-}
-
-#withdraw input[type="date"]:focus,
-#withdraw input[type="email"]:focus,
-#withdraw input[type="number"]:focus,
-#withdraw input[type="password"]:focus,
-#withdraw input[type="tel"]:focus,
-#withdraw input[type="text"]:focus,
-#withdraw input[type="time"]:focus,
-#withdraw select:focus,
-#withdraw textarea:focus {
-  border-color: rgba(222, 175, 27, .85) !important;
-  box-shadow: 0 0 0 3px rgba(222, 175, 27, .16) !important;
-}
-
-@media (hover: hover) {
-  #withdraw input[type="date"]:hover,
-  #withdraw input[type="email"]:hover,
-  #withdraw input[type="number"]:hover,
-  #withdraw input[type="password"]:hover,
-  #withdraw input[type="tel"]:hover,
-  #withdraw input[type="text"]:hover,
-  #withdraw input[type="time"]:hover,
-  #withdraw select:hover,
-  #withdraw textarea:hover {
-    border-color: rgba(131, 46, 0, .55) !important;
+@media (hover:hover){
+  body.C #content #withdraw input:hover,
+  body.C #content #withdraw textarea:hover,
+  body.C #content #withdraw select:hover{
+    border-color:rgba(131,46,0,.55) !important;
   }
 }
 
-#withdraw input[disabled],
-#withdraw input[readonly],
-#withdraw select[disabled],
-#withdraw select[readonly],
-#withdraw textarea[disabled],
-#withdraw textarea[readonly] {
-  opacity: .72;
-  cursor: not-allowed;
+body.C #content #withdraw input:disabled,
+body.C #content #withdraw select:disabled,
+body.C #content #withdraw textarea:disabled{
+  opacity:.7;
+  cursor:not-allowed;
 }
 
-#withdraw .note {
-  margin-top: 8px;
-  font-size: 12px;
-  font-weight: 650;
-  color: rgba(45, 0, 0, .62);
-  line-height: 1.35;
+body.C #content #withdraw .note{
+  margin-top:10px;
+  font-size:11.5px;
+  font-weight:650;
+  color:rgba(45,0,0,.62);
+  line-height:1.35;
 }
 
-#withdraw form input[type="submit"],
-#withdraw form input[type="button"],
-#withdraw form input[type="reset"],
-#withdraw form button,
-#withdraw form a.btn,
-#withdraw form .btn {
-  -webkit-tap-highlight-color: transparent;
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 0 16px !important;
-  border-radius: 14px !important;
-  border: 2px solid transparent !important;
-  font-family: Montserrat, sans-serif !important;
-  font-weight: 900 !important;
-  font-size: 12px !important;
-  letter-spacing: .10em !important;
-  text-transform: uppercase !important;
-  line-height: 1 !important;
-  text-decoration: none !important;
-  user-select: none;
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  transform: translateZ(0);
-  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease !important;
-  margin: 12px 10px 0 0;
-  cursor: pointer;
+body.C #content #withdraw .btn,
+body.C #content #withdraw a.btn,
+body.C #content #withdraw button.btn{
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;
+  text-decoration:none !important;
+  cursor:pointer;
+  appearance:none !important;
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:10px 18px !important;
+  border-radius:14px !important;
+  border:2px solid transparent !important;
+  font-size:13px !important;
+  font-weight:900 !important;
+  letter-spacing:.06em !important;
+  text-transform:uppercase !important;
+  line-height:1 !important;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  transform:translateZ(0);
+  transition:transform .18s ease,filter .18s ease,box-shadow .18s ease !important;
 }
 
-#withdraw form input[type="submit"],
-#withdraw form button[type="submit"],
-#withdraw form .btn.submit,
-#withdraw form .btn.primary,
-#withdraw form .btn.warning,
-#withdraw form .submit {
-  background-color: var(--m26-gold) !important;
-  background-image:
-    radial-gradient(140% 95% at 50% 0%, rgba(255, 255, 255, .45) 0%, rgba(255, 255, 255, 0) 62%),
-    linear-gradient(180deg, var(--m26-offwhite) 0%, #fce58e 18%, var(--m26-gold-hi) 48%, var(--m26-gold) 78%, var(--m26-gold-deep) 100%),
-    linear-gradient(135deg, var(--m26-white) 0%, var(--m26-gold-hi) 30%, var(--m26-gold) 58%, var(--m26-brown) 100%) !important;
-  background-origin: padding-box, padding-box, border-box !important;
-  background-clip: padding-box, padding-box, border-box !important;
-  color: var(--m26-brown) !important;
-  text-shadow: 0 1px 0 rgba(255, 246, 207, .85), 0 -1px 0 rgba(0, 0, 0, .06) !important;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, .22), inset 0 2px 0 rgba(255, 255, 255, .70), inset 0 -16px 26px rgba(131, 46, 0, .22), 0 0 22px rgba(222, 175, 27, .20) !important;
+body.C #content #withdraw .btn + .btn,
+body.C #content #withdraw a.btn + a.btn,
+body.C #content #withdraw button.btn + button.btn{
+  margin-left:10px;
 }
 
-#withdraw form input[value*="cancel" i],
-#withdraw form input[value*="back" i],
-#withdraw form button.cancel,
-#withdraw form .btn.cancel,
-#withdraw form .btn.secondary,
-#withdraw form .btn.danger.cancel {
-  background-color: #2b2b2b !important;
-  background-image:
-    radial-gradient(140% 95% at 50% 0%, rgba(255, 255, 255, .18) 0%, rgba(255, 255, 255, 0) 65%),
-    linear-gradient(180deg, #4b4b4b 0%, #2b2b2b 55%, #111 100%),
-    linear-gradient(135deg, #bdbdbd 0%, #777 42%, #3a3a3a 100%) !important;
-  background-origin: padding-box, padding-box, border-box !important;
-  background-clip: padding-box, padding-box, border-box !important;
-  color: #fff !important;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .55) !important;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, .42), inset 0 0 0 1px rgba(255, 255, 255, .10), 0 0 18px rgba(0, 0, 0, .16) !important;
+body.C #content #withdraw .btn.warning,
+body.C #content #withdraw a.btn.warning,
+body.C #content #withdraw button.btn.warning,
+body.C #content #withdraw .btn.primary,
+body.C #content #withdraw a.btn.primary,
+body.C #content #withdraw button.btn.primary{
+  background-color:var(--m26-gold) !important;
+  background-image:radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.45) 0,rgba(255,255,255,0) 62%),linear-gradient(180deg,var(--m26-offwhite) 0,#fce58e 18%,var(--m26-gold-hi) 48%,var(--m26-gold) 78%,var(--m26-gold-deep) 100%),linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 30%,var(--m26-gold) 58%,var(--m26-brown) 100%) !important;
+  background-origin:padding-box,padding-box,border-box !important;
+  background-clip:padding-box,padding-box,border-box !important;
+  color:var(--m26-brown) !important;
+  -webkit-text-fill-color:var(--m26-brown) !important;
+  text-shadow:0 1px 0 rgba(255,246,207,.85),0 -1px 0 rgba(0,0,0,.06) !important;
+  box-shadow:0 14px 30px rgba(0,0,0,.22),inset 0 2px 0 rgba(255,255,255,.70),inset 0 -16px 26px rgba(131,46,0,.22),0 0 22px rgba(222,175,27,.20) !important;
 }
 
-#withdraw form input[type="submit"]::before,
-#withdraw form input[type="button"]::before,
-#withdraw form input[type="reset"]::before,
-#withdraw form button::before,
-#withdraw form a.btn::before,
-#withdraw form .btn::before {
-  content: "";
-  position: absolute;
-  inset: 2px;
-  border-radius: 12px;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .50) 0%, rgba(255, 255, 255, 0) 55%, rgba(0, 0, 0, .10) 100%);
-  opacity: .78;
+body.C #content #withdraw .btn.warning::before,
+body.C #content #withdraw a.btn.warning::before,
+body.C #content #withdraw button.btn.warning::before,
+body.C #content #withdraw .btn.primary::before,
+body.C #content #withdraw a.btn.primary::before,
+body.C #content #withdraw button.btn.primary::before{
+  content:"";
+  position:absolute;
+  inset:2px;
+  border-radius:12px;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.50) 0,rgba(255,255,255,0) 52%,rgba(0,0,0,.10) 100%);
+  opacity:.75;
 }
 
-#withdraw form input[type="submit"]::after,
-#withdraw form input[type="button"]::after,
-#withdraw form input[type="reset"]::after,
-#withdraw form button::after,
-#withdraw form a.btn::after,
-#withdraw form .btn::after {
-  content: "";
-  position: absolute;
-  top: -70%;
-  left: -90%;
-  width: 55%;
-  height: 240%;
-  pointer-events: none;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .75) 50%, rgba(255, 255, 255, 0) 100%);
-  transform: rotate(20deg) translateX(-220%);
-  opacity: 0;
-  mix-blend-mode: overlay;
+body.C #content #withdraw .btn.warning::after,
+body.C #content #withdraw a.btn.warning::after,
+body.C #content #withdraw button.btn.warning::after,
+body.C #content #withdraw .btn.primary::after,
+body.C #content #withdraw a.btn.primary::after,
+body.C #content #withdraw button.btn.primary::after{
+  content:"";
+  position:absolute;
+  top:-70%;
+  left:-90%;
+  width:55%;
+  height:240%;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(255,255,255,0) 0,rgba(255,255,255,.75) 50%,rgba(255,255,255,0) 100%);
+  transform:rotate(20deg) translateX(-220%);
+  opacity:0;
+  mix-blend-mode:overlay;
 }
 
-@media (hover: hover) {
-  #withdraw form input[type="submit"]:hover,
-  #withdraw form input[type="button"]:hover,
-  #withdraw form input[type="reset"]:hover,
-  #withdraw form button:hover,
-  #withdraw form a.btn:hover,
-  #withdraw form .btn:hover {
-    transform: translateY(-2px) translateZ(0) !important;
-    filter: brightness(1.03) saturate(1.05) !important;
+body.C #content #withdraw .btn.danger,
+body.C #content #withdraw a.btn.danger,
+body.C #content #withdraw button.btn.danger{
+  background-color:#2b2b2b !important;
+  background-image:radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.18) 0,rgba(255,255,255,0) 62%),linear-gradient(180deg,#4b4b4b 0,#2b2b2b 55%,#1a0a00 100%),linear-gradient(135deg,#bdbdbd 0,#777 42%,#3a3a3a 100%) !important;
+  background-origin:padding-box,padding-box,border-box !important;
+  background-clip:padding-box,padding-box,border-box !important;
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  text-shadow:0 2px 0 rgba(0,0,0,.35) !important;
+  box-shadow:0 14px 30px rgba(0,0,0,.42),0 0 0 1px rgba(255,255,255,.10) inset,0 0 22px rgba(255,255,255,.06) !important;
+}
+
+body.C #content #withdraw .btn.danger::before,
+body.C #content #withdraw a.btn.danger::before,
+body.C #content #withdraw button.btn.danger::before{
+  content:"";
+  position:absolute;
+  inset:2px;
+  border-radius:12px;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.25) 0,rgba(255,255,255,0) 55%,rgba(0,0,0,.25) 100%);
+  opacity:.75;
+}
+
+body.C #content #withdraw .btn.danger::after,
+body.C #content #withdraw a.btn.danger::after,
+body.C #content #withdraw button.btn.danger::after{
+  content:"";
+  position:absolute;
+  top:-70%;
+  left:-90%;
+  width:55%;
+  height:240%;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(255,255,255,0) 0,rgba(255,255,255,.75) 50%,rgba(255,255,255,0) 100%);
+  transform:rotate(20deg) translateX(-220%);
+  opacity:0;
+  mix-blend-mode:overlay;
+}
+
+@media (hover:hover){
+  body.C #content #withdraw .btn:hover,
+  body.C #content #withdraw a.btn:hover,
+  body.C #content #withdraw button.btn:hover{
+    transform:translateY(-2px) translateZ(0) !important;
+    filter:brightness(1.03) saturate(1.05) !important;
   }
 
-  #withdraw form input[type="submit"]:hover::after,
-  #withdraw form input[type="button"]:hover::after,
-  #withdraw form input[type="reset"]:hover::after,
-  #withdraw form button:hover::after,
-  #withdraw form a.btn:hover::after,
-  #withdraw form .btn:hover::after,
-  #withdraw form input[type="submit"]:focus-visible::after,
-  #withdraw form input[type="button"]:focus-visible::after,
-  #withdraw form input[type="reset"]:focus-visible::after,
-  #withdraw form button:focus-visible::after,
-  #withdraw form a.btn:focus-visible::after,
-  #withdraw form .btn:focus-visible::after {
-    opacity: .55;
-    animation: m26_withdraw_sweep 900ms cubic-bezier(.2, .7, .2, 1);
-  }
-}
-
-#withdraw form input[type="submit"]:active,
-#withdraw form input[type="button"]:active,
-#withdraw form input[type="reset"]:active,
-#withdraw form button:active,
-#withdraw form a.btn:active,
-#withdraw form .btn:active {
-  transform: translateY(0) translateZ(0) !important;
-  filter: brightness(.98) saturate(1.03) !important;
-}
-
-@media (hover: none) {
-  #withdraw form input[type="submit"]::before,
-  #withdraw form input[type="button"]::before,
-  #withdraw form input[type="reset"]::before,
-  #withdraw form button::before,
-  #withdraw form a.btn::before,
-  #withdraw form .btn::before {
-    animation: m26_withdraw_pulse 3.2s ease-in-out infinite;
-  }
-
-  #withdraw form input[type="submit"]::after,
-  #withdraw form input[type="button"]::after,
-  #withdraw form input[type="reset"]::after,
-  #withdraw form button::after,
-  #withdraw form a.btn::after,
-  #withdraw form .btn::after {
-    opacity: .55;
-    animation: m26_withdraw_sweep 3.6s ease-in-out infinite;
+  body.C #content #withdraw .btn:hover::after,
+  body.C #content #withdraw a.btn:hover::after,
+  body.C #content #withdraw button.btn:hover::after,
+  body.C #content #withdraw .btn:focus-visible::after,
+  body.C #content #withdraw a.btn:focus-visible::after,
+  body.C #content #withdraw button.btn:focus-visible::after{
+    opacity:.55;
+    animation:m26_withdraw_sweep 900ms cubic-bezier(.2,.7,.2,1);
   }
 }
 
-@media (max-width: 620px) {
-  body.C #content #withdraw {
-    width: calc(100% - 18px);
-    margin: 12px auto 86px;
-    padding: 14px 12px calc(16px + env(safe-area-inset-bottom));
+body.C #content #withdraw .btn:active,
+body.C #content #withdraw a.btn:active,
+body.C #content #withdraw button.btn:active{
+  transform:translateY(0) translateZ(0) !important;
+  filter:brightness(.98) saturate(1.03) !important;
+}
+
+@media (hover:none){
+  body.C #content #withdraw .btn::before,
+  body.C #content #withdraw a.btn::before,
+  body.C #content #withdraw button.btn::before{
+    animation:m26_withdraw_pulse 3.2s ease-in-out infinite;
   }
 
-  #withdraw h2 {
-    font-size: 17px;
+  body.C #content #withdraw .btn.warning::after,
+  body.C #content #withdraw a.btn.warning::after,
+  body.C #content #withdraw button.btn.warning::after,
+  body.C #content #withdraw .btn.primary::after,
+  body.C #content #withdraw a.btn.primary::after,
+  body.C #content #withdraw button.btn.primary::after{
+    opacity:.55;
+    animation:m26_withdraw_sweep 3.4s ease-in-out infinite;
+    animation-delay:.2s;
   }
 
-  #withdraw .inputs {
-    border-spacing: 0 8px;
-  }
-
-  #withdraw .inputs tr {
-    grid-template-columns: 1fr;
-    row-gap: 6px;
-  }
-
-  #withdraw .inputs td:nth-child(2) {
-    display: none;
-  }
-
-  #withdraw .inputs td:nth-child(1) {
-    padding-right: 0;
-    white-space: normal;
-  }
-
-  #withdraw form input[type="submit"],
-  #withdraw form input[type="button"],
-  #withdraw form input[type="reset"],
-  #withdraw form button,
-  #withdraw form a.btn,
-  #withdraw form .btn {
-    width: 100% !important;
-    margin: 12px 0 0;
+  body.C #content #withdraw .btn.danger::after,
+  body.C #content #withdraw a.btn.danger::after,
+  body.C #content #withdraw button.btn.danger::after{
+    opacity:.55;
+    animation:m26_withdraw_sweep 3.6s ease-in-out infinite;
+    animation-delay:1.0s;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  #withdraw .blink {
-    animation: none !important;
+@media (max-width:520px){
+  body.C #content #withdraw{
+    width:calc(100% - 18px);
+    margin:12px auto 86px;
+    padding:14px 14px 16px;
   }
 
-  #withdraw form input[type="submit"],
-  #withdraw form input[type="button"],
-  #withdraw form input[type="reset"],
-  #withdraw form button,
-  #withdraw form a.btn,
-  #withdraw form .btn {
-    transition: none !important;
+  body.C #content #withdraw form{padding:12px;}
+
+  body.C #content #withdraw .inputs,
+  body.C #content #withdraw .inputs tbody,
+  body.C #content #withdraw .inputs tr,
+  body.C #content #withdraw .inputs td{
+    display:block;
+    width:100%;
   }
 
-  #withdraw form input[type="submit"]::before,
-  #withdraw form input[type="button"]::before,
-  #withdraw form input[type="reset"]::before,
-  #withdraw form button::before,
-  #withdraw form a.btn::before,
-  #withdraw form .btn::before,
-  #withdraw form input[type="submit"]::after,
-  #withdraw form input[type="button"]::after,
-  #withdraw form input[type="reset"]::after,
-  #withdraw form button::after,
-  #withdraw form a.btn::after,
-  #withdraw form .btn::after {
-    animation: none !important;
-    opacity: .78 !important;
+  body.C #content #withdraw .inputs{border-spacing:0;}
+
+  body.C #content #withdraw .inputs tr{margin:0 0 10px;}
+
+  body.C #content #withdraw .inputs td:first-child{
+    width:100%;
+    white-space:normal;
+    padding:0 0 3px;
   }
+
+  body.C #content #withdraw .inputs td:nth-child(2){display:none;}
+
+  body.C #content #withdraw input[type=date],
+  body.C #content #withdraw input[type=email],
+  body.C #content #withdraw input[type=number],
+  body.C #content #withdraw input[type=password],
+  body.C #content #withdraw input[type=tel],
+  body.C #content #withdraw input[type=text],
+  body.C #content #withdraw input[type=time],
+  body.C #content #withdraw select,
+  body.C #content #withdraw textarea{
+    margin:0 !important;
+  }
+
+  body.C #content #withdraw .btn,
+  body.C #content #withdraw a.btn,
+  body.C #content #withdraw button.btn{
+    width:100% !important;
+  }
+
+  body.C #content #withdraw .btn + .btn,
+  body.C #content #withdraw a.btn + a.btn,
+  body.C #content #withdraw button.btn + button.btn{
+    margin-left:0;
+    margin-top:10px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  body.C #content #withdraw .btn,
+  body.C #content #withdraw a.btn,
+  body.C #content #withdraw button.btn{
+    transition:none !important;
+  }
+
+  body.C #content #withdraw .btn::before,
+  body.C #content #withdraw a.btn::before,
+  body.C #content #withdraw button.btn::before,
+  body.C #content #withdraw .btn::after,
+  body.C #content #withdraw a.btn::after,
+  body.C #content #withdraw button.btn::after{
+    animation:none !important;
+    opacity:.75 !important;
+  }
+
+  body.C #content #withdraw .blink{animation:none !important;}
 }
