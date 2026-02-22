@@ -7858,3 +7858,339 @@ body.C #resetPassword .login{
 
   text-decoration: none !important;
 }
+
+#withdraw,
+#withdraw *{
+  box-sizing:border-box;
+  text-shadow:none !important;
+}
+
+#withdraw{
+  --m26-white:#ffffff;
+  --m26-offwhite:#fff6cf;
+  --m26-gold-hi:#fcf380;
+  --m26-gold:#deaf1b;
+  --m26-gold-deep:#c7920a;
+  --m26-red-hi:#ae0000;
+  --m26-red:#6b0103;
+  --m26-deep:#2d0000;
+  --m26-brown:#832e00;
+  --m26-ink:#1a0a00;
+  --m26-shadow:rgba(0,0,0,.22);
+  --m26-glow:rgba(222,175,27,.18);
+  text-transform:none !important;
+  font-family:Montserrat,sans-serif;
+  padding:15px;
+  overflow:hidden;
+  color:#fff;
+}
+
+body.C #content #withdraw{
+  width:min(1120px,calc(100% - 28px));
+  margin:14px auto calc(92px + env(safe-area-inset-bottom));
+}
+
+#withdraw var{
+  font-style:normal;
+  font-variant:normal;
+}
+
+#withdraw h2{
+  margin:0;
+  color:var(--m26-gold-hi);
+  font-size:18px;
+  font-weight:900;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+#withdraw .title{
+  margin:10px 0 6px;
+  font-weight:900;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:var(--m26-gold-hi);
+}
+
+#withdraw ul{
+  margin:0 0 10px 18px;
+  padding:0;
+}
+
+#withdraw li{
+  margin:6px 0 0;
+  font-weight:700;
+  font-size:13px;
+  line-height:1.35;
+  color:rgba(255,255,255,.92);
+}
+
+#withdraw li::marker{
+  color:var(--m26-gold-hi);
+}
+
+@keyframes m26_withdraw_blink{
+  0%,49%{opacity:1;}
+  50%,100%{opacity:.35;}
+}
+
+#withdraw .blink{
+  animation:m26_withdraw_blink 1.2s linear infinite;
+  color:var(--m26-gold-hi);
+  font-weight:900;
+  letter-spacing:.02em;
+}
+
+#withdraw form{
+  margin-top:10px;
+  padding:14px;
+  border:2px solid transparent;
+  border-radius:18px;
+  background:
+    radial-gradient(140% 90% at 50% 0,rgba(255,255,255,.18),rgba(255,255,255,0) 62%) padding-box,
+    linear-gradient(180deg,var(--m26-red),var(--m26-deep)) padding-box,
+    linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 28%,var(--m26-gold) 58%,var(--m26-deep) 100%) border-box;
+  color:#fff;
+  font:700 13px/1.35 Montserrat,sans-serif;
+  box-shadow:0 14px 28px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08) inset,0 0 24px rgba(222,175,27,.14);
+}
+
+#withdraw .inputs{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  table-layout:fixed;
+}
+
+#withdraw .inputs td{
+  padding:7px 6px;
+  vertical-align:middle;
+  font-size:13px;
+}
+
+#withdraw .inputs tr+tr td{
+  border-top:1px solid rgba(252,243,128,.12);
+}
+
+#withdraw .inputs td:nth-child(1){
+  width:190px;
+  white-space:nowrap;
+  color:rgba(255,246,207,.95);
+  font-weight:900;
+  letter-spacing:.01em;
+  text-shadow:0 1px 0 rgba(0,0,0,.35);
+}
+
+#withdraw .inputs td:nth-child(2){
+  width:16px;
+  text-align:center;
+  white-space:nowrap;
+  color:rgba(255,246,207,.85);
+  font-weight:900;
+}
+
+#withdraw .inputs td:nth-child(3){
+  width:auto;
+}
+
+#withdraw .inputs input,
+#withdraw .inputs select,
+#withdraw .inputs textarea{
+  box-sizing:border-box;
+  width:100%;
+  font-size:15px;
+  margin:0;
+  padding:12px;
+  display:block;
+  outline:0;
+  border-radius:12px;
+  border:1px solid rgba(252,243,128,.38);
+  background:linear-gradient(180deg,rgba(255,255,255,.98) 0,rgba(255,255,255,.92) 100%);
+  color:rgba(32,2,54,.95);
+  font-family:Montserrat,sans-serif;
+  font-weight:700;
+  -webkit-appearance:none;
+  appearance:none;
+  -webkit-user-select:text;
+  user-select:text;
+  -webkit-tap-highlight-color:transparent;
+  text-transform:none;
+  box-shadow:0 12px 22px rgba(0,0,0,.36),0 0 0 1px rgba(255,255,255,.26) inset;
+  transition:border-color 160ms,box-shadow 160ms,transform 160ms,filter 160ms;
+}
+
+#withdraw .inputs input::placeholder,
+#withdraw .inputs textarea::placeholder{
+  color:rgba(45,0,0,.42);
+  font-weight:700;
+}
+
+#withdraw .inputs input:focus,
+#withdraw .inputs select:focus,
+#withdraw .inputs textarea:focus{
+  border-color:rgba(222,175,27,.92);
+  box-shadow:0 12px 22px rgba(0,0,0,.36),0 0 0 3px rgba(222,175,27,.16),0 0 0 1px rgba(255,255,255,.26) inset;
+}
+
+#withdraw .inputs input[disabled],
+#withdraw .inputs input[readonly],
+#withdraw .inputs select[disabled],
+#withdraw .inputs select[readonly],
+#withdraw .inputs textarea[disabled],
+#withdraw .inputs textarea[readonly]{
+  opacity:.78;
+  cursor:not-allowed;
+  font-size:15px !important;
+  font-weight:800;
+}
+
+#withdraw .note{
+  font-size:13px;
+  margin-top:8px;
+  color:rgba(255,255,255,.85);
+  font-weight:700;
+}
+
+#withdraw .btn,
+#withdraw a.btn,
+#withdraw button.btn,
+#withdraw input[type=submit],
+#withdraw input[type=button],
+#withdraw input[type=reset]{
+  -webkit-tap-highlight-color:transparent;
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  border:2px solid transparent !important;
+  border-radius:14px !important;
+  box-sizing:border-box;
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:0 16px !important;
+  margin:12px 10px 0 0;
+  font-family:Montserrat,sans-serif !important;
+  font-weight:900 !important;
+  font-size:12px !important;
+  letter-spacing:.10em !important;
+  text-transform:uppercase !important;
+  line-height:1 !important;
+  text-decoration:none !important;
+  cursor:pointer !important;
+  user-select:none;
+  position:relative;
+  overflow:hidden;
+  transition:transform .18s,filter .18s,box-shadow .18s;
+}
+
+#withdraw input[type=submit],
+#withdraw button[type=submit],
+#withdraw .btn.submit,
+#withdraw .btn.primary,
+#withdraw .btn.warning{
+  color:var(--m26-brown) !important;
+  -webkit-text-fill-color:var(--m26-brown) !important;
+  text-shadow:0 1px 0 rgba(255,246,207,.85),0 -1px 0 rgba(0,0,0,.06);
+  background:
+    radial-gradient(140% 90% at 50% 0,rgba(255,255,255,.35) 0,rgba(255,255,255,0) 60%) padding-box,
+    linear-gradient(180deg,var(--m26-offwhite) 0,#fce58e 18%,var(--m26-gold-hi) 48%,var(--m26-gold) 78%,var(--m26-gold-deep) 100%) padding-box,
+    linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 30%,var(--m26-gold) 58%,var(--m26-brown) 100%) border-box;
+  box-shadow:0 14px 28px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.14) inset,0 0 24px rgba(222,175,27,.20);
+}
+
+#withdraw input[type=button],
+#withdraw input[type=reset],
+#withdraw .btn.cancel,
+#withdraw .btn.secondary,
+#withdraw .btn.danger.cancel,
+#withdraw a.btn.cancel{
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  text-shadow:0 1px 0 rgba(0,0,0,.55);
+  background:
+    radial-gradient(140% 90% at 50% 0,rgba(255,255,255,.14) 0,rgba(255,255,255,0) 60%) padding-box,
+    linear-gradient(180deg,#4b4b4b 0,#2b2b2b 55%,#1a0a00 100%) padding-box,
+    linear-gradient(135deg,#bdbdbd 0,#777 42%,#3a3a3a 100%) border-box;
+  box-shadow:0 14px 28px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.10) inset,0 0 18px rgba(255,255,255,.06);
+}
+
+@media (hover:hover){
+  #withdraw .btn:hover,
+  #withdraw a.btn:hover,
+  #withdraw button.btn:hover,
+  #withdraw input[type=submit]:hover,
+  #withdraw input[type=button]:hover,
+  #withdraw input[type=reset]:hover{
+    transform:translateY(-1px);
+    filter:brightness(1.03);
+  }
+}
+
+#withdraw .btn:active,
+#withdraw a.btn:active,
+#withdraw button.btn:active,
+#withdraw input[type=submit]:active,
+#withdraw input[type=button]:active,
+#withdraw input[type=reset]:active{
+  transform:translateY(1px);
+  filter:brightness(.98);
+}
+
+@media (max-width:520px){
+  body.C #content #withdraw{
+    width:calc(100% - 18px);
+    padding:12px;
+    margin:12px auto calc(92px + env(safe-area-inset-bottom));
+  }
+
+  #withdraw h2{
+    font-size:16px;
+  }
+
+  #withdraw form{
+    padding:12px;
+    border-radius:16px;
+  }
+
+  #withdraw .inputs,
+  #withdraw .inputs tbody,
+  #withdraw .inputs tr,
+  #withdraw .inputs td{
+    display:block;
+    width:100% !important;
+  }
+
+  #withdraw .inputs tr{
+    padding:8px 0 10px;
+  }
+
+  #withdraw .inputs tr+tr{
+    border-top:1px solid rgba(252,243,128,.14);
+  }
+
+  #withdraw .inputs td{
+    border:0;
+    padding:4px 0;
+  }
+
+  #withdraw .inputs td:nth-child(2){
+    display:none !important;
+  }
+
+  #withdraw .inputs td:nth-child(1){
+    width:auto;
+    white-space:normal;
+    font-size:12px;
+    padding:0 0 6px;
+  }
+
+  #withdraw .btn,
+  #withdraw a.btn,
+  #withdraw button.btn,
+  #withdraw input[type=submit],
+  #withdraw input[type=button],
+  #withdraw input[type=reset]{
+    width:100% !important;
+    margin:10px 0 0;
+  }
+}
