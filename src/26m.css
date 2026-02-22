@@ -7863,10 +7863,10 @@ body.C #resetPassword .login{
 #withdraw *{
   box-sizing:border-box;
   text-shadow:none !important;
-  font-family:Montserrat,sans-serif;
+  font-family:"Montserrat",sans-serif;
 }
 
-@keyframes m26_withdraw_sweep{
+@keyframes m26_withdraw_set_sweep{
   0%{transform:rotate(20deg) translateX(-220%);opacity:0;}
   14%{opacity:0;}
   22%{opacity:.55;}
@@ -7875,12 +7875,12 @@ body.C #resetPassword .login{
   100%{transform:rotate(20deg) translateX(260%);opacity:0;}
 }
 
-@keyframes m26_withdraw_pulse{
+@keyframes m26_withdraw_set_pulse{
   0%,100%{opacity:.62;}
-  50%{opacity:.88;}
+  50%{opacity:.90;}
 }
 
-@keyframes m26_withdraw_blink{
+@keyframes m26_withdraw_set_blink{
   0%,100%{opacity:1;}
   50%{opacity:.35;}
 }
@@ -7896,38 +7896,42 @@ body.C #resetPassword .login{
   --m26-deep:#2d0000;
   --m26-brown:#832e00;
   --m26-ink:#1a0a00;
-  --m26-shadow:rgba(0,0,0,.22);
-  --m26-glow:rgba(222,175,27,.18);
   text-transform:none !important;
-  color:var(--m26-ink);
+  color:#2d0000;
 }
 
 body.C #content #withdraw{
   width:min(1120px,calc(100% - 28px));
   margin:14px auto 88px;
-  padding:18px 18px 20px;
+  padding:16px 16px 18px;
   border-radius:22px;
   border:2px solid transparent;
-  background:linear-gradient(#fffdf4,#fff8df) padding-box,linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 28%,var(--m26-gold) 58%,var(--m26-brown) 100%) border-box;
-  box-shadow:0 18px 44px var(--m26-shadow),0 0 26px var(--m26-glow);
+  background-color:var(--m26-offwhite);
+  background-image:
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.70) 0,rgba(255,255,255,0) 62%),
+    linear-gradient(180deg,#fffdf4 0,var(--m26-offwhite) 55%,var(--m26-gold-hi) 100%),
+    linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 28%,var(--m26-gold) 58%,var(--m26-brown) 100%);
+  background-origin:padding-box,padding-box,border-box;
+  background-clip:padding-box,padding-box,border-box;
+  box-shadow:0 18px 44px rgba(0,0,0,.30),0 0 26px rgba(222,175,27,.18);
 }
 
 body.C #content #withdraw h2{
-  margin:0 0 12px;
-  text-align:left;
+  margin:0 0 10px;
   font-size:18px;
   font-weight:900;
-  letter-spacing:.06em;
+  letter-spacing:.08em;
   text-transform:uppercase;
-  color:var(--m26-red) !important;
+  color:var(--m26-red);
+  text-shadow:0 1px 0 rgba(255,246,207,.85);
 }
 
 body.C #content #withdraw .title{
   margin:0 0 6px;
-  font-size:13px;
+  font-size:12px;
   font-weight:800;
-  color:rgba(45,0,0,.78);
-  letter-spacing:.02em;
+  color:rgba(45,0,0,.70);
+  line-height:1.2;
 }
 
 body.C #content #withdraw ul{
@@ -7937,27 +7941,28 @@ body.C #content #withdraw ul{
 
 body.C #content #withdraw li{
   margin:6px 0 0;
-  font-size:11.5px;
-  font-weight:650;
-  color:rgba(45,0,0,.62);
+  font-size:12px;
+  font-weight:600;
+  color:rgba(45,0,0,.68);
   line-height:1.35;
 }
 
 body.C #content #withdraw .blink{
-  animation:m26_withdraw_blink 1.2s linear infinite;
+  animation:m26_withdraw_set_blink 1.2s linear infinite;
   color:var(--m26-red);
   font-weight:800;
-  letter-spacing:.02em;
 }
 
 body.C #content #withdraw form{
   margin-top:12px;
   padding:14px;
   border-radius:18px;
+  background:
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.55) 0,rgba(255,255,255,0) 62%),
+    linear-gradient(180deg,rgba(255,255,255,.72) 0,rgba(255,255,255,.52) 100%);
   border:1px solid rgba(222,175,27,.22);
-  background:linear-gradient(180deg,rgba(255,246,207,.60) 0,rgba(255,246,207,.28) 100%);
-  box-shadow:0 10px 22px rgba(0,0,0,.12);
-  color:rgba(45,0,0,.78);
+  box-shadow:0 8px 18px rgba(0,0,0,.10),inset 0 1px 0 rgba(255,255,255,.55);
+  color:#2d0000;
 }
 
 body.C #content #withdraw .inputs{
@@ -7969,18 +7974,18 @@ body.C #content #withdraw .inputs{
 body.C #content #withdraw .inputs td{
   padding:0;
   vertical-align:top;
-  font-size:13px;
-  font-weight:650;
-  color:rgba(45,0,0,.78);
+  font-size:12.5px;
+  font-weight:600;
+  color:#2d0000;
 }
 
 body.C #content #withdraw .inputs td:first-child{
-  width:210px;
+  width:220px;
   padding:0 10px 0 0;
   white-space:nowrap;
-  font-size:11.5px;
+  font-size:12px;
   font-weight:800;
-  color:rgba(45,0,0,.78);
+  color:rgba(45,0,0,.70);
 }
 
 body.C #content #withdraw .inputs td:nth-child(2){
@@ -7988,12 +7993,8 @@ body.C #content #withdraw .inputs td:nth-child(2){
   text-align:center;
   font-size:12px;
   font-weight:800;
-  color:rgba(45,0,0,.45);
+  color:rgba(45,0,0,.40);
   padding:0 8px 0 0;
-}
-
-body.C #content #withdraw .inputs td:last-child{
-  width:auto;
 }
 
 body.C #content #withdraw input[type=date],
@@ -8005,23 +8006,23 @@ body.C #content #withdraw input[type=text],
 body.C #content #withdraw input[type=time],
 body.C #content #withdraw select,
 body.C #content #withdraw textarea{
+  box-sizing:border-box;
   width:100% !important;
-  background:linear-gradient(180deg,rgba(255,255,255,.98) 0,rgba(255,255,255,.92) 100%) !important;
-  border:1.2px solid rgba(222,175,27,.32) !important;
-  border-radius:12px !important;
-  padding:9px 36px 9px 12px !important;
-  font-size:13px !important;
-  font-weight:650 !important;
-  color:var(--m26-ink) !important;
   margin:0 !important;
+  padding:10px 12px !important;
+  border-radius:12px !important;
+  border:1px solid rgba(222,175,27,.22) !important;
+  background:linear-gradient(180deg,rgba(255,255,255,.98) 0,rgba(255,255,255,.92) 100%) !important;
+  color:rgba(45,0,0,.92) !important;
+  font-size:13px !important;
+  font-weight:600 !important;
   outline:none !important;
-  box-shadow:none !important;
-  transform:none !important;
-  filter:none !important;
-  transition:border-color .18s ease,box-shadow .18s ease !important;
   -webkit-appearance:none;
   appearance:none;
-  text-transform:none !important;
+  box-shadow:0 8px 18px rgba(0,0,0,.10),inset 0 1px 0 rgba(255,255,255,.55) !important;
+  transition:border-color .18s ease,box-shadow .18s ease,filter .18s ease;
+  -webkit-user-select:text;
+  user-select:text;
 }
 
 body.C #content #withdraw textarea{min-height:92px;resize:vertical;}
@@ -8029,14 +8030,14 @@ body.C #content #withdraw textarea{min-height:92px;resize:vertical;}
 body.C #content #withdraw input::placeholder,
 body.C #content #withdraw textarea::placeholder{
   color:rgba(45,0,0,.42);
-  font-weight:650;
+  font-weight:600;
 }
 
 body.C #content #withdraw input:focus,
 body.C #content #withdraw textarea:focus,
 body.C #content #withdraw select:focus{
   border-color:rgba(222,175,27,.85) !important;
-  box-shadow:0 0 0 3px rgba(222,175,27,.16) !important;
+  box-shadow:0 0 0 3px rgba(222,175,27,.16),0 8px 18px rgba(0,0,0,.10),inset 0 1px 0 rgba(255,255,255,.55) !important;
 }
 
 @media (hover:hover){
@@ -8044,6 +8045,7 @@ body.C #content #withdraw select:focus{
   body.C #content #withdraw textarea:hover,
   body.C #content #withdraw select:hover{
     border-color:rgba(131,46,0,.55) !important;
+    filter:brightness(1.01);
   }
 }
 
@@ -8056,10 +8058,28 @@ body.C #content #withdraw textarea:disabled{
 
 body.C #content #withdraw .note{
   margin-top:10px;
-  font-size:11.5px;
-  font-weight:650;
+  font-size:12px;
+  font-weight:600;
   color:rgba(45,0,0,.62);
   line-height:1.35;
+}
+
+body.C #content #withdraw .btns{
+  margin-top:14px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+body.C #content #withdraw .btns .btn,
+body.C #content #withdraw .btns a.btn,
+body.C #content #withdraw .btns button.btn{
+  float:none !important;
+  width:auto !important;
+  min-width:120px;
+  margin:0 !important;
 }
 
 body.C #content #withdraw .btn,
@@ -8073,26 +8093,27 @@ body.C #content #withdraw button.btn{
   display:inline-flex !important;
   align-items:center;
   justify-content:center;
-  min-height:44px;
-  padding:10px 18px !important;
-  border-radius:14px !important;
+  min-height:46px;
+  padding:10px 12px !important;
+  border-radius:16px !important;
   border:2px solid transparent !important;
-  font-size:13px !important;
   font-weight:900 !important;
-  letter-spacing:.06em !important;
+  font-size:12px !important;
+  letter-spacing:.6px !important;
   text-transform:uppercase !important;
   line-height:1 !important;
+  white-space:nowrap;
   position:relative;
   overflow:hidden;
   isolation:isolate;
   transform:translateZ(0);
-  transition:transform .18s ease,filter .18s ease,box-shadow .18s ease !important;
+  transition:transform .18s ease,filter .18s ease,box-shadow .18s ease;
 }
 
 body.C #content #withdraw .btn + .btn,
 body.C #content #withdraw a.btn + a.btn,
 body.C #content #withdraw button.btn + button.btn{
-  margin-left:10px;
+  margin-left:0 !important;
 }
 
 body.C #content #withdraw .btn.warning,
@@ -8100,100 +8121,81 @@ body.C #content #withdraw a.btn.warning,
 body.C #content #withdraw button.btn.warning,
 body.C #content #withdraw .btn.primary,
 body.C #content #withdraw a.btn.primary,
-body.C #content #withdraw button.btn.primary{
-  background-color:var(--m26-gold) !important;
-  background-image:radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.45) 0,rgba(255,255,255,0) 62%),linear-gradient(180deg,var(--m26-offwhite) 0,#fce58e 18%,var(--m26-gold-hi) 48%,var(--m26-gold) 78%,var(--m26-gold-deep) 100%),linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 30%,var(--m26-gold) 58%,var(--m26-brown) 100%) !important;
-  background-origin:padding-box,padding-box,border-box !important;
-  background-clip:padding-box,padding-box,border-box !important;
+body.C #content #withdraw button.btn.primary,
+body.C #content #withdraw .btns .btn:first-child{
   color:var(--m26-brown) !important;
-  -webkit-text-fill-color:var(--m26-brown) !important;
-  text-shadow:0 1px 0 rgba(255,246,207,.85),0 -1px 0 rgba(0,0,0,.06) !important;
-  box-shadow:0 14px 30px rgba(0,0,0,.22),inset 0 2px 0 rgba(255,255,255,.70),inset 0 -16px 26px rgba(131,46,0,.22),0 0 22px rgba(222,175,27,.20) !important;
-}
-
-body.C #content #withdraw .btn.warning::before,
-body.C #content #withdraw a.btn.warning::before,
-body.C #content #withdraw button.btn.warning::before,
-body.C #content #withdraw .btn.primary::before,
-body.C #content #withdraw a.btn.primary::before,
-body.C #content #withdraw button.btn.primary::before{
-  content:"";
-  position:absolute;
-  inset:2px;
-  border-radius:12px;
-  pointer-events:none;
-  background:linear-gradient(180deg,rgba(255,255,255,.50) 0,rgba(255,255,255,0) 52%,rgba(0,0,0,.10) 100%);
-  opacity:.75;
-}
-
-body.C #content #withdraw .btn.warning::after,
-body.C #content #withdraw a.btn.warning::after,
-body.C #content #withdraw button.btn.warning::after,
-body.C #content #withdraw .btn.primary::after,
-body.C #content #withdraw a.btn.primary::after,
-body.C #content #withdraw button.btn.primary::after{
-  content:"";
-  position:absolute;
-  top:-70%;
-  left:-90%;
-  width:55%;
-  height:240%;
-  pointer-events:none;
-  background:linear-gradient(90deg,rgba(255,255,255,0) 0,rgba(255,255,255,.75) 50%,rgba(255,255,255,0) 100%);
-  transform:rotate(20deg) translateX(-220%);
-  opacity:0;
-  mix-blend-mode:overlay;
+  text-shadow:0 1px 0 rgba(255,246,207,.85),0 -1px 0 rgba(0,0,0,.06);
+  background-color:var(--m26-gold);
+  background-image:
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.55) 0,rgba(255,255,255,0) 62%),
+    linear-gradient(180deg,var(--m26-offwhite) 0,#fce58e 18%,var(--m26-gold-hi) 48%,var(--m26-gold) 78%,var(--m26-gold-deep) 100%),
+    linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 30%,var(--m26-gold) 58%,var(--m26-brown) 100%);
+  background-origin:padding-box,padding-box,border-box;
+  background-clip:padding-box,padding-box,border-box;
+  box-shadow:0 10px 22px rgba(0,0,0,.18),inset 0 2px 0 rgba(255,255,255,.70),inset 0 -14px 22px rgba(131,46,0,.16),0 0 18px rgba(222,175,27,.16);
 }
 
 body.C #content #withdraw .btn.danger,
 body.C #content #withdraw a.btn.danger,
-body.C #content #withdraw button.btn.danger{
-  background-color:#2b2b2b !important;
-  background-image:radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.18) 0,rgba(255,255,255,0) 62%),linear-gradient(180deg,#4b4b4b 0,#2b2b2b 55%,#1a0a00 100%),linear-gradient(135deg,#bdbdbd 0,#777 42%,#3a3a3a 100%) !important;
-  background-origin:padding-box,padding-box,border-box !important;
-  background-clip:padding-box,padding-box,border-box !important;
-  color:#fff !important;
-  -webkit-text-fill-color:#fff !important;
-  text-shadow:0 2px 0 rgba(0,0,0,.35) !important;
-  box-shadow:0 14px 30px rgba(0,0,0,.42),0 0 0 1px rgba(255,255,255,.10) inset,0 0 22px rgba(255,255,255,.06) !important;
+body.C #content #withdraw button.btn.danger,
+body.C #content #withdraw .btn.cancel,
+body.C #content #withdraw a.btn.cancel,
+body.C #content #withdraw button.btn.cancel,
+body.C #content #withdraw .btns .btn:last-child{
+  color:var(--m26-gold-hi) !important;
+  text-shadow:0 1px 0 rgba(0,0,0,.55);
+  background-color:var(--m26-ink);
+  background-image:
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.12) 0,rgba(255,255,255,0) 62%),
+    linear-gradient(180deg,var(--m26-deep) 0,var(--m26-ink) 55%,#0b0600 100%),
+    linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 30%,var(--m26-gold) 58%,var(--m26-brown) 100%);
+  background-origin:padding-box,padding-box,border-box;
+  background-clip:padding-box,padding-box,border-box;
+  box-shadow:0 10px 22px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.10),inset 0 -14px 22px rgba(0,0,0,.22),0 0 16px rgba(0,0,0,.08);
 }
 
-body.C #content #withdraw .btn.danger::before,
-body.C #content #withdraw a.btn.danger::before,
-body.C #content #withdraw button.btn.danger::before{
+body.C #content #withdraw .btn::before,
+body.C #content #withdraw a.btn::before,
+body.C #content #withdraw button.btn::before{
   content:"";
   position:absolute;
   inset:2px;
-  border-radius:12px;
+  border-radius:14px;
   pointer-events:none;
-  background:linear-gradient(180deg,rgba(255,255,255,.25) 0,rgba(255,255,255,0) 55%,rgba(0,0,0,.25) 100%);
-  opacity:.75;
+  background:linear-gradient(180deg,rgba(255,255,255,.45) 0,rgba(255,255,255,0) 55%,rgba(0,0,0,.12) 100%);
+  opacity:.82;
+}
+
+body.C #content #withdraw .btn::after,
+body.C #content #withdraw a.btn::after,
+body.C #content #withdraw button.btn::after{
+  content:"";
+  position:absolute;
+  top:-70%;
+  left:-85%;
+  width:52%;
+  height:240%;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(255,255,255,0) 0,rgba(255,255,255,.78) 50%,rgba(255,255,255,0) 100%);
+  transform:rotate(20deg) translateX(-220%);
+  opacity:0;
+  mix-blend-mode:overlay;
 }
 
 body.C #content #withdraw .btn.danger::after,
 body.C #content #withdraw a.btn.danger::after,
 body.C #content #withdraw button.btn.danger::after{
-  content:"";
-  position:absolute;
-  top:-70%;
-  left:-90%;
-  width:55%;
-  height:240%;
-  pointer-events:none;
-  background:linear-gradient(90deg,rgba(255,255,255,0) 0,rgba(255,255,255,.75) 50%,rgba(255,255,255,0) 100%);
-  transform:rotate(20deg) translateX(-220%);
-  opacity:0;
-  mix-blend-mode:overlay;
+  background:linear-gradient(90deg,rgba(252,243,128,0) 0,rgba(252,243,128,.80) 50%,rgba(252,243,128,0) 100%);
+  mix-blend-mode:screen;
 }
 
 @media (hover:hover){
   body.C #content #withdraw .btn:hover,
   body.C #content #withdraw a.btn:hover,
   body.C #content #withdraw button.btn:hover{
-    transform:translateY(-2px) translateZ(0) !important;
-    filter:brightness(1.03) saturate(1.05) !important;
+    transform:translateY(-1px) translateZ(0);
+    filter:brightness(1.04) saturate(1.05);
   }
-
   body.C #content #withdraw .btn:hover::after,
   body.C #content #withdraw a.btn:hover::after,
   body.C #content #withdraw button.btn:hover::after,
@@ -8201,41 +8203,27 @@ body.C #content #withdraw button.btn.danger::after{
   body.C #content #withdraw a.btn:focus-visible::after,
   body.C #content #withdraw button.btn:focus-visible::after{
     opacity:.55;
-    animation:m26_withdraw_sweep 900ms cubic-bezier(.2,.7,.2,1);
+    animation:m26_withdraw_set_sweep 900ms cubic-bezier(.2,.7,.2,1);
   }
-}
-
-body.C #content #withdraw .btn:active,
-body.C #content #withdraw a.btn:active,
-body.C #content #withdraw button.btn:active{
-  transform:translateY(0) translateZ(0) !important;
-  filter:brightness(.98) saturate(1.03) !important;
+  body.C #content #withdraw .btn:active,
+  body.C #content #withdraw a.btn:active,
+  body.C #content #withdraw button.btn:active{
+    transform:translateY(0) scale(.99);
+    filter:brightness(.99) saturate(1.03);
+  }
 }
 
 @media (hover:none){
   body.C #content #withdraw .btn::before,
   body.C #content #withdraw a.btn::before,
   body.C #content #withdraw button.btn::before{
-    animation:m26_withdraw_pulse 3.2s ease-in-out infinite;
+    animation:m26_withdraw_set_pulse 3.2s ease-in-out infinite;
   }
-
-  body.C #content #withdraw .btn.warning::after,
-  body.C #content #withdraw a.btn.warning::after,
-  body.C #content #withdraw button.btn.warning::after,
-  body.C #content #withdraw .btn.primary::after,
-  body.C #content #withdraw a.btn.primary::after,
-  body.C #content #withdraw button.btn.primary::after{
+  body.C #content #withdraw .btn::after,
+  body.C #content #withdraw a.btn::after,
+  body.C #content #withdraw button.btn::after{
     opacity:.55;
-    animation:m26_withdraw_sweep 3.4s ease-in-out infinite;
-    animation-delay:.2s;
-  }
-
-  body.C #content #withdraw .btn.danger::after,
-  body.C #content #withdraw a.btn.danger::after,
-  body.C #content #withdraw button.btn.danger::after{
-    opacity:.55;
-    animation:m26_withdraw_sweep 3.6s ease-in-out infinite;
-    animation-delay:1.0s;
+    animation:m26_withdraw_set_sweep 3.6s ease-in-out infinite;
   }
 }
 
@@ -8243,7 +8231,7 @@ body.C #content #withdraw button.btn:active{
   body.C #content #withdraw{
     width:calc(100% - 18px);
     margin:12px auto 86px;
-    padding:14px 14px 16px;
+    padding:12px 12px 14px;
   }
 
   body.C #content #withdraw form{padding:12px;}
@@ -8263,34 +8251,21 @@ body.C #content #withdraw button.btn:active{
   body.C #content #withdraw .inputs td:first-child{
     width:100%;
     white-space:normal;
-    padding:0 0 3px;
+    padding:0 0 6px;
   }
 
   body.C #content #withdraw .inputs td:nth-child(2){display:none;}
 
-  body.C #content #withdraw input[type=date],
-  body.C #content #withdraw input[type=email],
-  body.C #content #withdraw input[type=number],
-  body.C #content #withdraw input[type=password],
-  body.C #content #withdraw input[type=tel],
-  body.C #content #withdraw input[type=text],
-  body.C #content #withdraw input[type=time],
-  body.C #content #withdraw select,
-  body.C #content #withdraw textarea{
-    margin:0 !important;
+  body.C #content #withdraw .btns{
+    flex-direction:column;
+    align-items:stretch;
   }
 
   body.C #content #withdraw .btn,
   body.C #content #withdraw a.btn,
   body.C #content #withdraw button.btn{
     width:100% !important;
-  }
-
-  body.C #content #withdraw .btn + .btn,
-  body.C #content #withdraw a.btn + a.btn,
-  body.C #content #withdraw button.btn + button.btn{
-    margin-left:0;
-    margin-top:10px;
+    justify-content:center;
   }
 }
 
@@ -8298,7 +8273,7 @@ body.C #content #withdraw button.btn:active{
   body.C #content #withdraw .btn,
   body.C #content #withdraw a.btn,
   body.C #content #withdraw button.btn{
-    transition:none !important;
+    transition:none;
   }
 
   body.C #content #withdraw .btn::before,
@@ -8308,7 +8283,7 @@ body.C #content #withdraw button.btn:active{
   body.C #content #withdraw a.btn::after,
   body.C #content #withdraw button.btn::after{
     animation:none !important;
-    opacity:.75 !important;
+    opacity:.82 !important;
   }
 
   body.C #content #withdraw .blink{animation:none !important;}
