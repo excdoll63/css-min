@@ -8418,6 +8418,72 @@ body.C #content #withdraw button.btn+button.btn,
   --m26-ink:#1a0a00;
 }
 
+#deposit .question{
+  overflow:hidden;
+  margin-top:10px;
+}
+
+#deposit .question:first-child{
+  margin-top:0;
+}
+
+#deposit input.question,
+#deposit select.question,
+#deposit textarea.question{
+  width:100% !important;
+  background:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 100%) !important;
+  border:1.2px solid rgba(222,175,27,.32) !important;
+  border-radius:16px !important;
+  padding:12px 14px !important;
+  font-size:13px !important;
+  font-weight:650 !important;
+  color:var(--m26-ink) !important;
+  outline:none !important;
+  box-shadow:none !important;
+  transform:none !important;
+  filter:none !important;
+  -webkit-appearance:none;
+  appearance:none;
+  transition:border-color .18s ease,box-shadow .18s ease !important;
+  caret-color:var(--m26-red);
+  font-family:"Montserrat",sans-serif !important;
+  text-shadow:none !important;
+  text-transform:none !important;
+  box-sizing:border-box;
+}
+
+#deposit input.question::placeholder,
+#deposit textarea.question::placeholder{
+  color:rgba(45,0,0,.42);
+  font-weight:650;
+}
+
+#deposit input.question:focus,
+#deposit textarea.question:focus,
+#deposit select.question:focus{
+  border-color:rgba(222,175,27,.85) !important;
+  box-shadow:0 0 0 3px rgba(222,175,27,.16) !important;
+}
+
+@media (hover:hover){
+  #deposit input.question:hover,
+  #deposit textarea.question:hover,
+  #deposit select.question:hover{
+    border-color:rgba(131,46,0,.55) !important;
+  }
+}
+
+#deposit select.question{
+  padding-right:44px !important;
+  background-image:
+    linear-gradient(45deg,transparent 50%,rgba(45,0,0,.95) 50%),
+    linear-gradient(135deg,rgba(45,0,0,.95) 50%,transparent 50%),
+    linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 100%) !important;
+  background-size:6px 6px,6px 6px,100% 100% !important;
+  background-repeat:no-repeat !important;
+  background-position:96% 50%,98% 50%,0 0 !important;
+}
+
 #gggpay input,#gggpay select{margin-top:15px;}
 #fpay select,#fpay input{margin-top:10px;}
 #amopay input,#amopay select{margin-top:15px;}
@@ -8470,11 +8536,13 @@ body.C #content #withdraw button.btn+button.btn,
 #telcopinnew select{
   width:100% !important;
   padding-right:44px !important;
-  background-image:linear-gradient(45deg,transparent 50%,rgba(45,0,0,.95) 50%),linear-gradient(135deg,rgba(45,0,0,.95) 50%,transparent 50%),linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 100%) !important;
+  background-image:
+    linear-gradient(45deg,transparent 50%,rgba(45,0,0,.95) 50%),
+    linear-gradient(135deg,rgba(45,0,0,.95) 50%,transparent 50%),
+    linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 100%) !important;
   background-size:6px 6px,6px 6px,100% 100% !important;
   background-repeat:no-repeat !important;
   background-position:96% 50%,98% 50%,0 0 !important;
-  background-position:right 18px center,right 12px center,0 0 !important;
 }
 
 #redtelco input::placeholder,
@@ -8587,14 +8655,19 @@ body.C #content #withdraw button.btn+button.btn,
 #fpay select,
 #amopay select{
   padding-right:44px !important;
-  background-image:linear-gradient(45deg,transparent 50%,rgba(45,0,0,.95) 50%),linear-gradient(135deg,rgba(45,0,0,.95) 50%,transparent 50%),linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 100%) !important;
+  background-image:
+    linear-gradient(45deg,transparent 50%,rgba(45,0,0,.95) 50%),
+    linear-gradient(135deg,rgba(45,0,0,.95) 50%,transparent 50%),
+    linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 100%) !important;
   background-size:6px 6px,6px 6px,100% 100% !important;
   background-repeat:no-repeat !important;
   background-position:96% 50%,98% 50%,0 0 !important;
-  background-position:right 18px center,right 12px center,0 0 !important;
 }
 
 @media (prefers-reduced-motion:reduce){
+  #deposit input.question,
+  #deposit select.question,
+  #deposit textarea.question,
   #redtelco input,
   #redtelco textarea,
   #redtelco select,
