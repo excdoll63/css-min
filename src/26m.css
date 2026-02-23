@@ -8406,21 +8406,21 @@ body.C #content #withdraw button.btn+button.btn,
 }
 
 :root{
-  --m26-white: #ffffff;
-  --m26-offwhite: #fff6cf;
-  --m26-gold-hi: #fcf380;
-  --m26-gold: #deaf1b;
-  --m26-gold-deep: #c7920a;
-  --m26-red-hi: #ae0000;
-  --m26-red: #6b0103;
-  --m26-deep: #2d0000;
-  --m26-brown: #832e00;
-  --m26-ink: #1a0a00;
+  --m26-white:#ffffff;
+  --m26-offwhite:#fff6cf;
+  --m26-gold-hi:#fcf380;
+  --m26-gold:#deaf1b;
+  --m26-gold-deep:#c7920a;
+  --m26-red-hi:#ae0000;
+  --m26-red:#6b0103;
+  --m26-deep:#2d0000;
+  --m26-brown:#832e00;
+  --m26-ink:#1a0a00;
 }
 
-#gggpay input, #gggpay select { margin-top: 15px; }
-#fpay select, #fpay input { margin-top: 10px; }
-#amopay input, #amopay select { margin-top: 15px; }
+#gggpay input,#gggpay select{margin-top:15px;}
+#fpay select,#fpay input{margin-top:10px;}
+#amopay input,#amopay select{margin-top:15px;}
 
 #deposit input,
 #deposit select,
@@ -8431,27 +8431,22 @@ body.C #content #withdraw button.btn+button.btn,
 #fpay select,
 #amopay input,
 #amopay select{
-  width: 100% !important;
-
-  border: 1.2px solid rgba(222, 175, 27, 0.32) !important;
-  border-radius: 12px !important;
-
-  padding: 9px 12px !important;
-  font-size: 13px !important;
-  font-weight: 650 !important;
-  color: var(--m26-ink) !important;
-
-  background-color: #fff !important;
-  outline: none !important;
-  box-shadow: none !important;
-  transform: none !important;
-  filter: none !important;
-
-  -webkit-appearance: none;
-  appearance: none;
-
-  transition: border-color 0.18s ease, box-shadow 0.18s ease !important;
-  caret-color: var(--m26-red);
+  width:100% !important;
+  border:1.2px solid rgba(222,175,27,.32) !important;
+  border-radius:12px !important;
+  padding:9px 12px !important;
+  font-size:13px !important;
+  font-weight:650 !important;
+  color:var(--m26-ink) !important;
+  background-color:#fff !important;
+  outline:none !important;
+  box-shadow:none !important;
+  transform:none !important;
+  filter:none !important;
+  -webkit-appearance:none;
+  appearance:none;
+  transition:border-color .18s ease,box-shadow .18s ease !important;
+  caret-color:var(--m26-red);
 }
 
 #deposit input,
@@ -8459,11 +8454,7 @@ body.C #content #withdraw button.btn+button.btn,
 #gggpay input,
 #fpay input,
 #amopay input{
-  background-image: linear-gradient(
-    180deg,
-    rgba(255,255,255,.98) 0%,
-    rgba(255,255,255,.92) 100%
-  ) !important;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 100%) !important;
 }
 
 #deposit input::placeholder,
@@ -8471,8 +8462,8 @@ body.C #content #withdraw button.btn+button.btn,
 #gggpay input::placeholder,
 #fpay input::placeholder,
 #amopay input::placeholder{
-  color: rgba(45, 0, 0, 0.42);
-  font-weight: 650;
+  color:rgba(45,0,0,.42);
+  font-weight:650;
 }
 
 #deposit input:focus,
@@ -8484,11 +8475,11 @@ body.C #content #withdraw button.btn+button.btn,
 #fpay select:focus,
 #amopay input:focus,
 #amopay select:focus{
-  border-color: rgba(222, 175, 27, 0.85) !important;
-  box-shadow: 0 0 0 3px rgba(222, 175, 27, 0.16) !important;
+  border-color:rgba(222,175,27,.85) !important;
+  box-shadow:0 0 0 3px rgba(222,175,27,.16) !important;
 }
 
-@media (hover: hover){
+@media (hover:hover){
   #deposit input:hover,
   #deposit textarea:hover,
   #deposit select:hover,
@@ -8498,7 +8489,7 @@ body.C #content #withdraw button.btn+button.btn,
   #fpay select:hover,
   #amopay input:hover,
   #amopay select:hover{
-    border-color: rgba(131, 46, 0, 0.55) !important;
+    border-color:rgba(131,46,0,.55) !important;
   }
 }
 
@@ -8506,57 +8497,96 @@ body.C #content #withdraw button.btn+button.btn,
 #gggpay select,
 #fpay select,
 #amopay select{
-  padding-right: 44px !important;
-
+  padding-right:44px !important;
   background-image:
-    linear-gradient(45deg, transparent 50%, rgba(45,0,0,.95) 50%),
-    linear-gradient(135deg, rgba(45,0,0,.95) 50%, transparent 50%),
-    linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 100%) !important;
+    linear-gradient(45deg,transparent 50%,rgba(45,0,0,.95) 50%),
+    linear-gradient(135deg,rgba(45,0,0,.95) 50%,transparent 50%),
+    linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 100%) !important;
+  background-size:6px 6px,6px 6px,100% 100% !important;
+  background-repeat:no-repeat !important;
+  background-position:96% 50%,98% 50%,0 0 !important;
+  background-position:right 18px center,right 12px center,0 0 !important;
+}
 
-  background-position:
-    calc(100% - 18px) 50%,
-    calc(100% - 12px) 50%,
-    0 0;
+#deposit select[id*="hour"],
+#deposit select[name*="hour"],
+#deposit select[id*="min"],
+#deposit select[name*="min"],
+#deposit select[id*="minute"],
+#deposit select[name*="minute"],
+#deposit select[id*="ampm"],
+#deposit select[name*="ampm"],
+#gggpay select[id*="hour"],
+#gggpay select[name*="hour"],
+#gggpay select[id*="min"],
+#gggpay select[name*="min"],
+#gggpay select[id*="minute"],
+#gggpay select[name*="minute"],
+#gggpay select[id*="ampm"],
+#gggpay select[name*="ampm"],
+#fpay select[id*="hour"],
+#fpay select[name*="hour"],
+#fpay select[id*="min"],
+#fpay select[name*="min"],
+#fpay select[id*="minute"],
+#fpay select[name*="minute"],
+#fpay select[id*="ampm"],
+#fpay select[name*="ampm"],
+#amopay select[id*="hour"],
+#amopay select[name*="hour"],
+#amopay select[id*="min"],
+#amopay select[name*="min"],
+#amopay select[id*="minute"],
+#amopay select[name*="minute"],
+#amopay select[id*="ampm"],
+#amopay select[name*="ampm"]{
+  width:auto !important;
+  display:inline-block !important;
+  vertical-align:middle;
+  min-width:64px;
+  margin-right:8px;
+}
 
-  background-size: 6px 6px, 6px 6px, 100% 100%;
-  background-repeat: no-repeat;
+#deposit select[id*="ampm"],
+#deposit select[name*="ampm"],
+#gggpay select[id*="ampm"],
+#gggpay select[name*="ampm"],
+#fpay select[id*="ampm"],
+#fpay select[name*="ampm"],
+#amopay select[id*="ampm"],
+#amopay select[name*="ampm"]{
+  margin-right:0;
 }
 
 #redtelco,
 #telcopinnew{
-  padding: 14px;
-  overflow: hidden;
-
-  border-radius: 16px;
-  border: 1px solid rgba(222,175,27,.22);
-
+  padding:14px;
+  overflow:hidden;
+  border-radius:16px;
+  border:1px solid rgba(222,175,27,.22);
   background:
-    radial-gradient(140% 95% at 50% 0, rgba(255,255,255,.55) 0, rgba(255,255,255,0) 62%),
-    linear-gradient(180deg, rgba(255,246,207,.60) 0%, rgba(255,246,207,.28) 100%);
-
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.55) 0,rgba(255,255,255,0) 62%),
+    linear-gradient(180deg,rgba(255,246,207,.60) 0%,rgba(255,246,207,.28) 100%);
   box-shadow:
     0 10px 22px rgba(0,0,0,.12),
     inset 0 1px 0 rgba(255,255,255,.55);
 }
 
 #deposit .question{
-  overflow: hidden;
-  margin-top: 10px;
-
-  padding: 12px 14px;
-  border-radius: 16px;
-  border: 1px solid rgba(222,175,27,.22);
-
+  overflow:hidden;
+  margin-top:10px;
+  padding:12px 14px;
+  border-radius:16px;
+  border:1px solid rgba(222,175,27,.22);
   background:
-    radial-gradient(140% 95% at 50% 0, rgba(255,255,255,.55) 0, rgba(255,255,255,0) 62%),
-    linear-gradient(180deg, rgba(255,255,255,.72) 0%, rgba(255,255,255,.52) 100%);
-
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.55) 0,rgba(255,255,255,0) 62%),
+    linear-gradient(180deg,rgba(255,255,255,.72) 0,rgba(255,255,255,.52) 100%);
   box-shadow:
     0 8px 18px rgba(0,0,0,.10),
     inset 0 1px 0 rgba(255,255,255,.55);
 }
 
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion:reduce){
   #deposit input,
   #deposit select,
   #deposit textarea,
@@ -8566,6 +8596,6 @@ body.C #content #withdraw button.btn+button.btn,
   #fpay select,
   #amopay input,
   #amopay select{
-    transition: none !important;
+    transition:none !important;
   }
 }
