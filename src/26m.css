@@ -8422,46 +8422,31 @@ body.C #content #withdraw button.btn+button.btn,
 #fpay select,#fpay input{margin-top:10px;}
 #amopay input,#amopay select{margin-top:15px;}
 
-#redtelco,
-#telcopinnew{
+#redtelco,#telcopinnew,
+#redtelco *,#telcopinnew *{
+  box-sizing:border-box;
+  text-shadow:none !important;
+  font-family:"Montserrat",sans-serif;
+  text-transform:none !important;
+}
+
+#redtelco,#telcopinnew{
   padding:14px;
   overflow:hidden;
   border-radius:22px;
   border:2px solid transparent;
-  background:linear-gradient(#fffdf4,#fff8df) padding-box,linear-gradient(135deg,var(--m26-white) 0%,var(--m26-gold-hi) 28%,var(--m26-gold) 58%,var(--m26-brown) 100%) border-box;
+  background:linear-gradient(#fffdf4,#fff8df) padding-box,linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 28%,var(--m26-gold) 58%,var(--m26-brown) 100%) border-box;
   box-shadow:0 18px 44px rgba(0,0,0,.22),0 0 26px rgba(222,175,27,.18);
-  font-family:"Montserrat",sans-serif;
   color:var(--m26-ink);
-  text-transform:none;
 }
 
-#redtelco *,
-#telcopinnew *{
-  box-sizing:border-box;
-  text-shadow:none !important;
-}
-
-#deposit input.question,
-#deposit select.question,
-#deposit textarea.question,
 #redtelco input,
-#redtelco select,
 #redtelco textarea,
+#redtelco select,
 #telcopinnew input,
-#telcopinnew select,
 #telcopinnew textarea,
-#gggpay input,
-#gggpay select,
-#gggpay textarea,
-#fpay input,
-#fpay select,
-#fpay textarea,
-#amopay input,
-#amopay select,
-#amopay textarea{
-  width:100% !important;
-  background-color:#fff !important;
-  background-image:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 100%) !important;
+#telcopinnew select{
+  background:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 100%) !important;
   border:1.2px solid rgba(222,175,27,.32) !important;
   border-radius:12px !important;
   padding:9px 12px !important;
@@ -8474,25 +8459,93 @@ body.C #content #withdraw button.btn+button.btn,
   filter:none !important;
   -webkit-appearance:none;
   appearance:none;
-  text-shadow:none !important;
-  font-family:"Montserrat",sans-serif;
-  text-transform:none !important;
-  caret-color:var(--m26-red);
   transition:border-color .18s ease,box-shadow .18s ease !important;
+  max-width:100%;
+  vertical-align:middle;
+  text-shadow:none !important;
+  text-transform:none !important;
 }
 
-#deposit input.question,
-#deposit select.question,
-#deposit textarea.question{
-  margin-top:10px;
+#redtelco select,
+#telcopinnew select{
+  width:100% !important;
+  padding-right:44px !important;
+  background-image:linear-gradient(45deg,transparent 50%,rgba(45,0,0,.95) 50%),linear-gradient(135deg,rgba(45,0,0,.95) 50%,transparent 50%),linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 100%) !important;
+  background-size:6px 6px,6px 6px,100% 100% !important;
+  background-repeat:no-repeat !important;
+  background-position:96% 50%,98% 50%,0 0 !important;
+  background-position:right 18px center,right 12px center,0 0 !important;
 }
 
-#deposit input.question::placeholder,
-#deposit textarea.question::placeholder,
 #redtelco input::placeholder,
 #redtelco textarea::placeholder,
 #telcopinnew input::placeholder,
-#telcopinnew textarea::placeholder,
+#telcopinnew textarea::placeholder{
+  color:rgba(45,0,0,.42);
+  font-weight:650;
+}
+
+#redtelco input:focus,
+#redtelco textarea:focus,
+#redtelco select:focus,
+#telcopinnew input:focus,
+#telcopinnew textarea:focus,
+#telcopinnew select:focus{
+  border-color:rgba(222,175,27,.85) !important;
+  box-shadow:0 0 0 3px rgba(222,175,27,.16) !important;
+}
+
+@media (hover:hover){
+  #redtelco input:hover,
+  #redtelco textarea:hover,
+  #redtelco select:hover,
+  #telcopinnew input:hover,
+  #telcopinnew textarea:hover,
+  #telcopinnew select:hover{
+    border-color:rgba(131,46,0,.55) !important;
+  }
+}
+
+#gggpay input,
+#gggpay select,
+#gggpay textarea,
+#fpay input,
+#fpay select,
+#fpay textarea,
+#amopay input,
+#amopay select,
+#amopay textarea{
+  width:100% !important;
+  border:1.2px solid rgba(222,175,27,.32) !important;
+  border-radius:12px !important;
+  padding:9px 12px !important;
+  font-size:13px !important;
+  font-weight:650 !important;
+  color:var(--m26-ink) !important;
+  background-color:#fff !important;
+  outline:none !important;
+  box-shadow:none !important;
+  transform:none !important;
+  filter:none !important;
+  -webkit-appearance:none;
+  appearance:none;
+  transition:border-color .18s ease,box-shadow .18s ease !important;
+  caret-color:var(--m26-red);
+  font-family:"Montserrat",sans-serif;
+  text-shadow:none !important;
+  text-transform:none !important;
+  box-sizing:border-box;
+}
+
+#gggpay input,
+#gggpay textarea,
+#fpay input,
+#fpay textarea,
+#amopay input,
+#amopay textarea{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 100%) !important;
+}
+
 #gggpay input::placeholder,
 #gggpay textarea::placeholder,
 #fpay input::placeholder,
@@ -8503,15 +8556,6 @@ body.C #content #withdraw button.btn+button.btn,
   font-weight:650;
 }
 
-#deposit input.question:focus,
-#deposit textarea.question:focus,
-#deposit select.question:focus,
-#redtelco input:focus,
-#redtelco textarea:focus,
-#redtelco select:focus,
-#telcopinnew input:focus,
-#telcopinnew textarea:focus,
-#telcopinnew select:focus,
 #gggpay input:focus,
 #gggpay textarea:focus,
 #gggpay select:focus,
@@ -8526,15 +8570,6 @@ body.C #content #withdraw button.btn+button.btn,
 }
 
 @media (hover:hover){
-  #deposit input.question:hover,
-  #deposit textarea.question:hover,
-  #deposit select.question:hover,
-  #redtelco input:hover,
-  #redtelco textarea:hover,
-  #redtelco select:hover,
-  #telcopinnew input:hover,
-  #telcopinnew textarea:hover,
-  #telcopinnew select:hover,
   #gggpay input:hover,
   #gggpay textarea:hover,
   #gggpay select:hover,
@@ -8548,9 +8583,6 @@ body.C #content #withdraw button.btn+button.btn,
   }
 }
 
-#deposit select.question,
-#redtelco select,
-#telcopinnew select,
 #gggpay select,
 #fpay select,
 #amopay select{
@@ -8563,15 +8595,12 @@ body.C #content #withdraw button.btn+button.btn,
 }
 
 @media (prefers-reduced-motion:reduce){
-  #deposit input.question,
-  #deposit select.question,
-  #deposit textarea.question,
   #redtelco input,
-  #redtelco select,
   #redtelco textarea,
+  #redtelco select,
   #telcopinnew input,
-  #telcopinnew select,
   #telcopinnew textarea,
+  #telcopinnew select,
   #gggpay input,
   #gggpay select,
   #gggpay textarea,
