@@ -8859,3 +8859,6 @@ body.C #content #history-transaction table input.btn.danger.cancel::before,
 body.C #content #history-transaction table input.btn.danger.cancel::after {
   content: none !important;
 }
+
+#telcopinnew .btn,#amopay .btn{margin:15px 10px 0 0 !important;width:100px !important;min-width:100px !important;max-width:100px !important;height:40px !important;min-height:40px !important;padding:0 12px !important;box-sizing:border-box !important;display:inline-flex !important;align-items:center !important;justify-content:center !important;float:left !important;}
+#telcopinnew .btn:last-child,#amopay .btn:last-child{margin-right:0 !important;}
