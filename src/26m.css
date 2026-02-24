@@ -8892,30 +8892,3 @@ body.C #promotion-popup .btn.claim,body.C #promotion-popup a.btn.claim,body.C #p
   padding:0;
   font-style:normal;
 }
-
-
-body.C #home-balance > .A .btns .btn{
-    justify-content: space-between !important;
-    text-align: left !important;
-    padding-right: 18px !important;
-}
-body.C #home-balance > .A .btns .btn > i,
-body.C #home-balance > .A .btns .btn > svg,
-body.C #home-balance > .A .btns .btn > .btn-ico{
-    order: 2 !important;
-    margin-left: 12px !important;
-    margin-right: 4px !important;
-    flex: 0 0 34px !important;
-    width: 34px !important;
-    height: 34px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    line-height: 1 !important;
-    box-sizing: border-box !important;
-    position: static !important;
-    transform: none !important;
-}
-body.C #home-balance > .A .btns .btn i{
-    display: inline-flex !important;
-}
