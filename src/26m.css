@@ -5114,45 +5114,6 @@ body.C #home-balance>.A .btns .btn.warning.vc-refresh {
     transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
 }
 
-/* ================================
-   HOME BALANCE BUTTONS ALIGNMENT
-   Text always on the LEFT, SVG/ICON always on the RIGHT
-   ================================ */
-body.C #home-balance>.A .btns .btn.vc-deposit,
-body.C #home-balance>.A .btns .btn.vc-withdraw,
-body.C #home-balance>.A .btns .btn.danger.vc-withdraw,
-body.C #home-balance>.A .btns .btn.warning.vc-refresh,
-body.C #home-balance>.A .btns .btn.vc-refresh{
-    justify-content: flex-start !important;
-    text-align: left !important;
-}
-
-/* Move icon element (FontAwesome <i> OR inline <svg>) to the right side */
-body.C #home-balance>.A .btns .btn.vc-deposit > i,
-body.C #home-balance>.A .btns .btn.vc-withdraw > i,
-body.C #home-balance>.A .btns .btn.danger.vc-withdraw > i,
-body.C #home-balance>.A .btns .btn.warning.vc-refresh > i,
-body.C #home-balance>.A .btns .btn.vc-refresh > i,
-body.C #home-balance>.A .btns .btn.vc-deposit > svg,
-body.C #home-balance>.A .btns .btn.vc-withdraw > svg,
-body.C #home-balance>.A .btns .btn.danger.vc-withdraw > svg,
-body.C #home-balance>.A .btns .btn.warning.vc-refresh > svg,
-body.C #home-balance>.A .btns .btn.vc-refresh > svg{
-    order: 2;
-    margin-left: auto !important;
-}
-
-/* If your icon is wrapped (e.g. <span class="btn-ico"><svg/></span>), also support it */
-body.C #home-balance>.A .btns .btn.vc-deposit > .btn-ico,
-body.C #home-balance>.A .btns .btn.vc-withdraw > .btn-ico,
-body.C #home-balance>.A .btns .btn.danger.vc-withdraw > .btn-ico,
-body.C #home-balance>.A .btns .btn.warning.vc-refresh > .btn-ico,
-body.C #home-balance>.A .btns .btn.vc-refresh > .btn-ico{
-    order: 2;
-    margin-left: auto !important;
-}
-
-
 body.C #home-balance>.A .btns .btn.vc-deposit::before,
 body.C #home-balance>.A .btns .btn.vc-withdraw::before,
 body.C #home-balance>.A .btns .btn.danger.vc-withdraw::before,
