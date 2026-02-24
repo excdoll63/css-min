@@ -8706,3 +8706,67 @@ body.C #content #withdraw button.btn+button.btn,
 }
 body.C .swal2-popup .swal2-cancel.swal2-styled,body.C .swal2-popup .swal2-styled.swal2-cancel{background-color:var(--m26-ink) !important;background-image:radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.12) 0,rgba(255,255,255,0) 62%),linear-gradient(180deg,var(--m26-deep) 0,var(--m26-ink) 55%,#0b0600 100%),linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 30%,var(--m26-gold) 58%,var(--m26-brown) 100%) !important;background-origin:padding-box,padding-box,border-box !important;background-clip:padding-box,padding-box,border-box !important;border:2px solid transparent !important;color:var(--m26-gold-hi) !important;-webkit-text-fill-color:var(--m26-gold-hi) !important;text-shadow:0 1px 0 rgba(0,0,0,.55) !important;box-shadow:0 16px 34px rgba(0,0,0,.40),inset 0 1px 0 rgba(255,255,255,.10),0 0 20px rgba(222,175,27,.14) !important;}
 body.C .swal2-popup .swal2-cancel.swal2-styled::after,body.C .swal2-popup .swal2-styled.swal2-cancel::after{background:linear-gradient(90deg,rgba(252,243,128,0) 0%,rgba(252,243,128,.80) 50%,rgba(252,243,128,0) 100%) !important;mix-blend-mode:screen !important;}
+
+body.C #content .btn.submit,
+body.C #content a.btn.submit,
+body.C #content button.btn.submit,
+body.C #content .btn.next,
+body.C #content a.btn.next,
+body.C #content button.btn.next,
+body.C #content .btn.ok,
+body.C #content a.btn.ok,
+body.C #content button.btn.ok,
+body.C #content .btn.confirm,
+body.C #content a.btn.confirm,
+body.C #content button.btn.confirm,
+body.C #content .btn.claim,
+body.C #content a.btn.claim,
+body.C #content button.btn.claim,
+body.C #content .btn.single:not(.danger):not(.cancel):not(.close),
+body.C #content a.btn.single:not(.danger):not(.cancel):not(.close),
+body.C #content button.btn.single:not(.danger):not(.cancel):not(.close),
+body.C #popupwindow .btn.single:not(.danger):not(.cancel):not(.close),
+body.C #popupwindow a.btn.single:not(.danger):not(.cancel):not(.close),
+body.C #popupwindow button.btn.single:not(.danger):not(.cancel):not(.close),
+body.C #promotion-popup .btn.claim,
+body.C #promotion-popup a.btn.claim,
+body.C #promotion-popup button.btn.claim,
+body.C #promotion-popup .btns .btn:last-child:not(.danger):not(.cancel):not(.close),
+body.C #promotion-popup .btns a.btn:last-child:not(.danger):not(.cancel):not(.close),
+body.C #promotion-popup .btns button.btn:last-child:not(.danger):not(.cancel):not(.close),
+body.C .swal2-popup .swal2-confirm.swal2-styled,
+body.C .swal2-popup .swal2-styled.swal2-confirm{
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;
+  text-decoration:none;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:46px;
+  padding:10px 12px;
+  box-sizing:border-box;
+  border-radius:16px !important;
+  border:2px solid transparent !important;
+  font-family:"Montserrat",sans-serif !important;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  line-height:1;
+  white-space:nowrap;
+  color:var(--m26-brown) !important;
+  text-shadow:0 1px 0 rgba(255,246,207,.85),0 -1px 0 rgba(0,0,0,.06) !important;
+  background-color:var(--m26-gold) !important;
+  background-image:radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.55) 0,rgba(255,255,255,0) 62%),linear-gradient(180deg,var(--m26-offwhite) 0,#fce58e 18%,var(--m26-gold-hi) 48%,var(--m26-gold) 78%,var(--m26-gold-deep) 100%),linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 30%,var(--m26-gold) 58%,var(--m26-brown) 100%) !important;
+  background-origin:padding-box,padding-box,border-box !important;
+  background-clip:padding-box,padding-box,border-box !important;
+  background-repeat:no-repeat;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  transform:translateZ(0);
+  box-shadow:0 14px 30px rgba(0,0,0,.30),inset 0 2px 0 rgba(255,255,255,.70),inset 0 -14px 22px rgba(131,46,0,.18),0 0 20px rgba(222,175,27,.18) !important;
+  transition:transform .18s ease,filter .18s ease,box-shadow .18s ease;
+}
