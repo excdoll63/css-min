@@ -8864,3 +8864,31 @@ body.C #content #history-transaction table input.btn.danger.cancel::after {
 #telcopinnew .btn:last-child,#amopay .btn:last-child{margin-right:0 !important;}
 
 body.C #promotion-popup .btn.claim,body.C #promotion-popup a.btn.claim,body.C #promotion-popup button.btn.claim,body.C #promotion-popup input.btn.claim,body.C #promotion-popup .btns .btn:last-child:not(.danger):not(.cancel):not(.close),body.C #promotion-popup .btns a.btn:last-child:not(.danger):not(.cancel):not(.close),body.C #promotion-popup .btns button.btn:last-child:not(.danger):not(.cancel):not(.close),body.C #promotion-popup .btns input.btn:last-child:not(.danger):not(.cancel):not(.close){min-height:40px !important;height:40px !important;}
+
+#gameList .gamenote{
+  margin:10px 10px 0;
+  padding:6px 12px;
+  border-radius:10px;
+  border:1px solid rgba(222,175,27,.45);
+  box-sizing:border-box;
+  background-image:
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.16) 0,rgba(255,255,255,0) 62%),
+    linear-gradient(180deg,rgba(45,0,0,.94) 0,rgba(26,10,0,.98) 62%,#0b0600 100%) !important;
+  background-color:var(--m26-ink) !important;
+  background-repeat:no-repeat;
+  font-family:Montserrat,sans-serif;
+  font-weight:900;
+  font-size:11px;
+  letter-spacing:.3px;
+  text-transform:uppercase;
+  color:var(--m26-gold-hi);
+  text-shadow:0 1px 0 rgba(0,0,0,.55);
+  box-shadow:0 8px 18px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.10),0 0 16px rgba(222,175,27,.12);
+}
+
+#gameList .gamenote var,
+#gameList .gamenote p{
+  margin:0;
+  padding:0;
+  font-style:normal;
+}
