@@ -8143,7 +8143,7 @@ body.C #content #withdraw a.btn.cancel,
 body.C #content #withdraw button.btn.cancel,
 body.C #content #withdraw .btns .btn:last-child{
   color:var(--m26-gold-hi) !important;
-  text-shadow:0 1px 0 rgba(0,0,0,.55) !important;
+  text-shadow:0 1px 0 rgba(0,0,0,.55);
   background-color:var(--m26-ink);
   background-image:
     radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.12) 0,rgba(255,255,255,0) 62%),
@@ -8151,7 +8151,7 @@ body.C #content #withdraw .btns .btn:last-child{
     linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 30%,var(--m26-gold) 58%,var(--m26-brown) 100%);
   background-origin:padding-box,padding-box,border-box;
   background-clip:padding-box,padding-box,border-box;
-  box-shadow:0 16px 34px rgba(0,0,0,.40),inset 0 1px 0 rgba(255,255,255,.10),0 0 20px rgba(222,175,27,.14);
+  box-shadow:0 10px 22px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.10),inset 0 -14px 22px rgba(0,0,0,.22),0 0 16px rgba(0,0,0,.08);
 }
 
 body.C #content #withdraw .btn::before,
@@ -8184,11 +8184,7 @@ body.C #content #withdraw button.btn::after{
 
 body.C #content #withdraw .btn.danger::after,
 body.C #content #withdraw a.btn.danger::after,
-body.C #content #withdraw button.btn.danger::after,
-body.C #content #withdraw .btn.cancel::after,
-body.C #content #withdraw a.btn.cancel::after,
-body.C #content #withdraw button.btn.cancel::after,
-body.C #content #withdraw .btns .btn:last-child::after{
+body.C #content #withdraw button.btn.danger::after{
   background:linear-gradient(90deg,rgba(252,243,128,0) 0,rgba(252,243,128,.80) 50%,rgba(252,243,128,0) 100%);
   mix-blend-mode:screen;
 }
@@ -8694,3 +8690,17 @@ body.C #content #withdraw button.btn+button.btn,
 #deposit .btn.submit:focus-visible,#deposit a.btn.submit:focus-visible,#deposit button.btn.submit:focus-visible,#deposit .btn.next:focus-visible,#deposit a.btn.next:focus-visible,#deposit button.btn.next:focus-visible,#gggpay .btn.submit:focus-visible,#gggpay a.btn.submit:focus-visible,#gggpay button.btn.submit:focus-visible,#fpay .btn.submit:focus-visible,#fpay a.btn.submit:focus-visible,#fpay button.btn.submit:focus-visible,#direpay .btn.submit:focus-visible,#direpay a.btn.submit:focus-visible,#direpay button.btn.submit:focus-visible,#amopayramp .btn.submit:focus-visible,#amopayramp a.btn.submit:focus-visible,#amopayramp button.btn.submit:focus-visible,#amopay .btn.submit:focus-visible,#amopay a.btn.submit:focus-visible,#amopay button.btn.submit:focus-visible,#redtelco .btn.submit:focus-visible,#redtelco a.btn.submit:focus-visible,#redtelco button.btn.submit:focus-visible,#telcopinnew .btn.submit:focus-visible,#telcopinnew a.btn.submit:focus-visible,#telcopinnew button.btn.submit:focus-visible,#deposit .btn.cancel:focus-visible,#deposit a.btn.cancel:focus-visible,#deposit button.btn.cancel:focus-visible,#deposit .btn.danger.cancel:focus-visible,#deposit a.btn.danger.cancel:focus-visible,#deposit button.btn.danger.cancel:focus-visible,#gggpay .btn.cancel:focus-visible,#gggpay a.btn.cancel:focus-visible,#gggpay button.btn.cancel:focus-visible,#gggpay .btn.danger.cancel:focus-visible,#gggpay a.btn.danger.cancel:focus-visible,#gggpay button.btn.danger.cancel:focus-visible,#fpay .btn.cancel:focus-visible,#fpay a.btn.cancel:focus-visible,#fpay button.btn.cancel:focus-visible,#fpay .btn.danger.cancel:focus-visible,#fpay a.btn.danger.cancel:focus-visible,#fpay button.btn.danger.cancel:focus-visible,#direpay .btn.cancel:focus-visible,#direpay a.btn.cancel:focus-visible,#direpay button.btn.cancel:focus-visible,#direpay .btn.danger.cancel:focus-visible,#direpay a.btn.danger.cancel:focus-visible,#direpay button.btn.danger.cancel:focus-visible,#amopayramp .btn.cancel:focus-visible,#amopayramp a.btn.cancel:focus-visible,#amopayramp button.btn.cancel:focus-visible,#amopayramp .btn.danger.cancel:focus-visible,#amopayramp a.btn.danger.cancel:focus-visible,#amopayramp button.btn.danger.cancel:focus-visible,#amopay .btn.cancel:focus-visible,#amopay a.btn.cancel:focus-visible,#amopay button.btn.cancel:focus-visible,#amopay .btn.danger.cancel:focus-visible,#amopay a.btn.danger.cancel:focus-visible,#amopay button.btn.danger.cancel:focus-visible,#redtelco .btn.cancel:focus-visible,#redtelco a.btn.cancel:focus-visible,#redtelco button.btn.cancel:focus-visible,#redtelco .btn.danger.cancel:focus-visible,#redtelco a.btn.danger.cancel:focus-visible,#redtelco button.btn.danger.cancel:focus-visible,#telcopinnew .btn.cancel:focus-visible,#telcopinnew a.btn.cancel:focus-visible,#telcopinnew button.btn.cancel:focus-visible,#telcopinnew .btn.danger.cancel:focus-visible,#telcopinnew a.btn.danger.cancel:focus-visible,#telcopinnew button.btn.danger.cancel:focus-visible{box-shadow:none !important;outline:none !important;}
 
 #amopay .btn.cancel,#amopay a.btn.cancel,#amopay button.btn.cancel,#amopay .btn.danger.cancel,#amopay a.btn.danger.cancel,#amopay button.btn.danger.cancel{width:100px !important;min-width:100px !important;max-width:100px !important;height:40px !important;min-height:40px !important;}
+.btn.cancel,a.btn.cancel,button.btn.cancel,.btn.danger.cancel,a.btn.danger.cancel,button.btn.danger.cancel,.btn.close,a.btn.close,button.btn.close,.close.btn,a.close.btn,button.close.btn,.close.danger,a.close.danger,button.close.danger,.btns>.btn.danger:first-child,.btns>a.btn.danger:first-child,.btns>button.btn.danger:first-child,.swal2-popup .swal2-cancel.swal2-styled,.swal2-popup .swal2-styled.swal2-cancel,#history-transaction table .btn.danger.cancel,#history-transaction table a.btn.danger.cancel,#history-transaction table button.btn.danger.cancel,body.C #user-report .close-btn,body.C #user-report .btn.close,body.C #user-report .btn.cancel,body.C #user-report .btns .btn.close,body.C #user-report .btns .btn.cancel,body.C #user-report .btns>.btn:first-child,#promotion-popup .btn.single.danger,#promotion-popup a.btn.single.danger,#promotion-popup button.btn.single.danger,#promotion-popup div.btn.single.danger{
+  background-color:var(--m26-ink) !important;
+  background-image:
+    radial-gradient(140% 95% at 50% 0,rgba(255,255,255,.12) 0,rgba(255,255,255,0) 62%),
+    linear-gradient(180deg,var(--m26-deep) 0,var(--m26-ink) 55%,#0b0600 100%),
+    linear-gradient(135deg,var(--m26-white) 0,var(--m26-gold-hi) 30%,var(--m26-gold) 58%,var(--m26-brown) 100%) !important;
+  background-origin:padding-box,padding-box,border-box !important;
+  background-clip:padding-box,padding-box,border-box !important;
+  border:2px solid transparent !important;
+  color:var(--m26-gold-hi) !important;
+  -webkit-text-fill-color:var(--m26-gold-hi) !important;
+  text-shadow:0 1px 0 rgba(0,0,0,.55) !important;
+  box-shadow:0 16px 34px rgba(0,0,0,.40),inset 0 1px 0 rgba(255,255,255,.10),0 0 20px rgba(222,175,27,.14) !important;
+}
