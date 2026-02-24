@@ -8770,3 +8770,92 @@ body.C .swal2-popup .swal2-styled.swal2-confirm{
   box-shadow:0 14px 30px rgba(0,0,0,.30),inset 0 2px 0 rgba(255,255,255,.70),inset 0 -14px 22px rgba(131,46,0,.18),0 0 20px rgba(222,175,27,.18) !important;
   transition:transform .18s ease,filter .18s ease,box-shadow .18s ease;
 }
+
+body.C #content #history-transaction table .btn.report.danger,
+body.C #content #history-transaction table a.btn.report.danger,
+body.C #content #history-transaction table button.btn.report.danger,
+body.C #content #history-transaction table input.btn.report.danger,
+body.C #content #history-transaction table .btn.danger.cancel,
+body.C #content #history-transaction table a.btn.danger.cancel,
+body.C #content #history-transaction table button.btn.danger.cancel,
+body.C #content #history-transaction table input.btn.danger.cancel {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  user-select: none;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 36px !important;
+  padding: 0 14px !important;
+  box-sizing: border-box;
+  width: min(240px, 92%) !important;
+  max-width: 100% !important;
+  margin: 10px auto 0 !important;
+  border-radius: 12px !important;
+  border: 2px solid transparent !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.6px !important;
+  text-transform: uppercase !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+}
+
+body.C #content #history-transaction table .btn.report.danger,
+body.C #content #history-transaction table a.btn.report.danger,
+body.C #content #history-transaction table button.btn.report.danger,
+body.C #content #history-transaction table input.btn.report.danger {
+  color: #1a0a00 !important;
+  -webkit-text-fill-color: #1a0a00 !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+  background: radial-gradient(140% 90% at 50% 0, rgba(255, 255, 255, 0.28) 0, rgba(255, 255, 255, 0) 58%) padding-box,
+    linear-gradient(180deg, #fff6cf 0, #fce58e 18%, #fcf380 45%, #deaf1b 72%, #c7920a 100%) padding-box,
+    linear-gradient(135deg, #fff 0, #fcf380 28%, #deaf1b 58%, #832e00 100%) border-box !important;
+  background-origin: padding-box, padding-box, border-box !important;
+  background-clip: padding-box, padding-box, border-box !important;
+  background-repeat: no-repeat;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.14) inset, 0 0 24px rgba(222, 175, 27, 0.22) !important;
+}
+
+body.C #content #history-transaction table .btn.danger.cancel,
+body.C #content #history-transaction table a.btn.danger.cancel,
+body.C #content #history-transaction table button.btn.danger.cancel,
+body.C #content #history-transaction table input.btn.danger.cancel {
+  color: var(--m26-gold-hi) !important;
+  -webkit-text-fill-color: var(--m26-gold-hi) !important;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55) !important;
+  background: radial-gradient(140% 95% at 50% 0, rgba(255, 255, 255, 0.12) 0, rgba(255, 255, 255, 0) 62%) padding-box,
+    linear-gradient(180deg, var(--m26-deep) 0, var(--m26-ink) 55%, #0b0600 100%) padding-box,
+    linear-gradient(135deg, var(--m26-white) 0, var(--m26-gold-hi) 30%, var(--m26-gold) 58%, var(--m26-brown) 100%) border-box !important;
+  background-origin: padding-box, padding-box, border-box !important;
+  background-clip: padding-box, padding-box, border-box !important;
+  background-repeat: no-repeat;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -14px 22px rgba(0, 0, 0, 0.22), 0 0 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+body.C #content #history-transaction table .btn.report.danger::before,
+body.C #content #history-transaction table .btn.report.danger::after,
+body.C #content #history-transaction table a.btn.report.danger::before,
+body.C #content #history-transaction table a.btn.report.danger::after,
+body.C #content #history-transaction table button.btn.report.danger::before,
+body.C #content #history-transaction table button.btn.report.danger::after,
+body.C #content #history-transaction table input.btn.report.danger::before,
+body.C #content #history-transaction table input.btn.report.danger::after,
+body.C #content #history-transaction table .btn.danger.cancel::before,
+body.C #content #history-transaction table .btn.danger.cancel::after,
+body.C #content #history-transaction table a.btn.danger.cancel::before,
+body.C #content #history-transaction table a.btn.danger.cancel::after,
+body.C #content #history-transaction table button.btn.danger.cancel::before,
+body.C #content #history-transaction table button.btn.danger.cancel::after,
+body.C #content #history-transaction table input.btn.danger.cancel::before,
+body.C #content #history-transaction table input.btn.danger.cancel::after {
+  content: none !important;
+}
