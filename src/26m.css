@@ -8862,3 +8862,5 @@ body.C #content #history-transaction table input.btn.danger.cancel::after {
 
 #telcopinnew .btn,#amopay .btn{margin:15px 10px 0 0 !important;width:100px !important;min-width:100px !important;max-width:100px !important;height:40px !important;min-height:40px !important;padding:0 12px !important;box-sizing:border-box !important;display:inline-flex !important;align-items:center !important;justify-content:center !important;float:left !important;}
 #telcopinnew .btn:last-child,#amopay .btn:last-child{margin-right:0 !important;}
+
+body.C #promotion-popup .btn.claim,body.C #promotion-popup a.btn.claim,body.C #promotion-popup button.btn.claim,body.C #promotion-popup input.btn.claim,body.C #promotion-popup .btns .btn:last-child:not(.danger):not(.cancel):not(.close),body.C #promotion-popup .btns a.btn:last-child:not(.danger):not(.cancel):not(.close),body.C #promotion-popup .btns button.btn:last-child:not(.danger):not(.cancel):not(.close),body.C #promotion-popup .btns input.btn:last-child:not(.danger):not(.cancel):not(.close){min-height:40px !important;height:40px !important;}
