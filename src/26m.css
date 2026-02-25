@@ -1434,8 +1434,8 @@ var {
   align-items: center;
   justify-content: center;
   height: 40px !important;
-  width: 150px !important;
-  max-width: 150px !important;
+  width: 100% !important;
+  max-width: 140px !important;
   margin: 6px 0 0 auto !important;
   padding: 0 12px !important;
   color: #832E00 !important;
