@@ -1,0 +1,194 @@
+window.__26M_HISTORY_VER__ = "20260226";
+
+(function () {
+  'use strict';
+
+  function onReady(fn) {
+    if (document.readyState !== 'loading') {
+      fn();
+      return;
+    }
+    document.addEventListener('DOMContentLoaded', fn, { once: true });
+  }
+
+  function safeGet(k) {
+    try { return localStorage.getItem(k); } catch (e) { return null; }
+  }
+
+  function normLang(raw) {
+    var s = (raw || '').toLowerCase();
+    if (!s) return '';
+    if (s.indexOf('zh') === 0) return 'ZH';
+    if (s.indexOf('ms') === 0) return 'MS';
+    if (s.indexOf('th') === 0) return 'TH';
+    if (s.indexOf('vi') === 0) return 'VN';
+    if (s.indexOf('vn') === 0) return 'VN';
+    if (s.indexOf('id') === 0) return 'ID';
+    if (s.indexOf('en') === 0) return 'EN';
+    return '';
+  }
+
+  function getLangFromPage() {
+    var htmlLang = document.documentElement ? document.documentElement.getAttribute('lang') : '';
+    var byHtml = normLang(htmlLang);
+    if (byHtml) return byHtml;
+
+    var cls = document.body && document.body.className ? document.body.className : '';
+    var m = cls.match(/(?:^|\s)(EN|ZH|MS|TH|VN|VI|ID)(?=\s|$)/i);
+    if (m) {
+      var code = (m[1] || 'EN').toUpperCase();
+      if (code === 'VI') code = 'VN';
+      return code;
+    }
+
+    var ls = normLang(safeGet('LANGUAGE'));
+    if (ls) return ls;
+
+    return 'EN';
+  }
+
+  var dict = {
+    EN: {
+      history_transactions: 'Transactions',
+      history_bet_history: 'Bet History'
+    },
+    ZH: {
+      history_transactions: '交易记录',
+      history_bet_history: '投注记录'
+    },
+    MS: {
+      history_transactions: 'Transaksi',
+      history_bet_history: 'Sejarah Bet'
+    },
+    TH: {
+      history_transactions: 'ธุรกรรม',
+      history_bet_history: 'ประวัติเดิมพัน'
+    },
+    VN: {
+      history_transactions: 'Giao dịch',
+      history_bet_history: 'Lịch sử cược'
+    },
+    ID: {
+      history_transactions: 'Transaksi',
+      history_bet_history: 'Riwayat Bet'
+    }
+  };
+
+  function applyI18n(root) {
+    if (!root) return;
+    var lang = getLangFromPage();
+    var t = dict[lang] || dict.EN;
+    var nodes = root.querySelectorAll('[data-i18n]');
+    for (var i = 0; i < nodes.length; i++) {
+      var el = nodes[i];
+      var key = el.getAttribute('data-i18n');
+      if (key && Object.prototype.hasOwnProperty.call(t, key)) {
+        el.textContent = t[key];
+      }
+    }
+  }
+
+  function wipeChildrenKeep(tab, keepNode) {
+    if (!tab) return;
+    var keep = keepNode || null;
+    while (tab.firstChild) {
+      tab.removeChild(tab.firstChild);
+    }
+    if (keep) tab.appendChild(keep);
+  }
+
+  function ensureTab(tab, iconClass, i18nKey, fallbackText) {
+    if (!tab) return;
+
+    var icoWrap = tab.querySelector('.tab-ico');
+    var ico;
+    if (!icoWrap) {
+      icoWrap = document.createElement('span');
+      icoWrap.className = 'tab-ico';
+      ico = document.createElement('i');
+      ico.setAttribute('aria-hidden', 'true');
+      icoWrap.appendChild(ico);
+    } else {
+      ico = icoWrap.querySelector('i');
+      if (!ico) {
+        ico = document.createElement('i');
+        ico.setAttribute('aria-hidden', 'true');
+        icoWrap.appendChild(ico);
+      }
+    }
+    ico.className = iconClass;
+
+    var textSpan = tab.querySelector('.tab-text');
+    if (!textSpan) {
+      var current = (tab.textContent || '').trim();
+      if (!current) current = fallbackText || '';
+      textSpan = document.createElement('span');
+      textSpan.className = 'tab-text';
+      textSpan.textContent = current;
+
+      wipeChildrenKeep(tab, icoWrap);
+      tab.appendChild(textSpan);
+    }
+
+    textSpan.setAttribute('data-i18n', i18nKey);
+  }
+
+  function decorate(root) {
+    if (!root) return;
+    var tabs = root.querySelector('.tabs');
+    if (!tabs) return;
+
+    var tx = tabs.querySelector('.tab[data-tab="TRANSACTION"]');
+    var bet = tabs.querySelector('.tab[data-tab="BET"]');
+
+    ensureTab(tx, 'fi fi-sr-exchange', 'history_transactions', 'Transactions');
+    ensureTab(bet, 'fi fi-sr-order-history', 'history_bet_history', 'Bet History');
+  }
+
+  function boot() {
+    var tries = 0;
+
+    function initWhenReady() {
+      tries++;
+      var root = document.getElementById('history');
+      if (!root) {
+        if (tries < 20) setTimeout(initWhenReady, 250);
+        return;
+      }
+
+      decorate(root);
+      applyI18n(root);
+
+      var lastLang = getLangFromPage();
+
+      function refreshIfNeeded() {
+        var lang = getLangFromPage();
+        if (lang !== lastLang) {
+          lastLang = lang;
+          applyI18n(root);
+        }
+      }
+
+      try {
+        var mo = new MutationObserver(function () { refreshIfNeeded(); });
+        if (document.documentElement) {
+          mo.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        }
+        if (document.body) {
+          mo.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+        }
+      } catch (e) {}
+
+      window.addEventListener('storage', function () {
+        setTimeout(refreshIfNeeded, 0);
+      });
+
+      setTimeout(refreshIfNeeded, 800);
+      setTimeout(refreshIfNeeded, 1600);
+    }
+
+    initWhenReady();
+  }
+
+  onReady(boot);
+})();
