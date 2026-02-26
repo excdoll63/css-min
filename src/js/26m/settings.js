@@ -382,7 +382,7 @@ window.__26M_SETTINGS_VER__ = "20260226";
     ensureProfileIcon('phone', 'fi fi-sr-phone-call');
     ensureProfileIcon('walletBalance', 'fi fi-sr-wallet');
     ensureProfileIcon('bankName', 'fi fi-sr-bank');
-    ensureProfileIcon('bankAccName', 'fi fi-sr-id-card');
+    ensureProfileIcon('bankAccName', 'fi fi-sr-id-card-clip-alt');
     ensureProfileIcon('bankAccNumber', 'fi fi-sr-credit-card');
 
     ensureActionSpan(root, '.settings-grid a[href="#changePassword"]', 'settings_change_password');
