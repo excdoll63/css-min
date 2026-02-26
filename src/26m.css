@@ -1005,24 +1005,26 @@ body .light-theme .current {
 #chatroom .chat-tools .tool {
   position: absolute;
   width: 30px;
-  line-height: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
   text-align: center;
   font-size: 23px;
   cursor: pointer;
   bottom: 10px;
   right: 55px;
   color: #FCF380;
-  background-image: url("https://mgiwallet.com/media/987b86d24a29667291495.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  text-indent: -9999px;
-  overflow: hidden;
+  background: none;
+  background-image: none;
+  text-indent: 0;
+  overflow: visible;
 }
 
 #chatroom .chat-tools .tool.file {
   right: 10px;
-  background-image: url("https://mgiwallet.com/media/f4ae89c24a296ab9e9583.png");
+  background-image: none;
 }
 
 #chatroom .message .text a {
