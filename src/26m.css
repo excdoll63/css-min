@@ -846,9 +846,6 @@ body .light-theme .current {
   font-weight: 700;
 }
 
-#home-featured .wrapper {
-  background: linear-gradient(90deg,rgba(252, 243, 128, 1) 0%, rgba(222, 175, 27, 1) 50%, rgba(45, 0, 0, 1) 100%);
-}
 
 #history-report textarea {
   margin-top: 10px;
@@ -4604,7 +4601,7 @@ body[page="promotion"] #popupwindow[style*="display:block"] {
   background:linear-gradient(90deg, var(--hf-ac1) 0%, var(--hf-ac2) 65%, var(--hf-ac3) 100%);
   border-right:1px solid rgba(255,255,255,.12);
   border-bottom:1px solid rgba(255,255,255,.12);
-  border-radius:0 0 12px 0;
+  border-radius:0 0 12px;
 
   text-shadow:1px 1px 2px rgba(25,25,25,.85);
   box-shadow:
@@ -4637,6 +4634,17 @@ body[page="promotion"] #popupwindow[style*="display:block"] {
   border-radius:10px;
 }
 
+#home-featured .wrapper .game{
+  float:left;
+  width:calc(20% - 10px);
+  margin:0 5px;
+  box-shadow:1px 1px 3px rgba(0,0,0,1);
+  background:#fff;
+  border-radius:5px;
+  border:2px solid #fff;
+  cursor:pointer;
+}
+
 #home-featured a{
   color:inherit;
   text-decoration:none;
@@ -4655,7 +4663,7 @@ body[page="promotion"] #popupwindow[style*="display:block"] {
     line-height:24px;
     font-size:10px;
     padding:0 10px;
-    border-radius:0 0 10px 0;
+    border-radius:0 0 10px;
   }
 
   #home-featured iframe{
