@@ -847,6 +847,7 @@ body .light-theme .current {
 }
 
 
+
 #history-report textarea {
   margin-top: 10px;
   background: #FFFFFF;
@@ -4664,6 +4665,18 @@ body[page="promotion"] #popupwindow[style*="display:block"] {
     font-size:10px;
     padding:0 10px;
     border-radius:0 0 10px;
+  }
+
+  #home-featured iframe{
+    border-radius:10px;
+  }
+}
+#home-featured .label{
+    height:24px;
+    line-height:24px;
+    font-size:10px;
+    padding:0 10px;
+    border-radius:0 0 10px 0;
   }
 
   #home-featured iframe{
