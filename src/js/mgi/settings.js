@@ -1,4 +1,4 @@
-window.__MGI_SETTINGS_VER__ = "20260127";
+window.__MGI_SETTINGS_VER__ = "20260227";
 
 (function () {
   'use strict';
@@ -276,6 +276,63 @@ window.__MGI_SETTINGS_VER__ = "20260127";
     }
   }
 
+  function hasClass(el, cls) {
+    if (!el || el.nodeType !== 1) return false;
+    var c = el.className || '';
+    return (' ' + c + ' ').indexOf(' ' + cls + ' ') !== -1;
+  }
+
+  function ensureProfileIcon(valueId, iconClass) {
+    var v = document.getElementById(valueId);
+    if (!v) return;
+
+    var item = v;
+    while (item && item.nodeType === 1 && !isProfileItem(item)) {
+      item = item.parentNode;
+    }
+    if (!item || item.nodeType !== 1) return;
+
+    var label = item.querySelector ? item.querySelector('.label') : null;
+    if (!label) return;
+
+    var wrap = label.parentNode;
+    if (wrap && wrap.nodeType === 1 && hasClass(wrap, 'label-wrap')) {
+      var icoWrap = wrap.querySelector ? wrap.querySelector('.p-ico') : null;
+      if (!icoWrap) {
+        icoWrap = document.createElement('span');
+        icoWrap.className = 'p-ico';
+        icoWrap.setAttribute('aria-hidden', 'true');
+        wrap.insertBefore(icoWrap, wrap.firstChild);
+      }
+
+      var iEl = icoWrap.querySelector ? icoWrap.querySelector('i') : null;
+      if (!iEl) {
+        iEl = document.createElement('i');
+        iEl.setAttribute('aria-hidden', 'true');
+        icoWrap.appendChild(iEl);
+      }
+      if (iEl.className !== iconClass) iEl.className = iconClass;
+      return;
+    }
+
+    var newWrap = document.createElement('span');
+    newWrap.className = 'label-wrap';
+
+    var ico = document.createElement('span');
+    ico.className = 'p-ico';
+    ico.setAttribute('aria-hidden', 'true');
+
+    var ii = document.createElement('i');
+    ii.className = iconClass;
+    ii.setAttribute('aria-hidden', 'true');
+    ico.appendChild(ii);
+
+    newWrap.appendChild(ico);
+
+    item.insertBefore(newWrap, label);
+    newWrap.appendChild(label);
+  }
+
   function ensureActionSpan(root, selector, key) {
     if (!root) return;
     var a = root.querySelector(selector);
@@ -297,11 +354,7 @@ window.__MGI_SETTINGS_VER__ = "20260127";
 
     var icon = a.querySelector('i');
     if (icon && icon.parentNode === a) {
-      var space = document.createTextNode(' ');
-      if (icon.nextSibling) a.insertBefore(space, icon.nextSibling);
-      else a.appendChild(space);
-
-      if (space.nextSibling) a.insertBefore(span, space.nextSibling);
+      if (icon.nextSibling) a.insertBefore(span, icon.nextSibling);
       else a.appendChild(span);
     } else {
       a.appendChild(span);
@@ -323,6 +376,14 @@ window.__MGI_SETTINGS_VER__ = "20260127";
     ensureProfileLabel('bankName', 'settings_bank_name');
     ensureProfileLabel('bankAccName', 'settings_bank_acc_name');
     ensureProfileLabel('bankAccNumber', 'settings_bank_acc_number');
+
+    ensureProfileIcon('username', 'fi fi-sr-id-badge');
+    ensureProfileIcon('name', 'fi fi-sr-user');
+    ensureProfileIcon('phone', 'fi fi-sr-phone-call');
+    ensureProfileIcon('walletBalance', 'fi fi-sr-wallet');
+    ensureProfileIcon('bankName', 'fi fi-sr-bank');
+    ensureProfileIcon('bankAccName', 'fi fi-sr-id-card-clip-alt');
+    ensureProfileIcon('bankAccNumber', 'fi fi-sr-credit-card');
 
     ensureActionSpan(root, '.settings-grid a[href="#changePassword"]', 'settings_change_password');
     ensureActionSpan(root, '.settings-grid a.change-language', 'settings_language');
