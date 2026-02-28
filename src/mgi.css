@@ -6466,7 +6466,7 @@ body #downline .light-theme .current {
   -webkit-tap-highlight-color: transparent;
   appearance: none;
   min-width: 92px;
-  min-height: 40px;
+  min-height: 38px;
   margin: 0 !important;
   padding: 0 18px !important;
   border: 2px solid transparent !important;
