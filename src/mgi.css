@@ -7084,3 +7084,165 @@ body #downline .light-theme .current {
     border-radius: 16px;
   }
 }
+
+#downline-list .filter {
+  margin: 0 4px 12px !important;
+  padding: 5px !important;
+  border: 1.5px solid transparent;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(245,242,248,.90) 100%) padding-box,
+    linear-gradient(135deg, rgba(255,255,255,.95) 0%, #cb3fff 34%, #ef00ff 68%, #5105a3 100%) border-box;
+  box-shadow:
+    0 12px 24px rgba(0,0,0,.16),
+    0 0 0 1px rgba(255,255,255,.34) inset;
+}
+
+#downline-list .filter select {
+  width: 100% !important;
+  min-height: 42px !important;
+  margin: 0 !important;
+  padding: 10px 42px 10px 14px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(81,5,163,.16) !important;
+  background-color: rgba(255,255,255,.98) !important;
+  color: #3d0251 !important;
+  font: 800 13px/1.15 "Montserrat", sans-serif !important;
+  box-shadow: none !important;
+}
+
+#downline-list table {
+  width: 100% !important;
+  margin-top: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: 1px solid rgba(239,0,255,.92);
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(38,2,60,.82) 0%, rgba(24,1,38,.86) 100%);
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.30),
+    0 0 0 1px rgba(255,255,255,.05) inset;
+}
+
+#downline-list table tr:first-child td {
+  padding: 9px 8px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(239,0,255,.90) !important;
+  border-left: 1px solid rgba(239,0,255,.86) !important;
+  background:
+    radial-gradient(140% 95% at 50% 0%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 62%),
+    linear-gradient(90deg, #5105a3 0%, #3d0251 55%, #200236 100%) !important;
+  color: #ffffff !important;
+  font: 800 11px/1.1 "Montserrat", sans-serif !important;
+  letter-spacing: .04em;
+  text-transform: uppercase !important;
+}
+
+#downline-list table tr:first-child td:first-child {
+  border-left: 0 !important;
+  border-top-left-radius: 15px;
+}
+
+#downline-list table tr:first-child td:last-child {
+  border-top-right-radius: 15px;
+}
+
+#downline-list table tr:not(:first-child) td {
+  padding: 7px 8px !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(239,0,255,.86) !important;
+  border-left: 1px solid rgba(239,0,255,.82) !important;
+  background: linear-gradient(180deg, rgba(45,0,77,.44) 0%, rgba(32,2,54,.34) 100%) !important;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+#downline-list table tr:not(:first-child) td:first-child {
+  border-left: 0 !important;
+}
+
+#downline-list table tr:last-child td:first-child {
+  border-bottom-left-radius: 15px;
+}
+
+#downline-list table tr:last-child td:last-child {
+  border-bottom-right-radius: 15px;
+}
+
+#downline-list table tr:not(:first-child):hover td {
+  background: linear-gradient(180deg, rgba(61,2,81,.56) 0%, rgba(32,2,54,.46) 100%) !important;
+}
+
+#downline-list table td:nth-child(1),
+#downline-list table tr:first-child td:nth-child(1) {
+  width: 32px !important;
+  text-align: center !important;
+  white-space: nowrap;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#downline-list table td:nth-child(2),
+#downline-list table tr:first-child td:nth-child(2) {
+  width: auto !important;
+  text-align: left !important;
+  white-space: normal !important;
+}
+
+#downline-list table td:nth-child(3),
+#downline-list table tr:first-child td:nth-child(3) {
+  width: 31% !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+}
+
+#downline-list .light-theme,
+#downline .light-theme {
+  gap: 6px;
+  margin: 12px 4px 0 !important;
+}
+
+#downline .light-theme a,
+#downline .light-theme span,
+body #downline .light-theme a,
+body #downline .light-theme span {
+  min-width: 30px;
+  height: 32px;
+  border-radius: 10px;
+}
+
+@media (max-width: 560px) {
+  #downline-list .filter {
+    margin: 0 4px 10px !important;
+    padding: 4px !important;
+    border-radius: 14px;
+  }
+
+  #downline-list .filter select {
+    min-height: 40px !important;
+    font-size: 13px !important;
+  }
+
+  #downline-list table {
+    border-radius: 14px;
+  }
+
+  #downline-list table tr:first-child td {
+    padding: 8px 6px !important;
+    font-size: 10.5px !important;
+  }
+
+  #downline-list table tr:not(:first-child) td {
+    padding: 7px 6px !important;
+    font-size: 12px !important;
+  }
+
+  #downline-list table td:nth-child(3),
+  #downline-list table tr:first-child td:nth-child(3) {
+    width: auto !important;
+    white-space: normal !important;
+  }
+}
