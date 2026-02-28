@@ -6651,3 +6651,168 @@ body #downline .light-theme .current {
     transition: none !important;
   }
 }
+
+
+#withdraw {
+  --mgi-white: #ffffff;
+  --mgi-lilac: #cb3fff;
+  --mgi-magenta: #ef00ff;
+  --mgi-violet: #5105a3;
+  --mgi-deep: #3d0251;
+  --mgi-ink: #200236;
+  --mgi-graphite: #191919;
+  padding: 16px 14px 18px !important;
+  border: 2px solid transparent;
+  border-radius: 22px;
+  background:
+    radial-gradient(140% 96% at 50% 0%, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 62%) padding-box,
+    linear-gradient(180deg, rgba(61,2,81,.94) 0%, rgba(32,2,54,.98) 100%) padding-box,
+    linear-gradient(135deg, #ffffff 0%, #cb3fff 28%, #ef00ff 58%, #5105a3 100%) border-box;
+  box-shadow:
+    0 18px 42px rgba(0,0,0,.56),
+    0 0 0 1px rgba(255,255,255,.08) inset,
+    0 0 28px rgba(239,0,255,.14);
+  color: var(--mgi-white);
+  overflow: hidden;
+}
+
+#withdraw h2 {
+  margin: 0 0 8px;
+  color: var(--mgi-magenta) !important;
+  font: 800 18px/1.2 "Montserrat", sans-serif;
+  letter-spacing: .01em;
+  text-transform: none;
+}
+
+#withdraw .title {
+  display: block;
+  margin: 0 0 4px;
+  color: var(--mgi-magenta) !important;
+  font: 800 17px/1.2 "Montserrat", sans-serif;
+  letter-spacing: .01em;
+  text-transform: none;
+}
+
+#withdraw ul,
+#withdraw ol {
+  margin: 0 0 10px;
+  padding-left: 18px;
+  list-style-position: outside;
+}
+
+#withdraw li {
+  margin: 6px 0;
+  color: var(--mgi-white);
+  font: 700 13.5px/1.45 "Montserrat", sans-serif;
+  text-transform: none;
+}
+
+#withdraw .blink {
+  color: var(--mgi-magenta) !important;
+  font-weight: 700;
+}
+
+#withdraw form {
+  margin-top: 10px;
+  padding: 10px 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+#withdraw .inputs {
+  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 0 10px;
+}
+
+#withdraw .inputs tr td:first-child {
+  width: 150px;
+  padding: 0 10px 0 0 !important;
+}
+
+#withdraw .inputs tr td:last-child {
+  padding-right: 0 !important;
+}
+
+#withdraw .note {
+  margin: 10px 0 0;
+}
+
+#withdraw .btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0 0;
+}
+
+#withdraw .btns .btn,
+#withdraw .btns a.btn,
+#withdraw .btns button.btn {
+  min-width: 92px;
+}
+
+@media (max-width: 720px) {
+  #withdraw {
+    padding: 14px 12px 16px !important;
+    border-radius: 18px;
+  }
+
+  #withdraw h2 {
+    margin-bottom: 6px;
+  }
+
+  #withdraw .title {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  #withdraw ul,
+  #withdraw ol {
+    margin-bottom: 8px;
+    padding-left: 16px;
+  }
+
+  #withdraw form {
+    margin-top: 8px;
+    padding-top: 6px;
+  }
+
+  #withdraw .inputs,
+  #withdraw .inputs tbody,
+  #withdraw .inputs tr,
+  #withdraw .inputs td {
+    display: block;
+    width: 100% !important;
+  }
+
+  #withdraw .inputs tr td:first-child {
+    padding: 0 0 4px !important;
+    white-space: normal;
+  }
+
+  #withdraw .btns .btn,
+  #withdraw .btns a.btn,
+  #withdraw .btns button.btn {
+    flex: 1 1 calc(50% - 6px);
+    min-width: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  #withdraw {
+    padding: 12px 10px 14px !important;
+  }
+
+  #withdraw li {
+    font-size: 13px;
+    line-height: 1.42;
+  }
+
+  #withdraw ul,
+  #withdraw ol {
+    padding-left: 15px;
+  }
+}
