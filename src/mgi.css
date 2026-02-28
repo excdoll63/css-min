@@ -4823,3 +4823,268 @@ body.C #footer>a[href="#home"]:active::after{
 
 body.C #footer { display: flex !important; }
 body.C #marquee { display: block !important; }
+
+#history-report {
+  --hr-white: #ffffff;
+  --hr-lilac: #cb3fff;
+  --hr-magenta: #ef00ff;
+  --hr-violet: #5105a3;
+  --hr-deep: #3d0251;
+  --hr-ink: #200236;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: min(90vw, 360px);
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 16px 16px 18px;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  background:
+    radial-gradient(120% 96% at 50% 0%, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 58%) padding-box,
+    linear-gradient(180deg, #8a1cff 0%, #6713c4 24%, #47078a 56%, #29043f 100%) padding-box,
+    linear-gradient(135deg, #ffb8ff 0%, #ef00ff 38%, #cb3fff 65%, #5105a3 100%) border-box;
+  box-shadow:
+    0 22px 48px rgba(0,0,0,.58),
+    0 0 0 1px rgba(255,255,255,.08) inset,
+    0 0 22px rgba(239,0,255,.24),
+    0 0 40px rgba(81,5,163,.22);
+  color: var(--hr-white);
+  font-family: "Montserrat", sans-serif;
+  text-transform: none;
+  position: relative;
+  isolation: isolate;
+}
+
+#history-report::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(70% 55% at 50% 0%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 68%);
+}
+
+#history-report .t1 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 14px;
+  padding: 0 0 10px;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(255,255,255,.92);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: .2px;
+  text-transform: none;
+  text-shadow: 0 1px 0 rgba(0,0,0,.35);
+}
+
+#history-report textarea {
+  position: relative;
+  z-index: 1;
+  width: 100% !important;
+  min-height: 92px;
+  margin: 0 !important;
+  padding: 14px 16px !important;
+  border: 2px solid #ef00ff !important;
+  border-radius: 14px !important;
+  background: #ffffff !important;
+  color: #3d0251 !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  text-transform: none !important;
+  resize: none;
+  box-shadow:
+    0 10px 22px rgba(0,0,0,.22),
+    0 0 0 1px rgba(255,255,255,.35) inset,
+    0 0 0 3px rgba(239,0,255,.08);
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+#history-report textarea::placeholder {
+  color: rgba(61,2,81,.62);
+  font-weight: 700;
+  text-transform: none;
+}
+
+#history-report textarea:hover {
+  transform: none !important;
+  filter: none !important;
+  border-color: #cb3fff !important;
+  box-shadow:
+    0 10px 22px rgba(0,0,0,.22),
+    0 0 0 1px rgba(255,255,255,.35) inset,
+    0 0 0 3px rgba(203,63,255,.10);
+}
+
+#history-report textarea:focus,
+#history-report textarea:focus-visible,
+#history-report textarea:active {
+  outline: none !important;
+  transform: none !important;
+  filter: none !important;
+  border-color: #cb3fff !important;
+  box-shadow:
+    0 12px 26px rgba(0,0,0,.28),
+    0 0 0 1px rgba(255,255,255,.40) inset,
+    0 0 0 4px rgba(239,0,255,.16),
+    0 0 18px rgba(239,0,255,.18);
+}
+
+#history-report .btn,
+#history-report a.btn,
+#history-report button.btn {
+  position: relative;
+  z-index: 1;
+  -webkit-tap-highlight-color: transparent;
+  appearance: none !important;
+  width: 100% !important;
+  min-height: 42px !important;
+  margin: 14px 0 0 !important;
+  padding: 0 18px !important;
+  box-sizing: border-box;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent !important;
+  border-radius: 12px !important;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(255,255,255,.35) 0%, rgba(255,255,255,0) 55%) padding-box,
+    linear-gradient(180deg, #ff43ff 0%, #ba10ff 34%, #7c02d4 68%, #5c00b2 100%) padding-box,
+    linear-gradient(135deg, #ffd7ff 0%, #ffffff 20%, #ef00ff 58%, #5105a3 100%) border-box !important;
+  color: #ffffff !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  letter-spacing: .8px !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.45) !important;
+  cursor: pointer !important;
+  user-select: none;
+  overflow: hidden;
+  box-shadow:
+    0 14px 26px rgba(0,0,0,.42),
+    0 0 0 1px rgba(255,255,255,.18) inset,
+    0 0 20px rgba(239,0,255,.28) !important;
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+
+#history-report .btn::before,
+#history-report a.btn::before,
+#history-report button.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(80% 95% at 50% 0%, rgba(255,255,255,.28) 0%, rgba(255,255,255,0) 62%);
+  pointer-events: none;
+}
+
+#history-report .btn::after,
+#history-report a.btn::after,
+#history-report button.btn::after {
+  content: "";
+  position: absolute;
+  top: -45%;
+  left: -75%;
+  width: 42%;
+  height: 190%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.62) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-20deg);
+  opacity: .7;
+  pointer-events: none;
+  transition: left .65s ease;
+}
+
+#history-report .btn:hover,
+#history-report a.btn:hover,
+#history-report button.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+  box-shadow:
+    0 16px 30px rgba(0,0,0,.46),
+    0 0 0 1px rgba(255,255,255,.20) inset,
+    0 0 26px rgba(239,0,255,.32) !important;
+}
+
+#history-report .btn:hover::after,
+#history-report a.btn:hover::after,
+#history-report button.btn:hover::after {
+  left: 135%;
+}
+
+#history-report .btn:active,
+#history-report a.btn:active,
+#history-report button.btn:active {
+  transform: translateY(0);
+  filter: brightness(.98);
+  box-shadow:
+    0 10px 20px rgba(0,0,0,.40),
+    0 0 0 1px rgba(255,255,255,.16) inset,
+    0 0 18px rgba(239,0,255,.22) !important;
+}
+
+#history-report .btn:focus-visible,
+#history-report a.btn:focus-visible,
+#history-report button.btn:focus-visible {
+  outline: none !important;
+  box-shadow:
+    0 0 0 3px rgba(239,0,255,.24),
+    0 16px 30px rgba(0,0,0,.46),
+    0 0 0 1px rgba(255,255,255,.20) inset,
+    0 0 28px rgba(239,0,255,.34) !important;
+}
+
+#history-report .btn:disabled,
+#history-report a.btn:disabled,
+#history-report button.btn:disabled {
+  opacity: .55 !important;
+  filter: grayscale(.25);
+  cursor: not-allowed !important;
+  box-shadow:
+    0 10px 20px rgba(0,0,0,.34),
+    0 0 0 1px rgba(255,255,255,.12) inset,
+    0 0 16px rgba(239,0,255,.12) !important;
+}
+
+@media (max-width: 480px) {
+  #history-report {
+    width: calc(100% - 24px);
+    max-width: 360px;
+    padding: 14px 14px 16px;
+    border-radius: 14px;
+  }
+
+  #history-report .t1 {
+    font-size: 15px;
+    padding-bottom: 9px;
+    margin-bottom: 12px;
+  }
+
+  #history-report textarea {
+    min-height: 88px;
+    padding: 12px 14px !important;
+  }
+
+  #history-report .btn,
+  #history-report a.btn,
+  #history-report button.btn {
+    min-height: 40px !important;
+    font-size: 13px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #history-report textarea,
+  #history-report .btn,
+  #history-report a.btn,
+  #history-report button.btn,
+  #history-report .btn::after,
+  #history-report a.btn::after,
+  #history-report button.btn::after {
+    transition: none !important;
+  }
+}
