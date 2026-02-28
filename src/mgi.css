@@ -5414,3 +5414,160 @@ body.C #marquee { display: block !important; }
     animation: none !important;
   }
 }
+.swal2-popup div:where(.swal2-icon).swal2-error {
+  position: relative;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5em;
+  height: 5em;
+  margin: 1.45em auto 0.8em;
+  zoom: var(--swal2-icon-zoom);
+  border: 0.25em solid transparent !important;
+  border-radius: 50%;
+  font-family: inherit;
+  line-height: 1;
+  cursor: default;
+  user-select: none;
+  overflow: visible;
+  color: #ffffff !important;
+  background:
+    radial-gradient(120% 110% at 50% 0%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 58%) padding-box,
+    linear-gradient(180deg, #7a15dd 0%, #5105a3 44%, #3d0251 76%, #200236 100%) padding-box,
+    linear-gradient(135deg, #ffffff 0%, #ffe0e7 18%, #f27474 42%, #ef00ff 72%, #5105a3 100%) border-box !important;
+  box-shadow:
+    0 18px 36px rgba(0,0,0,.48),
+    0 0 0 1px rgba(255,255,255,.10) inset,
+    0 0 24px rgba(242,116,116,.24),
+    0 0 42px rgba(81,5,163,.18);
+  isolation: isolate;
+}
+
+.swal2-popup div:where(.swal2-icon).swal2-error::before {
+  content: "";
+  position: absolute;
+  inset: 0.2em;
+  border-radius: 50%;
+  pointer-events: none;
+  background:
+    radial-gradient(75% 75% at 32% 24%, rgba(255,255,255,.24) 0%, rgba(255,255,255,0) 44%),
+    radial-gradient(90% 90% at 70% 76%, rgba(242,116,116,.16) 0%, rgba(242,116,116,0) 68%),
+    linear-gradient(180deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,0) 30%);
+}
+
+.swal2-popup div:where(.swal2-icon).swal2-error::after {
+  content: "";
+  position: absolute;
+  inset: -0.42em;
+  border-radius: 50%;
+  border: 1px solid rgba(242,116,116,.30);
+  box-shadow:
+    0 0 18px rgba(242,116,116,.18),
+    0 0 32px rgba(239,0,255,.12);
+  opacity: 0.84;
+  pointer-events: none;
+  animation: mgiSwalErrorHalo 2.7s ease-in-out infinite;
+}
+
+.swal2-popup div:where(.swal2-icon).swal2-error .swal2-x-mark {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.swal2-popup div:where(.swal2-icon).swal2-error [class^="swal2-x-mark-line"] {
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  width: 2.5em !important;
+  height: 0.36em !important;
+  margin: 0 !important;
+  border-radius: 999px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #ffe7ec 12%, #ff97a8 100%) !important;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.10) inset,
+    0 0 10px rgba(242,116,116,.26),
+    0 2px 6px rgba(0,0,0,.34);
+  transform-origin: center !important;
+}
+
+.swal2-popup div:where(.swal2-icon).swal2-error .swal2-x-mark-line-left {
+  transform: translate(-50%, -50%) rotate(45deg) !important;
+}
+
+.swal2-popup div:where(.swal2-icon).swal2-error .swal2-x-mark-line-right {
+  transform: translate(-50%, -50%) rotate(-45deg) !important;
+}
+
+.swal2-popup div:where(.swal2-icon).swal2-error.swal2-icon-show {
+  animation: mgiSwalErrorPop .46s cubic-bezier(.2,.8,.2,1), mgiSwalErrorBreath 2.9s ease-in-out .46s infinite !important;
+}
+
+@keyframes mgiSwalErrorPop {
+  0% {
+    transform: scale(0.76);
+    opacity: 0;
+  }
+
+  58% {
+    transform: scale(1.07);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes mgiSwalErrorHalo {
+  0%, 100% {
+    transform: scale(0.96);
+    opacity: 0.50;
+  }
+
+  50% {
+    transform: scale(1.06);
+    opacity: 0.94;
+  }
+}
+
+@keyframes mgiSwalErrorBreath {
+  0%, 100% {
+    box-shadow:
+      0 18px 36px rgba(0,0,0,.48),
+      0 0 0 1px rgba(255,255,255,.10) inset,
+      0 0 20px rgba(242,116,116,.18),
+      0 0 34px rgba(81,5,163,.14);
+  }
+
+  50% {
+    box-shadow:
+      0 20px 40px rgba(0,0,0,.52),
+      0 0 0 1px rgba(255,255,255,.12) inset,
+      0 0 30px rgba(242,116,116,.28),
+      0 0 44px rgba(81,5,163,.20);
+  }
+}
+
+@media (max-width: 480px) {
+  .swal2-popup div:where(.swal2-icon).swal2-error {
+    width: 4.6em;
+    height: 4.6em;
+    margin: 1.2em auto 0.72em;
+  }
+
+  .swal2-popup div:where(.swal2-icon).swal2-error [class^="swal2-x-mark-line"] {
+    width: 2.3em !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swal2-popup div:where(.swal2-icon).swal2-error,
+  .swal2-popup div:where(.swal2-icon).swal2-error::after {
+    animation: none !important;
+  }
+}
