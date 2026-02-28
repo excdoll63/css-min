@@ -7005,3 +7005,82 @@ body #downline .light-theme .current {
   }
 }
 
+
+
+#luckynumber {
+  padding-top: 20px;
+}
+
+#luckynumber .tabs {
+  margin: 8px 0 16px;
+}
+
+#luckynumber table + .tabs {
+  margin-top: 14px;
+}
+
+#luckynumber table + table {
+  margin-top: 12px;
+}
+
+#luckynumber .tabs .tab {
+  min-height: 40px;
+  overflow: hidden;
+}
+
+#luckynumber table {
+  margin-top: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #ef00ff;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(81,5,163,.96) 0%, rgba(61,2,81,.98) 100%);
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.42),
+    0 0 0 1px rgba(255,255,255,.06) inset;
+}
+
+#luckynumber table td {
+  border: 0;
+  border-top: 1px solid #ef00ff;
+  border-left: 1px solid #ef00ff;
+}
+
+#luckynumber table tr:first-child td {
+  border-top: 0;
+}
+
+#luckynumber table td:first-child {
+  border-left: 0;
+}
+
+#luckynumber table td.label {
+  background: linear-gradient(180deg, rgba(255,255,255,.99) 0%, rgba(236,226,255,.96) 100%);
+}
+
+#luckynumber table tr:nth-child(even) td:not(.label) {
+  background: linear-gradient(180deg, rgba(95,10,180,.94) 0%, rgba(61,2,81,.98) 100%);
+}
+
+@media (max-width: 560px) {
+  #luckynumber {
+    padding-top: 18px;
+  }
+
+  #luckynumber .tabs {
+    margin: 6px 0 14px;
+  }
+
+  #luckynumber table + .tabs {
+    margin-top: 12px;
+  }
+
+  #luckynumber .tabs .tab {
+    min-height: 38px;
+  }
+
+  #luckynumber table {
+    border-radius: 16px;
+  }
+}
