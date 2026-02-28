@@ -5917,3 +5917,363 @@ body.C #marquee { display: block !important; }
     transition: none !important;
   }
 }
+#downline {
+  --mgi-white: #ffffff;
+  --mgi-lilac: #cb3fff;
+  --mgi-magenta: #ef00ff;
+  --mgi-violet: #5105a3;
+  --mgi-deep: #3d0251;
+  --mgi-ink: #200236;
+  --mgi-graphite: #191919;
+  color: var(--mgi-white);
+}
+
+#downline,
+#downline * {
+  box-sizing: border-box;
+}
+
+#downline .tabs {
+  display: flex !important;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 8px 10px 10px !important;
+  margin: 0 !important;
+}
+
+#downline .tabs .tab {
+  float: none !important;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 32px;
+  margin: 0 !important;
+  padding: 0 14px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent !important;
+  border-radius: 14px !important;
+  background: radial-gradient(140% 100% at 50% 0%, rgba(255,255,255,.28) 0%, rgba(255,255,255,0) 58%) padding-box,
+    linear-gradient(180deg, #cb3fff 0%, #c920ff 18%, #9e0fe4 58%, #6f06bb 82%, #5105a3 100%) padding-box,
+    linear-gradient(135deg, rgba(255,255,255,.95) 0%, #ffd8ff 18%, #cb3fff 40%, #ef00ff 72%, #5105a3 100%) border-box !important;
+  color: #ffffff !important;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0,0,0,.28);
+  font: 800 12px/1 "Montserrat", sans-serif !important;
+  letter-spacing: .5px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 10px 22px rgba(0,0,0,.34), 0 0 0 1px rgba(255,255,255,.10) inset;
+  cursor: pointer;
+}
+
+#downline .tabs .tab.selected {
+  border: 2px solid transparent !important;
+  background: radial-gradient(140% 90% at 50% 0%, rgba(255,255,255,.22) 0%, rgba(255,255,255,0) 58%) padding-box,
+    linear-gradient(180deg, #2d004d 0%, #24003f 35%, #200236 100%) padding-box,
+    linear-gradient(135deg, #ffffff 0%, #cb3fff 28%, #ef00ff 58%, #5105a3 100%) border-box !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 26px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.12) inset, 0 0 22px rgba(239,0,255,.22);
+}
+
+#downline .tabs .tab:hover {
+  filter: brightness(1.02);
+}
+
+#downline-list .filter,
+#downline-winloss .filter {
+  margin: 0 4px 10px;
+}
+
+#downline-list .filter select,
+#downline-winloss .filter input,
+#downline-winloss .filter select {
+  width: 100% !important;
+  min-height: 42px;
+  margin: 0 !important;
+  padding: 10px 14px !important;
+  border-radius: 14px !important;
+  border: 1.2px solid rgba(81,5,163,.24) !important;
+  background-color: #ffffff !important;
+  color: #3d0251 !important;
+  font: 700 13px/1.2 "Montserrat", sans-serif !important;
+  text-transform: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+#downline-list .filter select,
+#downline-winloss .filter select {
+  padding-right: 40px !important;
+  background-image: linear-gradient(45deg, transparent 50%, #7f52b9 50%), linear-gradient(135deg, #7f52b9 50%, transparent 50%) !important;
+  background-position: calc(100% - 18px) calc(50% - 3px), calc(100% - 12px) calc(50% - 3px) !important;
+  background-size: 6px 6px, 6px 6px !important;
+  background-repeat: no-repeat !important;
+}
+
+#downline-winloss .filter input::placeholder {
+  color: rgba(61,2,81,.62);
+  font-weight: 700;
+}
+
+#downline-list .filter select:focus,
+#downline-winloss .filter input:focus,
+#downline-winloss .filter select:focus {
+  border-color: #ef00ff !important;
+  box-shadow: 0 0 0 3px rgba(239,0,255,.08) !important;
+}
+
+#downline-winloss .filter {
+  display: grid;
+  grid-template-columns: minmax(170px, 1.02fr) minmax(170px, 1fr) minmax(170px, 1fr) minmax(170px, .88fr);
+  gap: 10px;
+  align-items: stretch;
+}
+
+#downline-winloss .filter input,
+#downline-winloss .filter select,
+#downline-winloss .filter .btn {
+  float: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+#downline-winloss .filter .btn,
+#downline-winloss .filter a.btn,
+#downline-winloss .filter button.btn {
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+  box-sizing: border-box;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px !important;
+  padding: 0 16px !important;
+  border: 2px solid transparent !important;
+  border-radius: 14px !important;
+  background: radial-gradient(140% 90% at 50% 0%, rgba(255,255,255,.22), rgba(255,255,255,0) 58%) padding-box,
+    linear-gradient(180deg, #2d004d, #200236) padding-box,
+    linear-gradient(135deg, #ffffff 0%, #cb3fff 28%, #ef00ff 58%, #5105a3 100%) border-box !important;
+  color: #ffffff !important;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.38);
+  font: 800 13px/1 "Montserrat", sans-serif !important;
+  letter-spacing: .6px !important;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 12px 24px rgba(0,0,0,.36), 0 0 0 1px rgba(255,255,255,.08) inset;
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+
+#downline-winloss .filter .btn:hover,
+#downline-winloss .filter a.btn:hover,
+#downline-winloss .filter button.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+#downline-winloss .filter .btn:active,
+#downline-winloss .filter a.btn:active,
+#downline-winloss .filter button.btn:active {
+  transform: translateY(0);
+  filter: brightness(.98);
+}
+
+#downline-winloss .filter input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: .85;
+  cursor: pointer;
+  filter: hue-rotate(255deg) saturate(1.8) brightness(.82);
+}
+
+#downline table {
+  width: 100% !important;
+  border-collapse: collapse;
+  margin-top: 6px;
+  font: 600 13px/1.35 "Montserrat", sans-serif;
+  color: #ffffff;
+}
+
+#downline table tr:first-child td {
+  padding: 8px 6px !important;
+  background: radial-gradient(140% 95% at 50% 0%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 62%),
+    linear-gradient(90deg, #5105a3 0%, #3d0251 55%, #200236 100%) !important;
+  color: #ffffff !important;
+  font: 800 11px/1.1 "Montserrat", sans-serif !important;
+  letter-spacing: .04em;
+  text-transform: uppercase !important;
+  border: 1px solid #ef00ff !important;
+}
+
+#downline table tr:not(:first-child) td {
+  padding: 6px 6px !important;
+  background: linear-gradient(180deg, rgba(45,0,77,.46) 0%, rgba(32,2,54,.38) 100%);
+  color: #ffffff;
+  text-transform: uppercase;
+  vertical-align: top;
+  word-break: break-word;
+  border: 1px solid rgba(239,0,255,.88) !important;
+}
+
+#downline table tr:not(:first-child):hover td {
+  background: linear-gradient(180deg, rgba(61,2,81,.58) 0%, rgba(32,2,54,.48) 100%);
+}
+
+#downline-list table td:nth-child(1),
+#downline-list table tr:first-child td:nth-child(1) {
+  width: 30px;
+  text-align: center;
+  white-space: nowrap;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#downline-list table td:nth-child(3),
+#downline-list table tr:first-child td:nth-child(3) {
+  width: 31%;
+  white-space: nowrap;
+}
+
+#downline .light-theme {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 4px 0;
+}
+
+#downline .light-theme a,
+#downline .light-theme span,
+body #downline .light-theme a,
+body #downline .light-theme span {
+  float: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 32px;
+  padding: 0 12px;
+  margin: 0 !important;
+  border-radius: 10px;
+  border: 1.2px solid rgba(81,5,163,.18);
+  background: linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(246,244,250,.94) 100%);
+  color: #6b5a75;
+  font: 700 13px/1 "Montserrat", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: none;
+  text-transform: none;
+}
+
+#downline .light-theme a:hover,
+body #downline .light-theme a:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f5fb 100%);
+  color: #5105a3;
+  text-decoration: none;
+}
+
+#downline .light-theme span:not(.current),
+body #downline .light-theme span:not(.current) {
+  background: linear-gradient(180deg, #f1f1f1 0%, #e5e5e5 100%);
+  color: #8a8191;
+  border-color: rgba(81,5,163,.12);
+}
+
+#downline .light-theme .current,
+body #downline .light-theme .current {
+  background: #ffffff;
+  color: #ef00ff;
+  border: 2px solid #ef00ff;
+  box-shadow: none;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  #downline-winloss .filter {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  #downline .tabs {
+    gap: 6px;
+    padding: 8px 6px 8px !important;
+  }
+
+  #downline .tabs .tab {
+    min-height: 30px;
+    padding: 0 10px !important;
+    font-size: 11px !important;
+    letter-spacing: .4px !important;
+  }
+
+  #downline-list .filter,
+  #downline-winloss .filter {
+    margin: 0 4px 8px;
+  }
+
+  #downline-winloss .filter {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  #downline-list .filter select,
+  #downline-winloss .filter input,
+  #downline-winloss .filter select,
+  #downline-winloss .filter .btn,
+  #downline-winloss .filter a.btn,
+  #downline-winloss .filter button.btn {
+    min-height: 40px !important;
+    font-size: 13px !important;
+  }
+
+  #downline table {
+    font-size: 12px;
+  }
+
+  #downline table tr:first-child td {
+    padding: 7px 5px !important;
+    font-size: 10.5px !important;
+  }
+
+  #downline table tr:not(:first-child) td {
+    padding: 6px 5px !important;
+  }
+
+  #downline-list table td:nth-child(3),
+  #downline-list table tr:first-child td:nth-child(3) {
+    width: auto;
+    white-space: normal;
+  }
+
+  #downline .light-theme a,
+  #downline .light-theme span,
+  body #downline .light-theme a,
+  body #downline .light-theme span {
+    min-width: 30px;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #downline .tabs .tab,
+  #downline-list .filter select,
+  #downline-winloss .filter input,
+  #downline-winloss .filter select,
+  #downline-winloss .filter .btn,
+  #downline-winloss .filter a.btn,
+  #downline-winloss .filter button.btn {
+    transition: none !important;
+  }
+}
