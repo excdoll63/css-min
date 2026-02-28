@@ -6277,3 +6277,377 @@ body #downline .light-theme .current {
     transition: none !important;
   }
 }
+
+
+#withdraw {
+  --mgi-white: #ffffff;
+  --mgi-lilac: #cb3fff;
+  --mgi-magenta: #ef00ff;
+  --mgi-violet: #5105a3;
+  --mgi-deep: #3d0251;
+  --mgi-ink: #200236;
+  --mgi-graphite: #191919;
+  text-transform: none !important;
+  color: var(--mgi-white);
+}
+
+#withdraw .title {
+  display: block;
+  margin: 14px 0 6px;
+  color: var(--mgi-magenta) !important;
+  font: 800 17px/1.2 "Montserrat", sans-serif;
+  letter-spacing: .01em;
+  text-transform: none;
+}
+
+#withdraw h2 {
+  color: var(--mgi-magenta) !important;
+  font: 800 18px/1.2 "Montserrat", sans-serif;
+  letter-spacing: .01em;
+  text-transform: none;
+}
+
+#withdraw ul,
+#withdraw ol {
+  margin: 0 0 12px 20px;
+  padding: 0;
+}
+
+#withdraw li {
+  margin: 6px 0;
+  color: var(--mgi-white);
+  font: 700 13.5px/1.45 "Montserrat", sans-serif;
+  text-transform: none;
+}
+
+#withdraw .blink {
+  color: var(--mgi-magenta) !important;
+  font-weight: 700;
+  animation: mgiWithdrawBlink 1.2s linear infinite;
+}
+
+@keyframes mgiWithdrawBlink {
+  0%,
+  100% {
+    opacity: 1;
+    filter: saturate(1);
+  }
+
+  50% {
+    opacity: .38;
+    filter: saturate(1.15);
+  }
+}
+
+#withdraw form {
+  margin-top: 12px;
+  padding: 16px 14px 14px;
+  border: 2px solid transparent;
+  border-radius: 22px;
+  background:
+    radial-gradient(140% 96% at 50% 0%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 62%) padding-box,
+    linear-gradient(180deg, rgba(61,2,81,.96) 0%, rgba(32,2,54,.98) 100%) padding-box,
+    linear-gradient(135deg, #ffffff 0%, #cb3fff 28%, #ef00ff 58%, #5105a3 100%) border-box;
+  color: var(--mgi-white);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.58),
+    0 0 0 1px rgba(255,255,255,.08) inset,
+    0 0 26px rgba(239,0,255,.14);
+  font: 600 14px/1.35 "Montserrat", sans-serif;
+}
+
+#withdraw .inputs {
+  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 0 10px;
+}
+
+#withdraw .inputs td {
+  padding: 0 !important;
+  vertical-align: middle;
+  font: 700 13px/1.35 "Montserrat", sans-serif;
+  color: var(--mgi-white);
+}
+
+#withdraw .inputs tr td:first-child {
+  width: 145px;
+  padding: 0 10px 0 12px !important;
+  white-space: nowrap;
+  color: var(--mgi-white);
+  font-weight: 800;
+}
+
+#withdraw .inputs tr td:nth-child(2) {
+  width: 14px;
+  text-align: center;
+  color: rgba(255,255,255,.86);
+}
+
+#withdraw .inputs tr td:last-child {
+  width: auto;
+  padding-right: 0 !important;
+}
+
+#withdraw .inputs input,
+#withdraw .inputs select,
+#withdraw .inputs textarea {
+  width: 100% !important;
+  min-height: 40px;
+  margin: 0 !important;
+  padding: 10px 12px !important;
+  border: 1.2px solid rgba(81,5,163,.22) !important;
+  border-radius: 12px !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(245,240,249,.94) 100%) !important;
+  color: var(--mgi-deep) !important;
+  font: 700 13px/1.25 "Montserrat", sans-serif !important;
+  text-transform: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+#withdraw .inputs input::placeholder,
+#withdraw .inputs textarea::placeholder {
+  color: rgba(61,2,81,.52);
+  font-weight: 700;
+}
+
+#withdraw .inputs input:hover,
+#withdraw .inputs select:hover,
+#withdraw .inputs textarea:hover {
+  border-color: rgba(81,5,163,.42) !important;
+}
+
+#withdraw .inputs input:focus,
+#withdraw .inputs select:focus,
+#withdraw .inputs textarea:focus {
+  border-color: var(--mgi-magenta) !important;
+  box-shadow: 0 0 0 3px rgba(239,0,255,.10) !important;
+}
+
+#withdraw .inputs input[disabled],
+#withdraw .inputs input[readonly],
+#withdraw .inputs select[disabled],
+#withdraw .inputs select[readonly],
+#withdraw .inputs textarea[disabled],
+#withdraw .inputs textarea[readonly] {
+  background: linear-gradient(180deg, rgba(239,232,244,.90) 0%, rgba(230,222,239,.92) 100%) !important;
+  border-color: rgba(81,5,163,.14) !important;
+  color: rgba(61,2,81,.68) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  cursor: default !important;
+  box-shadow: none !important;
+}
+
+#withdraw .note {
+  margin: 10px 12px 0;
+  color: var(--mgi-white);
+  font: 700 12.5px/1.45 "Montserrat", sans-serif;
+  text-transform: none;
+}
+
+#withdraw .btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0 0;
+}
+
+#withdraw .btns .btn,
+#withdraw .btns a.btn,
+#withdraw .btns button.btn {
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+  min-width: 92px;
+  min-height: 40px;
+  margin: 0 !important;
+  padding: 0 18px !important;
+  border: 2px solid transparent !important;
+  border-radius: 14px !important;
+  box-sizing: border-box;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  font: 800 13px/1 "Montserrat", sans-serif !important;
+  letter-spacing: .5px !important;
+  color: var(--mgi-white) !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.42);
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+
+#withdraw .btns .btn::before,
+#withdraw .btns a.btn::before,
+#withdraw .btns button.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(80% 130% at 50% 0%, rgba(255,255,255,.22) 0%, rgba(255,255,255,0) 58%);
+}
+
+#withdraw .btns .btn.submit,
+#withdraw .btns a.btn.submit,
+#withdraw .btns button.btn.submit {
+  background:
+    radial-gradient(140% 100% at 50% 0%, rgba(255,255,255,.26), rgba(255,255,255,0) 58%) padding-box,
+    linear-gradient(180deg, #ef00ff 0%, #5105a3 100%) padding-box,
+    linear-gradient(135deg, #ffffff 0%, #cb3fff 30%, #ef00ff 60%, #5105a3 100%) border-box !important;
+  box-shadow:
+    0 14px 30px rgba(25,25,25,.50),
+    0 0 0 1px rgba(255,255,255,.10) inset,
+    0 0 26px rgba(239,0,255,.22);
+}
+
+#withdraw .btns .btn.cancel,
+#withdraw .btns .btn.danger.cancel,
+#withdraw .btns a.btn.cancel,
+#withdraw .btns a.btn.danger.cancel,
+#withdraw .btns button.btn.cancel,
+#withdraw .btns button.btn.danger.cancel {
+  background:
+    radial-gradient(140% 100% at 50% 0%, rgba(255,255,255,.16), rgba(255,255,255,0) 58%) padding-box,
+    linear-gradient(180deg, #4a4a4a 0%, #191919 100%) padding-box,
+    linear-gradient(135deg, #dcdcdc 0%, #7a7a7a 40%, #3e3e3e 100%) border-box !important;
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.48),
+    0 0 0 1px rgba(255,255,255,.08) inset;
+}
+
+#withdraw .btns .btn:hover,
+#withdraw .btns a.btn:hover,
+#withdraw .btns button.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+#withdraw .btns .btn:active,
+#withdraw .btns a.btn:active,
+#withdraw .btns button.btn:active {
+  transform: translateY(0);
+  filter: brightness(.98);
+}
+
+#withdraw .btns .btn:focus-visible,
+#withdraw .btns a.btn:focus-visible,
+#withdraw .btns button.btn:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(239,0,255,.16), 0 14px 30px rgba(25,25,25,.50), 0 0 0 1px rgba(255,255,255,.10) inset;
+}
+
+#withdraw input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#withdraw input[type=number]::-webkit-outer-spin-button,
+#withdraw input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  #withdraw form {
+    padding: 14px 12px 14px;
+    border-radius: 18px;
+  }
+
+  #withdraw .title {
+    font-size: 16px;
+  }
+
+  #withdraw .inputs,
+  #withdraw .inputs tbody,
+  #withdraw .inputs tr,
+  #withdraw .inputs td {
+    display: block;
+    width: 100% !important;
+  }
+
+  #withdraw .inputs {
+    border-spacing: 0;
+  }
+
+  #withdraw .inputs tr {
+    padding: 8px 0 10px;
+    border-bottom: 1px solid rgba(239,0,255,.18);
+  }
+
+  #withdraw .inputs tr:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  #withdraw .inputs tr td:first-child {
+    padding: 0 0 4px !important;
+    white-space: normal;
+  }
+
+  #withdraw .inputs tr td:nth-child(2) {
+    display: none;
+  }
+
+  #withdraw .inputs tr td:last-child {
+    padding-right: 0 !important;
+  }
+
+  #withdraw .note {
+    margin: 12px 0 0;
+  }
+
+  #withdraw .btns {
+    gap: 10px;
+  }
+
+  #withdraw .btns .btn,
+  #withdraw .btns a.btn,
+  #withdraw .btns button.btn {
+    flex: 1 1 calc(50% - 5px);
+    min-width: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  #withdraw li {
+    font-size: 13px;
+  }
+
+  #withdraw .inputs input,
+  #withdraw .inputs select,
+  #withdraw .inputs textarea {
+    min-height: 38px;
+    font-size: 12.5px !important;
+  }
+
+  #withdraw .btns .btn,
+  #withdraw .btns a.btn,
+  #withdraw .btns button.btn {
+    min-height: 38px;
+    font-size: 12px !important;
+    letter-spacing: .4px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #withdraw .blink,
+  #withdraw .inputs input,
+  #withdraw .inputs select,
+  #withdraw .inputs textarea,
+  #withdraw .btns .btn,
+  #withdraw .btns a.btn,
+  #withdraw .btns button.btn {
+    animation: none !important;
+    transition: none !important;
+  }
+}
