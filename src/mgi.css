@@ -7246,3 +7246,202 @@ body #downline .light-theme span {
     white-space: normal !important;
   }
 }
+
+
+#downline-winloss .filter {
+  margin: 0 4px 12px !important;
+  padding: 5px !important;
+  display: grid;
+  grid-template-columns: minmax(170px, 1.02fr) minmax(170px, 1fr) minmax(170px, 1fr) minmax(170px, .88fr);
+  gap: 10px;
+  align-items: stretch;
+  border: 1.5px solid transparent;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(245,242,248,.90) 100%) padding-box,
+    linear-gradient(135deg, rgba(255,255,255,.95) 0%, #cb3fff 34%, #ef00ff 68%, #5105a3 100%) border-box;
+  box-shadow:
+    0 12px 24px rgba(0,0,0,.16),
+    0 0 0 1px rgba(255,255,255,.34) inset;
+}
+
+#downline-winloss .filter > * {
+  min-width: 0;
+}
+
+#downline-winloss .filter input,
+#downline-winloss .filter select,
+#downline-winloss .filter .btn,
+#downline-winloss .filter a.btn,
+#downline-winloss .filter button.btn {
+  min-height: 42px !important;
+}
+
+#downline-winloss table,
+#downline-report table,
+#downline-commission table {
+  width: 100% !important;
+  margin-top: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: 1px solid rgba(239,0,255,.92);
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(38,2,60,.82) 0%, rgba(24,1,38,.86) 100%);
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.30),
+    0 0 0 1px rgba(255,255,255,.05) inset;
+}
+
+#downline-winloss table tr:first-child td,
+#downline-report table tr:first-child td,
+#downline-commission table tr:first-child td {
+  padding: 9px 8px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(239,0,255,.90) !important;
+  border-left: 1px solid rgba(239,0,255,.86) !important;
+  background:
+    radial-gradient(140% 95% at 50% 0%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 62%),
+    linear-gradient(90deg, #5105a3 0%, #3d0251 55%, #200236 100%) !important;
+  color: #ffffff !important;
+  font: 800 11px/1.1 "Montserrat", sans-serif !important;
+  letter-spacing: .04em;
+  text-transform: uppercase !important;
+  text-align: left !important;
+}
+
+#downline-winloss table tr:first-child td:first-child,
+#downline-report table tr:first-child td:first-child,
+#downline-commission table tr:first-child td:first-child {
+  border-left: 0 !important;
+  border-top-left-radius: 15px;
+}
+
+#downline-winloss table tr:first-child td:last-child,
+#downline-report table tr:first-child td:last-child,
+#downline-commission table tr:first-child td:last-child {
+  border-top-right-radius: 15px;
+  text-align: right !important;
+}
+
+#downline-winloss table tr:not(:first-child) td,
+#downline-report table tr:not(:first-child) td,
+#downline-commission table tr:not(:first-child) td {
+  padding: 7px 8px !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(239,0,255,.86) !important;
+  border-left: 1px solid rgba(239,0,255,.82) !important;
+  background: linear-gradient(180deg, rgba(45,0,77,.44) 0%, rgba(32,2,54,.34) 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+#downline-winloss table tr:not(:first-child) td:first-child,
+#downline-report table tr:not(:first-child) td:first-child,
+#downline-commission table tr:not(:first-child) td:first-child {
+  border-left: 0 !important;
+}
+
+#downline-winloss table tr:last-child td:first-child,
+#downline-report table tr:last-child td:first-child,
+#downline-commission table tr:last-child td:first-child {
+  border-bottom-left-radius: 15px;
+}
+
+#downline-winloss table tr:last-child td:last-child,
+#downline-report table tr:last-child td:last-child,
+#downline-commission table tr:last-child td:last-child {
+  border-bottom-right-radius: 15px;
+}
+
+#downline-winloss table tr:not(:first-child):hover td,
+#downline-report table tr:not(:first-child):hover td,
+#downline-commission table tr:not(:first-child):hover td {
+  background: linear-gradient(180deg, rgba(61,2,81,.56) 0%, rgba(32,2,54,.46) 100%) !important;
+}
+
+#downline-winloss table tr:nth-last-child(-n+2) td,
+#downline-commission table tr:nth-last-child(-n+2) td {
+  background: linear-gradient(180deg, rgba(71,10,96,.58) 0%, rgba(40,3,64,.56) 100%) !important;
+  font-weight: 800;
+}
+
+#downline-winloss table td:first-child,
+#downline-report table td:first-child,
+#downline-commission table td:first-child {
+  text-align: left !important;
+}
+
+#downline-winloss table td:last-child,
+#downline-winloss table tr:first-child td:last-child,
+#downline-report table td:last-child,
+#downline-report table tr:first-child td:last-child,
+#downline-commission table td:last-child,
+#downline-commission table tr:first-child td:last-child {
+  width: 86px !important;
+  min-width: 86px;
+  white-space: nowrap;
+  text-align: right !important;
+}
+
+#downline-winloss table td[colspan],
+#downline-report table td[colspan],
+#downline-commission table td[colspan] {
+  text-align: center !important;
+}
+
+#downline-winloss .light-theme,
+#downline-report .light-theme,
+#downline-commission .light-theme {
+  gap: 6px;
+  margin: 12px 4px 0 !important;
+}
+
+@media (max-width: 900px) {
+  #downline-winloss .filter {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  #downline-winloss .filter {
+    margin: 0 4px 10px !important;
+    padding: 4px !important;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    border-radius: 14px;
+  }
+
+  #downline-winloss table,
+  #downline-report table,
+  #downline-commission table {
+    border-radius: 14px;
+  }
+
+  #downline-winloss table tr:first-child td,
+  #downline-report table tr:first-child td,
+  #downline-commission table tr:first-child td {
+    padding: 8px 6px !important;
+    font-size: 10.5px !important;
+  }
+
+  #downline-winloss table tr:not(:first-child) td,
+  #downline-report table tr:not(:first-child) td,
+  #downline-commission table tr:not(:first-child) td {
+    padding: 7px 6px !important;
+    font-size: 12px !important;
+  }
+
+  #downline-winloss table td:last-child,
+  #downline-winloss table tr:first-child td:last-child,
+  #downline-report table td:last-child,
+  #downline-report table tr:first-child td:last-child,
+  #downline-commission table td:last-child,
+  #downline-commission table tr:first-child td:last-child {
+    width: 72px !important;
+    min-width: 72px;
+  }
+}
