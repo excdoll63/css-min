@@ -7919,3 +7919,213 @@ body #downline .light-theme span {
 #deposit .manual-container > input.question[type=number] {
   -moz-appearance: textfield;
 }
+
+
+#resetPassword,
+#resetPassword * {
+  box-sizing: border-box;
+  text-shadow: none !important;
+}
+
+#resetPassword {
+  --mgi-white: #ffffff;
+  --mgi-p1: #cb3fff;
+  --mgi-p2: #ef00ff;
+  --mgi-p3: #5105a3;
+  --mgi-p4: #3d0251;
+  --mgi-p5: #200236;
+  --mgi-black: #191919;
+  width: min(420px, calc(100% - 16px)) !important;
+  margin: 12px auto 20px !important;
+  padding: 16px 16px 18px !important;
+  background: var(--mgi-white) !important;
+  border-radius: 22px !important;
+  border: 1.5px solid rgba(81, 5, 163, 0.28) !important;
+  box-shadow: 0 18px 44px rgba(32, 2, 54, 0.35) !important;
+  overflow: visible !important;
+  color: var(--mgi-black) !important;
+  text-transform: none !important;
+}
+
+#resetPassword .t1 {
+  margin: 0 0 14px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--mgi-p3) !important;
+  text-align: center !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+#resetPassword table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+}
+
+#resetPassword table td {
+  padding: 5px 5px 5px 0 !important;
+  vertical-align: middle !important;
+}
+
+#resetPassword table td:not(:last-child) {
+  width: 1% !important;
+  white-space: nowrap !important;
+  color: var(--mgi-p4) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+#resetPassword table td:last-child {
+  width: auto !important;
+  white-space: normal !important;
+}
+
+#resetPassword input:not([type=button]):not([type=submit]):not([type=reset]):not([type=checkbox]):not([type=radio]):not([type=file]):not([type=image]):not([type=hidden]),
+#resetPassword select,
+#resetPassword textarea {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 9px 12px !important;
+  display: block !important;
+  position: relative !important;
+  outline: 0 !important;
+  border-radius: 12px !important;
+  border: 1.2px solid rgba(61, 2, 81, 0.22) !important;
+  background: rgba(203, 63, 255, 0.06) !important;
+  color: var(--mgi-black) !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+  transition: border-color 0.18s ease !important;
+  -webkit-appearance: none;
+  appearance: none;
+  caret-color: var(--mgi-p3) !important;
+  text-transform: none !important;
+}
+
+#resetPassword input:not([type=button]):not([type=submit]):not([type=reset]):not([type=checkbox]):not([type=radio]):not([type=file]):not([type=image]):not([type=hidden])::placeholder,
+#resetPassword textarea::placeholder {
+  color: rgba(25, 25, 25, 0.5) !important;
+  font-weight: 650 !important;
+}
+
+#resetPassword input:not([type=button]):not([type=submit]):not([type=reset]):not([type=checkbox]):not([type=radio]):not([type=file]):not([type=image]):not([type=hidden]):focus,
+#resetPassword select:focus,
+#resetPassword textarea:focus {
+  border-color: var(--mgi-p2) !important;
+  box-shadow: none !important;
+}
+
+@media (hover: hover) {
+  #resetPassword input:not([type=button]):not([type=submit]):not([type=reset]):not([type=checkbox]):not([type=radio]):not([type=file]):not([type=image]):not([type=hidden]):hover,
+  #resetPassword select:hover,
+  #resetPassword textarea:hover {
+    border-color: var(--mgi-p1) !important;
+    box-shadow: none !important;
+  }
+}
+
+#resetPassword .btn,
+#resetPassword a.btn,
+#resetPassword button.btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 44px !important;
+  margin: 14px 0 0 !important;
+  padding: 10px 16px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(61, 2, 81, 0.22) !important;
+  background: linear-gradient(180deg, var(--mgi-p2) 0%, var(--mgi-p3) 100%) !important;
+  color: var(--mgi-white) !important;
+  text-decoration: none !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.6px !important;
+  text-transform: uppercase !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+  transition: transform 0.18s ease, filter 0.18s ease, background 0.18s ease !important;
+  cursor: pointer !important;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#resetPassword .btn::before,
+#resetPassword a.btn::before,
+#resetPassword button.btn::before,
+#resetPassword .btn::after,
+#resetPassword a.btn::after,
+#resetPassword button.btn::after {
+  display: none !important;
+  content: none !important;
+}
+
+@media (hover: hover) {
+  #resetPassword .btn:hover,
+  #resetPassword a.btn:hover,
+  #resetPassword button.btn:hover {
+    transform: translateY(-2px) !important;
+    background: linear-gradient(180deg, var(--mgi-p1) 0%, var(--mgi-p4) 100%) !important;
+    filter: brightness(1.04) !important;
+  }
+}
+
+#resetPassword .btn:active,
+#resetPassword a.btn:active,
+#resetPassword button.btn:active {
+  transform: translateY(0) !important;
+  filter: brightness(0.96) !important;
+}
+
+#resetPassword .login {
+  margin: 12px auto 0 !important;
+  display: block !important;
+  text-align: center !important;
+  color: var(--mgi-p3) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+}
+
+#resetPassword .login::before,
+#resetPassword .login::after {
+  display: none !important;
+  content: none !important;
+}
+
+@media (hover: hover) {
+  #resetPassword .login:hover {
+    color: var(--mgi-p2) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #resetPassword {
+    width: calc(100% - 12px) !important;
+    margin: 8px auto 16px !important;
+    padding: 14px 14px 16px !important;
+    border-radius: 20px !important;
+  }
+
+  #resetPassword .t1 {
+    font-size: 17px !important;
+    margin-bottom: 12px !important;
+  }
+}
