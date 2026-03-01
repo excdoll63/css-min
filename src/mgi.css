@@ -8402,3 +8402,82 @@ body #downline .light-theme span {
     margin-bottom: 12px !important;
   }
 }
+
+#loading {
+  --mgi-white: #ffffff;
+  --mgi-p1: #cb3fff;
+  --mgi-p2: #ef00ff;
+  --mgi-p3: #5105a3;
+  --mgi-p4: #3d0251;
+}
+
+#loading .btn,
+#loading a.btn,
+#loading button.btn {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 100px !important;
+  min-height: 44px !important;
+  margin: 100px 0 0 -50px !important;
+  padding: 10px 12px !important;
+  display: none;
+  box-sizing: border-box !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(61, 2, 81, 0.22) !important;
+  background: linear-gradient(180deg, var(--mgi-p2) 0%, var(--mgi-p3) 100%) !important;
+  color: var(--mgi-white) !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  line-height: 22px !important;
+  letter-spacing: 0.6px !important;
+  text-transform: uppercase !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  outline: 0 !important;
+  transform: none !important;
+  filter: none !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.18s ease, filter 0.18s ease, background 0.18s ease !important;
+}
+
+#loading .btn::before,
+#loading a.btn::before,
+#loading button.btn::before,
+#loading .btn::after,
+#loading a.btn::after,
+#loading button.btn::after {
+  display: none !important;
+  content: none !important;
+}
+
+@media (hover: hover) {
+  #loading .btn:hover,
+  #loading a.btn:hover,
+  #loading button.btn:hover {
+    transform: translateY(-2px) !important;
+    background: linear-gradient(180deg, var(--mgi-p1) 0%, var(--mgi-p4) 100%) !important;
+    filter: brightness(1.04) !important;
+  }
+}
+
+#loading .btn:active,
+#loading a.btn:active,
+#loading button.btn:active {
+  transform: translateY(0) !important;
+  filter: brightness(0.96) !important;
+}
+
+#loading .btn:focus-visible,
+#loading a.btn:focus-visible,
+#loading button.btn:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(239, 0, 255, 0.16) !important;
+}
