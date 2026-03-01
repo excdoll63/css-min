@@ -8129,3 +8129,276 @@ body #downline .light-theme span {
     margin-bottom: 12px !important;
   }
 }
+
+#changePassword,
+#changePassword * {
+  box-sizing: border-box;
+  text-shadow: none !important;
+}
+
+#changePassword {
+  --mgi-white: #ffffff;
+  --mgi-p1: #cb3fff;
+  --mgi-p2: #ef00ff;
+  --mgi-p3: #5105a3;
+  --mgi-p4: #3d0251;
+  --mgi-p5: #200236;
+  --mgi-black: #191919;
+  width: min(420px, calc(100% - 16px)) !important;
+  margin: 12px auto 20px !important;
+  padding: 16px 16px 18px !important;
+  background: var(--mgi-white) !important;
+  border-radius: 22px !important;
+  border: 1.5px solid rgba(81, 5, 163, 0.28) !important;
+  box-shadow: 0 18px 44px rgba(32, 2, 54, 0.35) !important;
+  overflow: visible !important;
+  color: var(--mgi-black) !important;
+  text-transform: none !important;
+}
+
+#changePassword > .t1,
+#changePassword .t1 {
+  margin: 0 0 14px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--mgi-p3) !important;
+  text-align: center !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+#changePassword table,
+#changePassword tbody {
+  width: 100% !important;
+  margin: 0 !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+}
+
+#changePassword table,
+#changePassword tbody,
+#changePassword tr,
+#changePassword td {
+  display: block !important;
+}
+
+#changePassword tr {
+  width: 100% !important;
+  margin: 0 0 10px !important;
+}
+
+#changePassword tr:last-child {
+  margin-bottom: 0 !important;
+}
+
+#changePassword td {
+  width: 100% !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--mgi-black) !important;
+  white-space: normal !important;
+}
+
+#changePassword tr td:first-child {
+  margin: 0 0 6px !important;
+  color: var(--mgi-p4) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+#changePassword tr td:nth-child(2) {
+  display: none !important;
+}
+
+#changePassword td.inline {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+#changePassword td.inline input[type=password],
+#changePassword td.inline input[type=text],
+#changePassword td.inline input[type=email],
+#changePassword td.inline input[type=tel],
+#changePassword td.inline input[type=number] {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 9px 44px 9px 12px !important;
+  display: block !important;
+  position: relative !important;
+  outline: 0 !important;
+  border-radius: 12px !important;
+  border: 1.2px solid rgba(61, 2, 81, 0.22) !important;
+  background: rgba(203, 63, 255, 0.06) !important;
+  color: var(--mgi-black) !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+  transition: border-color 0.18s ease !important;
+  -webkit-appearance: none;
+  appearance: none;
+  caret-color: var(--mgi-p3) !important;
+  text-transform: none !important;
+}
+
+#changePassword td.inline input[type=password]::placeholder,
+#changePassword td.inline input[type=text]::placeholder,
+#changePassword td.inline input[type=email]::placeholder,
+#changePassword td.inline input[type=tel]::placeholder,
+#changePassword td.inline input[type=number]::placeholder {
+  color: rgba(25, 25, 25, 0.5) !important;
+  font-weight: 650 !important;
+}
+
+#changePassword td.inline input[type=password]:focus,
+#changePassword td.inline input[type=text]:focus,
+#changePassword td.inline input[type=email]:focus,
+#changePassword td.inline input[type=tel]:focus,
+#changePassword td.inline input[type=number]:focus {
+  border-color: var(--mgi-p2) !important;
+  box-shadow: none !important;
+}
+
+@media (hover: hover) {
+  #changePassword td.inline input[type=password]:hover,
+  #changePassword td.inline input[type=text]:hover,
+  #changePassword td.inline input[type=email]:hover,
+  #changePassword td.inline input[type=tel]:hover,
+  #changePassword td.inline input[type=number]:hover {
+    border-color: var(--mgi-p1) !important;
+    box-shadow: none !important;
+  }
+}
+
+#changePassword td.inline > i,
+#changePassword td.inline > .fa,
+#changePassword td.inline > .fa-eye,
+#changePassword td.inline > .fa-eye-slash {
+  position: absolute !important;
+  right: 12px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 34px !important;
+  height: 34px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  font-size: 16px !important;
+  color: var(--mgi-p3) !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  z-index: 10 !important;
+  vertical-align: middle !important;
+  transition: color 0.18s ease, filter 0.18s ease !important;
+}
+
+#changePassword td.inline input:focus + i,
+#changePassword td.inline input:focus + .fa,
+#changePassword td.inline input:focus ~ i,
+#changePassword td.inline input:focus ~ .fa {
+  color: var(--mgi-p2) !important;
+}
+
+@media (hover: hover) {
+  #changePassword td.inline > i:hover,
+  #changePassword td.inline > .fa:hover,
+  #changePassword td.inline > .fa-eye:hover,
+  #changePassword td.inline > .fa-eye-slash:hover {
+    filter: brightness(1.06) !important;
+  }
+}
+
+#changePassword .update.btn,
+#changePassword a.update.btn,
+#changePassword button.update.btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 44px !important;
+  margin: 14px 0 0 !important;
+  padding: 10px 16px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(61, 2, 81, 0.22) !important;
+  background: linear-gradient(180deg, var(--mgi-p2) 0%, var(--mgi-p3) 100%) !important;
+  color: var(--mgi-white) !important;
+  text-decoration: none !important;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.6px !important;
+  text-transform: uppercase !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+  transition: transform 0.18s ease, filter 0.18s ease, background 0.18s ease !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+#changePassword .update.btn::before,
+#changePassword a.update.btn::before,
+#changePassword button.update.btn::before,
+#changePassword .update.btn::after,
+#changePassword a.update.btn::after,
+#changePassword button.update.btn::after {
+  display: none !important;
+  content: none !important;
+}
+
+@media (hover: hover) {
+  #changePassword .update.btn:hover,
+  #changePassword a.update.btn:hover,
+  #changePassword button.update.btn:hover {
+    transform: translateY(-2px) !important;
+    background: linear-gradient(180deg, var(--mgi-p1) 0%, var(--mgi-p4) 100%) !important;
+    filter: brightness(1.04) !important;
+  }
+}
+
+#changePassword .update.btn:active,
+#changePassword a.update.btn:active,
+#changePassword button.update.btn:active {
+  transform: translateY(0) !important;
+  filter: brightness(0.96) !important;
+}
+
+#changePassword .update.btn:focus-visible,
+#changePassword a.update.btn:focus-visible,
+#changePassword button.update.btn:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(239, 0, 255, 0.16) !important;
+}
+
+@media (max-width: 480px) {
+  #changePassword {
+    width: calc(100% - 12px) !important;
+    margin: 8px auto 16px !important;
+    padding: 14px 14px 16px !important;
+    border-radius: 20px !important;
+  }
+
+  #changePassword .t1,
+  #changePassword > .t1 {
+    font-size: 17px !important;
+    margin-bottom: 12px !important;
+  }
+}
