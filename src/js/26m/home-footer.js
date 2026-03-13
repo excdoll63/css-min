@@ -1,3 +1,5 @@
+window.__26M_HOME_VER__ = '20260313';
+
 (function () {
   'use strict';
 
