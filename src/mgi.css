@@ -8482,11 +8482,29 @@ body #downline .light-theme span {
   box-shadow: 0 0 0 3px rgba(239, 0, 255, 0.16) !important;
 }
 
+#footer {
+  background: #12001F !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+body.C #footer {
+  background-image:
+    radial-gradient(120px 38px at 50% 0, rgba(239,0,255,0.18), rgba(0,0,0,0) 70%),
+    linear-gradient(180deg, #2D004D 0%, #12001F 60%, #07000C 100%) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+  box-shadow: none !important;
+}
+
 body.C #footer > a {
   font-size: 0 !important;
+  line-height: 0 !important;
   color: transparent !important;
+  text-shadow: none !important;
   text-indent: -9999px !important;
   white-space: nowrap !important;
+  overflow: hidden !important;
 }
 
 body.C #footer > a > i.material-icons,
