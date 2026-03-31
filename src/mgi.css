@@ -8481,3 +8481,19 @@ body #downline .light-theme span {
   outline: none !important;
   box-shadow: 0 0 0 3px rgba(239, 0, 255, 0.16) !important;
 }
+
+body.C #footer > a {
+  font-size: 0 !important;
+  color: transparent !important;
+  text-indent: -9999px !important;
+  white-space: nowrap !important;
+}
+
+body.C #footer > a > i.material-icons,
+body.C #footer > a > .badge {
+  display: none !important;
+}
+
+body.C #footer > a[href="#home"] > img {
+  display: block !important;
+}
