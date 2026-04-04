@@ -1008,16 +1008,28 @@ body .light-theme .current {
 }
 
 #chatroom .message.myself .name {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Tahoma, Arial, sans-serif;
   font-weight: 700;
-  color: #CB3FFF;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  color: #3d0251;
+  text-transform: none;
   text-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #chatroom .message .name {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Tahoma, Arial, sans-serif;
   font-weight: 700;
-  color: #EF00FF;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  color: #5105a3;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #chatroom .chat-tools .tool {
