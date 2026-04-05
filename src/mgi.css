@@ -977,11 +977,11 @@ body .light-theme .current {
 
 #chatroom .chat-tools {
   position: absolute;
-  overflow: visible;
+  overflow: hidden;
   width: 100%;
   bottom: 0;
   box-sizing: border-box;
-  padding: 6px 56px 11px 10px;
+  padding: 5px 55px 10px 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   background: linear-gradient(180deg, #120a1a 0%, #1f1230 55%, #2a1a3d 100%);
@@ -997,8 +997,8 @@ body .light-theme .current {
   width: 100%;
   max-width: 100%;
   border: 2px solid transparent;
-  border-radius: 20px;
-  padding: 10px 46px 10px 14px;
+  border-radius: 10px;
+  padding: 10px 52px 10px 15px;
   line-height: 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -1095,13 +1095,12 @@ body .light-theme .current {
 
 #chatroom .chat-tools .tool.send {
   right: 5px;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  bottom: 9px;
+  bottom: 11px;
+  width: 45px;
+  height: 40px;
+  border-radius: 20%;
   background: linear-gradient(180deg, #ef00ff 0%, #cb3fff 52%, #5105a3 100%) !important;
   color: #ffffff !important;
-  box-shadow: 0 2px 10px rgba(239, 0, 255, 0.25);
 }
 
 #chatroom .chat-tools .tool.send:hover {
