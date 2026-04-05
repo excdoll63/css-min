@@ -991,19 +991,23 @@ body .light-theme .current {
 #chatroom .chat-tools textarea {
   height: 40px;
   resize: none;
+  box-sizing: border-box;
+  border: 2px solid transparent;
   border-radius: 20px;
-  border: 1px solid rgba(81, 5, 163, 0.22);
-  background: rgba(255, 255, 255, 0.97);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.85) inset, 0 2px 10px rgba(81, 5, 163, 0.12);
-  color: #191919;
   padding: 10px 100px 10px 15px;
   line-height: 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  color: #191919;
+  background-image:
+    linear-gradient(#ffffff, #ffffff),
+    linear-gradient(135deg, #ffffff 0%, #cb3fff 28%, #ef00ff 58%, #5105a3 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 #chatroom .chat-tools textarea::placeholder {
-  color: rgba(25, 25, 25, 0.42);
+  color: rgba(25, 25, 25, 0.45);
 }
 
 #chatroom .message .text {
@@ -1053,25 +1057,46 @@ body .light-theme .current {
 
 #chatroom .chat-tools .tool {
   position: absolute;
-  width: 30px;
-  line-height: 40px;
-  text-align: center;
-  font-size: 23px;
+  width: 45px;
+  height: 40px;
+  bottom: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 1;
   cursor: pointer;
-  bottom: 10px;
-  right: 55px;
-  color: #CB3FFF;
-  background-image: url("https://mgiwallet.com/media/987b86d24a29667291495.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  text-indent: -9999px;
-  overflow: hidden;
+  text-indent: 0;
+  overflow: visible;
+  text-align: center;
+  background-image: none !important;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#chatroom .chat-tools .tool.send {
+  right: 6px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #ef00ff 0%, #cb3fff 52%, #5105a3 100%) !important;
+  color: #ffffff !important;
+}
+
+#chatroom .chat-tools .tool.send:hover {
+  filter: brightness(1.07);
 }
 
 #chatroom .chat-tools .tool.file {
-  right: 10px;
-  background-image: url("https://mgiwallet.com/media/f4ae89c24a296ab9e9583.png");
+  right: 52px;
+  border-radius: 100%;
+  background-color: transparent !important;
+  color: #cb3fff !important;
+  border: 1px solid rgba(239, 0, 255, 0.28);
+}
+
+#chatroom .chat-tools .tool.file:hover {
+  color: #ffffff !important;
+  border-color: rgba(203, 63, 255, 0.55);
+  background-color: rgba(239, 0, 255, 0.12) !important;
 }
 
 #chatroom .message .text a {
