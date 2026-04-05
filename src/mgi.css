@@ -1093,6 +1093,15 @@ body .light-theme .current {
   font-weight: inherit !important;
 }
 
+#chatroom .chat-tools .tool.file.fa::before,
+#chatroom .chat-tools .tool.file .fa::before {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "FontAwesome", sans-serif !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 #chatroom .chat-tools .tool.send {
   right: 5px;
   bottom: 11px;
@@ -1109,19 +1118,33 @@ body .light-theme .current {
 
 #chatroom .chat-tools .tool.file {
   right: 50px;
-  padding-right: 10px;
-  box-sizing: border-box;
+  bottom: 11px;
   width: 45px;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0 10px 0 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: none;
   border-radius: 100%;
+  background: transparent !important;
   background-color: transparent !important;
-  color: #cb3fff !important;
-  border: 1px solid rgba(239, 0, 255, 0.35);
+  color: #e7e7e7 !important;
 }
 
-#chatroom .chat-tools .tool.file:hover {
-  color: #ffffff !important;
-  border-color: rgba(203, 63, 255, 0.6);
-  background-color: rgba(239, 0, 255, 0.15) !important;
+#chatroom .chat-tools .tool.file:hover,
+#chatroom .chat-tools .tool.file:focus,
+#chatroom .chat-tools .tool.file:focus-visible,
+#chatroom .chat-tools .tool.file:active {
+  color: #e7e7e7 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 #chatroom .message .text a {
