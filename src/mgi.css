@@ -5280,7 +5280,7 @@ body.C #marquee { display: block !important; }
   width: 100%;
   height: 100%;
   color: transparent !important;
-  background: linear-gradient(135deg, #ffffff 0%, #ffd9ff 18%, #cb3fff 42%, #ef00ff 72%, #ff66ff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 38%, #ffe5ff 68%, #ef00ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   font-family: "Montserrat", sans-serif;
@@ -5290,9 +5290,9 @@ body.C #marquee { display: block !important; }
   text-shadow: none !important;
   filter:
     drop-shadow(0 1px 2px rgba(0,0,0,.55))
-    drop-shadow(0 0 8px rgba(239,0,255,.55))
-    drop-shadow(0 0 16px rgba(203,63,255,.40))
-    drop-shadow(0 0 26px rgba(81,5,163,.22));
+    drop-shadow(0 0 6px rgba(255,255,255,.65))
+    drop-shadow(0 0 14px rgba(239,0,255,.32))
+    drop-shadow(0 0 24px rgba(81,5,163,.18));
   transform: translateY(-1px);
 }
 
