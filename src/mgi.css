@@ -8809,3 +8809,43 @@ body.C #footer > a > .badge {
 body.C #footer > a[href="#home"] > img {
   display: block !important;
 }
+
+#mgi-withdraw-success .fa-solid.mws-link-icon,
+#mgi-withdraw-success .mws-recommend .fa-solid,
+#mgi-deposit-success .fa-solid.mds-link-icon,
+#mgi-deposit-success .mds-recommend .fa-solid,
+#mgi-deposit-success .fa-solid.mws-link-icon,
+#mgi-deposit-success .mws-recommend .fa-solid {
+  font-style: normal;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  color: transparent !important;
+  background-image: linear-gradient(180deg, #ffffff 0%, #ffd9ff 18%, #cb3fff 52%, #ef00ff 78%, #a804d8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter:
+    drop-shadow(0 0 6px rgba(239, 0, 255, 0.55))
+    drop-shadow(0 0 14px rgba(203, 63, 255, 0.35))
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.35));
+}
+
+#mgi-withdraw-success a.mws-link .fa-brands.fa-telegram.mws-link-icon,
+#mgi-deposit-success a.mds-link .fa-brands.fa-telegram.mds-link-icon,
+#mgi-deposit-success a.mws-link .fa-brands.fa-telegram.mws-link-icon {
+  font-style: normal;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  color: transparent !important;
+  background-image: linear-gradient(180deg, #ffffff 0%, #f4c9ff 35%, #cb3fff 65%, #ef00ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter:
+    drop-shadow(0 0 6px rgba(239, 0, 255, 0.5))
+    drop-shadow(0 0 12px rgba(203, 63, 255, 0.3));
+}
