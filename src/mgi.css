@@ -8809,3 +8809,23 @@ body.C #footer > a > .badge {
 body.C #footer > a[href="#home"] > img {
   display: block !important;
 }
+
+#home-balance .vc-deposit > i,
+#home-balance .vc-withdraw > i,
+#home-balance .vc-refresh > i {
+  font-style: normal !important;
+  line-height: 1 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-right: 6px !important;
+  font-size: 15px !important;
+  color: transparent !important;
+  background-image: linear-gradient(180deg, #ffffff 0%, #ffd9ff 18%, #cb3fff 52%, #ef00ff 78%, #a804d8 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter:
+    drop-shadow(0 0 6px rgba(239, 0, 255, 0.55))
+    drop-shadow(0 0 14px rgba(203, 63, 255, 0.35))
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.35)) !important;
+}
