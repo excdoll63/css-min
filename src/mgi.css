@@ -8809,39 +8809,3 @@ body.C #footer > a > .badge {
 body.C #footer > a[href="#home"] > img {
   display: block !important;
 }
-
-#home-balance .vc-deposit,
-#home-balance .vc-withdraw,
-#home-balance .vc-refresh {
-  position: relative !important;
-  padding-left: 30px !important;
-  padding-right: 10px !important;
-  justify-content: flex-end !important;
-  text-align: right !important;
-}
-
-#home-balance .vc-deposit > i,
-#home-balance .vc-withdraw > i,
-#home-balance .vc-refresh > i {
-  position: absolute !important;
-  left: 12px !important;
-  top: 50% !important;
-  right: auto !important;
-  bottom: auto !important;
-  transform: translateY(-50%) !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  font-style: normal !important;
-  line-height: 1 !important;
-  display: inline-block !important;
-  font-size: 13px !important;
-  color: #ef00ff !important;
-  background: none !important;
-  background-image: none !important;
-  -webkit-background-clip: border-box !important;
-  background-clip: border-box !important;
-  -webkit-text-fill-color: #ef00ff !important;
-  filter:
-    drop-shadow(0 1px 0 rgba(0, 0, 0, 0.55))
-    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.18)) !important;
-}
