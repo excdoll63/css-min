@@ -8810,21 +8810,27 @@ body.C #footer > a[href="#home"] > img {
   display: block !important;
 }
 
+#home-balance .vc-deposit,
+#home-balance .vc-withdraw,
+#home-balance .vc-refresh {
+  position: relative !important;
+}
+
 #home-balance .vc-deposit > i,
 #home-balance .vc-withdraw > i,
 #home-balance .vc-refresh > i {
-  position: static !important;
-  top: auto !important;
-  left: auto !important;
+  position: absolute !important;
+  left: 14px !important;
+  top: 50% !important;
   right: auto !important;
   bottom: auto !important;
-  margin: 0 7px 0 0 !important;
+  transform: translateY(-50%) !important;
+  margin: 0 !important;
   padding: 0 !important;
   font-style: normal !important;
   line-height: 1 !important;
   display: inline-block !important;
-  vertical-align: middle !important;
-  font-size: 15px !important;
+  font-size: 16px !important;
   color: transparent !important;
   background-image: linear-gradient(180deg, #ffffff 0%, #ffd9ff 18%, #cb3fff 52%, #ef00ff 78%, #a804d8 100%) !important;
   -webkit-background-clip: text !important;
