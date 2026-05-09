@@ -8814,8 +8814,8 @@ body.C #footer > a[href="#home"] > img {
 #home-balance .vc-withdraw,
 #home-balance .vc-refresh {
   position: relative !important;
-  padding-left: 38px !important;
-  padding-right: 8px !important;
+  padding-left: 30px !important;
+  padding-right: 10px !important;
   justify-content: flex-end !important;
   text-align: right !important;
 }
@@ -8824,7 +8824,7 @@ body.C #footer > a[href="#home"] > img {
 #home-balance .vc-withdraw > i,
 #home-balance .vc-refresh > i {
   position: absolute !important;
-  left: 9px !important;
+  left: 12px !important;
   top: 50% !important;
   right: auto !important;
   bottom: auto !important;
@@ -8834,7 +8834,7 @@ body.C #footer > a[href="#home"] > img {
   font-style: normal !important;
   line-height: 1 !important;
   display: inline-block !important;
-  font-size: 18px !important;
+  font-size: 13px !important;
   color: #ffffff !important;
   background: none !important;
   background-image: none !important;
