@@ -1277,6 +1277,8 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   text-rendering: auto !important;
   display: inline-block !important;
   line-height: 1 !important;
+  font-size: 15px !important;
+  vertical-align: -1px;
   margin-right: 8px;
   color: #ef00ff !important;
   filter: drop-shadow(0 0 5px rgba(239, 0, 255, 0.45));
@@ -1309,6 +1311,8 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   text-rendering: auto !important;
   display: inline-block !important;
   line-height: 1 !important;
+  font-size: 15px !important;
+  vertical-align: -1px;
   margin-right: 8px;
   color: #ef00ff !important;
   filter: drop-shadow(0 0 6px rgba(239, 0, 255, 0.4));
