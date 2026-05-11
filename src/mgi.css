@@ -111,10 +111,6 @@ body.C #home>.A .pinfo .links a {
   display: none;
 }
 
-#home-balance>.A .vc-balance {
-  color: purple;
-}
-
 #home-balance>.A .btns .btn i {
   margin: 4px -23px;
   display: none;
@@ -1263,8 +1259,21 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
 }
 
 #home-balance > .A .pinfo .welcome-name {
-  color: #f700fd;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   text-align: left;
+  margin: 0 0 2px;
+  color: #cb3fff;
+  background: linear-gradient(90deg, #ffffff 0%, #ef00ff 50%, #cb3fff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(0 1px 4px rgba(239, 0, 255, 0.22));
 }
 
 #home-balance.balance-bg>.A .pinfo {
@@ -1275,16 +1284,92 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   font-weight: 600;
 }
 
-#home-balance > .A .vc-balance {
-  font-size: 1.5em;
-  margin: 5px 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+#home #home-balance > .A .t1,
+#home-balance > .A .t1 {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 12px 0 2px;
 }
 
-#home-balance.balance-bg>.A .vc-note {
-  font-size: 13px;
+#home #home-balance > .A .vc-balance,
+#home-balance > .A .vc-balance {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 26px;
+  font-weight: 800 !important;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  margin: 2px 0 6px;
+  color: #cb3fff;
+  background: linear-gradient(90deg, #ffffff 0%, #ef00ff 50%, #cb3fff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(0 2px 6px rgba(239, 0, 255, 0.3));
+}
+
+#home-balance > .A .vc-note,
+#home-balance.balance-bg > .A .vc-note {
+  font-family: "Montserrat", sans-serif !important;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 11.5px;
   font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+#home-balance > .A .vc-note .rollover {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ef00ff;
+  margin: 6px 0 2px;
+}
+
+#home-balance > .A .vc-note .note {
+  margin: 4px 0 0;
+}
+
+#home-balance > .A .vc-note .note p {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 3px 0;
+}
+
+#home-balance > .A .vc-note .note p strong,
+#home-balance > .A .vc-note .note p b {
+  color: #ef00ff;
+  font-weight: 700;
+}
+
+@media (max-width: 420px) {
+  #home-balance > .A .pinfo .welcome-name {
+    font-size: 14px;
+  }
+
+  #home-balance > .A .pinfo .vc-username {
+    font-size: 11.5px;
+  }
+
+  #home #home-balance > .A .vc-balance,
+  #home-balance > .A .vc-balance {
+    font-size: 24px;
+  }
+
+  #home-balance > .A .vc-note,
+  #home-balance > .A .vc-note .note p {
+    font-size: 10.5px;
+  }
 }
 
 #gggpay .fabtn {
@@ -1428,15 +1513,27 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   pointer-events: none;
 }
 
-#home-balance>.A .pinfo .vc-username {
-  font-size: 13px;
+#home-balance > .A .pinfo .vc-username {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
   text-align: left;
+  margin: 0;
 }
 
-#home-balance>.A .pinfo .vc-bank {
-  font-size: 13px;
-  display: none;
+#home-balance > .A .pinfo .vc-bank {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.7);
   text-align: left;
+  display: none;
+  margin: 4px 0 0;
 }
 
 var {
