@@ -1303,7 +1303,7 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
 
 #home .popular-game .popular-game-title::before,
 .popular-game .popular-game-title::before {
-  content: "\f06d" !important;
+  content: "\f7e4" !important;
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "FontAwesome", sans-serif !important;
   font-weight: 900 !important;
   font-style: normal !important;
@@ -1311,7 +1311,7 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   text-rendering: auto !important;
   display: inline-block !important;
   line-height: 1 !important;
-  font-size: 15px !important;
+  font-size: 16px !important;
   vertical-align: -1px;
   margin-right: 8px;
   color: #ef00ff !important;
