@@ -1301,7 +1301,7 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
 
 #home #home-balance > .A .pbalance > .t1::before,
 #home-balance > .A .pbalance > .t1::before {
-  content: "\f555" !important;
+  content: "\f0d6" !important;
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "FontAwesome", sans-serif !important;
   font-weight: 900 !important;
   font-style: normal !important;
