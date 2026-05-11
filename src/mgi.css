@@ -1267,13 +1267,18 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   text-align: left;
 }
 
+#home #home-balance > .A .pinfo .welcome-name::before,
 #home-balance > .A .pinfo .welcome-name::before {
-  content: "\f2bd";
-  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "FontAwesome", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+  content: "\f2bd" !important;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "FontAwesome", sans-serif !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  text-rendering: auto !important;
+  display: inline-block !important;
+  line-height: 1 !important;
   margin-right: 8px;
-  color: #ef00ff;
+  color: #ef00ff !important;
   filter: drop-shadow(0 0 5px rgba(239, 0, 255, 0.45));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1294,13 +1299,18 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   font-weight: 600;
 }
 
+#home #home-balance > .A .vc-balance::before,
 #home-balance > .A .vc-balance::before {
-  content: "\f555";
-  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "FontAwesome", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+  content: "\f555" !important;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "FontAwesome", sans-serif !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  text-rendering: auto !important;
+  display: inline-block !important;
+  line-height: 1 !important;
   margin-right: 10px;
-  color: #ef00ff;
+  color: #ef00ff !important;
   filter: drop-shadow(0 0 6px rgba(239, 0, 255, 0.4));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
