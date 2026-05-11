@@ -1305,8 +1305,8 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
 .popular-game .popular-game-title::before {
   content: "" !important;
   display: inline-block !important;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   background-color: #ef00ff !important;
   background-image: none !important;
   -webkit-mask-image: url("https://mgiwallet.com/media/e3c01d79e10a68448f2d5.png") !important;
@@ -1317,8 +1317,8 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   mask-repeat: no-repeat !important;
   -webkit-mask-position: center !important;
   mask-position: center !important;
-  vertical-align: -5px;
-  margin-right: 2px;
+  vertical-align: middle;
+  margin-right: 4px;
   filter: drop-shadow(0 0 6px rgba(239, 0, 255, 0.45));
 }
 
