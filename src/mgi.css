@@ -1301,10 +1301,18 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   -moz-osx-font-smoothing: grayscale;
 }
 
+#home .popular-game .popular-game-title,
+.popular-game .popular-game-title {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px;
+}
+
 #home .popular-game .popular-game-title::before,
 .popular-game .popular-game-title::before {
   content: "" !important;
   display: inline-block !important;
+  flex-shrink: 0;
   width: 26px;
   height: 26px;
   background-color: #ef00ff !important;
@@ -1317,8 +1325,6 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   mask-repeat: no-repeat !important;
   -webkit-mask-position: center !important;
   mask-position: center !important;
-  vertical-align: middle;
-  margin-right: 4px;
   filter: drop-shadow(0 0 6px rgba(239, 0, 255, 0.45));
 }
 
