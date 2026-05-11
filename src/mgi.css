@@ -1307,12 +1307,18 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   display: inline-block !important;
   width: 20px;
   height: 20px;
-  background-image: url("https://mgiwallet.com/media/e3c01d79e10a68448f2d5.png") !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
+  background-color: #ef00ff !important;
+  background-image: none !important;
+  -webkit-mask-image: url("https://mgiwallet.com/media/e3c01d79e10a68448f2d5.png") !important;
+  mask-image: url("https://mgiwallet.com/media/e3c01d79e10a68448f2d5.png") !important;
+  -webkit-mask-size: contain !important;
+  mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-repeat: no-repeat !important;
+  -webkit-mask-position: center !important;
+  mask-position: center !important;
   vertical-align: -5px;
-  margin-right: 8px;
+  margin-right: 2px;
   filter: drop-shadow(0 0 6px rgba(239, 0, 255, 0.45));
 }
 
