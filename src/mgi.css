@@ -1308,8 +1308,13 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   gap: 6px;
 }
 
-#home .popular-game .popular-game-title::before,
-.popular-game .popular-game-title::before {
+#home .popular-game .popular-game-brand,
+.popular-game .popular-game-brand {
+  display: none !important;
+}
+
+#home .popular-game .popular-game-title::after,
+.popular-game .popular-game-title::after {
   content: "" !important;
   display: inline-block !important;
   flex-shrink: 0;
