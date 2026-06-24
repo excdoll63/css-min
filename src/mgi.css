@@ -1394,6 +1394,20 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   cursor: pointer;
 }
 
+#payessence .fabtn {
+  float: left;
+  color: #3D0251;
+  padding: 8px 0;
+  margin: 5px 5px 0 0;
+  width: 70px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #CB3FFF;
+  background-color: #CB3FFF;
+  background-image: linear-gradient(to bottom,#CB3FFF,#CB3FFF);
+  cursor: pointer;
+}
+
 #deposit .fabtn {
   font-size: 13px;
   line-height: 1;
@@ -3805,7 +3819,7 @@ div:where(.swal2-icon).swal2-success .swal2-success-ring {
   }
 }
 
-#amopayramp .fabtn, #direpay .fabtn, #fpay .fabtn, #gggpay .fabtn {
+#amopayramp .fabtn, #direpay .fabtn, #fpay .fabtn, #gggpay .fabtn, #payessence .fabtn {
   float: left;
   box-sizing: border-box;
   height: 40px;
@@ -3835,25 +3849,25 @@ div:where(.swal2-icon).swal2-success .swal2-success-ring {
 }
 
 @media (hover: hover) {
-  #amopayramp .fabtn:hover, #direpay .fabtn:hover, #fpay .fabtn:hover, #gggpay .fabtn:hover {
+  #amopayramp .fabtn:hover, #direpay .fabtn:hover, #fpay .fabtn:hover, #gggpay .fabtn:hover, #payessence .fabtn:hover {
     transform: translateY(-1px);
     border-color: rgba(239, 0, 255, 0.75);
     filter: brightness(1.06) saturate(1.05);
     box-shadow: 0 12px 22px rgba(0, 0, 0, 0.48), 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 0 26px rgba(239, 0, 255, 0.18), 0 0 34px rgba(81, 5, 163, 0.16);
   }
 
-  #amopayramp .fabtn:hover::after, #direpay .fabtn:hover::after, #fpay .fabtn:hover::after, #gggpay .fabtn:hover::after {
+  #amopayramp .fabtn:hover::after, #direpay .fabtn:hover::after, #fpay .fabtn:hover::after, #gggpay .fabtn:hover::after, #payessence .fabtn:hover::after {
     opacity: 1;
     animation: mgiFabtnShine 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 }
 
-#amopayramp .fabtn:focus-visible, #direpay .fabtn:focus-visible, #fpay .fabtn:focus-visible, #gggpay .fabtn:focus-visible {
+#amopayramp .fabtn:focus-visible, #direpay .fabtn:focus-visible, #fpay .fabtn:focus-visible, #gggpay .fabtn:focus-visible, #payessence .fabtn:focus-visible {
   outline: none;
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.48), 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 0 0 3px rgba(239, 0, 255, 0.22), 0 0 28px rgba(239, 0, 255, 0.18);
 }
 
-#amopayramp .fabtn.selected, #direpay .fabtn.selected, #fpay .fabtn.selected, #gggpay .fabtn.selected, #amopayramp .fabtn.active, #direpay .fabtn.active, #fpay .fabtn.active, #gggpay .fabtn.active {
+#amopayramp .fabtn.selected, #direpay .fabtn.selected, #fpay .fabtn.selected, #gggpay .fabtn.selected, #payessence .fabtn.selected, #amopayramp .fabtn.active, #direpay .fabtn.active, #fpay .fabtn.active, #gggpay .fabtn.active, #payessence .fabtn.active {
   border-color: rgba(255, 255, 255, 0.24);
   background: radial-gradient(120% 140% at 50% 0%, rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0) 58%), linear-gradient(135deg, rgba(203, 63, 255, 0.88) 0%, rgba(239, 0, 255, 0.70) 55%, rgba(81, 5, 163, 0.92) 100%);
   color: rgba(255, 255, 255, 0.98);
@@ -3872,7 +3886,7 @@ div:where(.swal2-icon).swal2-success .swal2-success-ring {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #amopayramp .fabtn::after, #direpay .fabtn::after, #fpay .fabtn::after, #gggpay .fabtn::after {
+  #amopayramp .fabtn::after, #direpay .fabtn::after, #fpay .fabtn::after, #gggpay .fabtn::after, #payessence .fabtn::after {
     animation: none;
   }
 }
@@ -4335,13 +4349,13 @@ input[readonly], textarea[readonly] {
   }
 }
 
-#amopayramp .fabtn, #direpay .fabtn, #fpay .fabtn, #gggpay .fabtn {
+#amopayramp .fabtn, #direpay .fabtn, #fpay .fabtn, #gggpay .fabtn, #payessence .fabtn {
   touch-action: manipulation;
   -webkit-touch-callout: none;
   will-change: transform, filter, box-shadow;
 }
 
-#amopayramp .fabtn::before, #direpay .fabtn::before, #fpay .fabtn::before, #gggpay .fabtn::before {
+#amopayramp .fabtn::before, #direpay .fabtn::before, #fpay .fabtn::before, #gggpay .fabtn::before, #payessence .fabtn::before {
   content: "";
   position: absolute;
   inset: -14px;
@@ -4353,7 +4367,7 @@ input[readonly], textarea[readonly] {
   filter: blur(.2px);
 }
 
-#amopayramp .fabtn::after, #direpay .fabtn::after, #fpay .fabtn::after, #gggpay .fabtn::after {
+#amopayramp .fabtn::after, #direpay .fabtn::after, #fpay .fabtn::after, #gggpay .fabtn::after, #payessence .fabtn::after {
   content: "";
   position: absolute;
   top: -80%;
@@ -4369,19 +4383,19 @@ input[readonly], textarea[readonly] {
   filter: blur(.2px);
 }
 
-#amopayramp .fabtn:active, #direpay .fabtn:active, #fpay .fabtn:active, #gggpay .fabtn:active {
+#amopayramp .fabtn:active, #direpay .fabtn:active, #fpay .fabtn:active, #gggpay .fabtn:active, #payessence .fabtn:active {
   transform: translateY(1px) scale(.985);
   filter: brightness(1.22) saturate(1.25);
   border-color: rgba(239, 0, 255, .92);
   box-shadow: 0 16px 30px rgba(0, 0, 0, .58), 0 0 0 1px rgba(255, 255, 255, .12) inset, 0 0 26px rgba(239, 0, 255, .40), 0 0 44px rgba(203, 63, 255, .24);
 }
 
-#amopayramp .fabtn:active::before, #direpay .fabtn:active::before, #fpay .fabtn:active::before, #gggpay .fabtn:active::before {
+#amopayramp .fabtn:active::before, #direpay .fabtn:active::before, #fpay .fabtn:active::before, #gggpay .fabtn:active::before, #payessence .fabtn:active::before {
   opacity: 1;
   animation: mgiFabtnPulse 520ms cubic-bezier(.2, .8, .2, 1);
 }
 
-#amopayramp .fabtn:active::after, #direpay .fabtn:active::after, #fpay .fabtn:active::after, #gggpay .fabtn:active::after {
+#amopayramp .fabtn:active::after, #direpay .fabtn:active::after, #fpay .fabtn:active::after, #gggpay .fabtn:active::after, #payessence .fabtn:active::after {
   opacity: 1;
   animation: mgiFabtnSaber 520ms cubic-bezier(.2, .7, .2, 1);
 }
@@ -4413,11 +4427,11 @@ input[readonly], textarea[readonly] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #amopayramp .fabtn, #direpay .fabtn, #fpay .fabtn, #gggpay .fabtn {
+  #amopayramp .fabtn, #direpay .fabtn, #fpay .fabtn, #gggpay .fabtn, #payessence .fabtn {
     transition: none;
   }
 
-  #amopayramp .fabtn:active::before, #direpay .fabtn:active::before, #fpay .fabtn:active::before, #gggpay .fabtn:active::before, #amopayramp .fabtn:active::after, #direpay .fabtn:active::after, #fpay .fabtn:active::after, #gggpay .fabtn:active::after {
+  #amopayramp .fabtn:active::before, #direpay .fabtn:active::before, #fpay .fabtn:active::before, #gggpay .fabtn:active::before, #payessence .fabtn:active::before, #amopayramp .fabtn:active::after, #direpay .fabtn:active::after, #fpay .fabtn:active::after, #gggpay .fabtn:active::after, #payessence .fabtn:active::after {
     animation: none;
     opacity: 0;
   }
