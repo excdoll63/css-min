@@ -9025,13 +9025,14 @@ body.C #footer > a[href="#home"] > img {
 }
 
 #leaderboard table tbody tr:active td {
-  background: rgba(239, 0, 255, 0.22);
-  box-shadow: 0 0 16px rgba(239, 0, 255, 0.22) inset;
+  background: rgba(203, 63, 255, 0.07);
 }
 
 #leaderboard table thead td:first-child,
 #leaderboard table tbody td:first-child {
   text-align: center;
+  width: 1%;
+  white-space: nowrap;
 }
 
 #leaderboard table tbody td:nth-child(5) {
@@ -9045,30 +9046,22 @@ body.C #footer > a[href="#home"] > img {
   color: inherit;
 }
 
-#leaderboard table tbody tr.lb-top1 td {
+#leaderboard table tbody tr.lb-top1 td:first-child {
   background: #f2c53d;
   color: #5a3d00;
   font-weight: 800;
-  text-shadow: none;
 }
 
-#leaderboard table tbody tr.lb-top2 td {
+#leaderboard table tbody tr.lb-top2 td:first-child {
   background: #c8d4e2;
   color: #2b3a52;
   font-weight: 800;
-  text-shadow: none;
 }
 
-#leaderboard table tbody tr.lb-top3 td {
+#leaderboard table tbody tr.lb-top3 td:first-child {
   background: #dd8a4d;
   color: #4a1c0a;
   font-weight: 800;
-  text-shadow: none;
-}
-
-#leaderboard table tbody tr.lb-top td:nth-child(5) {
-  color: #0b7a3b;
-  text-shadow: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
