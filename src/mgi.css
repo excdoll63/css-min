@@ -9036,41 +9036,47 @@ body.C #footer > a[href="#home"] > img {
 #leaderboard table tbody tr:nth-child(-n+3) td:first-child {
   position: relative;
   z-index: 0;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+  font-weight: 800;
+  font-size: 12.5px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 #leaderboard table tbody tr:nth-child(-n+3) td:first-child::before {
   content: "";
   position: absolute;
-  inset: 4px 7px;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 20px;
+  transform: translate(-50%, -50%);
   z-index: -1;
-  border-radius: 7px;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -3px 6px rgba(0, 0, 0, 0.22);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -3px 6px rgba(0, 0, 0, 0.22);
 }
 
 #leaderboard table tbody tr:nth-child(1) td:first-child {
-  color: #4a3000;
+  color: #5a3d00;
 }
 
 #leaderboard table tbody tr:nth-child(1) td:first-child::before {
-  background: linear-gradient(180deg, #fff6cf 0%, #ffdf7a 42%, #f2b100 78%, #d18e00 100%);
+  background: linear-gradient(180deg, #fff2b0 0%, #ffcf3d 45%, #f5a400 100%);
 }
 
 #leaderboard table tbody tr:nth-child(2) td:first-child {
-  color: #33404d;
+  color: #2b3a52;
 }
 
 #leaderboard table tbody tr:nth-child(2) td:first-child::before {
-  background: linear-gradient(180deg, #ffffff 0%, #e6edf4 42%, #c2cedb 78%, #9fb0c1 100%);
+  background: linear-gradient(180deg, #f4faff 0%, #cfe0f5 45%, #9db8de 100%);
 }
 
 #leaderboard table tbody tr:nth-child(3) td:first-child {
-  color: #4a2410;
+  color: #5c2410;
 }
 
 #leaderboard table tbody tr:nth-child(3) td:first-child::before {
-  background: linear-gradient(180deg, #ffdcb8 0%, #eca367 42%, #cd7c3a 78%, #a45f28 100%);
+  background: linear-gradient(180deg, #ffd0a3 0%, #f08a45 45%, #c65f24 100%);
 }
 
 #leaderboard table tbody td:nth-child(5) {
