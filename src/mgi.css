@@ -9030,7 +9030,7 @@ body.C #footer > a[href="#home"] > img {
 }
 
 #leaderboard table tbody td:first-child {
-  text-align: center;
+  text-align: left;
 }
 
 #leaderboard table tbody tr:nth-child(-n+3) td:first-child {
@@ -9045,8 +9045,8 @@ body.C #footer > a[href="#home"] > img {
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 30px;
+  left: 14px;
+  width: 26px;
   height: 20px;
   transform: translate(-50%, -50%);
   z-index: -1;
