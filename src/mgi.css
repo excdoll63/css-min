@@ -9001,7 +9001,7 @@ body.C #footer > a[href="#home"] > img {
   color: var(--lb-white);
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
-  font-size: 12px;
+  font-size: 11.5px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 10px 8px;
@@ -9015,7 +9015,7 @@ body.C #footer > a[href="#home"] > img {
   border: 0;
   border-bottom: 1px solid var(--lb-line);
   color: rgba(255, 255, 255, 0.92);
-  font-size: 13px;
+  font-size: 11.5px;
 }
 
 #leaderboard table tbody tr:nth-child(even) td {
@@ -9032,16 +9032,56 @@ body.C #footer > a[href="#home"] > img {
   }
 }
 
+#leaderboard table tbody td:nth-child(5) {
+  color: #3aff9e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  text-shadow: 0 0 6px rgba(58, 255, 158, 0.55), 0 0 14px rgba(58, 255, 158, 0.35), 0 0 26px rgba(58, 255, 158, 0.2);
+}
+
+#leaderboard table tbody td:first-child {
+  text-align: center;
+}
+
 #leaderboard table tbody tr:nth-child(-n+3) td {
   color: var(--lb-white);
   font-weight: 700;
-  text-shadow: 0 0 10px rgba(239, 0, 255, 0.3);
 }
 
 #leaderboard table tbody tr:nth-child(-n+3) td:first-child {
-  color: var(--lb-magenta);
+  position: relative;
+  z-index: 0;
+  color: #141414;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
+  font-size: 12px;
+}
+
+#leaderboard table tbody tr:nth-child(-n+3) td:first-child::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#leaderboard table tbody tr:nth-child(1) td:first-child::before {
+  background: radial-gradient(120% 120% at 30% 25%, #fff6c9 0%, #ffd75e 35%, #f0a500 70%, #9a6400 100%);
+  box-shadow: 0 0 10px rgba(255, 214, 90, 0.75), 0 0 22px rgba(255, 190, 40, 0.4), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#leaderboard table tbody tr:nth-child(2) td:first-child::before {
+  background: radial-gradient(120% 120% at 30% 25%, #ffffff 0%, #d9e4ee 35%, #9fb2c4 70%, #5d7080 100%);
+  box-shadow: 0 0 10px rgba(214, 228, 240, 0.65), 0 0 22px rgba(170, 195, 215, 0.35), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#leaderboard table tbody tr:nth-child(3) td:first-child::before {
+  background: radial-gradient(120% 120% at 30% 25%, #ffd9b3 0%, #e8964f 35%, #b96a26 70%, #6e3a10 100%);
+  box-shadow: 0 0 10px rgba(232, 150, 79, 0.65), 0 0 22px rgba(185, 106, 38, 0.35), 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes lbShine {
