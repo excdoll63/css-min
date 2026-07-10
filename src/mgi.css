@@ -8887,7 +8887,7 @@ body.C #footer > a[href="#home"] > img {
 
 #leaderboard .t1 {
   margin: 12px auto 14px;
-  padding: 12px 16px;
+  padding: 11px 16px;
   width: min(360px, calc(100% - 24px));
   display: flex;
   align-items: center;
@@ -8895,34 +8895,19 @@ body.C #footer > a[href="#home"] > img {
   text-align: center;
   color: var(--lb-white);
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  font-weight: 900;
-  letter-spacing: 0.12em;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   line-height: 1.1;
   position: relative;
   overflow: hidden;
   border-radius: 14px;
-  border: 2px solid transparent;
-  background: radial-gradient(120% 120% at 50% 0%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 58%) padding-box, linear-gradient(180deg, var(--lb-ink) 0%, var(--lb-deep) 55%, var(--lb-ink) 100%) padding-box, linear-gradient(135deg, var(--lb-white) 0%, var(--lb-lilac) 28%, var(--lb-magenta) 58%, var(--lb-violet) 100%) border-box;
-  box-shadow: 0 16px 34px var(--lb-shadow), 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 0 26px rgba(239, 0, 255, 0.18), 0 0 44px rgba(81, 5, 163, 0.22);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55), 0 0 18px var(--lb-glow);
+  border: 1.6px solid transparent;
+  background: linear-gradient(180deg, var(--lb-deep) 0%, var(--lb-ink) 100%) padding-box, linear-gradient(135deg, var(--lb-lilac) 0%, var(--lb-magenta) 50%, var(--lb-violet) 100%) border-box;
+  box-shadow: 0 12px 26px var(--lb-shadow), 0 0 0 1px rgba(255, 255, 255, 0.05) inset, 0 0 20px rgba(239, 0, 255, 0.16);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
   user-select: none;
-  animation: lbTitleGlow 3.2s ease-in-out infinite;
-}
-
-#leaderboard .t1::after {
-  content: "";
-  position: absolute;
-  top: -60%;
-  left: -80%;
-  width: 48%;
-  height: 240%;
-  transform: rotate(25deg);
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.78) 50%, rgba(255, 255, 255, 0) 100%);
-  opacity: 0;
-  pointer-events: none;
-  animation: lbShine 3.4s cubic-bezier(0.2, 0.7, 0.2, 1) infinite;
 }
 
 #leaderboard .dates .date,
@@ -8931,18 +8916,18 @@ body.C #footer > a[href="#home"] > img {
   position: relative;
   overflow: hidden;
   line-height: 1;
-  padding: 10px 15px;
+  padding: 10px 16px;
   margin: 10px 10px 0 0;
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.82);
   cursor: pointer;
   border-radius: 12px;
-  border: 1.6px solid transparent;
-  background: linear-gradient(180deg, var(--lb-ink) 0%, #191919 100%) padding-box, linear-gradient(135deg, rgba(203, 63, 255, 0.55), rgba(81, 5, 163, 0.55)) border-box;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  border: 1.4px solid transparent;
+  background: linear-gradient(180deg, var(--lb-ink) 0%, #191919 100%) padding-box, linear-gradient(135deg, rgba(203, 63, 255, 0.45), rgba(81, 5, 163, 0.45)) border-box;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
   transition: transform 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
@@ -8952,7 +8937,7 @@ body.C #footer > a[href="#home"] > img {
   #leaderboard .dates .date:hover,
   #leaderboard .keys .key:hover {
     transform: translateY(-1px);
-    filter: brightness(1.12);
+    filter: brightness(1.1);
     color: var(--lb-white);
   }
 }
@@ -8966,12 +8951,11 @@ body.C #footer > a[href="#home"] > img {
 #leaderboard .dates .date.selected,
 #leaderboard .keys .key.selected {
   color: var(--lb-white);
-  font-weight: 900;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
-  border: 1.6px solid transparent;
-  background: radial-gradient(140% 90% at 50% 0%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 58%) padding-box, linear-gradient(180deg, #cb3fff 0%, #5105a3 45%, #200236 100%) padding-box, linear-gradient(135deg, var(--lb-white) 0%, var(--lb-lilac) 28%, var(--lb-magenta) 58%, var(--lb-violet) 100%) border-box;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 0 18px var(--lb-glow);
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  border: 1.4px solid transparent;
+  background: linear-gradient(180deg, var(--lb-magenta) 0%, var(--lb-violet) 100%) padding-box, linear-gradient(135deg, var(--lb-lilac), var(--lb-magenta)) border-box;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 0 16px var(--lb-glow);
 }
 
 #leaderboard .note {
@@ -8979,9 +8963,9 @@ body.C #footer > a[href="#home"] > img {
   margin-top: 12px;
   color: var(--lb-magenta);
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.02em;
-  text-shadow: 0 0 12px rgba(239, 0, 255, 0.18);
+  text-shadow: 0 0 10px rgba(239, 0, 255, 0.15);
 }
 
 #leaderboard table {
@@ -9000,22 +8984,24 @@ body.C #footer > a[href="#home"] > img {
   background: linear-gradient(180deg, var(--lb-violet) 0%, var(--lb-ink) 100%);
   color: var(--lb-white);
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 11.5px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 10px 8px;
   border: 0;
   border-bottom: 1.6px solid var(--lb-magenta);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 0 12px rgba(239, 0, 255, 0.25);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 
 #leaderboard table td {
   padding: 7px 8px;
   border: 0;
   border-bottom: 1px solid var(--lb-line);
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Montserrat", sans-serif;
   font-size: 11.5px;
+  font-weight: 500;
 }
 
 #leaderboard table tbody tr:nth-child(even) td {
@@ -9032,76 +9018,19 @@ body.C #footer > a[href="#home"] > img {
   }
 }
 
-#leaderboard table tbody td:nth-child(5) {
-  color: #3aff9e;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  text-shadow: 0 0 6px rgba(58, 255, 158, 0.55), 0 0 14px rgba(58, 255, 158, 0.35), 0 0 26px rgba(58, 255, 158, 0.2);
-}
-
 #leaderboard table tbody td:first-child {
   text-align: center;
 }
 
-#leaderboard table tbody tr:nth-child(-n+3) td {
-  color: var(--lb-white);
-  font-weight: 700;
-}
-
-#leaderboard table tbody tr:nth-child(-n+3) td:first-child {
-  position: relative;
-  z-index: 0;
-  color: #141414;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 12px;
-}
-
-#leaderboard table tbody tr:nth-child(-n+3) td:first-child::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 24px;
-  height: 24px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: -1;
-}
-
-#leaderboard table tbody tr:nth-child(1) td:first-child::before {
-  background: radial-gradient(120% 120% at 30% 25%, #fff6c9 0%, #ffd75e 35%, #f0a500 70%, #9a6400 100%);
-  box-shadow: 0 0 10px rgba(255, 214, 90, 0.75), 0 0 22px rgba(255, 190, 40, 0.4), 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-#leaderboard table tbody tr:nth-child(2) td:first-child::before {
-  background: radial-gradient(120% 120% at 30% 25%, #ffffff 0%, #d9e4ee 35%, #9fb2c4 70%, #5d7080 100%);
-  box-shadow: 0 0 10px rgba(214, 228, 240, 0.65), 0 0 22px rgba(170, 195, 215, 0.35), 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-#leaderboard table tbody tr:nth-child(3) td:first-child::before {
-  background: radial-gradient(120% 120% at 30% 25%, #ffd9b3 0%, #e8964f 35%, #b96a26 70%, #6e3a10 100%);
-  box-shadow: 0 0 10px rgba(232, 150, 79, 0.65), 0 0 22px rgba(185, 106, 38, 0.35), 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes lbShine {
-  0% { left: -80%; opacity: 0; }
-  8% { opacity: 1; }
-  30% { left: 130%; opacity: 0; }
-  100% { left: 130%; opacity: 0; }
-}
-
-@keyframes lbTitleGlow {
-  0%, 100% { box-shadow: 0 16px 34px var(--lb-shadow), 0 0 0 1px rgba(255, 255, 255, 0.06) inset, 0 0 22px rgba(239, 0, 255, 0.16), 0 0 40px rgba(81, 5, 163, 0.2); }
-  50% { box-shadow: 0 16px 34px var(--lb-shadow), 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 0 32px rgba(239, 0, 255, 0.3), 0 0 52px rgba(81, 5, 163, 0.3); }
+#leaderboard table tbody td:nth-child(5) {
+  color: #3aff9e;
+  font-weight: 500;
+  text-shadow: 0 0 6px rgba(58, 255, 158, 0.55), 0 0 12px rgba(58, 255, 158, 0.3);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #leaderboard .t1,
-  #leaderboard .t1::after,
   #leaderboard .dates .date,
   #leaderboard .keys .key {
-    animation: none;
     transition: none;
   }
 }
