@@ -9040,16 +9040,19 @@ body.C #footer > a[href="#home"] > img {
   text-shadow: 0 0 6px rgba(58, 255, 158, 0.55), 0 0 12px rgba(58, 255, 158, 0.3);
 }
 
-#leaderboard table tbody tr:nth-child(1) td {
-  background: linear-gradient(90deg, rgba(255, 199, 60, 0.26) 0%, rgba(255, 199, 60, 0.09) 60%, rgba(255, 199, 60, 0.03) 100%);
+#leaderboard table tbody tr:nth-child(1) td:first-child {
+  background: linear-gradient(180deg, #fff2b0 0%, #ffcf3d 45%, #f5a400 100%);
+  color: #5a3d00;
 }
 
-#leaderboard table tbody tr:nth-child(2) td {
-  background: linear-gradient(90deg, rgba(214, 228, 240, 0.24) 0%, rgba(214, 228, 240, 0.08) 60%, rgba(214, 228, 240, 0.03) 100%);
+#leaderboard table tbody tr:nth-child(2) td:first-child {
+  background: linear-gradient(180deg, #f4faff 0%, #cfe0f5 45%, #9db8de 100%);
+  color: #2b3a52;
 }
 
-#leaderboard table tbody tr:nth-child(3) td {
-  background: linear-gradient(90deg, rgba(224, 140, 80, 0.26) 0%, rgba(224, 140, 80, 0.09) 60%, rgba(224, 140, 80, 0.03) 100%);
+#leaderboard table tbody tr:nth-child(3) td:first-child {
+  background: linear-gradient(180deg, #ffd0a3 0%, #f08a45 45%, #c65f24 100%);
+  color: #5c2410;
 }
 
 @media (prefers-reduced-motion: reduce) {
