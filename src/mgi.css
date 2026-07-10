@@ -9046,26 +9046,29 @@ body.C #footer > a[href="#home"] > img {
 }
 
 #leaderboard table tbody tr.lb-top1 td {
-  background: linear-gradient(90deg, rgba(255, 199, 61, 0.26) 0%, rgba(255, 199, 61, 0.06) 100%);
-  color: #ffd777;
+  background: #f2c53d;
+  color: #5a3d00;
   font-weight: 800;
+  text-shadow: none;
 }
 
 #leaderboard table tbody tr.lb-top2 td {
-  background: linear-gradient(90deg, rgba(205, 224, 245, 0.24) 0%, rgba(205, 224, 245, 0.05) 100%);
-  color: #e2edfb;
+  background: #c8d4e2;
+  color: #2b3a52;
   font-weight: 800;
+  text-shadow: none;
 }
 
 #leaderboard table tbody tr.lb-top3 td {
-  background: linear-gradient(90deg, rgba(240, 138, 69, 0.24) 0%, rgba(240, 138, 69, 0.05) 100%);
-  color: #f3b183;
+  background: #dd8a4d;
+  color: #4a1c0a;
   font-weight: 800;
+  text-shadow: none;
 }
 
 #leaderboard table tbody tr.lb-top td:nth-child(5) {
-  color: #3aff9e;
-  text-shadow: 0 0 6px rgba(58, 255, 158, 0.55), 0 0 12px rgba(58, 255, 158, 0.3);
+  color: #0b7a3b;
+  text-shadow: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
