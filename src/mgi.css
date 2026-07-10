@@ -9022,6 +9022,21 @@ body.C #footer > a[href="#home"] > img {
   text-align: center;
 }
 
+#leaderboard table tbody tr:nth-child(1) td:first-child {
+  color: #ffd75e;
+  text-shadow: 0 0 8px rgba(255, 215, 94, 0.55);
+}
+
+#leaderboard table tbody tr:nth-child(2) td:first-child {
+  color: #d9e4ee;
+  text-shadow: 0 0 8px rgba(217, 228, 238, 0.5);
+}
+
+#leaderboard table tbody tr:nth-child(3) td:first-child {
+  color: #e8964f;
+  text-shadow: 0 0 8px rgba(232, 150, 79, 0.5);
+}
+
 #leaderboard table tbody td:nth-child(5) {
   color: #3aff9e;
   font-weight: 500;
