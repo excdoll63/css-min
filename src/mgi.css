@@ -9089,6 +9089,27 @@ body.C #footer > a[href="#home"] > img {
     0 0 8px rgba(240, 138, 69, 0.5);
 }
 
+#leaderboard .lb-loading-row td {
+  padding: 34px 8px;
+  text-align: center;
+  background: transparent;
+}
+
+#leaderboard .lb-spinner {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 3px solid rgba(203, 63, 255, 0.25);
+  border-top-color: #ef00ff;
+  border-radius: 50%;
+  animation: lbspin 0.8s linear infinite;
+  box-shadow: 0 0 12px rgba(239, 0, 255, 0.35);
+}
+
+@keyframes lbspin {
+  to { transform: rotate(360deg); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   #leaderboard .dates .date,
   #leaderboard .keys .key {
