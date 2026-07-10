@@ -9042,23 +9042,14 @@ body.C #footer > a[href="#home"] > img {
 
 #leaderboard table tbody tr:nth-child(1) td {
   background: linear-gradient(90deg, rgba(255, 199, 60, 0.26) 0%, rgba(255, 199, 60, 0.09) 60%, rgba(255, 199, 60, 0.03) 100%);
-  color: #ffe08a;
-  font-weight: 700;
-  text-shadow: 0 0 8px rgba(255, 199, 60, 0.4);
 }
 
 #leaderboard table tbody tr:nth-child(2) td {
   background: linear-gradient(90deg, rgba(214, 228, 240, 0.24) 0%, rgba(214, 228, 240, 0.08) 60%, rgba(214, 228, 240, 0.03) 100%);
-  color: #eef4fa;
-  font-weight: 700;
-  text-shadow: 0 0 8px rgba(214, 228, 240, 0.35);
 }
 
 #leaderboard table tbody tr:nth-child(3) td {
   background: linear-gradient(90deg, rgba(224, 140, 80, 0.26) 0%, rgba(224, 140, 80, 0.09) 60%, rgba(224, 140, 80, 0.03) 100%);
-  color: #f3ba8d;
-  font-weight: 700;
-  text-shadow: 0 0 8px rgba(224, 140, 80, 0.35);
 }
 
 @media (prefers-reduced-motion: reduce) {
