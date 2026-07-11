@@ -9035,7 +9035,8 @@ body.C #footer > a[href="#home"] > img {
   white-space: nowrap;
 }
 
-#leaderboard table td:nth-child(2) {
+#leaderboard table td:nth-child(2),
+#leaderboard table td:nth-child(3) {
   text-align: center;
 }
 
