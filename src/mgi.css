@@ -9060,6 +9060,17 @@ body.C #footer > a[href="#home"] > img {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+  #leaderboard .lb-rank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin: -5px 0;
+    vertical-align: middle;
+    line-height: 1;
+  }
 }
 
 #leaderboard table tbody td:nth-child(5) {
