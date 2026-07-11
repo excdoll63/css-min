@@ -401,7 +401,6 @@ window.__MGI_SIDEMENU_VER__ = "2026-01-27";
       else if (href === "/luckynumber") key = "sm_lucky_number";
       else if (href === "/downline") key = "sm_downline";
       else if (href === "/vip") key = "sm_vip";
-      else if (href && href.indexOf("mgi.hfcapital.top") !== -1) key = "sm_download";
 
       if (key) {
         var labelEl = a.querySelector(".grid-label");
