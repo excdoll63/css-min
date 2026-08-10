@@ -9136,11 +9136,11 @@ body.C #footer > a[href="#home"] > img {
   }
 }
 
-.providedbylb {
+body.C .providedbylb {
   visibility: visible !important;
   transform: translateX(-100%) !important;
 }
 
-.providedbylb.open {
+body.C .providedbylb.open {
   transform: translateX(0) !important;
 }
