@@ -9135,3 +9135,12 @@ body.C #footer > a[href="#home"] > img {
     transition: none;
   }
 }
+
+.providedbylb {
+  visibility: visible !important;
+  transform: translateX(-100%) !important;
+}
+
+.providedbylb.open {
+  transform: translateX(0) !important;
+}
