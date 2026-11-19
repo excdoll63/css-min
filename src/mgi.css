@@ -101,15 +101,9 @@ body.C #home>.A .pinfo .links a {
   background-position: center;
 }
 
-#home-refer .wrapper.bg {
-  background-size: 100% 100%;
-  background-color: transparent;
-  padding: 160px 7px 12px 12px;
-}
 
-#home-refer p {
-  display: none;
-}
+
+
 
 #home-balance>.A .vc-balance {
   color: purple;
@@ -1862,101 +1856,27 @@ var {
   }
 }
 
-#home-refer .refer::before {
-  filter: blur(18px);
-  transform: scale(1);
-  z-index: -1;
-  animation: mgiReferBreathe 2.8s ease-in-out infinite;
-}
 
-#home-refer .refer::after {
-  inset: 0;
-  z-index: -1;
-}
 
-#home-refer .btn, #home-refer a.btn, #home-refer button.btn, #home-refer .copy, #home-refer a.copy, #home-refer button.copy {
-  background-image: none !important;
-  background-repeat: no-repeat !important;
-  background-size: auto !important;
-  background-position: center !important;
-  border: 2px solid transparent !important;
-  border-radius: 14px !important;
-  background: linear-gradient(180deg, #cb3fff 0%, #3d0251 100%) padding-box, linear-gradient(135deg, #ef00ff 0%, #cb3fff 50%, #5105a3 100%) border-box !important;
-  color: #ffffff !important;
-  text-shadow: 0 1px 0 rgba(25, 25, 25, 0.55) !important;
-  padding: 10px 16px !important;
-  line-height: 1.1 !important;
-  font-size: 13px !important;
-  font-weight: 900;
-  letter-spacing: 0.65px;
-  text-transform: uppercase;
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  min-height: 40px !important;
-  box-shadow: 0 12px 26px rgba(25, 25, 25, 0.48), 0 0 0 1px rgba(255, 255, 255, 0.10) inset, 0 0 22px rgba(239, 0, 255, 0.18) !important;
-  cursor: pointer;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  text-decoration: none !important;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease;
-}
 
-#home-refer .btn::before, #home-refer .copy::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0) 55%);
-  pointer-events: none;
-}
 
-#home-refer .btn.downline {
-  background: linear-gradient(180deg, #ef00ff 0%, #5105a3 100%) padding-box, linear-gradient(135deg, #ffffff 0%, #cb3fff 30%, #ef00ff 60%, #5105a3 100%) border-box !important;
-  box-shadow: 0 12px 26px rgba(25, 25, 25, 0.48), 0 0 0 1px rgba(255, 255, 255, 0.10) inset, 0 0 26px rgba(239, 0, 255, 0.28) !important;
-}
 
-#home-refer .copy {
-  background: linear-gradient(180deg, #5105a3 0%, #200236 100%) padding-box, linear-gradient(135deg, #ef00ff 0%, #cb3fff 45%, #5105a3 100%) border-box !important;
-  box-shadow: 0 12px 26px rgba(25, 25, 25, 0.50), 0 0 0 1px rgba(255, 255, 255, 0.10) inset, 0 0 20px rgba(203, 63, 255, 0.22) !important;
-}
 
-#home-refer .btn.more {
-  background: linear-gradient(180deg, #cb3fff 0%, #3d0251 100%) padding-box, linear-gradient(135deg, #ef00ff 0%, #cb3fff 50%, #5105a3 100%) border-box !important;
-}
 
-#home-refer .btn:active, #home-refer .copy:active {
-  transform: translateY(0);
-  filter: brightness(0.98);
-  box-shadow: 0 10px 22px rgba(25, 25, 25, 0.48), 0 0 0 1px rgba(255, 255, 255, 0.10) inset, 0 0 18px rgba(239, 0, 255, 0.18) !important;
-}
 
-#home-refer .btn:active::after, #home-refer .copy:active::after {
-  left: 125%;
-}
 
-@keyframes mgiReferBreathe {
-  0%, 100% {
-    opacity: 0.35;
-    transform: scale(1);
-  }
 
-  50% {
-    opacity: 0.85;
-    transform: scale(1.035);
-  }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  #home-refer .refer::before {
-    animation: none !important;
-  }
 
-  #home-refer .btn, #home-refer .copy, #home-refer .btn::after, #home-refer .copy::after {
-    transition: none !important;
-  }
-}
+
+
+
+
+
+
+
+
+
 
 #home-lucky .btn {
   float: left;
@@ -4110,19 +4030,7 @@ input[readonly], textarea[readonly] {
   }
 }
 
-@keyframes mgiReferBreath {
-  0%, 100% {
-    transform: translateZ(0) scale(1);
-    filter: brightness(1) saturate(1);
-    box-shadow: 0 12px 26px rgba(25,25,25,.48), 0 0 0 1px rgba(255,255,255,.12) inset, 0 0 26px rgba(239,0,255,.20);
-  }
 
-  50% {
-    transform: translateZ(0) scale(1.035);
-    filter: brightness(1.06) saturate(1.06);
-    box-shadow: 0 14px 30px rgba(25,25,25,.52), 0 0 0 1px rgba(255,255,255,.14) inset, 0 0 40px rgba(239,0,255,.30);
-  }
-}
 
 #home-lucky .btn, #home-lucky a.btn, #home-lucky button.btn {
   position: relative;
@@ -4174,166 +4082,36 @@ input[readonly], textarea[readonly] {
   }
 }
 
-#home-refer .btn, #home-refer .copy, #home-refer a.btn, #home-refer a.copy, #home-refer button.btn, #home-refer button.copy {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
 
-#home-refer .btn::after, #home-refer .copy::after, #home-refer a.btn::after, #home-refer a.copy::after, #home-refer button.btn::after, #home-refer button.copy::after {
-  content: "";
-  position: absolute;
-  top: -70%;
-  left: -85%;
-  width: 46%;
-  height: 240%;
-  transform: rotate(25deg);
-  background: linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.85) 50%, rgba(255,255,255,0) 100% );
-  opacity: 0;
-  pointer-events: none;
-}
 
-#home-refer .btn.downline, #home-refer .copy, #home-refer .btn.more, #home-refer a.btn.downline, #home-refer a.copy, #home-refer a.btn.more {
-  background: linear-gradient(180deg,#5105a3 0,#200236 100%) padding-box, linear-gradient(135deg,#ef00ff 0,#cb3fff 50%,#5105a3 100%) border-box !important;
-  border: 2px solid transparent !important;
-  box-shadow: 0 12px 26px rgba(25,25,25,.48), 0 0 0 1px rgba(255,255,255,.10) inset, 0 0 22px rgba(239,0,255,.18) !important;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  #home-refer .refer, #home-refer a.refer, #home-refer .btn.refer, #home-refer a.btn.refer {
-    animation: mgiReferBreath 2.8s ease-in-out infinite;
-  }
-}
 
-@media (hover: hover) {
-  #home-refer .btn.downline:hover, #home-refer .copy:hover, #home-refer .btn.more:hover, #home-refer a.btn.downline:hover, #home-refer a.copy:hover, #home-refer a.btn.more:hover {
-    transform: translateY(-1px) translateZ(0);
-    filter: brightness(1.06) saturate(1.04);
-  }
 
-  #home-refer .btn.downline:hover::after, #home-refer .copy:hover::after, #home-refer .btn.more:hover::after, #home-refer a.btn.downline:hover::after, #home-refer a.copy:hover::after, #home-refer a.btn.more:hover::after {
-    opacity: 1;
-    animation: mgiSaberSweep 900ms cubic-bezier(.2,.7,.2,1);
-  }
 
-  #home-refer .btn.downline:active::after, #home-refer .copy:active::after, #home-refer .btn.more:active::after, #home-refer a.btn.downline:active::after, #home-refer a.copy:active::after, #home-refer a.btn.more:active::after {
-    opacity: 1;
-    animation: mgiSaberSweep 700ms cubic-bezier(.2,.7,.2,1);
-  }
-}
 
-@media (hover: none) {
-  #home-refer .btn.downline::after, #home-refer .copy::after, #home-refer .btn.more::after, #home-refer a.btn.downline::after, #home-refer a.copy::after, #home-refer a.btn.more::after {
-    opacity: .55;
-    animation: mgiSaberSweep 3.0s cubic-bezier(.2,.7,.2,1) infinite;
-  }
 
-  #home-refer .btn.downline::after, #home-refer a.btn.downline::after {
-    animation-delay: 0s;
-  }
 
-  #home-refer .copy::after, #home-refer a.copy::after {
-    animation-delay: .9s;
-  }
 
-  #home-refer .btn.more::after, #home-refer a.btn.more::after {
-    animation-delay: 1.8s;
-  }
-}
+
 
 @media (prefers-reduced-motion: reduce) {
-  #home-lucky .btn::after, #home-lucky a.btn::after, #home-lucky button.btn::after, #home-refer .btn::after, #home-refer .copy::after, #home-refer a.btn::after, #home-refer a.copy::after, #home-refer button.btn::after, #home-refer button.copy::after, #home-refer .refer, #home-refer a.refer, #home-refer .btn.refer, #home-refer a.btn.refer {
+  #home-lucky .btn::after, #home-lucky a.btn::after, #home-lucky button.btn::after {
     animation: none !important;
     transition: none !important;
   }
 }
 
-#home-refer .refer {
-  background-image: none !important;
-  background-repeat: no-repeat !important;
-  background-size: auto !important;
-  background-position: center !important;
-  border: 3px solid transparent !important;
-  border-radius: 18px !important;
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-  background: radial-gradient(140% 120% at 50% 0%, rgba(255,255,255,.14) 0%, rgba(255,255,255,0) 58%) padding-box, radial-gradient(85% 120% at 18% 18%, rgba(203,63,255,.16) 0%, rgba(203,63,255,0) 62%) padding-box, linear-gradient(180deg,#191919 0%,#200236 42%,#3D0251 100%) padding-box, linear-gradient(135deg,#FFFFFF 0%,#CB3FFF 38%,#5105A3 86%) border-box !important;
-  box-shadow: 0 18px 40px rgba(25,25,25,.55), 0 0 0 1px rgba(255,255,255,.10) inset, 0 0 34px rgba(81,5,163,.22), 0 0 22px rgba(203,63,255,.14);
-  animation: mgiReferPulse 2.8s ease-in-out infinite;
-  transform-origin: 50% 55%;
-}
 
-#home-refer .refer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0, rgba(255,255,255,.10) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 12px), repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0, rgba(255,255,255,.06) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 12px);
-  opacity: .06;
-  pointer-events: none;
-}
 
-#home-refer .refer::after {
-  content: "";
-  position: absolute;
-  top: -70%;
-  left: -70%;
-  width: 46%;
-  height: 240%;
-  transform: rotate(25deg);
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.70) 50%, rgba(255,255,255,0) 100%);
-  opacity: 0;
-  pointer-events: none;
-  animation: mgiReferSaber 3.2s ease-in-out infinite;
-}
 
-@keyframes mgiReferPulse {
-  0%,100% {
-    transform: scale(1);
-    filter: brightness(1) saturate(1);
-  }
 
-  50% {
-    transform: scale(1.035);
-    filter: brightness(1.06) saturate(1.06);
-  }
-}
 
-@keyframes mgiReferSaber {
-  0% {
-    left: -70%;
-    opacity: 0;
-  }
 
-  18% {
-    opacity: .92;
-  }
 
-  38% {
-    left: 135%;
-    opacity: 0;
-  }
 
-  100% {
-    left: 135%;
-    opacity: 0;
-  }
-}
 
-@media (prefers-reduced-motion:reduce) {
-  #home-refer .refer {
-    animation: none;
-  }
 
-  #home-refer .refer::after {
-    animation: none;
-    opacity: 0;
-  }
-}
+
 
 #amopayramp .fabtn, #direpay .fabtn, #fpay .fabtn, #gggpay .fabtn, #payessence .fabtn, #mpintelco .fabtn {
   touch-action: manipulation;
