@@ -8550,8 +8550,6 @@ body #downline .light-theme span {
   padding-bottom: 0 !important;
 }
 
-/* Footer icons drawn in CSS. HOME HISTORY PROMO LIVE CHAT SETTINGS. */
-
 body.C #footer {
   display: flex !important;
   align-items: stretch !important;
