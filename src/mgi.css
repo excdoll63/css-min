@@ -8671,7 +8671,7 @@ body.C #footer > a[href="#home"]:active::before {
 
 body.C #footer > a.selected::before,
 body.C #footer > a[href="#home"].selected::before {
-  background: #F700FD !important;
+  background: #3d0251 !important;
   background-image: none !important;
 }
 
@@ -8720,7 +8720,7 @@ body.C #footer > a[href="#home"]:active::after {
 
 body.C #footer > a.selected::after,
 body.C #footer > a[href="#home"].selected::after {
-  color: #F700FD !important;
+  color: #3d0251 !important;
 }
 
 body.C #footer > a[href="#home"]::after { content: "HOME" !important; }
@@ -8759,4 +8759,10 @@ body.C #footer > a[href="#promotion"] > .badge {
 
 body.C #footer > a[href="#promotion"] > .badge:empty {
   display: none !important;
+}
+
+body.C #footer > a.selected,
+body.C #footer > a[href="#home"].selected {
+  background-color: #f6e8ff !important;
+  background-image: none !important;
 }
