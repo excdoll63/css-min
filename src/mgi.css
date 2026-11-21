@@ -560,8 +560,18 @@ body .light-theme .current {
 
 #home .game-banners {
   width: 100%;
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  cursor: grab;
+  scrollbar-width: none;
+}
+
+#home .game-banners::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 #home .game-banner {
@@ -574,29 +584,8 @@ body .light-theme .current {
   object-position: center;
   display: inline-block;
   vertical-align: top;
-  animation: slide 20s infinite;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(0%);
-  }
-
-  25% {
-    transform: translateX(-100%);
-  }
-
-  50% {
-    transform: translateX(-150%);
-  }
-
-  75% {
-    transform: translateX(-165%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 #home .game-banners.swiper-wrapper {
