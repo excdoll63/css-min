@@ -1238,22 +1238,13 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
 
 #home .popular-game .popular-game-title::after,
 .popular-game .popular-game-title::after {
-  content: "" !important;
-  display: inline-block !important;
-  flex-shrink: 0;
-  width: 26px;
-  height: 26px;
-  background-color: #ef00ff !important;
-  background-image: none !important;
-  -webkit-mask-image: url("https://mgiwallet.com/media/e3c01d79e10a68448f2d5.png") !important;
-  mask-image: url("https://mgiwallet.com/media/e3c01d79e10a68448f2d5.png") !important;
-  -webkit-mask-size: contain !important;
-  mask-size: contain !important;
-  -webkit-mask-repeat: no-repeat !important;
-  mask-repeat: no-repeat !important;
-  -webkit-mask-position: center !important;
-  mask-position: center !important;
-  filter: drop-shadow(0 0 6px rgba(239, 0, 255, 0.45));
+  content: none !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
 }
 
 #home-balance.balance-bg>.A .vc-note {
