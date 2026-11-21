@@ -568,8 +568,12 @@ body .light-theme .current {
   margin: 0 8px 0 0;
   border-radius: 8px;
   cursor: pointer;
-  width: calc(38% - 0px);
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
   display: inline-block;
+  vertical-align: top;
   animation: slide 20s infinite;
 }
 
@@ -606,6 +610,10 @@ body .light-theme .current {
 
 #home .game-banner.swiper-slide {
   margin: 0;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
 }
 
 #gameList.BNG .games .game[data-code="770"] {
