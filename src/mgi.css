@@ -560,10 +560,12 @@ body .light-theme .current {
 
 #home .game-banners {
   width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  overflow-x: scroll;
+  overflow-y: auto;
   white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
   touch-action: pan-x;
   cursor: grab;
   scrollbar-width: none;
@@ -580,9 +582,10 @@ body .light-theme .current {
   cursor: pointer;
   width: 100px;
   height: 100px;
+  flex: 0 0 100px;
   object-fit: cover;
   object-position: center;
-  display: inline-block;
+  display: block;
   vertical-align: top;
   -webkit-user-drag: none;
   user-select: none;
