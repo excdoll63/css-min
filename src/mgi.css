@@ -8760,3 +8760,66 @@ body.C #footer > a[href="#promotion"] > .badge {
 body.C #footer > a[href="#promotion"] > .badge:empty {
   display: none !important;
 }
+
+body.C #footer > a[href="#chatroom"] > .badge {
+  display: block !important;
+  position: absolute !important;
+  top: auto !important;
+  bottom: 43px !important;
+  left: 50% !important;
+  right: auto !important;
+  width: 16px !important;
+  margin: 0 0 0 4px !important;
+  transform: none !important;
+  min-width: 14px !important;
+  height: 14px !important;
+  padding: 0 3px !important;
+  border-radius: 8px !important;
+  background: #F700FD !important;
+  color: #fff !important;
+  font-family: Montserrat, "Segoe UI", sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  line-height: 14px !important;
+  text-align: center !important;
+  text-indent: 0 !important;
+  text-shadow: none !important;
+  z-index: 3 !important;
+}
+
+body.C #footer > a[href="#chatroom"] > .badge:empty {
+  display: none !important;
+}
+
+body.C #footer > a[href="#chatroom"].selected > .badge {
+  bottom: 51px !important;
+}
+
+body.C #footer > a[href="#home"].selected::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: auto !important;
+  bottom: 17px !important;
+  width: 42px !important;
+  height: 42px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background-color: #F700FD !important;
+  background-image: linear-gradient(180deg, #ff4dff 0%, #F700FD 42%, #5105a3 100%) !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22%20d%3D%22M12%202.6%202.2%2011.2h2.3V21h5.6v-6.1h3.8V21h5.6v-9.8h2.3L12%202.6zm-1.2%2012.3h2.4V21h-2.4v-6.1z%22%2F%3E%3C%2Fsvg%3E") !important;
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23000%22%20fill-rule%3D%22evenodd%22%20d%3D%22M12%202.6%202.2%2011.2h2.3V21h5.6v-6.1h3.8V21h5.6v-9.8h2.3L12%202.6zm-1.2%2012.3h2.4V21h-2.4v-6.1z%22%2F%3E%3C%2Fsvg%3E") !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-repeat: no-repeat !important;
+  -webkit-mask-position: center !important;
+  mask-position: center !important;
+  -webkit-mask-size: contain !important;
+  mask-size: contain !important;
+}
