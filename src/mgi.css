@@ -2342,8 +2342,8 @@ var {
 }
 
 #gameList .games .game .btn {
-  line-height: 22px;
-  font-family: "Montserrat", sans-serif;
+  line-height: 32px;
+  font-family: Montserrat, "Segoe UI", sans-serif;
   font-weight: 700;
   font-size: 12px;
 }
